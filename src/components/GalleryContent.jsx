@@ -11,7 +11,7 @@ import 'lightgallery/css/lg-thumbnail.css';
 import lgThumbnail from 'lightgallery/plugins/thumbnail';
 import lgZoom from 'lightgallery/plugins/zoom';
 
-import galleryData from '../data/gallery.json';
+import galleryData from '@/lib/gallery.json';
 import Image from 'next/image';
 
 export default function GalleryContent() {

@@ -2,89 +2,126 @@
 
 ![MAS Contractors Logo](public/IMG_0271.png)
 
-## 📌 Descripción del Proyecto
-Este repositorio contiene el sitio web oficial de **MAS Contractors LLC**, una empresa de contratistas generales en Richmond, VA, especializada en servicios de construcción comercial y residencial. El sitio está diseñado para ofrecer una experiencia premium, moderna y altamente optimizada para buscadores (SEO).
+This project is a modern, responsive website for **MAS Contractors LLC**, built with **Next.js 14**, **Tailwind CSS**, and **Framer Motion**. It focuses on performance, local SEO, and a premium user experience.
 
----
+## 📂 Project Structure Map
 
-## 🚀 Características Principales
-- **Experiencia de Usuario Premium:** Animaciones fluidas con Framer Motion y diseño moderno con CSS de vanguardia.
-- **Optimización SEO Avanzada:** Configuración de etiquetas canonical, metadatos dinámicos y estructura de encabezados para máxima visibilidad en Google.
-- **Rendimiento de Clase Mundial:** Puntuaciones altas en Core Web Vitals y monitoreo en tiempo real con Vercel Speed Insights.
-- **Integración Social y Contacto:** Formulario de contacto seguro con ReCAPTCHA y EmailJS.
-- **Arquitectura Escalable:** Basado en Next.js 14 con App Router.
-
----
-
-## 🛠️ Stack Tecnológico
-- **Framework:** [Next.js 14](https://nextjs.org/) (App Router)
-- **Estilos:** [Vanilla CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) & [TailwindCSS](https://tailwindcss.com/)
-- **Animaciones:** [Framer Motion](https://www.framer.com/motion/)
-- **Iconos:** [React Icons](https://react-icons.github.io/react-icons/)
-- **Monitoreo:** [Vercel Speed Insights](https://vercel.com/docs/speed-insights)
-- **Despliegue:** [Vercel](https://vercel.com/)
-
----
-
-## 🛠️ Configuración y Desarrollo
-
-### Prerrequisitos
-- [Node.js](https://nodejs.org/) (versión 18 o superior)
-- [npm](https://www.npmjs.com/)
-
-### Instalación
-1. Clonar el repositorio desde GitHub:
-   ```bash
-   git clone https://github.com/barckstar/mascontractorsllc.git
-   ```
-2. Instalar dependencias:
-   ```bash
-   npm install
-   ```
-
-### Desarrollo Local
-Ejecutar el servidor de desarrollo:
-```bash
-npm run dev
 ```
-Abrir [http://localhost:3000](http://localhost:3000) en tu navegador.
+d:\Proyectos\mascontractorsllc\
+├── public/                 # Static assets (images, logos, robots.txt)
+├── src/
+│   ├── app/                # Next.js App Router (Pages & Routing)
+│   │   ├── about/          # Route: /about
+│   │   ├── contact/        # Route: /contact
+│   │   ├── gallery/        # Route: /gallery
+│   │   ├── services/       # Route: /services
+│   │   ├── layout.js       # Root Layout (Fonts, Metadata, Header/Footer)
+│   │   ├── page.jsx        # Route: / (Home Page)
+│   │   ├── not-found.js    # 404 Error Handler (Redirects to Home)
+│   │   └── globals.css     # Global Styles & Tailwind Directives
+│   │
+│   ├── components/         # Reusable UI Components
+│   │   ├── contact.jsx     # Contact Form with EmailJS & ReCAPTCHA
+│   │   ├── navbar.jsx      # Responsive Navigation Bar
+│   │   ├── footer.jsx      # Site Footer
+│   │   ├── FAQ.jsx         # Accordion FAQ Component
+│   │   └── ...             # Other section-specific components
+│   │
+│   └── lib/                # Utilities & Shared Data
+│       ├── data.json       # Content Text & Configuration
+│       └── gallery.json    # Gallery Image Data (Generated)
+│
+├── scripts/
+│   └── generate-gallery.js # Script to generate gallery.json
+│
+├── .env.local              # Local Environment Variables (Git Ignored)
 
-### Producción
-Para crear una versión optimizada:
-```bash
-npm run build
-npm start
+└── tailwind.config.js      # Design System Configuration (Colors, Fonts)
 ```
 
----
+## 🏗️ Architecture Decisions
 
-## 📈 Optimizaciones Recientes
-Se han realizado mejoras significativas en:
-- **Redirecciones Críticas:** Saneamiento de URLs duplicadas (www vs non-www).
-- **Consolidación de Enlaces:** Corrección de errores 404 provenientes de rutas legacy.
-- **Migración Integral:** Movimiento exitoso del historial de desarrollo de GitLab a GitHub.
+The project follows a **Feature-Based** and **Component-Driven** architecture optimized for Next.js App Router:
 
----
+1.  **`src/app/` (Routing)**:
+    *   We use the **App Router** for better performance and Server Components support.
+    *   **Server Components** (`page.jsx`): Used by default for SEO metadata and initial data fetching.
+    *   **Client Components** (`"use client"`): Used only where interactivity is needed (animations, forms, sliders), keeping the JS bundle size small.
 
-## ⚙️ Automatización (Scripts)
+2.  **`src/components/` (UI)**:
+    *   Components are modular and reusable.
+    *   Logic is separated from the page structure (e.g., `ServicesContent.jsx` holds the logic/view for `services/page.jsx`).
 
-### Generación de Galería
-El proyecto cuenta con un script de automatización (`scripts/generate-gallery.js`) que gestiona los datos de la galería de proyectos de forma dinámica.
+3.  **`src/data/` vs `src/lib/`**:
+    *   Separation of content from code allows for easier updates to text and images without risking breaking the application logic.
 
-#### ¿Por qué es necesario?
-Next.js requiere conocer las dimensiones (ancho y alto) de las imágenes locales para optimizarlas correctamente (`next/image`). En lugar de escribir estos datos a mano, el script:
-1. Escanea la carpeta `public/gallery`.
-2. Lee las dimensiones reales de cada imagen.
-3. Genera un archivo `src/data/gallery.json` que la aplicación consume.
+## 🚀 SEO Implementation (Search Engine Optimization)
 
-#### ¿Cómo se usa?
-Este proceso está **totalmente automatizado**. Se ha configurado un script de `prebuild` en el `package.json`:
-- **Build en Vercel/Local:** Cada vez que se ejecuta `npm run build`, el script se activa automáticamente, asegurando que la galería esté siempre actualizada con las últimas fotos subidas.
-- **Manual:** Si deseas regenerar los datos manualmente durante el desarrollo:
-  ```bash
-  npm run generate-gallery
-  ```
+The site is heavily optimized for **Local SEO** to target clients in **Richmond, VA**.
 
+### 1. Metadata API
+Every page (`page.jsx`) exports a `metadata` object containing:
+*   **Title**: Optimized with keywords (e.g., "General Contractor in Richmond, VA").
+*   **Description**: Compelling summaries including core services.
+*   **Keywords**: Specific tags like "Kitchen Remodeling", "Commercial Construction".
+*   **OpenGraph**: optimized for social media sharing.
 
----
-© 2026 MAS Contractors LLC. Todos los derechos reservados.
+### 2. Semantic HTML
+*   **Hierarchy**: Strict `H1` -> `H2` -> `H3` structure.
+    *   `H1`: One per page, defining the main topic.
+    *   `H2`: Main sections and service categories.
+*   **Alt Text**: All images follow the **"What + Where"** pattern (e.g., *"Kitchen Remodeling in Richmond VA"*) to help Google associate services with the location.
+
+### 3. Structured Data (Schema.org)
+*   **LocalBusiness**: Implemented to tell Google this is a physical business.
+*   **FAQPage**: The Services page includes JSON-LD for FAQs, increasing the chance of appearing in Google's "People Also Ask" snippets.
+
+### 4. Technical SEO
+*   **Mobile First**: Fully responsive design.
+*   **Performance**: Uses `next/image` for automatic image optimization (WebP, resizing).
+*   **Redirects**: A custom `not-found.js` redirects all broken links to the Homepage to reduce bounce rates.
+
+## 🔐 Environment Variables
+
+Security is managed via `.env.local` (local development) and Vercel Environment Variables (production).
+
+**Required Keys:**
+*   `NEXT_PUBLIC_RECAPTCHA_SITE_KEY`: For Google ReCAPTCHA v2.
+*   `NEXT_PUBLIC_EMAILJS_PUBLIC_KEY`: For sending emails via EmailJS.
+*   `NEXT_PUBLIC_EMAILJS_SERVICE_ID`: EmailJS Service Identifier.
+*   `NEXT_PUBLIC_EMAILJS_TEMPLATE_ID`: EmailJS Template Identifier.
+
+> **Note:** These keys are prefixed with `NEXT_PUBLIC_` because they are required by Client Components (`contact.jsx`) to function in the browser.
+
+## 🛠️ Tech Stack
+
+*   **Framework**: Next.js 14 (App Router)
+*   **Styling**: Tailwind CSS
+*   **Animations**: Framer Motion
+*   **Forms**: React Hook Form / Standard State
+*   **Email**: EmailJS
+*   **Security**: Google ReCAPTCHA v2
+
+## 📜 Available Scripts
+
+In the project directory, you can run:
+
+### `npm run dev`
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+### `npm run build`
+Builds the app for production.\
+It automatically runs `npm run generate-gallery` before building to ensure `src/lib/gallery.json` is up to date.
+
+### `npm run start`
+Starts the production server.
+
+### `npm run lint`
+Runs the linter to check for code quality issues.
+
+### `npm run generate-gallery`
+Scans `public/gallery` and generates/updates `src/lib/gallery.json`.\
+*Useful when you add new images to the gallery.*\
+\
+**Alt Text Format**: Automatically generates readable descriptions based on the filename + "in North Chesterfield, VA". (e.g. `MyImage.jpg` -> `My Image in North Chesterfield, VA`)
