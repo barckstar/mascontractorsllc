@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
@@ -12,6 +14,7 @@ function Contact() {
   const key = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
   const onChangeCaptcha = (value) => {
+    if (!value) return;
     setCaptchaValue(value);
     setIsButtonDisabled(false);
   };
@@ -175,7 +178,12 @@ function Contact() {
                     ></textarea>
                   </div>
                   <div className="flex my-4 justify-center">
-                    <ReCAPTCHA sitekey={key} onChange={onChangeCaptcha} />
+                    {key && (
+                      <ReCAPTCHA
+                        sitekey={key}
+                        onChange={onChangeCaptcha}
+                      />
+                    )}
                   </div>
                   <div className="flex justify-center">
                     <button
