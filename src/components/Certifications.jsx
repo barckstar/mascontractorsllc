@@ -8,7 +8,7 @@ const Certifications = () => {
                 <div className="bg-white p-3 rounded-lg mb-2 inline-block shadow-lg transform group-hover:scale-105 transition-transform duration-300">
                     <Image
                         src="/DPOR.png"
-                        alt="DPOR License"
+                        alt="DPOR License - Virginia Contractor"
                         width={120}
                         height={60}
                         className="object-contain h-12 w-auto"
@@ -25,7 +25,7 @@ const Certifications = () => {
                 <div className="bg-white p-3 rounded-lg mb-2 inline-block shadow-lg transform group-hover:scale-105 transition-transform duration-300">
                     <Image
                         src="/OSHA-Logo.png"
-                        alt="OSHA Certified"
+                        alt="OSHA Safety Certified Contractor"
                         width={120}
                         height={60}
                         className="object-contain h-12 w-auto"

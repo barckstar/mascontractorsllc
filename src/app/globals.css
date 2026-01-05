@@ -43,11 +43,11 @@ a {
 
 .container {
     background-color: var(--bg);
-    width: 1563px;
+    max-width: 1563px;
     margin: auto;
-    padding-left: 50px;
-    padding-right: 50px;
-    display: flex
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
 }
 
 .hero-section {
@@ -170,19 +170,19 @@ a {
 
 @media (max-width:1563px) {
     .container {
-        width: 1366px
+        /* max-width will handle this */
     }
 }
 
 @media (max-width:1366px) {
     .container {
-        width: 1280px
+        /* max-width will handle this */
     }
 }
 
 @media (max-width:1280px) {
     .container {
-        width: 1024px
+        /* max-width will handle this */
     }
 
     .hero-title {
@@ -200,7 +200,7 @@ a {
 
 @media (max-width:1024px) {
     .container {
-        width: 768px
+        /* max-width will handle this */
     }
 
     .img {
@@ -227,7 +227,7 @@ a {
 
 @media (max-width:768px) {
     .container {
-        width: 640px
+        /* max-width will handle this */
     }
 
     .hero-title {
@@ -250,7 +250,7 @@ a {
 
 @media (max-width:640px) {
     .container {
-        width: 475px
+        /* max-width will handle this */
     }
 
     .hero-title {
@@ -276,7 +276,7 @@ a {
 
 @media (max-width:475px) {
     .container {
-        width: 380
+        /* max-width will handle this */
     }
 
     .hero-button {
@@ -307,7 +307,7 @@ a {
 
 @media (max-width:380px) {
     .container {
-        width: 320px
+        /* max-width will handle this */
     }
 
     .hero-button {

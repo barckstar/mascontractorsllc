@@ -66,7 +66,7 @@ export const Footer = () => {
             <Link href="/" className="flex title-font font-medium items-center justify-end flex-shrink-0">
               <Image
                 src="/IMG_0271.png"
-                alt="Logo"
+                alt="MAS Contractors LLC Logo - General Contractor Richmond VA"
                 width={200}
                 height={200}
                 className="object-contain mx-auto"

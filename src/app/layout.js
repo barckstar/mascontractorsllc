@@ -40,6 +40,23 @@ export default function RootLayout({ children }) {
       "postalCode": "23236",
       "addressCountry": "US"
     },
+    "areaServed": [
+      { "@type": "City", "name": "Richmond" },
+      { "@type": "City", "name": "North Chesterfield" },
+      { "@type": "City", "name": "Midlothian" },
+      { "@type": "City", "name": "Glen Allen" },
+      { "@type": "City", "name": "Henrico" }
+    ],
+    "knowsAbout": [
+      "Commercial Construction",
+      "Residential Remodeling",
+      "Tile Installation",
+      "Cabinetry",
+      "Carpentry",
+      "Framing",
+      "Drywall",
+      "Painting"
+    ],
     "priceRange": "$$",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",

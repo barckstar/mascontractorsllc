@@ -9,6 +9,10 @@
             "title": "Gallery"
         },
         {
+            "url": "/services",
+            "title": "Services"
+        },
+        {
             "url": "/about",
             "title": "About"
         },
@@ -28,13 +32,13 @@
             "title": "Your Personal Oasis, Exquisite Designs",
             "text": "Transform your bathroom into a luxurious retreat with our expert remodeling services. From elegant fixtures to modern layouts, we create spaces that blend functionality with style.",
             "img": "/img-7.png",
-            "alt": "Modern bathroom remodeling and renovation showing luxury fixtures"
+            "alt": "Modern bathroom remodeling and renovation showing luxury fixtures in Richmond VA"
         },
         {
             "title": "Inspiring Porches, Outdoor Elegance",
             "text": "We create stunning outdoor spaces that enhance your home's curb appeal and provide a perfect retreat for relaxation and entertainment. Our custom porch designs are tailored to your style and needs.",
             "img": "/img-8.png",
-            "alt": "Custom patio and porch design construction for outdoor living spaces"
+            "alt": "Custom patio and porch design construction for outdoor living spaces in Richmond VA"
         }
     ],
     "homeGreenCards": [
@@ -43,42 +47,42 @@
             "subTitle": "Expand your space. Enhance your life.",
             "text": "We design and build custom home additions that seamlessly blend with your existing structure, providing you with the extra space you need for your growing family or lifestyle.",
             "img": "/img-9.png",
-            "alt": "Home addition construction site extending residential property"
+            "alt": "Home addition construction site extending residential property in Richmond VA"
         },
         {
             "title": "KITCHEN",
             "subTitle": "Your dream kitchen, come to life",
             "text": "From sleek, modern makeovers to timeless, classic designs, we specialize in creating kitchens that are both stunning and highly functional. We are the trusted professionals for high-quality granite and quartz installation, ensuring a perfect, luxurious finish.",
             "img": "/img-10.png",
-            "alt": "Luxury kitchen renovation with granite countertops and custom cabinetry"
+            "alt": "Luxury kitchen renovation with granite countertops and custom cabinetry in Richmond VA"
         },
         {
             "title": "BATHROOMS",
             "subTitle": "Your personal oasis, exquisite designs",
             "text": "Transform your bathroom into a luxurious retreat with our expert remodeling services. From elegant fixtures to modern layouts, we create spaces that blend functionality with style.",
             "img": "/img-11.png",
-            "alt": "Elegant bathroom design with modern tiling and fixtures"
+            "alt": "Elegant bathroom design with modern tiling and fixtures in Richmond VA"
         },
         {
             "title": "DECKS",
             "subTitle": "Outdoor living at its finest",
             "text": "We create beautiful and functional decks that enhance your outdoor space, providing the perfect setting for relaxation and entertainment. Our custom designs are tailored to your lifestyle and preferences.",
             "img": "/img-12.png",
-            "alt": "Wooden deck construction and outdoor entertainment area"
+            "alt": "Wooden deck construction and outdoor entertainment area in Richmond VA"
         },
         {
             "title": "ROOFING",
             "subTitle": "Superior protection for your home",
             "text": "We offer comprehensive roofing services, including repairs, replacements, and installations, to ensure your home is protected from the elements. Our team uses high-quality materials and expert craftsmanship to deliver durable and reliable roofing solutions.",
             "img": "/img-13.png",
-            "alt": "Professional roofing team installing weather-resistant shingles"
+            "alt": "Professional roofing team installing weather-resistant shingles in Richmond VA"
         },
         {
             "title": "SIDING",
             "subTitle": "Flexible protection for your home",
             "text": "Enhance your home's exterior with our top-notch siding services. We provide a variety of styles and materials to improve your home's appearance and protect it from the elements, ensuring long-lasting durability and curb appeal.",
             "img": "/img-14.png",
-            "alt": "Vinyl and fiber cement siding installation for home exterior protection"
+            "alt": "Vinyl and fiber cement siding installation for home exterior protection in Richmond VA"
         }
     ],
     "heroL": {
@@ -134,55 +138,55 @@
             "title": "TRIM",
             "title2": "Trim",
             "description": "We install interior doors, crown molding, coffered ceilings, wall panels and built-in shelves exactly as you imagined it.",
-            "img": "/Trim.jpeg"
+            "img": "/gallery/Trim.jpeg"
         },
         {
             "title": "ROOFING",
             "title2": "Roofing",
             "description": "Whether it’s a minor roof repair, an older roof in need of a full replacement. We provide all the assistance you need to help service you every step of the way!",
-            "img": "/Roofing.jpeg"
+            "img": "/img-5.png"
         },
         {
             "title": "KITCHEN",
             "title2": "Kitchen",
             "description": "The kitchen is the heart of the home, let us transform it by installing cabinets, countertops, tile backsplash, flooring, and appliances.",
-            "img": "/Kitchen.jpeg"
+            "img": "/gallery/Kitchen.jpeg"
         },
         {
             "title": "BATHROOMS",
             "title2": "Bathrooms",
             "description": "Increase the value of your home. We love adding new bathroom cabinets, adding soaking tubs, new storage closets, and new shower tile.",
-            "img": "/Bathroom.jpeg"
+            "img": "/img-7.png"
         },
         {
             "title": "DOORS",
             "title2": "Doors",
             "description": "We can install storm doors, sliding glass doors, french doors and front entry doors that come with built-in safety mechanisms and in a variety of patterns, colors, and glass panels.",
-            "img": "/Doors.jpeg"
+            "img": "/gallery/Doors.jpeg"
         },
         {
             "title": "DECKS",
             "title2": "Decks",
             "description": "We offer deck replacements and custom deck builds including porches and pergolas. We offer various materials to choose from for it to be long lasting for your home.",
-            "img": "/Deck.jpeg"
+            "img": "/img-8.png"
         },
         {
             "title": "SIDING",
             "title2": "Siding",
             "description": "New siding doesn’t only bring new life to your home’s exterior but also can reduce the amount of maintenance needed to upkeep your home.",
-            "img": "/Siding.jpeg"
+            "img": "/gallery/Siding.jpeg"
         },
         {
             "title": "WINDOWS",
             "title2": "Windows",
             "description": "With our expansive offering of numerous manufacturers, we can help you change any window to a high quality and energy efficient window.",
-            "img": "/Windows.jpeg"
+            "img": "/gallery/Windows.jpeg"
         },
         {
             "title": "HOME ADDITIONS",
             "title2": "Home Additions",
             "description": "Add value to your home with your desired additional space. We take care of all required city permits, plumbing and electrical work. Your dreams will become a reality.",
-            "img": "/CustomRoomAdditions.png"
+            "img": "/img-9.jpg"
         }
     ],
     "commercial": [
@@ -280,7 +284,7 @@
             "descriptionLarge": "MAS Contractors LLC offers top-quality home renovation services. Whether it's a kitchen update, bathroom modernization, or a complete overhaul, our expert team brings your vision to life. Experience excellence with MAS Contractors LLC today.",
             "descriptionLarge2": "Contact us for a free consultation before making any important decisions, and we will help you navigate through permits and regulations, providing you with tools and expertise so that you can find the best choice for your room addition project.",
             "list": [],
-            "image": "/CustomRoomAdditions.png",
+            "image": "/gallery/CustomRoomAdditions.png",
             "link": "#contact",
             "imgCarrusel": [
                 {
@@ -323,7 +327,7 @@
                     "item": "Shower benches"
                 }
             ],
-            "image": "/Tile.png",
+            "image": "/gallery/Tile.png",
             "link": "#contact",
             "imgCarrusel": [
                 {
@@ -381,7 +385,7 @@
                     "item": "Interior Door Installation"
                 }
             ],
-            "image": "/FinishCarpentry.png",
+            "image": "/gallery/FinishCarpentry.png",
             "link": "#contact",
             "imgCarrusel": [
                 {

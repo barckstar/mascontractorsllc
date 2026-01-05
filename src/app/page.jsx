@@ -1,12 +1,26 @@
 import HomeContent from "@/components/HomeContent";
 
 export const metadata = {
-  title: "MAS Contractors | General Contractor in Richmond, VA",
-  description: "MAS Contractors offers top-tier commercial and residential construction services in Richmond, VA. From remodeling to new builds, we transform spaces with quality and innovation.",
-  keywords: ["General Contractor", "Richmond VA", "Construction", "Remodeling", "Commercial", "Residential", "MAS Contractors"],
+  title: "General Contractor in Richmond, VA | MAS Contractors",
+
+  description:
+    "Top-rated general contractor in Richmond, VA offering commercial and residential construction, remodeling, and home improvements. Free estimates available.",
+
+  keywords: [
+    "General Contractor Richmond VA",
+    "Construction Company Richmond",
+    "Commercial Construction Richmond",
+    "Residential Contractor Richmond VA",
+    "Kitchen Remodeling Richmond",
+    "Bathroom Remodeling Richmond",
+    "Home Improvement Richmond VA",
+    "MAS Contractors"
+  ],
+
   openGraph: {
-    title: "MAS Contractors | Transforming Spaces, Building Legacies",
-    description: "Expert general contracting services in Richmond, VA. Quality craftsmanship for commercial and residential projects.",
+    title: "General Contractor in Richmond, VA | MAS Contractors",
+    description:
+      "Expert general contracting services in Richmond, VA. Licensed and insured for residential and commercial projects.",
     url: "https://mascontractors.com",
     siteName: "MAS Contractors",
     images: [
@@ -14,11 +28,15 @@ export const metadata = {
         url: "/img-1.jpg",
         width: 1200,
         height: 630,
-        alt: "MAS Contractors Hero Image",
+        alt: "MAS Contractors – General Contractor in Richmond VA",
       },
     ],
     locale: "en_US",
     type: "website",
+  },
+
+  alternates: {
+    canonical: "https://mascontractors.com",
   },
 };
 

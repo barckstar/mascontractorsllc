@@ -38,7 +38,7 @@ const nextConfig = {
             },
             {
                 source: '/specialties/:slug',
-                destination: '/contact',
+                destination: '/services',
                 permanent: true,
             },
             // Legacy Cloudflare email protection link found in Search Console

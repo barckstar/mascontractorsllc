@@ -8,7 +8,10 @@ module.exports = {
   ],
   theme: {
     extend: {
-
+      colors: {
+        primary: "#1e1e1e",
+        secondary: "#9fe300",
+      },
       screens: {
         'custom': '1240px',
         'custom870': '870px'

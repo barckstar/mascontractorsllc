@@ -33,7 +33,7 @@ export default function AboutPageContent() {
                 <div className="absolute inset-0 z-0">
                     <Image
                         src="/img-4.jpg" // Using a high-quality image from gallery as hero bg
-                        alt="About MAS Contractors - Licensed and Insured General Contractor Team"
+                        alt="About MAS Contractors - Licensed and Insured General Contractor Team in Richmond VA"
                         fill
                         className="object-cover opacity-40"
                         priority
@@ -109,7 +109,7 @@ export default function AboutPageContent() {
                         <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 group">
                             <Image
                                 src="/uniform-1.png"
-                                alt="MAS Contractors team member in uniform"
+                                alt="MAS Contractors team member in uniform in Richmond VA"
                                 width={640}
                                 height={400}
                                 className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
@@ -128,14 +128,14 @@ export default function AboutPageContent() {
                     <div className="bg-[#2a2a2a] p-6 rounded-xl border border-[#9fe300]/30 flex flex-wrap justify-center mt-10 items-center gap-8">
                         <div className="text-center">
                             <div className="bg-white p-3 rounded-lg mb-2 inline-block shadow-lg">
-                                <Image src="/DPOR.png" alt="DPOR License - Licensed Contractor" width={100} height={50} className="object-contain" />
+                                <Image src="/DPOR.png" alt="DPOR License - Licensed Contractor in Richmond VA" width={100} height={50} className="object-contain" />
                             </div>
                             <p className="text-white text-xs font-atpinko opacity-70">Licensed & Insured</p>
                         </div>
                         <div className="w-px h-16 bg-white/10 hidden sm:block" />
                         <div className="text-center">
                             <div className="bg-white p-3 rounded-lg mb-2 inline-block shadow-lg">
-                                <Image src="/OSHA-Logo.png" alt="OSHA Safety Certification Logo" width={100} height={50} className="object-contain" />
+                                <Image src="/OSHA-Logo.png" alt="OSHA Safety Certification Logo for MAS Contractors in Richmond VA" width={100} height={50} className="object-contain" />
                             </div>
                             <p className="text-white text-xs font-atpinko opacity-70">Safety Certified</p>
                         </div>
@@ -208,9 +208,9 @@ export default function AboutPageContent() {
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-6">
                     {[
                         { icon: <BiPhoneCall size={50} />, title: "Contact", text: "Reach us by phone or email. We respond quickly and schedule your free on-site visit." },
-                        { icon: <Image src="/car.png" alt="Free Site Visit Icon" width={60} height={60} />, title: "Free Site Visit", text: "We visit your location to assess the project and provide a detailed, no-obligation estimate." },
-                        { icon: <Image src="/material.jpg" alt="Construction Materials Sample" width={60} height={60} className="rounded-full object-cover" />, title: "Materials & Quality", text: "We discuss materials, quality standards, and project details to ensure your satisfaction." },
-                        { icon: <Image src="/contrat.png" alt="Contract Agreement Icon" width={60} height={60} />, title: "Agreement", text: "Once agreed, we send a detailed contract with pricing for materials and labor." },
+                        { icon: <Image src="/car.png" alt="Free Construction Site Visit in Richmond VA" width={60} height={60} />, title: "Free Site Visit", text: "We visit your location to assess the project and provide a detailed, no-obligation estimate." },
+                        { icon: <Image src="/material.jpg" alt="Quality Construction Materials Sample in Richmond VA" width={60} height={60} className="rounded-full object-cover" />, title: "Materials & Quality", text: "We discuss materials, quality standards, and project details to ensure your satisfaction." },
+                        { icon: <Image src="/contrat.png" alt="Construction Contract Agreement Icon in Richmond VA" width={60} height={60} />, title: "Agreement", text: "Once agreed, we send a detailed contract with pricing for materials and labor." },
                         { icon: <TbBrandCashapp size={50} />, title: "Completion", text: "50% upfront, 50% upon completion. We deliver quality and transparency." }
                     ].map((step, index) => (
                         <motion.div

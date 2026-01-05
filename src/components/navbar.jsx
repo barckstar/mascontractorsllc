@@ -114,7 +114,7 @@ export const Navbar = () => {
             src={isMobile ? "/IMG_0271_SM.png" : "/IMG_0271.png"}
             width={isMobile ? 55 : 250}
             height={isMobile ? 25 : 120}
-            alt="logo"
+            alt="MAS Contractors LLC Logo - General Contractor Richmond VA"
             className="object-contain"
           />
         </Link>

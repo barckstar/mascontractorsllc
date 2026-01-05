@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import data from "@/lib/data.json";
 import Certifications from "./Certifications";
 import { BiRightArrowAlt } from "react-icons/bi";
+import LocalBusiness from "./LocalBusiness";
 
 export default function HomeContent() {
     // Animation variants
@@ -88,6 +89,9 @@ export default function HomeContent() {
                 </motion.div>
             </section>
 
+
+            <LocalBusiness />
+
             {/* 2. Certifications Bar */}
             <section className="relative z-20 -mt-10 px-4">
                 <motion.div
@@ -101,7 +105,7 @@ export default function HomeContent() {
             </section>
 
             {/* 3. About Section */}
-            <section className="py-24 px-6 md:px-16 max-w-7xl mx-auto">
+            <section className="px-6 md:px-16 max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     <motion.div
                         initial="hidden"
@@ -113,7 +117,7 @@ export default function HomeContent() {
                         <div className="relative z-10">
                             <Image
                                 src="/logo-3D.png"
-                                alt="MAS Contractors 3D Logo - Premier General Contractor"
+                                alt="MAS Contractors 3D Logo - Premier General Contractor in Richmond VA"
                                 width={500}
                                 height={500}
                                 className="w-full max-w-md mx-auto drop-shadow-2xl"
@@ -300,7 +304,7 @@ export default function HomeContent() {
                             <div className="relative h-64 w-full rounded-2xl overflow-hidden border-2 border-[#9fe300]/20 shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500">
                                 <Image
                                     src="/car.png"
-                                    alt="MAS Contractors fleet vehicle for free estimate site visits"
+                                    alt="MAS Contractors fleet vehicle for free estimate site visits in Richmond VA"
                                     fill
                                     className="object-cover"
                                     sizes="(max-width: 768px) 100vw, 33vw"
@@ -325,7 +329,7 @@ export default function HomeContent() {
                             <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 group">
                                 <Image
                                     src="/work.png"
-                                    alt="MAS Contractors team discussing blueprints and project plans"
+                                    alt="MAS Contractors team discussing blueprints and project plans in Richmond VA"
                                     width={600}
                                     height={800}
                                     className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
