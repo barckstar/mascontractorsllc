@@ -120,7 +120,7 @@ export default function ServicesContent() {
                                         {spec.description}
                                     </p>
                                     <p className="text-gray-400 font-atpinko text-lg mb-10 leading-relaxed italic">
-                                        "{spec.descriptionLarge}"
+                                        &quot;{spec.descriptionLarge}&quot;
                                     </p>
 
                                     <ul className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">

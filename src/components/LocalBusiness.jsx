@@ -119,7 +119,7 @@ export default function LocalBusiness() {
                             </Link>
 
                             <p className="mt-4 text-center text-gray-500 text-sm font-atpinko">
-                                Ready to start your project? Let's talk.
+                                Ready to start your project? Let&apos;s talk.
                             </p>
                         </div>
                     </div>

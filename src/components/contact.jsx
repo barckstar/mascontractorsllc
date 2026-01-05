@@ -9,7 +9,7 @@ function Contact() {
   const [message, setMessage] = useState("");
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   const form = useRef();
-  const key = "6LcnByQqAAAAALE1TZQ0KK2Rsw0XVlnn8r4fJ_nj";
+  const key = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
   const onChangeCaptcha = (value) => {
     setCaptchaValue(value);
@@ -22,8 +22,8 @@ function Contact() {
     setMessage("");
     if (captchaValue) {
       emailjs
-        .sendForm("service_dat04vh", "template_iu7wwvs", form.current, {
-          publicKey: "LQG9Wl4SBYDG3uuo4",
+        .sendForm(process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID, process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID, form.current, {
+          publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
         })
         .then(
           () => {
