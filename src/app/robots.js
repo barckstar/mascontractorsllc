@@ -4,7 +4,7 @@ export default function robots() {
             {
                 userAgent: '*',
                 allow: '/',
-                disallow: ['/cdn-cgi/', '/_next/static/media/'],
+                disallow: ['/cdn-cgi/'],
             }
         ],
         sitemap: 'https://mascontractors.com/sitemap.xml',
