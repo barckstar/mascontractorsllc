@@ -1,6 +1,10 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
+    swcMinify: true,
+    experimental: {
+        optimizePackageImports: ['framer-motion', 'react-icons'],
+    },
     images: {
         domains: [
             'mascontractors.com'

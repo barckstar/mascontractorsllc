@@ -6,6 +6,7 @@
     font-family: 'Contrax Heavy';
     src: url('/fonts/Conthrax-SemiBold.otf') format('opentype');
     font-weight: 800;
+    font-display: swap;
 }
 
 @font-face {

@@ -1,5 +1,12 @@
-import React from "react";
-import ServicesContent from "@/components/ServicesContent";
+import dynamic from "next/dynamic";
+
+const ServicesContent = dynamic(() => import("@/components/ServicesContent"), {
+    loading: () => (
+        <div className="bg-[#1e1e1e] min-h-screen flex items-center justify-center pt-32">
+            <div className="w-12 h-12 border-4 border-[#9fe300] border-t-transparent rounded-full animate-spin" />
+        </div>
+    ),
+});
 
 export const metadata = {
     title: "General Contractor & Construction Services in Richmond, VA | MAS Contractors",

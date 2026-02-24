@@ -1,4 +1,12 @@
-import HomeContent from "@/components/HomeContent";
+import dynamic from "next/dynamic";
+
+const HomeContent = dynamic(() => import("@/components/HomeContent"), {
+  loading: () => (
+    <div className="bg-[#1e1e1e] min-h-screen flex items-center justify-center">
+      <div className="w-12 h-12 border-4 border-[#9fe300] border-t-transparent rounded-full animate-spin" />
+    </div>
+  ),
+});
 
 export const metadata = {
   title: "General Contractor in Richmond, VA | MAS Contractors",
@@ -43,3 +51,4 @@ export const metadata = {
 export default function Home() {
   return <HomeContent />;
 }
+

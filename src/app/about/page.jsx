@@ -1,4 +1,12 @@
-import AboutPageContent from "@/components/AboutPageContent";
+import dynamic from "next/dynamic";
+
+const AboutPageContent = dynamic(() => import("@/components/AboutPageContent"), {
+  loading: () => (
+    <div className="bg-[#1e1e1e] min-h-screen flex items-center justify-center">
+      <div className="w-12 h-12 border-4 border-[#9fe300] border-t-transparent rounded-full animate-spin" />
+    </div>
+  ),
+});
 
 export const metadata = {
   title: "About MAS Contractors | Licensed General Contractor in Richmond VA",

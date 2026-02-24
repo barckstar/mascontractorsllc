@@ -1,5 +1,12 @@
-import React from "react";
-import GalleryContent from "@/components/GalleryContent";
+import dynamic from "next/dynamic";
+
+const GalleryContent = dynamic(() => import("@/components/GalleryContent"), {
+  loading: () => (
+    <div className="bg-[#1e1e1e] min-h-screen flex items-center justify-center">
+      <div className="w-12 h-12 border-4 border-[#9fe300] border-t-transparent rounded-full animate-spin" />
+    </div>
+  ),
+});
 
 export const metadata = {
   title: "Construction Project Gallery | MAS Contractors Richmond VA",
