@@ -1,37 +1,15 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoShieldCheckmark } from "react-icons/io5";
 import { IoIosMail } from "react-icons/io";
 import { RiMedalLine } from "react-icons/ri";
-import { motion, AnimatePresence } from "framer-motion";
 import data from "../lib/data.json";
 
 export const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  // Auto-slide for mobile top bar
-  useEffect(() => {
-    if (!isMobile) return;
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % 4);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [isMobile]);
 
   const topBarItems = [
     {
@@ -86,36 +64,39 @@ export const Navbar = () => {
           ))}
         </div>
 
-        {/* Mobile View (Slider) */}
+        {/* Mobile View (CSS-only Slider) */}
         <div className="md:hidden w-full h-full flex items-center justify-center relative">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={currentSlide}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.3 }}
-              className="flex items-center gap-3 absolute"
-            >
-              {topBarItems[currentSlide].icon}
-              <div className="text-left">
-                <span className="block text-xs text-[#9fe300] font-bold">{topBarItems[currentSlide].title}</span>
-                <span className="block text-xs text-white">{topBarItems[currentSlide].subtitle}</span>
+          <div className="topbar-slider">
+            {topBarItems.map((item, index) => (
+              <div key={index} className="topbar-slide flex items-center gap-3">
+                {item.icon}
+                <div className="text-left">
+                  <span className="block text-xs text-[#9fe300] font-bold">{item.title}</span>
+                  <span className="block text-xs text-white">{item.subtitle}</span>
+                </div>
               </div>
-            </motion.div>
-          </AnimatePresence>
+            ))}
+          </div>
         </div>
       </div>
 
       {/* Main Navbar */}
       <div className="max-w-full mx-auto px-6 flex items-center justify-between h-20">
         <Link href="/" className="flex-shrink-0">
+          {/* Small logo for mobile, full logo for desktop — CSS controlled */}
           <Image
-            src={isMobile ? "/IMG_0271_SM.png" : "/IMG_0271.png"}
-            width={isMobile ? 55 : 250}
-            height={isMobile ? 25 : 120}
+            src="/IMG_0271_SM.png"
+            width={55}
+            height={25}
             alt="MAS Contractors LLC Logo - General Contractor Richmond VA"
-            className="object-contain"
+            className="object-contain md:hidden"
+          />
+          <Image
+            src="/IMG_0271.png"
+            width={250}
+            height={120}
+            alt="MAS Contractors LLC Logo - General Contractor Richmond VA"
+            className="object-contain hidden md:block"
           />
         </Link>
 
@@ -151,30 +132,24 @@ export const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu Dropdown */}
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            className="md:hidden bg-[#1e1e1e]/95 border-t border-white/10 overflow-hidden"
-          >
-            <div className="px-6 py-4 flex flex-col space-y-4">
-              {data.url_navbar.map((link) => (
-                <Link
-                  key={link.title}
-                  href={link.url}
-                  className="text-white text-lg font-atpinko py-2 border-b border-white/5 hover:text-[#9fe300] hover:pl-2 transition-all"
-                  onClick={() => setOpen(false)}
-                >
-                  {link.title}
-                </Link>
-              ))}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {/* Mobile Menu Dropdown — CSS transition instead of Framer Motion */}
+      <div
+        className={`md:hidden bg-[#1e1e1e]/95 border-t border-white/10 overflow-hidden transition-all duration-300 ease-in-out ${open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          }`}
+      >
+        <div className="px-6 py-4 flex flex-col space-y-4">
+          {data.url_navbar.map((link) => (
+            <Link
+              key={link.title}
+              href={link.url}
+              className="text-white text-lg font-atpinko py-2 border-b border-white/5 hover:text-[#9fe300] hover:pl-2 transition-all"
+              onClick={() => setOpen(false)}
+            >
+              {link.title}
+            </Link>
+          ))}
+        </div>
+      </div>
     </nav>
   );
 };

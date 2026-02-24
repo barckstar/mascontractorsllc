@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import { motion } from "framer-motion";
 import data from "@/lib/data.json";
 import Link from "next/link";
 
@@ -9,14 +8,41 @@ export const Footer = () => {
   return (
     <>
       <footer className="body-font bg-[#1e1e1e] border-t-2 border-[#515151]">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.05, duration: 0.5 }}
+        <div
+          className="footer-fade-in"
         >
-          <div className="py-16 mx-auto px-6 md:px-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 text-center md:text-left">
-            {/* Secciones */}
+          <div className="py-16 mx-auto px-6 md:px-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-center md:text-left">
+            {/* Quick Links */}
+            <div className="w-full">
+              <p className="text-[#9fe300] font-contrax text-3xl mb-4 footer-title">Quick Links</p>
+              <ul className="space-y-2">
+                <li>
+                  <Link href="/" className="text-white text-lg font-atpinko hover:text-[#9fe300] transition footer-text">
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services" className="text-white text-lg font-atpinko hover:text-[#9fe300] transition footer-text">
+                    Services
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/gallery" className="text-white text-lg font-atpinko hover:text-[#9fe300] transition footer-text">
+                    Gallery
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/about" className="text-white text-lg font-atpinko hover:text-[#9fe300] transition footer-text">
+                    About Us
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/contact" className="text-white text-lg font-atpinko hover:text-[#9fe300] transition footer-text">
+                    Contact
+                  </Link>
+                </li>
+              </ul>
+            </div>
 
             {/* Commercial */}
             <div className="w-full">
@@ -73,7 +99,7 @@ export const Footer = () => {
               />
             </Link>
           </div>
-        </motion.div>
+        </div>
       </footer>
     </>
   );

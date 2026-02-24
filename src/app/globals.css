@@ -314,3 +314,81 @@ a {
         padding: 0.25rem
     }
 }
+
+/* ===== CSS-only Topbar Slider (replaces setInterval + Framer Motion) ===== */
+.topbar-slider {
+    display: flex;
+    flex-direction: column;
+    animation: topbar-slide 12s infinite;
+    width: 100%;
+}
+
+.topbar-slide {
+    min-height: 4rem; /* h-16 = 64px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+@keyframes topbar-slide {
+    0%, 20%    { transform: translateY(0); }
+    25%, 45%   { transform: translateY(-25%); }
+    50%, 70%   { transform: translateY(-50%); }
+    75%, 95%   { transform: translateY(-75%); }
+    100%       { transform: translateY(0); }
+}
+
+/* ===== Footer fade-in (replaces Framer Motion whileInView) ===== */
+.footer-fade-in {
+    animation: footer-enter 0.6s ease-out both;
+}
+
+@keyframes footer-enter {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== Social Media Bar entrance (replaces Framer Motion initial animation) ===== */
+.social-bar-enter {
+    animation: social-slide-in 0.8s ease-out 1s both;
+}
+
+@keyframes social-slide-in {
+    from {
+        opacity: 0;
+        transform: translateX(-100px) translateY(-50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) translateY(-50%);
+    }
+}
+
+.social-icon-hover {
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.social-icon-hover:hover {
+    transform: scale(1.2) translateX(5px);
+}
+
+.social-icon-hover:active {
+    transform: scale(0.9);
+}
+
+/* ===== 404 page subtle pulse ===== */
+.animate-pulse-slow {
+    animation: pulse-slow 3s ease-in-out infinite;
+}
+
+@keyframes pulse-slow {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}

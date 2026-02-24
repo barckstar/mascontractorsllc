@@ -73,6 +73,12 @@ export default function ServicesContent() {
                         </div>
                     </motion.div>
                 ))}
+
+                <div className="col-span-full text-center mt-8">
+                    <Link href="/gallery" className="inline-flex items-center gap-2 text-secondary font-contrax text-sm tracking-widest hover:gap-4 transition-all">
+                        VIEW OUR PROJECT GALLERY <BiRightArrowAlt size={20} className="ml-2" />
+                    </Link>
+                </div>
             </section>
             {/* Detailed Specialties Section */}
             <section className="relative px-6 md:px-16  py-24 bg-[#151515]">
@@ -179,6 +185,11 @@ export default function ServicesContent() {
                             CONTACT US TODAY
                         </motion.button>
                     </Link>
+                    <div className="mt-6">
+                        <Link href="/about" className="inline-flex items-center gap-2 text-gray-400 font-atpinko hover:text-secondary transition-colors">
+                            Learn more about MAS Contractors <BiRightArrowAlt size={20} />
+                        </Link>
+                    </div>
                 </motion.div>
             </section>
         </div>

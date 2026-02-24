@@ -195,6 +195,12 @@ export default function HomeContent() {
                             </motion.div>
                         ))}
                     </div>
+
+                    <div className="text-center mt-12">
+                        <Link href="/gallery" className="inline-flex items-center gap-2 text-[#9fe300] font-contrax hover:gap-4 transition-all group">
+                            VIEW OUR WORK <BiRightArrowAlt size={24} className="group-hover:text-white transition-colors" />
+                        </Link>
+                    </div>
                 </div>
             </section>
 
@@ -272,6 +278,12 @@ export default function HomeContent() {
                             </motion.div>
                         );
                     })}
+                </div>
+
+                <div className="text-center mt-12">
+                    <Link href="/services" className="inline-flex items-center gap-2 text-[#9fe300] font-contrax hover:gap-4 transition-all group">
+                        VIEW ALL SERVICES <BiRightArrowAlt size={24} className="group-hover:text-white transition-colors" />
+                    </Link>
                 </div>
             </section>
 
