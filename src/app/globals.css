@@ -321,22 +321,47 @@ a {
     flex-direction: column;
     animation: topbar-slide 12s infinite;
     width: 100%;
+    height: 16rem;
+    /* 4 slides × 4rem each — needed for % translation */
 }
 
 .topbar-slide {
-    min-height: 4rem; /* h-16 = 64px */
+    height: 4rem;
+    /* must match parent container h-16 */
+    min-height: 4rem;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    gap: 0.75rem;
+    padding: 0 1rem;
 }
 
 @keyframes topbar-slide {
-    0%, 20%    { transform: translateY(0); }
-    25%, 45%   { transform: translateY(-25%); }
-    50%, 70%   { transform: translateY(-50%); }
-    75%, 95%   { transform: translateY(-75%); }
-    100%       { transform: translateY(0); }
+
+    0%,
+    20% {
+        transform: translateY(0);
+    }
+
+    25%,
+    45% {
+        transform: translateY(-4rem);
+    }
+
+    50%,
+    70% {
+        transform: translateY(-8rem);
+    }
+
+    75%,
+    95% {
+        transform: translateY(-12rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 /* ===== Footer fade-in (replaces Framer Motion whileInView) ===== */
@@ -349,6 +374,7 @@ a {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -365,6 +391,7 @@ a {
         opacity: 0;
         transform: translateX(-100px) translateY(-50%);
     }
+
     to {
         opacity: 1;
         transform: translateX(0) translateY(-50%);
@@ -389,6 +416,13 @@ a {
 }
 
 @keyframes pulse-slow {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.7; }
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
 }

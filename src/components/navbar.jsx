@@ -65,7 +65,7 @@ export const Navbar = () => {
         </div>
 
         {/* Mobile View (CSS-only Slider) */}
-        <div className="md:hidden w-full h-full flex items-center justify-center relative">
+        <div className="md:hidden w-full h-full relative">
           <div className="topbar-slider">
             {topBarItems.map((item, index) => (
               <div key={index} className="topbar-slide flex items-center gap-3">
