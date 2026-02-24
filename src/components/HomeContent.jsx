@@ -142,7 +142,7 @@ export default function HomeContent() {
                         </p>
                         <Link href="/about" aria-label="Read more about MAS Contractors history and mission">
                             <span className="inline-flex items-center gap-2 text-[#9fe300] font-contrax hover:gap-4 transition-all cursor-pointer group">
-                                READ MORE <BiRightArrowAlt size={24} className="group-hover:text-white transition-colors" />
+                                READ MORE ABOUT MAS CONTRACTORS <BiRightArrowAlt size={24} className="group-hover:text-white transition-colors" />
                             </span>
                         </Link>
                     </motion.div>

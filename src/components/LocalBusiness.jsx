@@ -40,7 +40,7 @@ export default function LocalBusiness() {
                                 <FaMapMarkerAlt size={20} />
                             </div>
                             <div>
-                                <h4 className="text-white font-bold mb-1">Service Area</h4>
+                                <h3 className="text-white font-bold mb-1">Service Area</h3>
                                 <p className="text-sm text-gray-400">Serving Richmond, VA & Chesterfield County</p>
                             </div>
                         </div>
@@ -50,7 +50,7 @@ export default function LocalBusiness() {
                                 <FaPhoneAlt size={20} />
                             </div>
                             <div>
-                                <h4 className="text-white font-bold mb-1">Contact Us</h4>
+                                <h3 className="text-white font-bold mb-1">Contact Us</h3>
                                 <p className="text-sm text-gray-400">(804) 833-4600</p>
                                 <p className="text-sm text-gray-400">(540) 376-4453</p>
                             </div>
@@ -61,7 +61,7 @@ export default function LocalBusiness() {
                                 <FaHammer size={20} />
                             </div>
                             <div>
-                                <h4 className="text-white font-bold mb-1">Expertise</h4>
+                                <h3 className="text-white font-bold mb-1">Expertise</h3>
                                 <p className="text-sm text-gray-400">Residential & Commercial Construction</p>
                             </div>
                         </div>
@@ -71,7 +71,7 @@ export default function LocalBusiness() {
                                 <FaShieldAlt size={20} />
                             </div>
                             <div>
-                                <h4 className="text-white font-bold mb-1">Peace of Mind</h4>
+                                <h3 className="text-white font-bold mb-1">Peace of Mind</h3>
                                 <p className="text-sm text-gray-400">Licensed & Insured in Virginia</p>
                             </div>
                         </div>
