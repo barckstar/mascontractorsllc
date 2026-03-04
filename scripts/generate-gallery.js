@@ -35,16 +35,29 @@ function getGalleryImages() {
                     const buffer = fs.readFileSync(filePath);
                     const dimensions = sizeOf(buffer);
                     const basename = path.basename(file, ext);
-                    // Format: "MyImage" -> "My Image" (CamelCase to Space) and replace -/_ with space
+
+                    // 1. Formateo limpio del nombre del archivo
                     const formattedName = basename
                         .replace(/[-_]/g, ' ')
                         .replace(/([a-z])([A-Z])/g, '$1 $2');
+
+                    // 2. Lógica de SEO dinámico: 
+                    // Si el nombre tiene "kitchen", "bathroom" o "commercial", le damos prioridad.
+                    // Si no, usamos una frase descriptiva profesional.
+                    let seoAlt = "";
+                    const lowerName = formattedName.toLowerCase();
+
+                    if (lowerName.includes('kitchen') || lowerName.includes('bath') || lowerName.includes('commercial')) {
+                        seoAlt = `${formattedName} by MAS Contractors LLC`;
+                    } else {
+                        seoAlt = `${formattedName} | Professional Remodeling & Construction`;
+                    }
 
                     images.push({
                         src: `/gallery/${file}`,
                         width: dimensions.width,
                         height: dimensions.height,
-                        alt: `${formattedName} in North Chesterfield, VA`
+                        alt: seoAlt // <--- Usamos el nuevo Alt optimizado
                     });
                 } catch (e) {
                     console.error(`Error processing file ${file}:`, e.message);

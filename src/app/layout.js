@@ -9,17 +9,34 @@ import Script from "next/script";
 const inter = Inter({ subsets: ["latin"], display: 'swap' });
 
 export const metadata = {
-  metadataBase: new URL('https://mascontractors.com'),
   title: {
-    default: "MAS Contractors | General Contractor in Richmond, VA",
-    template: "%s | MAS Contractors"
+    default: "MAS Contractors | General Contractor in Richmond, VA | Free Estimates",
+    template: "%s | MAS Contractors LLC"
   },
-  description: "Premier General Contractor in Richmond, VA providing commercial and residential construction services. Licensed, insured, and committed to quality.",
-  alternates: {
-    canonical: 'https://mascontractors.com',
+  description: "Looking for expert remodeling in Richmond, VA? MAS Contractors specializes in kitchens, bathrooms, and commercial construction. 100% satisfaction guaranteed. Get your free quote today!",
+  keywords: ["General Contractor Richmond VA", "Kitchen Remodeling", "Bathroom Remodeling", "Commercial Construction Richmond", "Home Renovation Virginia"],
+  authors: [{ name: "MAS Contractors LLC" }],
+  creator: "MAS Contractors LLC",
+  publisher: "MAS Contractors LLC",
+  formatDetection: {
+    email: false,
+    address: true,
+    telephone: true,
   },
-  twitter: {
-    card: 'summary_large_image',
+  openGraph: {
+    title: "MAS Contractors | Expert Remodeling in Richmond, VA",
+    description: "Quality construction and remodeling services. From kitchens to commercial spaces.",
+    url: "https://mascontractors.com",
+    siteName: "MAS Contractors LLC",
+    images: [
+      {
+        url: "/logo-3D.png",
+        width: 800,
+        height: 600,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
   },
 };
 
@@ -40,6 +57,11 @@ export default function RootLayout({ children }) {
       "postalCode": "23236",
       "addressCountry": "US"
     },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 37.5015, // Coordenadas aproximadas para North Chesterfield
+      "longitude": -77.5651
+    },
     "areaServed": [
       { "@type": "City", "name": "Richmond" },
       { "@type": "City", "name": "North Chesterfield" },
@@ -56,6 +78,11 @@ export default function RootLayout({ children }) {
       "Framing",
       "Drywall",
       "Painting"
+    ],
+    "sameAs": [
+      "https://www.facebook.com/buildandrenovaterva?_rdr",
+      "https://www.instagram.com/mas_contractors/",
+      "https://www.thumbtack.com/va/richmond/disability-retrofit/mas-contractors-llc/service/292433618750267588"
     ],
     "priceRange": "$$",
     "openingHoursSpecification": {
