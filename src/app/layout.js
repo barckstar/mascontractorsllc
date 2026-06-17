@@ -9,6 +9,7 @@ import Script from "next/script";
 const inter = Inter({ subsets: ["latin"], display: 'swap' });
 
 export const metadata = {
+  metadataBase: new URL("https://mascontractors.com"),
   title: {
     default: "MAS Contractors | General Contractor in Richmond, VA | Free Estimates",
     template: "%s | MAS Contractors LLC"
@@ -43,12 +44,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "GeneralContractor",
+    "@type": ["GeneralContractor", "LocalBusiness"],
+    "@id": "https://mascontractors.com/#organization",
     "name": "MAS Contractors LLC",
+    "legalName": "MAS Contractors LLC",
+    "description": "MAS Contractors LLC is a licensed Class A General Contractor based in North Chesterfield, Virginia. We specialize in kitchen remodeling, bathroom remodeling, home additions, roofing, siding, trim carpentry, tile work, and commercial construction throughout Richmond, Chesterfield County, Midlothian, Glen Allen, and Henrico, VA. Certified James Hardie installer. Free estimates.",
     "image": "https://mascontractors.com/logo-3D.png",
-    "@id": "https://mascontractors.com",
+    "logo": "https://mascontractors.com/logo-3D.png",
     "url": "https://mascontractors.com",
     "telephone": "+18048334600",
+    "email": "mascontractorsllc@gmail.com",
+    "foundingYear": "2014",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "411 Branchway Rd Suite 107",
@@ -59,41 +65,60 @@ export default function RootLayout({ children }) {
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 37.5015, // Coordenadas aproximadas para North Chesterfield
+      "latitude": 37.5015,
       "longitude": -77.5651
     },
     "areaServed": [
-      { "@type": "City", "name": "Richmond" },
+      { "@type": "City", "name": "Richmond", "sameAs": "https://www.wikidata.org/wiki/Q43668" },
       { "@type": "City", "name": "North Chesterfield" },
       { "@type": "City", "name": "Midlothian" },
       { "@type": "City", "name": "Glen Allen" },
-      { "@type": "City", "name": "Henrico" }
+      { "@type": "City", "name": "Henrico" },
+      { "@type": "AdministrativeArea", "name": "Chesterfield County" }
     ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Construction & Remodeling Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kitchen Remodeling" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bathroom Remodeling" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Home Additions" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Roofing" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Siding Installation" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Trim Carpentry" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tile Work" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial Construction" } }
+      ]
+    },
     "knowsAbout": [
+      "General Contracting",
+      "Kitchen Remodeling",
+      "Bathroom Remodeling",
+      "Home Additions",
+      "Roofing",
+      "James Hardie Siding",
+      "Trim Carpentry",
+      "Tile Installation",
       "Commercial Construction",
       "Residential Remodeling",
-      "Tile Installation",
-      "Cabinetry",
-      "Carpentry",
-      "Framing",
-      "Drywall",
-      "Painting"
+      "Deck Building"
     ],
     "sameAs": [
       "https://www.facebook.com/buildandrenovaterva?_rdr",
       "https://www.instagram.com/mas_contractors/",
       "https://www.thumbtack.com/va/richmond/disability-retrofit/mas-contractors-llc/service/292433618750267588"
     ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "47",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
     "priceRange": "$$",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday"
-      ],
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
       "opens": "07:00",
       "closes": "16:00"
     }

@@ -32,6 +32,11 @@ export const Footer = () => {
                   </Link>
                 </li>
                 <li>
+                  <Link href="/blog" className="text-white text-lg font-atpinko hover:text-[#9fe300] transition footer-text">
+                    Blog & Resources
+                  </Link>
+                </li>
+                <li>
                   <Link href="/about" className="text-white text-lg font-atpinko hover:text-[#9fe300] transition footer-text">
                     About Us
                   </Link>
@@ -86,7 +91,7 @@ export const Footer = () => {
           {/* Copyright */}
           <div className="flex flex-col text-center items-center justify-between py-6 border-t border-[#515151] px-6 md:px-32 lg:flex-row lg:text-left lg:justify-between gap-4">
             <p className="text-[#9fe300] text-sm font-atpinko">
-              © 2024 - 2025 Mas Contractors LLC <br /> All Rights Reserved
+              © 2024 - 2026 MAS Contractors LLC <br /> All Rights Reserved
             </p>
             {/* Logo */}
             <Link href="/" className="flex title-font font-medium items-center justify-end flex-shrink-0">

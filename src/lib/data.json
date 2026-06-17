@@ -9,6 +9,10 @@
             "title": "Gallery"
         },
         {
+            "url": "/blog",
+            "title": "Blog"
+        },
+        {
             "url": "/services",
             "title": "Services"
         },

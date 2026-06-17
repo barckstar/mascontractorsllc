@@ -25,25 +25,42 @@ const nextConfig = {
                 destination: 'https://mascontractors.com/:path*',
                 permanent: true,
             },
-            // Redirect legacy specialties routes to home or contact
+            // Redirect legacy specialties routes to relevant service pages
             {
                 source: '/specialties/tile',
-                destination: '/contact',
+                destination: '/services/bathroom-remodeling',
                 permanent: true,
             },
             {
                 source: '/specialties/commercial_cabinetry',
-                destination: '/contact',
+                destination: '/services/kitchen-remodeling',
+                permanent: true,
+            },
+            // Typo variant found in GSC (Spanish spelling, single m)
+            {
+                source: '/specialties/comercial_cabinetry',
+                destination: '/services/kitchen-remodeling',
                 permanent: true,
             },
             {
                 source: '/specialties/finish_trim_carpentry',
-                destination: '/contact',
+                destination: '/services/trim-carpentry',
                 permanent: true,
             },
             {
                 source: '/specialties/:slug',
                 destination: '/services',
+                permanent: true,
+            },
+            // Legacy /projects routes → gallery
+            {
+                source: '/projects',
+                destination: '/gallery',
+                permanent: true,
+            },
+            {
+                source: '/projects/:slug',
+                destination: '/gallery',
                 permanent: true,
             },
             // Legacy Cloudflare email protection link found in Search Console

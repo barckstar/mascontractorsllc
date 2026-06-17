@@ -9,26 +9,29 @@ const HomeContent = dynamic(() => import("@/components/HomeContent"), {
 });
 
 export const metadata = {
-  title: "General Contractor in Richmond, VA | MAS Contractors",
+  title: "General Contractor Richmond, Chesterfield & Midlothian VA | MAS Contractors",
 
   description:
-    "Top-rated general contractor in Richmond, VA offering commercial and residential construction, remodeling, and home improvements. Free estimates available.",
+    "Top-rated Class A general contractor serving Richmond, Chesterfield County, Midlothian, Henrico & Glen Allen VA. Kitchens from $15K, bathrooms from $8K, decks from $8K. Licensed, insured. Free estimates.",
 
   keywords: [
     "General Contractor Richmond VA",
+    "General Contractor Chesterfield County VA",
+    "General Contractor Midlothian VA",
     "Construction Company Richmond",
     "Commercial Construction Richmond",
     "Residential Contractor Richmond VA",
-    "Kitchen Remodeling Richmond",
-    "Bathroom Remodeling Richmond",
-    "Home Improvement Richmond VA",
+    "Kitchen Remodeling Richmond VA",
+    "Bathroom Remodeling Chesterfield VA",
+    "Home Addition Midlothian VA",
+    "Home Improvement Virginia",
     "MAS Contractors"
   ],
 
   openGraph: {
-    title: "General Contractor in Richmond, VA | MAS Contractors",
+    title: "General Contractor Richmond, Chesterfield & Midlothian VA | MAS Contractors",
     description:
-      "Expert general contracting services in Richmond, VA. Licensed and insured for residential and commercial projects.",
+      "Class A licensed general contractor serving Richmond, Chesterfield, Midlothian & Henrico. Kitchens, bathrooms, additions, decks, roofing & more. Free estimates.",
     url: "https://mascontractors.com",
     siteName: "MAS Contractors",
     images: [

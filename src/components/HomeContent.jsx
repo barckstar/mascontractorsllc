@@ -7,6 +7,8 @@ import data from "@/lib/data.json";
 import Certifications from "./Certifications";
 import { BiRightArrowAlt } from "react-icons/bi";
 import LocalBusiness from "./LocalBusiness";
+import Reviews from "./Reviews";
+import { blogData } from "@/lib/blogData";
 
 export default function HomeContent() {
     // Animation variants
@@ -204,7 +206,76 @@ export default function HomeContent() {
                 </div>
             </section>
 
-            {/* 5. Services */}
+            {/* 5. Reviews */}
+            <Reviews />
+
+            {/* 6. Blog Teaser */}
+            <section className="py-20 px-6 md:px-16 max-w-7xl mx-auto">
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    variants={fadeInUp}
+                    className="flex items-end justify-between mb-12"
+                >
+                    <div>
+                        <span className="text-[#9fe300] font-contrax tracking-[0.3em] uppercase text-xs mb-3 block">Tips & Guides</span>
+                        <h2 className="text-2xl md:text-5xl font-contrax text-white uppercase leading-tight">
+                            From the <span className="text-[#9fe300]">Blog</span>
+                        </h2>
+                    </div>
+                    <Link href="/blog" className="hidden md:inline-flex items-center gap-2 text-[#9fe300] font-contrax text-sm tracking-widest hover:gap-4 transition-all">
+                        ALL ARTICLES <BiRightArrowAlt size={18} />
+                    </Link>
+                </motion.div>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {blogData.slice(0, 3).map((post, index) => (
+                        <motion.div
+                            key={post.slug}
+                            initial={{ opacity: 0, y: 25 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: index * 0.1 }}
+                            className="group bg-[#252525] rounded-2xl overflow-hidden border border-white/5 hover:border-[#9fe300]/30 hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(159,227,0,0.08)] transition-all duration-500"
+                        >
+                            <Link href={`/blog/${post.slug}`} className="block">
+                                <div className="relative h-48 overflow-hidden">
+                                    <Image
+                                        src={post.image}
+                                        alt={post.imgAlt}
+                                        fill
+                                        className="object-cover transition-all duration-700 group-hover:brightness-110"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-[#252525] via-[#252525]/20 to-transparent" />
+                                    <span className="absolute top-4 left-4 text-xs font-contrax tracking-wider px-3 py-1 rounded-full bg-[#9fe300]/10 text-[#9fe300]">
+                                        {post.category}
+                                    </span>
+                                </div>
+                                <div className="p-6">
+                                    <h3 className="text-base font-contrax text-white uppercase leading-snug mb-3 group-hover:text-[#9fe300] transition-colors line-clamp-2">
+                                        {post.title}
+                                    </h3>
+                                    <p className="text-gray-500 font-atpinko text-sm leading-relaxed line-clamp-2 mb-4">
+                                        {post.excerpt}
+                                    </p>
+                                    <span className="inline-flex items-center gap-2 text-[#9fe300] font-contrax text-xs tracking-widest group-hover:gap-4 transition-all">
+                                        READ ARTICLE <BiRightArrowAlt size={14} />
+                                    </span>
+                                </div>
+                            </Link>
+                        </motion.div>
+                    ))}
+                </div>
+
+                <div className="text-center mt-8 md:hidden">
+                    <Link href="/blog" className="inline-flex items-center gap-2 text-[#9fe300] font-contrax text-sm tracking-widest hover:gap-4 transition-all">
+                        ALL ARTICLES <BiRightArrowAlt size={18} />
+                    </Link>
+                </div>
+            </section>
+
+            {/* 7. Services */}
 
             <section className="py-24 px-6 md:px-16 max-w-7xl mx-auto">
                 <motion.div

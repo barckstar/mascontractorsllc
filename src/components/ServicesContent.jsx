@@ -8,6 +8,24 @@ import { FaCheckCircle } from "react-icons/fa";
 import { BiRightArrowAlt } from "react-icons/bi";
 import FAQ from "./FAQ";
 
+const SERVICE_SLUGS = {
+    TRIM: "trim-carpentry",
+    ROOFING: "roofing",
+    KITCHEN: "kitchen-remodeling",
+    BATHROOMS: "bathroom-remodeling",
+    DOORS: "door-installation",
+    DECKS: "decks-porches",
+    SIDING: "siding",
+    WINDOWS: "window-replacement",
+    "HOME ADDITIONS": "home-additions",
+};
+
+const SPECIALTY_PAGE_SLUGS = {
+    "commercial_cabinetry": "room-additions",
+    "tile": "tile-work",
+    "finish_trim_carpentry": "trim-carpentry",
+};
+
 export default function ServicesContent() {
     const { contact_services, specialties } = data;
 
@@ -39,40 +57,47 @@ export default function ServicesContent() {
 
             {/* Main Services Grid */}
             <section className="container mx-auto px-6 md:px-16  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-32 pb-24">
-                {contact_services.map((service, index) => (
-                    <motion.div
-                        key={service.title}
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: index * 0.1 }}
-                        className="group bg-[#252525] rounded-3xl overflow-hidden border border-white/5 hover:border-secondary/50 transition-all duration-500 shadow-2xl"
-                    >
-                        <div className="relative h-72">
-                            <Image
-                                src={service.img}
-                                alt={`${service.title2} services in Richmond VA by MAS Contractors`}
-                                fill
-                                className="object-cover"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-[#252525] via-[#252525]/20 to-transparent" />
-                            <h2 className="absolute bottom-6 left-8 text-2xl font-contrax text-white uppercase tracking-wider group-hover:text-secondary transition-colors">
-                                {service.title2}
-                            </h2>
-                        </div>
-                        <div className="p-8">
-                            <p className="text-gray-400 font-atpinko mb-8 leading-relaxed line-clamp-3 group-hover:text-gray-300 transition-colors">
-                                {service.description}
-                            </p>
-                            <Link
-                                href="/contact"
-                                className="inline-flex items-center text-secondary font-contrax text-sm tracking-widest hover:gap-4 transition-all"
-                            >
-                                Get a free estimate for {service.title2} in Richmond VA <BiRightArrowAlt size={20} className="ml-2" />
+                {contact_services.map((service, index) => {
+                    const slug = SERVICE_SLUGS[service.title];
+                    const href = slug ? `/services/${slug}` : "/contact";
+                    return (
+                        <motion.div
+                            key={service.title}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: index * 0.1 }}
+                            className="group bg-[#252525] rounded-3xl overflow-hidden border border-white/5 hover:border-secondary/50 hover:-translate-y-1.5 hover:shadow-[0_25px_60px_rgba(159,227,0,0.12)] transition-all duration-500 shadow-2xl"
+                        >
+                            <Link href={href} className="block">
+                                <div className="relative h-72 overflow-hidden">
+                                    <Image
+                                        src={service.img}
+                                        alt={`${service.title2} services in Richmond VA by MAS Contractors`}
+                                        fill
+                                        className="object-cover transition-all duration-700 group-hover:brightness-110"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-[#252525] via-[#252525]/20 to-transparent" />
+                                    <h2 className="absolute bottom-6 left-8 text-2xl font-contrax text-white uppercase tracking-wider group-hover:text-secondary transition-colors">
+                                        {service.title2}
+                                    </h2>
+                                </div>
                             </Link>
-                        </div>
-                    </motion.div>
-                ))}
+                            <div className="p-8">
+                                <p className="text-gray-400 font-atpinko mb-8 leading-relaxed line-clamp-3 group-hover:text-gray-300 transition-colors">
+                                    {service.description}
+                                </p>
+                                <Link
+                                    href={href}
+                                    className="inline-flex items-center text-secondary font-contrax text-sm tracking-widest hover:gap-4 transition-all"
+                                >
+                                    {slug ? `Learn more about ${service.title2}` : `Get a free estimate for ${service.title2} in Richmond VA`}
+                                    <BiRightArrowAlt size={20} className="ml-2" />
+                                </Link>
+                            </div>
+                        </motion.div>
+                    );
+                })}
 
                 <div className="col-span-full text-center mt-8">
                     <Link href="/gallery" className="inline-flex items-center gap-2 text-secondary font-contrax text-sm tracking-widest hover:gap-4 transition-all">
@@ -97,7 +122,9 @@ export default function ServicesContent() {
                         </div></motion.div>
 
                     <div className="space-y-32">
-                        {specialties.map((spec, index) => (
+                        {specialties.map((spec, index) => {
+                            const servicePage = SPECIALTY_PAGE_SLUGS[spec.slug];
+                            return (
                             <motion.div
                                 key={spec.slug}
                                 initial="hidden"
@@ -137,7 +164,7 @@ export default function ServicesContent() {
                                             </li>
                                         ))}
                                     </ul>
-                                    <div>
+                                    <div className="flex flex-col sm:flex-row gap-4">
                                         <Link href="/contact">
                                             <motion.button
                                                 whileHover={{ scale: 1.05 }}
@@ -147,10 +174,19 @@ export default function ServicesContent() {
                                                 FREE ESTIMATE
                                             </motion.button>
                                         </Link>
+                                        {servicePage && (
+                                            <Link
+                                                href={`/services/${servicePage}`}
+                                                className="inline-flex items-center gap-2 border border-secondary/50 text-secondary font-contrax py-4 px-8 rounded-full hover:border-secondary hover:bg-secondary/5 transition-all duration-300 text-sm tracking-widest"
+                                            >
+                                                FULL SERVICE PAGE <BiRightArrowAlt size={16} />
+                                            </Link>
+                                        )}
                                     </div>
                                 </div>
                             </motion.div>
-                        ))}
+                            );
+                        })}
                     </div>
                 </div>
 
