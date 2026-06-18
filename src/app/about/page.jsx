@@ -15,7 +15,7 @@ export const metadata = {
     "Learn about MAS Contractors LLC, a family-owned, licensed and insured Class A General Contractor serving Richmond, VA and surrounding areas. Built on trust, quality craftsmanship, and integrity.",
 
   keywords: [
-    "About MAS Contractors",
+    "About MAS Contractors", 
     "General Contractor Richmond VA",
     "Licensed Contractor Virginia",
     "Family Owned Construction Company Richmond",
