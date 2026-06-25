@@ -4,8 +4,12 @@ const nextConfig = {
     trailingSlash: false,
     experimental: {
         optimizePackageImports: ['framer-motion', 'react-icons'],
+        // Inlina el CSS en el HTML → elimina el render-blocking del <link> de estilos
+        inlineCss: true,
     },
     images: {
+        // AVIF primero (mejor compresión que WebP) → imagen LCP más liviana
+        formats: ['image/avif', 'image/webp'],
         qualities: [60, 75],
         remotePatterns: [
             { protocol: 'https', hostname: 'mascontractors.com' },
