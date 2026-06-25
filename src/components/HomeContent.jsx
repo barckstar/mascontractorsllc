@@ -245,6 +245,7 @@ export default function HomeContent() {
                                         src={post.image}
                                         alt={post.imgAlt}
                                         fill
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                         className="object-cover transition-all duration-700 group-hover:brightness-110"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-[#252525] via-[#252525]/20 to-transparent" />

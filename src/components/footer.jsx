@@ -101,6 +101,7 @@ export const Footer = () => {
                 width={200}
                 height={200}
                 className="object-contain mx-auto"
+                style={{ width: "auto", height: "auto" }}
               />
             </Link>
           </div>

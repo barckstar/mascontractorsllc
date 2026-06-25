@@ -106,6 +106,7 @@ export const Navbar = () => {
             height={25}
             alt="MAS Contractors LLC Logo - General Contractor Richmond VA"
             className="object-contain md:hidden"
+            style={{ width: "auto", height: "auto" }}
           />
           <Image
             src="/IMG_0271.png"
@@ -113,6 +114,7 @@ export const Navbar = () => {
             height={120}
             alt="MAS Contractors LLC Logo - General Contractor Richmond VA"
             className="object-contain hidden md:block"
+            style={{ width: "auto", height: "auto" }}
           />
         </Link>
 

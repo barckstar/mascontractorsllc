@@ -2,14 +2,13 @@
 
 const nextConfig = {
     trailingSlash: false,
-    swcMinify: true,
     experimental: {
         optimizePackageImports: ['framer-motion', 'react-icons'],
     },
     images: {
-        domains: [
-            'mascontractors.com'
-        ]
+        remotePatterns: [
+            { protocol: 'https', hostname: 'mascontractors.com' },
+        ],
     },
     async redirects() {
         return [

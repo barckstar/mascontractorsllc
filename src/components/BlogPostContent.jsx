@@ -178,6 +178,7 @@ export default function BlogPostContent({ post }) {
                     src={post.image}
                     alt={post.imgAlt}
                     fill
+                    sizes="100vw"
                     className="object-cover"
                     priority
                 />
@@ -241,6 +242,7 @@ export default function BlogPostContent({ post }) {
                                         src={p.image}
                                         alt={p.imgAlt}
                                         fill
+                                        sizes="(max-width: 768px) 100vw, 33vw"
                                         className="object-cover transition-all duration-700 group-hover:brightness-110"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-[#252525] via-[#252525]/20 to-transparent" />

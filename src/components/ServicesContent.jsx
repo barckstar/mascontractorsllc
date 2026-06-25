@@ -75,6 +75,7 @@ export default function ServicesContent() {
                                         src={service.img}
                                         alt={`${service.title2} services in Richmond VA by MAS Contractors`}
                                         fill
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                         className="object-cover transition-all duration-700 group-hover:brightness-110"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-[#252525] via-[#252525]/20 to-transparent" />
@@ -139,6 +140,7 @@ export default function ServicesContent() {
                                             src={spec.image}
                                             alt={`${spec.title} in Richmond VA`}
                                             fill
+                                            sizes="(max-width: 1024px) 100vw, 50vw"
                                             className="object-cover transform group-hover:scale-105 transition-transform duration-1000"
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
