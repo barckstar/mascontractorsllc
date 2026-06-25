@@ -45,13 +45,9 @@ export default function HomeContent() {
                     <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-[#1e1e1e]" />
                 </div>
 
-                {/* Hero Content */}
+                {/* Hero Content — estático (sin entrada animada) para que el LCP pinte de inmediato */}
                 <div className="relative z-10 text-center px-4 max-w-5xl mx-auto mt-10">
-                    <m.div
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
-                    >
+                    <div>
                         <h1 className="text-3xl max-[400px]:text-2xl md:text-7xl lg:text-8xl font-contrax text-white mb-2 tracking-wider">
                             TRANSFORMING <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9fe300] to-[#7ab300]">SPACES</span>
                         </h1>
@@ -76,7 +72,7 @@ export default function HomeContent() {
                         <h2 className="text-2xl max-[400px]:text-xl md:text-6xl font-contrax text-white mb-4">
                             <span className="text-[#9fe300]">Commercial & </span>Residential
                         </h2>
-                    </m.div>
+                    </div>
                 </div>
 
                 {/* Scroll Indicator */}
