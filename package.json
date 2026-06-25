@@ -16,23 +16,24 @@
     "@vercel/speed-insights": "^1.3.1",
     "framer-motion": "^12.23.24",
     "lightgallery": "^2.9.0",
-    "next": "^14.2.33",
-    "react": "^18",
-    "react-dom": "^18",
+    "next": "^16.2.9",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
     "react-google-recaptcha": "^3.1.0",
     "react-icons": "^5.2.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.19",
-    "eslint": "^8",
-    "eslint-config-next": "^14.2.3",
-    "postcss": "^8.4.38",
+    "eslint": "^10.5.0",
+    "eslint-config-next": "^16.2.9",
+    "postcss": "^8.5.10",
     "sharp": "^0.35.1",
     "tailwindcss": "^3.4.3"
   },
   "overrides": {
     "@next/eslint-plugin-next": {
       "glob": "^10.5.0"
-    }
+    },
+    "postcss": "^8.5.10"
   }
 }

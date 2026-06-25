@@ -1,15 +1,14 @@
 import { notFound } from "next/navigation";
-import dynamic from "next/dynamic";
 import { blogData } from "@/lib/blogData";
-
-const BlogPostContent = dynamic(() => import("@/components/BlogPostContent"), { ssr: false });
+import BlogPostContent from "@/components/BlogPostContent";
 
 export async function generateStaticParams() {
     return blogData.map((post) => ({ slug: post.slug }));
 }
 
 export async function generateMetadata({ params }) {
-    const post = blogData.find((p) => p.slug === params.slug);
+    const { slug } = await params;
+    const post = blogData.find((p) => p.slug === slug);
     if (!post) return {};
 
     return {
@@ -36,8 +35,9 @@ export async function generateMetadata({ params }) {
     };
 }
 
-export default function BlogPostPage({ params }) {
-    const post = blogData.find((p) => p.slug === params.slug);
+export default async function BlogPostPage({ params }) {
+    const { slug } = await params;
+    const post = blogData.find((p) => p.slug === slug);
     if (!post) notFound();
 
     const jsonLd = {

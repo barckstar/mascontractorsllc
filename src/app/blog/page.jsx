@@ -1,7 +1,5 @@
-import dynamic from "next/dynamic";
 import { blogData } from "@/lib/blogData";
-
-const BlogContent = dynamic(() => import("@/components/BlogContent"), { ssr: false });
+import BlogContent from "@/components/BlogContent";
 
 export const metadata = {
     title: "Contractor Resources & Home Improvement Tips | MAS Contractors Richmond VA",
