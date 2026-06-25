@@ -64,8 +64,8 @@ const reviews = [
 ];
 
 const PLATFORM_ICONS = {
-    Google: <FaGoogle size={13} className="text-[#4285F4]" />,
-    Houzz: <SiHouzz size={13} className="text-[#7DC242]" />,
+    Google: <FaGoogle size={13} className="text-[#4285F4]" aria-hidden="true" />,
+    Houzz: <SiHouzz size={13} className="text-[#7DC242]" aria-hidden="true" />,
     Thumbtack: <span className="text-xs font-bold text-[#009FD9]">TT</span>,
 };
 
@@ -141,10 +141,10 @@ export default function Reviews() {
                         <div className="w-px h-10 bg-white/10" />
                         <div className="flex items-center gap-3">
                             <div className="flex items-center gap-1.5 text-gray-400 font-atpinko text-xs">
-                                <FaGoogle size={13} className="text-[#4285F4]" /> Google
+                                <FaGoogle size={13} className="text-[#4285F4]" aria-hidden="true" /> Google
                             </div>
                             <div className="flex items-center gap-1.5 text-gray-400 font-atpinko text-xs">
-                                <SiHouzz size={13} className="text-[#7DC242]" /> Houzz
+                                <SiHouzz size={13} className="text-[#7DC242]" aria-hidden="true" /> Houzz
                             </div>
                             <div className="flex items-center gap-1.5 text-gray-400 font-atpinko text-xs">
                                 <span className="text-xs font-bold text-[#009FD9]">TT</span> Thumbtack

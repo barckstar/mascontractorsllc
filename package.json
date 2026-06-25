@@ -35,5 +35,13 @@
       "glob": "^10.5.0"
     },
     "postcss": "^8.5.10"
-  }
+  },
+  "browserslist": [
+    "chrome >= 109",
+    "edge >= 109",
+    "firefox >= 115",
+    "safari >= 16.4",
+    "ios_saf >= 16.4",
+    "not dead"
+  ]
 }

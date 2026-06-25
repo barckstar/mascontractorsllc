@@ -126,6 +126,23 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
+      <head>
+        {/* Preload de fuentes críticas above-the-fold para acortar el critical path */}
+        <link
+          rel="preload"
+          href="/fonts/ATPinko-Regular.ttf"
+          as="font"
+          type="font/ttf"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/Conthrax-SemiBold.otf"
+          as="font"
+          type="font/otf"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body className={inter.className}>
         <Navbar />
         <SocialMediaBar />

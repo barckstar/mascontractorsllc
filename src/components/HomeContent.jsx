@@ -39,6 +39,7 @@ export default function HomeContent() {
                         fill
                         className="object-cover"
                         priority
+                        quality={60}
                         sizes="100vw"
                     />
                     <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-[#1e1e1e]" />
@@ -249,7 +250,7 @@ export default function HomeContent() {
                                         className="object-cover transition-all duration-700 group-hover:brightness-110"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-[#252525] via-[#252525]/20 to-transparent" />
-                                    <span className="absolute top-4 left-4 text-xs font-contrax tracking-wider px-3 py-1 rounded-full bg-[#9fe300]/10 text-[#9fe300]">
+                                    <span className="absolute top-4 left-4 text-xs font-contrax tracking-wider px-3 py-1 rounded-full bg-black/70 border border-white/10 backdrop-blur-sm text-[#9fe300]">
                                         {post.category}
                                     </span>
                                 </div>

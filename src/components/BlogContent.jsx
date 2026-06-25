@@ -8,12 +8,12 @@ import { FaClock, FaTag } from "react-icons/fa";
 import { blogData } from "@/lib/blogData";
 
 const CATEGORY_COLORS = {
-    "Kitchen Remodeling": "bg-secondary/10 text-secondary",
-    "Decks & Porches": "bg-blue-500/10 text-blue-400",
-    "Siding": "bg-orange-500/10 text-orange-400",
-    "Home Improvement Tips": "bg-purple-500/10 text-purple-400",
-    "Roofing": "bg-red-500/10 text-red-400",
-    "Bathroom Remodeling": "bg-teal-500/10 text-teal-400",
+    "Kitchen Remodeling": "bg-black/70 border border-white/10 text-secondary",
+    "Decks & Porches": "bg-black/70 border border-white/10 text-blue-300",
+    "Siding": "bg-black/70 border border-white/10 text-orange-300",
+    "Home Improvement Tips": "bg-black/70 border border-white/10 text-purple-300",
+    "Roofing": "bg-black/70 border border-white/10 text-red-300",
+    "Bathroom Remodeling": "bg-black/70 border border-white/10 text-teal-300",
 };
 
 function formatDate(dateStr) {
