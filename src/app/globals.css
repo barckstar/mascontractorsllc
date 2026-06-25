@@ -25,7 +25,8 @@
 
 body {
     background-color: #1e1e1e;
-    color: var(--text)
+    color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 a {

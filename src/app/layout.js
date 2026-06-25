@@ -1,4 +1,3 @@
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
@@ -6,8 +5,6 @@ import { SocialMediaBar } from "@/components/socialMedia";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Script from "next/script";
 import MotionProvider from "@/components/MotionProvider";
-
-const inter = Inter({ subsets: ["latin"], display: 'swap' });
 
 export const metadata = {
   metadataBase: new URL("https://mascontractors.com"),
@@ -127,24 +124,7 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <head>
-        {/* Preload de fuentes críticas above-the-fold para acortar el critical path */}
-        <link
-          rel="preload"
-          href="/fonts/ATPinko-Regular.ttf"
-          as="font"
-          type="font/ttf"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/fonts/Conthrax-SemiBold.otf"
-          as="font"
-          type="font/otf"
-          crossOrigin="anonymous"
-        />
-      </head>
-      <body className={inter.className}>
+      <body>
         <MotionProvider>
           <Navbar />
           <SocialMediaBar />
