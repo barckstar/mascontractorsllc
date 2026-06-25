@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import data from "@/lib/data.json";
 import Image from "next/image";
 import Link from "next/link";
@@ -38,7 +38,7 @@ export default function ServicesContent() {
         <div className="bg-primary min-h-screen pt-32 pb-20 overflow-hidden mt-20">
             {/* Hero Section */}
             <section className="container mx-auto px-6 md:px-16  mb-24 text-center relative z-10">
-                <motion.div
+                <m.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
@@ -49,7 +49,7 @@ export default function ServicesContent() {
                     <p className="text-lg md:text-xl text-gray-400 font-atpinko max-w-2xl mx-auto leading-relaxed mb-12">
                         MAS Contractors LLC is a trusted general contractor in Richmond, VA, providing high-end residential remodeling and commercial construction services with proven craftsmanship.
                     </p>
-                </motion.div>
+                </m.div>
 
                 {/* Decorative background element */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-64 bg-secondary/5 blur-[120px] rounded-full -z-10" />
@@ -61,7 +61,7 @@ export default function ServicesContent() {
                     const slug = SERVICE_SLUGS[service.title];
                     const href = slug ? `/services/${slug}` : "/contact";
                     return (
-                        <motion.div
+                        <m.div
                             key={service.title}
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -96,7 +96,7 @@ export default function ServicesContent() {
                                     <BiRightArrowAlt size={20} className="ml-2" />
                                 </Link>
                             </div>
-                        </motion.div>
+                        </m.div>
                     );
                 })}
 
@@ -109,7 +109,7 @@ export default function ServicesContent() {
             {/* Detailed Specialties Section */}
             <section className="relative px-6 md:px-16  py-24 bg-[#151515]">
                 <div className="container mx-auto px-4">
-                    <motion.div
+                    <m.div
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
@@ -120,13 +120,13 @@ export default function ServicesContent() {
                                 Specialized Construction Services in <span className="text-secondary">Richmond, VA</span>
                             </h2>
                             <div className="w-24 h-1 bg-secondary mx-auto rounded-full" />
-                        </div></motion.div>
+                        </div></m.div>
 
                     <div className="space-y-32">
                         {specialties.map((spec, index) => {
                             const servicePage = SPECIALTY_PAGE_SLUGS[spec.slug];
                             return (
-                            <motion.div
+                            <m.div
                                 key={spec.slug}
                                 initial="hidden"
                                 whileInView="visible"
@@ -168,13 +168,13 @@ export default function ServicesContent() {
                                     </ul>
                                     <div className="flex flex-col sm:flex-row gap-4">
                                         <Link href="/contact">
-                                            <motion.button
+                                            <m.button
                                                 whileHover={{ scale: 1.05 }}
                                                 whileTap={{ scale: 0.95 }}
                                                 className="bg-secondary text-primary font-contrax py-4 px-10 rounded-full hover:bg-white transition-all duration-300 shadow-[0_0_20px_rgba(159,227,0,0.3)]"
                                             >
                                                 FREE ESTIMATE
-                                            </motion.button>
+                                            </m.button>
                                         </Link>
                                         {servicePage && (
                                             <Link
@@ -186,7 +186,7 @@ export default function ServicesContent() {
                                         )}
                                     </div>
                                 </div>
-                            </motion.div>
+                            </m.div>
                             );
                         })}
                     </div>
@@ -202,7 +202,7 @@ export default function ServicesContent() {
 
             {/* Final Call to Action */}
             <section className="container mx-auto px-6 md:px-16 py-32 text-center">
-                <motion.div
+                <m.div
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
@@ -215,20 +215,20 @@ export default function ServicesContent() {
                         Whether it&apos;s a small repair or a large-scale commercial project, our team is ready to deliver excellence.
                     </p>
                     <Link href="/contact">
-                        <motion.button
+                        <m.button
                             whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(159,227,0,0.4)" }}
                             whileTap={{ scale: 0.95 }}
                             className="bg-secondary text-primary font-contrax text-xl py-5 px-14 rounded-full hover:bg-white transition-all duration-300"
                         >
                             CONTACT US TODAY
-                        </motion.button>
+                        </m.button>
                     </Link>
                     <div className="mt-6">
                         <Link href="/about" className="inline-flex items-center gap-2 text-gray-400 font-atpinko hover:text-secondary transition-colors">
                             Learn more about MAS Contractors <BiRightArrowAlt size={20} />
                         </Link>
                     </div>
-                </motion.div>
+                </m.div>
             </section>
         </div>
     );

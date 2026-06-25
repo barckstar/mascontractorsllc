@@ -5,6 +5,7 @@ import { Footer } from "@/components/footer";
 import { SocialMediaBar } from "@/components/socialMedia";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Script from "next/script";
+import MotionProvider from "@/components/MotionProvider";
 
 const inter = Inter({ subsets: ["latin"], display: 'swap' });
 
@@ -144,11 +145,13 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className={inter.className}>
-        <Navbar />
-        <SocialMediaBar />
-        {children}
-        <SpeedInsights />
-        <Footer />
+        <MotionProvider>
+          <Navbar />
+          <SocialMediaBar />
+          {children}
+          <SpeedInsights />
+          <Footer />
+        </MotionProvider>
         <Script
           id="json-ld-schema"
           type="application/ld+json"

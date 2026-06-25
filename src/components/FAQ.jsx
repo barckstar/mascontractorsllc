@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import { FaPlus, FaMinus } from "react-icons/fa";
 
 const faqs = [
@@ -48,7 +48,7 @@ export default function FAQ() {
     return (
         <section className="py-24 bg-[#151515]">
             <div className="container mx-auto px-6 md:px-16 max-w-4xl">
-                <motion.div
+                <m.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -64,11 +64,11 @@ export default function FAQ() {
                         Everything Richmond homeowners ask before hiring a general contractor.
                     </p>
                     <div className="w-20 h-1 bg-secondary mx-auto rounded-full mt-6" />
-                </motion.div>
+                </m.div>
 
                 <div className="space-y-4">
                     {faqs.map((faq, index) => (
-                        <motion.div
+                        <m.div
                             key={index}
                             initial={{ opacity: 0, y: 15 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -101,7 +101,7 @@ export default function FAQ() {
 
                             <AnimatePresence>
                                 {activeIndex === index && (
-                                    <motion.div
+                                    <m.div
                                         initial={{ height: 0, opacity: 0 }}
                                         animate={{ height: "auto", opacity: 1 }}
                                         exit={{ height: 0, opacity: 0 }}
@@ -112,10 +112,10 @@ export default function FAQ() {
                                                 {faq.answer}
                                             </p>
                                         </div>
-                                    </motion.div>
+                                    </m.div>
                                 )}
                             </AnimatePresence>
-                        </motion.div>
+                        </m.div>
                     ))}
                 </div>
             </div>

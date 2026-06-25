@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { BiPhoneCall } from "react-icons/bi";
 import { TbBrandCashapp } from "react-icons/tb";
 import { FaHardHat, FaClipboardCheck, FaHandshake } from "react-icons/fa";
@@ -44,15 +44,15 @@ export default function AboutPageContent() {
 
                 {/* Hero Content */}
                 <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-                    <motion.h1
+                    <m.h1
                         initial={{ opacity: 0, y: -30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                         className="text-5xl md:text-7xl font-contrax text-white mb-4 tracking-wide"
                     >
                         {data.heroAbout.title}
-                    </motion.h1>
-                    <motion.div
+                    </m.h1>
+                    <m.div
                         initial={{ opacity: 0, scale: 0.8 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ delay: 0.3, duration: 0.6 }}
@@ -65,7 +65,7 @@ export default function AboutPageContent() {
             <section className="py-20 px-6 md:px-16 max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
                     {/* Text Content */}
-                    <motion.div
+                    <m.div
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
@@ -80,7 +80,7 @@ export default function AboutPageContent() {
                             </p>
                             <div className="space-y-4">
                                 {data.about.list.map((item, index) => (
-                                    <motion.div
+                                    <m.div
                                         key={index}
                                         initial={{ opacity: 0, x: -20 }}
                                         whileInView={{ opacity: 1, x: 0 }}
@@ -92,14 +92,14 @@ export default function AboutPageContent() {
                                         <p className="text-white/90 font-atpinko">
                                             <span className="text-[#9fe300] font-bold">{item.subTitle}</span> - {item.description}
                                         </p>
-                                    </motion.div>
+                                    </m.div>
                                 ))}
                             </div>
                         </div>
-                    </motion.div>
+                    </m.div>
 
                     {/* Image & Certifications */}
-                    <motion.div
+                    <m.div
                         initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
@@ -116,10 +116,10 @@ export default function AboutPageContent() {
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                         </div>
-                    </motion.div>
+                    </m.div>
                 </div>
                 {/* Certifications */}
-                <motion.div
+                <m.div
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
@@ -140,13 +140,13 @@ export default function AboutPageContent() {
                             <p className="text-white text-xs font-atpinko opacity-70">Safety Certified</p>
                         </div>
                     </div>
-                </motion.div>
+                </m.div>
             </section>
 
             {/* 3. Mission, Vision, Values */}
             <section className="py-20 bg-[#151515]">
                 <div className="max-w-7xl mx-auto px-6 md:px-16">
-                    <motion.div
+                    <m.div
                         variants={staggerContainer}
                         initial="hidden"
                         whileInView="visible"
@@ -154,7 +154,7 @@ export default function AboutPageContent() {
                         className="grid grid-cols-1 md:grid-cols-3 gap-8"
                     >
                         {/* Mission */}
-                        <motion.div variants={fadeInUp} className="bg-[#1e1e1e] p-8 rounded-2xl border border-white/5 hover:border-[#9fe300] transition-colors duration-300 group relative overflow-hidden">
+                        <m.div variants={fadeInUp} className="bg-[#1e1e1e] p-8 rounded-2xl border border-white/5 hover:border-[#9fe300] transition-colors duration-300 group relative overflow-hidden">
                             <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                                 <FaClipboardCheck size={80} color="#9fe300" />
                             </div>
@@ -162,10 +162,10 @@ export default function AboutPageContent() {
                             <p className="text-white/80 font-atpinko leading-relaxed">
                                 Build high quality projects, providing innovative and comfortable solutions that improve people&apos;s lives. We are committed to safety, compliance with deadlines, and total satisfaction of our clients.
                             </p>
-                        </motion.div>
+                        </m.div>
 
                         {/* Vision */}
-                        <motion.div variants={fadeInUp} className="bg-[#1e1e1e] p-8 rounded-2xl border border-white/5 hover:border-[#9fe300] transition-colors duration-300 group relative overflow-hidden">
+                        <m.div variants={fadeInUp} className="bg-[#1e1e1e] p-8 rounded-2xl border border-white/5 hover:border-[#9fe300] transition-colors duration-300 group relative overflow-hidden">
                             <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                                 <FaHardHat size={80} color="#9fe300" />
                             </div>
@@ -173,10 +173,10 @@ export default function AboutPageContent() {
                             <p className="text-white/80 font-atpinko leading-relaxed">
                                 Be recognized for the quality of construction nationwide, delivering excellence, efficiency, and personal development in every project. We aspire to be the preferred choice for clients, subcontractors, and employees.
                             </p>
-                        </motion.div>
+                        </m.div>
 
                         {/* Values */}
-                        <motion.div variants={fadeInUp} className="bg-[#1e1e1e] p-8 rounded-2xl border border-white/5 hover:border-[#9fe300] transition-colors duration-300 group relative overflow-hidden">
+                        <m.div variants={fadeInUp} className="bg-[#1e1e1e] p-8 rounded-2xl border border-white/5 hover:border-[#9fe300] transition-colors duration-300 group relative overflow-hidden">
                             <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                                 <FaHandshake size={80} color="#9fe300" />
                             </div>
@@ -188,14 +188,14 @@ export default function AboutPageContent() {
                                 <li className="flex items-center gap-2"><span className="text-[#9fe300]">✓</span> Teamwork & Respect</li>
                                 <li className="flex items-center gap-2"><span className="text-[#9fe300]">✓</span> Customer Satisfaction</li>
                             </ul>
-                        </motion.div>
-                    </motion.div>
+                        </m.div>
+                    </m.div>
                 </div>
             </section>
 
             {/* 4. Our Process */}
             <section className="py-20 px-6 md:px-16 max-w-7xl mx-auto">
-                <motion.div
+                <m.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -203,7 +203,7 @@ export default function AboutPageContent() {
                 >
                     <h2 className="text-4xl md:text-5xl font-contrax text-[#9fe300] mb-4">Our Process</h2>
                     <p className="text-white/60 font-atpinko">How we bring your vision to life</p>
-                </motion.div>
+                </m.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-6">
                     {[
@@ -213,7 +213,7 @@ export default function AboutPageContent() {
                         { icon: <Image src="/contrat.png" alt="Construction Contract Agreement Icon in Richmond VA" width={60} height={60} />, title: "Agreement", text: "Once agreed, we send a detailed contract with pricing for materials and labor." },
                         { icon: <TbBrandCashapp size={50} />, title: "Completion", text: "50% upfront, 50% upon completion. We deliver quality and transparency." }
                     ].map((step, index) => (
-                        <motion.div
+                        <m.div
                             key={index}
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -228,7 +228,7 @@ export default function AboutPageContent() {
                             <p className="text-white/70 text-sm font-atpinko leading-relaxed">
                                 {step.text}
                             </p>
-                        </motion.div>
+                        </m.div>
                     ))}
                 </div>
             </section>
@@ -237,22 +237,22 @@ export default function AboutPageContent() {
             <section className="py-16 bg-[#9fe300] relative overflow-hidden">
                 <div className="absolute inset-0 bg-[url('/img-1.jpg')] bg-cover bg-center opacity-10 mix-blend-multiply" />
                 <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-                    <motion.h2
+                    <m.h2
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         className="text-3xl md:text-4xl font-contrax text-[#1e1e1e] mb-8 leading-tight"
                     >
                         {data.about.aboutFooter}
-                    </motion.h2>
+                    </m.h2>
                     <Link href="/contact#email">
-                        <motion.button
+                        <m.button
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             className="bg-[#1e1e1e] text-white font-contrax text-xl py-4 px-10 rounded-full hover:bg-white hover:text-[#1e1e1e] transition-colors shadow-xl"
                         >
                             {data.about.buttonText}
-                        </motion.button>
+                        </m.button>
                     </Link>
                 </div>
             </section>

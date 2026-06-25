@@ -3,7 +3,7 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import data from "@/lib/data.json";
 
 function Contact() {
@@ -51,7 +51,7 @@ function Contact() {
 
   return (
     <div id="email" className="scroll-mt-28">
-      <motion.div
+      <m.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -174,7 +174,7 @@ function Contact() {
           </form>
 
           {status && (
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
               className={`mt-5 p-4 rounded-xl text-center font-atpinko text-sm ${
@@ -184,10 +184,10 @@ function Contact() {
               }`}
             >
               {status.text}
-            </motion.div>
+            </m.div>
           )}
         </div>
-      </motion.div>
+      </m.div>
     </div>
   );
 }

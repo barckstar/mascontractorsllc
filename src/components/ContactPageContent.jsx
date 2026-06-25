@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import Contact from "@/components/contact";
 import Mapa from "@/components/mapa";
 import { BiPhoneCall, BiSolidStore, BiCalendar } from "react-icons/bi";
@@ -65,16 +65,16 @@ export default function ContactPageContent() {
                 </div>
 
                 <div className="relative z-10 text-center px-6 max-w-5xl mx-auto pt-20 pb-32">
-                    <motion.p
+                    <m.p
                         initial={{ opacity: 0, y: 16 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
                         className="text-[#9fe300] font-contrax tracking-[0.35em] text-xs uppercase mb-5"
                     >
                         Free Estimates · 48-hr Response · Richmond, VA
-                    </motion.p>
+                    </m.p>
 
-                    <motion.h1
+                    <m.h1
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.1 }}
@@ -82,9 +82,9 @@ export default function ContactPageContent() {
                     >
                         Let&apos;s Build<br />
                         <span className="text-[#9fe300]">Together</span>
-                    </motion.h1>
+                    </m.h1>
 
-                    <motion.p
+                    <m.p
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.3 }}
@@ -92,9 +92,9 @@ export default function ContactPageContent() {
                     >
                         Richmond&apos;s trusted Class A general contractor for residential and commercial projects.
                         Tell us your vision &mdash; we&apos;ll handle the rest.
-                    </motion.p>
+                    </m.p>
 
-                    <motion.div
+                    <m.div
                         initial={{ opacity: 0, y: 16 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.5 }}
@@ -104,13 +104,13 @@ export default function ContactPageContent() {
                         <span className="text-gray-500 font-atpinko text-sm">
                             Typically responds within one business day
                         </span>
-                    </motion.div>
+                    </m.div>
                 </div>
             </section>
 
             {/* ── Info cards ───────────────────────────────────────────── */}
             <section className="relative z-20 px-6 md:px-16 max-w-7xl mx-auto -mt-6 mb-16">
-                <motion.div
+                <m.div
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
@@ -118,7 +118,7 @@ export default function ContactPageContent() {
                     className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"
                 >
                     {contactCards.map((card, i) => (
-                        <motion.div
+                        <m.div
                             key={i}
                             variants={fadeInUp}
                             className="group bg-[#181818] border border-white/5 rounded-2xl p-6 hover:border-[#9fe300]/30 hover:-translate-y-1 transition-all duration-300"
@@ -138,9 +138,9 @@ export default function ContactPageContent() {
                                     {card.cta} <BiRightArrowAlt size={14} />
                                 </a>
                             )}
-                        </motion.div>
+                        </m.div>
                     ))}
-                </motion.div>
+                </m.div>
             </section>
 
             {/* ── Form + Map (two-column) ───────────────────────────────── */}
@@ -149,7 +149,7 @@ export default function ContactPageContent() {
 
                     {/* Left: heading + form */}
                     <div>
-                        <motion.div
+                        <m.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -162,7 +162,7 @@ export default function ContactPageContent() {
                                 From kitchens and bathrooms to full commercial build-outs — we do it all.
                                 Fill out the form and we&apos;ll get back to you with a free, no-obligation estimate.
                             </p>
-                        </motion.div>
+                        </m.div>
 
                         <Contact />
                     </div>
@@ -171,7 +171,7 @@ export default function ContactPageContent() {
                     <div className="flex flex-col gap-6 lg:sticky lg:top-32">
 
                         {/* Map */}
-                        <motion.div
+                        <m.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -179,10 +179,10 @@ export default function ContactPageContent() {
                             className="h-[380px]"
                         >
                             <Mapa />
-                        </motion.div>
+                        </m.div>
 
                         {/* Office info card */}
-                        <motion.div
+                        <m.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -228,10 +228,10 @@ export default function ContactPageContent() {
                                     </p>
                                 </div>
                             </div>
-                        </motion.div>
+                        </m.div>
 
                         {/* Trust badges */}
-                        <motion.div
+                        <m.div
                             initial={{ opacity: 0, y: 16 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -246,7 +246,7 @@ export default function ContactPageContent() {
                                     {badge}
                                 </span>
                             ))}
-                        </motion.div>
+                        </m.div>
                     </div>
                 </div>
             </section>

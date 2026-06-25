@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import data from "@/lib/data.json";
 import Certifications from "./Certifications";
 import { BiRightArrowAlt } from "react-icons/bi";
@@ -47,7 +47,7 @@ export default function HomeContent() {
 
                 {/* Hero Content */}
                 <div className="relative z-10 text-center px-4 max-w-5xl mx-auto mt-10">
-                    <motion.div
+                    <m.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
@@ -64,23 +64,23 @@ export default function HomeContent() {
 
                         <div className="flex flex-col md:flex-row gap-6 justify-center items-center mb-10">
                             <Link href="/contact#email">
-                                <motion.button
+                                <m.button
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
                                     className="bg-[#9fe300] text-[#1e1e1e] font-contrax text-base max-[400px]:text-sm py-4 px-10 rounded-full hover:bg-white transition-all duration-300 shadow-[0_0_20px_rgba(159,227,0,0.3)]"
                                 >
                                     GET A QUOTE
-                                </motion.button>
+                                </m.button>
                             </Link>
                         </div>
                         <h2 className="text-2xl max-[400px]:text-xl md:text-6xl font-contrax text-white mb-4">
                             <span className="text-[#9fe300]">Commercial & </span>Residential
                         </h2>
-                    </motion.div>
+                    </m.div>
                 </div>
 
                 {/* Scroll Indicator */}
-                <motion.div
+                <m.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 1.5, duration: 1 }}
@@ -89,7 +89,7 @@ export default function HomeContent() {
                     <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
                         <div className="w-1 h-2 bg-[#9fe300] rounded-full mt-2" />
                     </div>
-                </motion.div>
+                </m.div>
             </section>
 
 
@@ -97,20 +97,20 @@ export default function HomeContent() {
 
             {/* 2. Certifications Bar */}
             <section className="relative z-20 -mt-10 px-4">
-                <motion.div
+                <m.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.2 }}
                 >
                     <Certifications />
-                </motion.div>
+                </m.div>
             </section>
 
             {/* 3. About Section */}
             <section className="px-6 md:px-16 max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                    <motion.div
+                    <m.div
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
@@ -128,9 +128,9 @@ export default function HomeContent() {
                         </div>
                         {/* Decorative elements */}
                         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[#9fe300]/5 blur-3xl rounded-full -z-10" />
-                    </motion.div>
+                    </m.div>
 
-                    <motion.div
+                    <m.div
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
@@ -148,14 +148,14 @@ export default function HomeContent() {
                                 READ MORE ABOUT MAS CONTRACTORS <BiRightArrowAlt size={24} className="group-hover:text-white transition-colors" />
                             </span>
                         </Link>
-                    </motion.div>
+                    </m.div>
                 </div>
             </section>
 
             {/* 4. Featured Projects */}
             <section className="py-24 bg-[#151515]">
                 <div className="max-w-7xl mx-auto px-6 md:px-16">
-                    <motion.div
+                    <m.div
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
@@ -165,11 +165,11 @@ export default function HomeContent() {
                         <h2 className="text-2xl max-[400px]:text-xl md:text-6xl font-contrax text-white mb-4">
                             Featured <span className="text-[#9fe300]">Projects</span>
                         </h2>
-                    </motion.div>
+                    </m.div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {data.homeCards.map((project, index) => (
-                            <motion.div
+                            <m.div
                                 key={index}
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -195,7 +195,7 @@ export default function HomeContent() {
                                         {project.text}
                                     </p>
                                 </div>
-                            </motion.div>
+                            </m.div>
                         ))}
                     </div>
 
@@ -212,7 +212,7 @@ export default function HomeContent() {
 
             {/* 6. Blog Teaser */}
             <section className="py-20 px-6 md:px-16 max-w-7xl mx-auto">
-                <motion.div
+                <m.div
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
@@ -228,11 +228,11 @@ export default function HomeContent() {
                     <Link href="/blog" className="hidden md:inline-flex items-center gap-2 text-[#9fe300] font-contrax text-sm tracking-widest hover:gap-4 transition-all">
                         ALL ARTICLES <BiRightArrowAlt size={18} />
                     </Link>
-                </motion.div>
+                </m.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {blogData.slice(0, 3).map((post, index) => (
-                        <motion.div
+                        <m.div
                             key={post.slug}
                             initial={{ opacity: 0, y: 25 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -266,7 +266,7 @@ export default function HomeContent() {
                                     </span>
                                 </div>
                             </Link>
-                        </motion.div>
+                        </m.div>
                     ))}
                 </div>
 
@@ -280,7 +280,7 @@ export default function HomeContent() {
             {/* 7. Services */}
 
             <section className="py-24 px-6 md:px-16 max-w-7xl mx-auto">
-                <motion.div
+                <m.div
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
@@ -293,7 +293,7 @@ export default function HomeContent() {
                     <p className="text-gray-400 font-atpinko text-lg max-w-3xl mx-auto">
                         From groundbreaking commercial to beautifully designed residential communities, our portfolio showcases the transformation power of our expertise.
                     </p>
-                </motion.div>
+                </m.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {data.homeGreenCards.map((service, index) => {
@@ -323,7 +323,7 @@ export default function HomeContent() {
                         }
 
                         return (
-                            <motion.div
+                            <m.div
                                 key={index}
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -348,7 +348,7 @@ export default function HomeContent() {
                                 <p className="text-gray-400 font-atpinko leading-relaxed group-hover:text-gray-300 transition-colors relative z-10">
                                     {service.text}
                                 </p>
-                            </motion.div>
+                            </m.div>
                         );
                     })}
                 </div>
@@ -363,7 +363,7 @@ export default function HomeContent() {
             {/* 6. Free Visit CTA */}
 
             <section className="py-16 px-6 md:px-16 max-w-7xl mx-auto mb-10">
-                <motion.div
+                <m.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
@@ -397,7 +397,7 @@ export default function HomeContent() {
                             </div>
                         </div>
                     </div>
-                </motion.div>
+                </m.div>
             </section>
 
             {/* 7. Future & Collaboration */}
@@ -405,7 +405,7 @@ export default function HomeContent() {
             <section className="py-20 bg-[#151515]">
                 <div className="max-w-7xl mx-auto px-6 md:px-16">
                     <div className="flex flex-col md:flex-row items-center gap-16">
-                        <motion.div
+                        <m.div
                             initial={{ opacity: 0, x: -30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
@@ -424,9 +424,9 @@ export default function HomeContent() {
                                     <p className="text-[#9fe300] font-contrax text-xl">ILLUMINATING THE FUTURE</p>
                                 </div>
                             </div>
-                        </motion.div>
+                        </m.div>
 
-                        <motion.div
+                        <m.div
                             initial={{ opacity: 0, x: 30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
@@ -441,7 +441,7 @@ export default function HomeContent() {
                             <p className="text-gray-300 font-atpinko text-lg mb-8 leading-relaxed">
                                 At MAS Contractors, we believe that the best results come from working together. Our collaborative approach not only enhances creativity and innovation but also builds lasting relationships based on trust.
                             </p>
-                        </motion.div>
+                        </m.div>
                     </div>
                 </div>
             </section>
@@ -449,7 +449,7 @@ export default function HomeContent() {
             {/* 8. Final CTA */}
 
             <section className="py-24 px-6 md:px-16 max-w-5xl mx-auto text-center">
-                <motion.div
+                <m.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -466,7 +466,7 @@ export default function HomeContent() {
                             GET A QUOTE NOW
                         </button>
                     </Link>
-                </motion.div>
+                </m.div>
             </section>
         </div>
     );

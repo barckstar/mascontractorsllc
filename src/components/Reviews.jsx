@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { FaStar, FaGoogle, FaQuoteLeft } from "react-icons/fa";
 import { SiHouzz, SiThumbstackIcon } from "react-icons/si";
 import { BiRightArrowAlt } from "react-icons/bi";
@@ -114,7 +114,7 @@ export default function Reviews() {
 
             <div className="container mx-auto px-6 md:px-16">
                 {/* Header */}
-                <motion.div
+                <m.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -151,12 +151,12 @@ export default function Reviews() {
                             </div>
                         </div>
                     </div>
-                </motion.div>
+                </m.div>
 
                 {/* Reviews grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {reviews.map((review, index) => (
-                        <motion.div
+                        <m.div
                             key={index}
                             initial={{ opacity: 0, y: 25 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -189,12 +189,12 @@ export default function Reviews() {
                                 </div>
                                 <span className="text-gray-600 font-atpinko text-xs">{review.date}</span>
                             </div>
-                        </motion.div>
+                        </m.div>
                     ))}
                 </div>
 
                 {/* CTA to leave review */}
-                <motion.div
+                <m.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -211,7 +211,7 @@ export default function Reviews() {
                     >
                         <FaGoogle size={14} /> LEAVE US A GOOGLE REVIEW <BiRightArrowAlt size={16} />
                     </Link>
-                </motion.div>
+                </m.div>
             </div>
         </section>
     );

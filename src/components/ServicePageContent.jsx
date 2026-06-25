@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { FaCheckCircle, FaPlus, FaMinus, FaPhoneAlt, FaClock, FaDollarSign, FaExclamationTriangle, FaLightbulb, FaShieldAlt } from "react-icons/fa";
@@ -21,7 +21,7 @@ export default function ServicePageContent({ service }) {
             {/* ── Hero ───────────────────────────────────────────── */}
             <section className="pt-44 pb-24 relative z-10">
                 <div className="container mx-auto px-6 lg:px-16">
-                    <motion.div
+                    <m.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.7 }}
@@ -45,26 +45,26 @@ export default function ServicePageContent({ service }) {
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link href="/contact">
-                                <motion.button
+                                <m.button
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
                                     className="bg-secondary text-primary font-contrax py-4 px-10 rounded-full hover:bg-white transition-all duration-300 shadow-[0_0_20px_rgba(159,227,0,0.3)]"
                                 >
                                     GET FREE ESTIMATE
-                                </motion.button>
+                                </m.button>
                             </Link>
                             <a href="tel:+18048334600">
-                                <motion.button
+                                <m.button
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
                                     className="flex items-center gap-3 border border-secondary/50 text-secondary font-contrax py-4 px-10 rounded-full hover:border-secondary transition-all duration-300"
                                 >
                                     <FaPhoneAlt size={14} />
                                     (804) 833-4600
-                                </motion.button>
+                                </m.button>
                             </a>
                         </div>
-                    </motion.div>
+                    </m.div>
                 </div>
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-64 bg-secondary/5 blur-[120px] rounded-full -z-10" />
             </section>
@@ -73,7 +73,7 @@ export default function ServicePageContent({ service }) {
             <section className="bg-[#191919] py-24">
                 <div className="container mx-auto px-6 lg:px-16">
                     <div className="flex flex-col lg:flex-row gap-16 items-center">
-                        <motion.div
+                        <m.div
                             initial={{ opacity: 0, x: -30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
@@ -91,9 +91,9 @@ export default function ServicePageContent({ service }) {
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                             </div>
-                        </motion.div>
+                        </m.div>
 
-                        <motion.div
+                        <m.div
                             initial={{ opacity: 0, x: 30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
@@ -120,7 +120,7 @@ export default function ServicePageContent({ service }) {
                                     </li>
                                 ))}
                             </ul>
-                        </motion.div>
+                        </m.div>
                     </div>
                 </div>
             </section>
@@ -129,7 +129,7 @@ export default function ServicePageContent({ service }) {
             {service.process && (
                 <section className="py-24">
                     <div className="container mx-auto px-6 lg:px-16">
-                        <motion.div
+                        <m.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -141,10 +141,10 @@ export default function ServicePageContent({ service }) {
                             <h2 className="text-3xl md:text-5xl font-contrax text-white uppercase tracking-wide">
                                 Our <span className="text-secondary">Process</span>
                             </h2>
-                        </motion.div>
+                        </m.div>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                             {service.process.map((item, i) => (
-                                <motion.div
+                                <m.div
                                     key={i}
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
@@ -164,7 +164,7 @@ export default function ServicePageContent({ service }) {
                                     {i < service.process.length - 1 && (
                                         <div className="hidden lg:block absolute top-10 -right-3 w-6 h-px bg-secondary/25" />
                                     )}
-                                </motion.div>
+                                </m.div>
                             ))}
                         </div>
                     </div>
@@ -181,7 +181,7 @@ export default function ServicePageContent({ service }) {
                             { label: "Satisfaction Rate", value: "100%" },
                             { label: "Free Estimate", value: "Always" },
                         ].map((stat, i) => (
-                            <motion.div
+                            <m.div
                                 key={stat.label}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -190,7 +190,7 @@ export default function ServicePageContent({ service }) {
                             >
                                 <p className="text-4xl md:text-5xl font-contrax text-secondary mb-2">{stat.value}</p>
                                 <p className="text-gray-400 font-atpinko text-sm uppercase tracking-wider">{stat.label}</p>
-                            </motion.div>
+                            </m.div>
                         ))}
                     </div>
                 </div>
@@ -200,7 +200,7 @@ export default function ServicePageContent({ service }) {
             {service.costGuide && (
                 <section className="bg-[#191919] py-24">
                     <div className="container mx-auto px-6 lg:px-16">
-                        <motion.div
+                        <m.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -212,11 +212,11 @@ export default function ServicePageContent({ service }) {
                             <h2 className="text-3xl md:text-5xl font-contrax text-white uppercase tracking-wide">
                                 Cost & <span className="text-secondary">Timeline</span> Guide
                             </h2>
-                        </motion.div>
+                        </m.div>
 
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
                             {/* Numbers */}
-                            <motion.div
+                            <m.div
                                 initial={{ opacity: 0, x: -20 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
@@ -256,10 +256,10 @@ export default function ServicePageContent({ service }) {
                                         Permit approval times may add 2–4 weeks for certain projects
                                     </p>
                                 </div>
-                            </motion.div>
+                            </m.div>
 
                             {/* Factors */}
-                            <motion.div
+                            <m.div
                                 initial={{ opacity: 0, x: 20 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
@@ -282,16 +282,16 @@ export default function ServicePageContent({ service }) {
                                         These are typical ranges for the Richmond, VA market. Every project is unique — we provide free on-site written estimates with no surprises and no pressure.
                                     </p>
                                     <Link href="/contact">
-                                        <motion.button
+                                        <m.button
                                             whileHover={{ scale: 1.03 }}
                                             whileTap={{ scale: 0.97 }}
                                             className="bg-secondary text-primary font-contrax py-3 px-8 rounded-full hover:bg-white transition-all duration-300 text-sm"
                                         >
                                             GET YOUR FREE ESTIMATE
-                                        </motion.button>
+                                        </m.button>
                                     </Link>
                                 </div>
-                            </motion.div>
+                            </m.div>
                         </div>
                     </div>
                 </section>
@@ -301,7 +301,7 @@ export default function ServicePageContent({ service }) {
             {(service.challenges?.length > 0 || service.proTips?.length > 0) && (
                 <section className="bg-[#0f0f0f] py-24">
                     <div className="container mx-auto px-6 lg:px-16">
-                        <motion.div
+                        <m.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -313,12 +313,12 @@ export default function ServicePageContent({ service }) {
                             <h2 className="text-3xl md:text-5xl font-contrax text-white uppercase tracking-wide">
                                 What Every Homeowner <span className="text-secondary">Should Know</span>
                             </h2>
-                        </motion.div>
+                        </m.div>
 
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
                             {/* Challenges */}
                             {service.challenges?.length > 0 && (
-                                <motion.div
+                                <m.div
                                     initial={{ opacity: 0, x: -20 }}
                                     whileInView={{ opacity: 1, x: 0 }}
                                     viewport={{ once: true }}
@@ -337,12 +337,12 @@ export default function ServicePageContent({ service }) {
                                             </div>
                                         ))}
                                     </div>
-                                </motion.div>
+                                </m.div>
                             )}
 
                             {/* Pro Tips */}
                             {service.proTips?.length > 0 && (
-                                <motion.div
+                                <m.div
                                     initial={{ opacity: 0, x: 20 }}
                                     whileInView={{ opacity: 1, x: 0 }}
                                     viewport={{ once: true }}
@@ -361,13 +361,13 @@ export default function ServicePageContent({ service }) {
                                             </div>
                                         ))}
                                     </div>
-                                </motion.div>
+                                </m.div>
                             )}
                         </div>
 
                         {/* Safety Gear */}
                         {service.safetyGear?.length > 0 && (
-                            <motion.div
+                            <m.div
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
@@ -386,7 +386,7 @@ export default function ServicePageContent({ service }) {
                                         </span>
                                     ))}
                                 </div>
-                            </motion.div>
+                            </m.div>
                         )}
                     </div>
                 </section>
@@ -396,7 +396,7 @@ export default function ServicePageContent({ service }) {
             {service.beforeAfter?.length > 0 && (
                 <section className="py-24">
                     <div className="container mx-auto px-6 lg:px-16">
-                        <motion.div
+                        <m.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -411,10 +411,10 @@ export default function ServicePageContent({ service }) {
                             <p className="text-gray-400 font-atpinko text-lg max-w-xl mx-auto">
                                 Drag the slider to see the full transformation.
                             </p>
-                        </motion.div>
+                        </m.div>
                         <div className="space-y-12">
                             {service.beforeAfter.map((item, i) => (
-                                <motion.div
+                                <m.div
                                     key={i}
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
@@ -426,7 +426,7 @@ export default function ServicePageContent({ service }) {
                                         after={item.after}
                                         label={item.label}
                                     />
-                                </motion.div>
+                                </m.div>
                             ))}
                         </div>
                     </div>
@@ -436,7 +436,7 @@ export default function ServicePageContent({ service }) {
             {/* ── FAQ ────────────────────────────────────────────── */}
             <section className="py-24">
                 <div className="container mx-auto px-6 lg:px-16 max-w-5xl">
-                    <motion.div
+                    <m.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -449,11 +449,11 @@ export default function ServicePageContent({ service }) {
                             Frequently Asked <span className="text-secondary">Questions</span>
                         </h2>
                         <div className="w-20 h-1 bg-secondary mx-auto rounded-full" />
-                    </motion.div>
+                    </m.div>
 
                     <div className="space-y-4">
                         {service.faq.map((item, index) => (
-                            <motion.div
+                            <m.div
                                 key={index}
                                 initial={{ opacity: 0, y: 15 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -485,7 +485,7 @@ export default function ServicePageContent({ service }) {
                                 </button>
                                 <AnimatePresence>
                                     {activeIndex === index && (
-                                        <motion.div
+                                        <m.div
                                             initial={{ height: 0, opacity: 0 }}
                                             animate={{ height: "auto", opacity: 1 }}
                                             exit={{ height: 0, opacity: 0 }}
@@ -496,10 +496,10 @@ export default function ServicePageContent({ service }) {
                                                     {item.answer}
                                                 </p>
                                             </div>
-                                        </motion.div>
+                                        </m.div>
                                     )}
                                 </AnimatePresence>
-                            </motion.div>
+                            </m.div>
                         ))}
                     </div>
                 </div>
@@ -508,7 +508,7 @@ export default function ServicePageContent({ service }) {
             {/* ── Related Services ───────────────────────────────── */}
             <section className="bg-[#191919] py-24">
                 <div className="container mx-auto px-6 lg:px-16">
-                    <motion.div
+                    <m.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -517,10 +517,10 @@ export default function ServicePageContent({ service }) {
                         <h2 className="text-2xl md:text-4xl font-contrax text-white uppercase">
                             Other Services in <span className="text-secondary">Richmond, VA</span>
                         </h2>
-                    </motion.div>
+                    </m.div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {relatedServices.map((s, i) => (
-                            <motion.div
+                            <m.div
                                 key={s.slug}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -549,7 +549,7 @@ export default function ServicePageContent({ service }) {
                                         LEARN MORE <BiRightArrowAlt size={16} />
                                     </Link>
                                 </div>
-                            </motion.div>
+                            </m.div>
                         ))}
                     </div>
                     <div className="text-center mt-10">
@@ -563,7 +563,7 @@ export default function ServicePageContent({ service }) {
             {/* ── Final CTA ──────────────────────────────────────── */}
             <section className="py-28">
                 <div className="container mx-auto px-6 lg:px-16">
-                    <motion.div
+                    <m.div
                         initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
@@ -577,26 +577,26 @@ export default function ServicePageContent({ service }) {
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link href="/contact">
-                                <motion.button
+                                <m.button
                                     whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(159,227,0,0.4)" }}
                                     whileTap={{ scale: 0.95 }}
                                     className="bg-secondary text-primary font-contrax text-lg py-5 px-14 rounded-full hover:bg-white transition-all duration-300"
                                 >
                                     CONTACT US TODAY
-                                </motion.button>
+                                </m.button>
                             </Link>
                             <a href="tel:+18048334600">
-                                <motion.button
+                                <m.button
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
                                     className="flex items-center justify-center gap-3 border border-white/20 text-white font-contrax text-lg py-5 px-14 rounded-full hover:border-secondary hover:text-secondary transition-all duration-300"
                                 >
                                     <FaPhoneAlt size={16} />
                                     (804) 833-4600
-                                </motion.button>
+                                </m.button>
                             </a>
                         </div>
-                    </motion.div>
+                    </m.div>
                 </div>
             </section>
         </div>

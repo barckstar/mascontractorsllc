@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { FaMapMarkerAlt, FaPhoneAlt, FaHammer, FaShieldAlt, FaCheckCircle, FaStar } from "react-icons/fa";
 
 export default function LocalBusiness() {
@@ -13,7 +13,7 @@ export default function LocalBusiness() {
 
             <div className="container mx-auto px-6 md:px-16 grid lg:grid-cols-2 gap-16 items-center relative z-10">
                 {/* LEFT CONTENT */}
-                <motion.div
+                <m.div
                     initial={{ opacity: 0, x: -30 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
@@ -76,10 +76,10 @@ export default function LocalBusiness() {
                             </div>
                         </div>
                     </div>
-                </motion.div>
+                </m.div>
 
                 {/* RIGHT CONTENT - CARD */}
-                <motion.div
+                <m.div
                     initial={{ opacity: 0, x: 30 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
@@ -109,13 +109,13 @@ export default function LocalBusiness() {
                             </ul>
 
                             <Link href="/contact#email" className="block">
-                                <motion.button
+                                <m.button
                                     whileHover={{ scale: 1.02 }}
                                     whileTap={{ scale: 0.98 }}
                                     className="w-full bg-[#9fe300] text-[#1e1e1e] font-contrax text-lg py-5 rounded-xl hover:bg-white transition-all duration-300 shadow-[0_0_20px_rgba(159,227,0,0.2)]"
                                 >
                                     GET A FREE ESTIMATE
-                                </motion.button>
+                                </m.button>
                             </Link>
 
                             <p className="mt-4 text-center text-gray-500 text-sm font-atpinko">
@@ -123,7 +123,7 @@ export default function LocalBusiness() {
                             </p>
                         </div>
                     </div>
-                </motion.div>
+                </m.div>
             </div>
         </section>
     );

@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { BiRightArrowAlt } from "react-icons/bi";
@@ -34,7 +34,7 @@ export default function BlogContent() {
             {/* Hero */}
             <section className="pt-44 pb-20 relative z-10">
                 <div className="container mx-auto px-6 lg:px-16 text-center">
-                    <motion.div
+                    <m.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.7 }}
@@ -48,7 +48,7 @@ export default function BlogContent() {
                         <p className="text-lg md:text-xl text-gray-400 font-atpinko max-w-2xl mx-auto leading-relaxed">
                             Real answers to real questions from Richmond homeowners — costs, permits, materials, and what to expect when working with a general contractor.
                         </p>
-                    </motion.div>
+                    </m.div>
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-64 bg-secondary/5 blur-[120px] rounded-full -z-10" />
                 </div>
             </section>
@@ -57,7 +57,7 @@ export default function BlogContent() {
             <section className="bg-[#191919] py-16">
                 <div className="container mx-auto px-6 lg:px-16">
                     <p className="text-secondary font-contrax text-xs tracking-widest uppercase mb-8">Latest Article</p>
-                    <motion.div
+                    <m.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -100,7 +100,7 @@ export default function BlogContent() {
                                 </Link>
                             </div>
                         </div>
-                    </motion.div>
+                    </m.div>
                 </div>
             </section>
 
@@ -109,7 +109,7 @@ export default function BlogContent() {
                 <div className="container mx-auto px-6 lg:px-16">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {rest.map((post, index) => (
-                            <motion.article
+                            <m.article
                                 key={post.slug}
                                 initial={{ opacity: 0, y: 25 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -152,7 +152,7 @@ export default function BlogContent() {
                                         READ ARTICLE <BiRightArrowAlt size={16} />
                                     </Link>
                                 </div>
-                            </motion.article>
+                            </m.article>
                         ))}
                     </div>
                 </div>
@@ -161,7 +161,7 @@ export default function BlogContent() {
             {/* CTA */}
             <section className="bg-[#191919] py-24">
                 <div className="container mx-auto px-6 lg:px-16 text-center max-w-3xl">
-                    <motion.div
+                    <m.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -173,15 +173,15 @@ export default function BlogContent() {
                             MAS Contractors is a licensed Class A general contractor serving Richmond, Chesterfield, Henrico, and Midlothian. Let&apos;s talk about your project.
                         </p>
                         <Link href="/contact">
-                            <motion.button
+                            <m.button
                                 whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(159,227,0,0.4)" }}
                                 whileTap={{ scale: 0.95 }}
                                 className="bg-secondary text-primary font-contrax text-lg py-5 px-14 rounded-full hover:bg-white transition-all duration-300"
                             >
                                 CONTACT US TODAY
-                            </motion.button>
+                            </m.button>
                         </Link>
-                    </motion.div>
+                    </m.div>
                 </div>
             </section>
         </div>

@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { BiRightArrowAlt } from "react-icons/bi";
@@ -107,13 +107,13 @@ function ContentBlock({ block }) {
                     <h3 className="text-xl md:text-2xl font-contrax text-white uppercase mb-3">{block.title}</h3>
                     <p className="text-gray-400 font-atpinko text-base mb-6 leading-relaxed">{block.text}</p>
                     <Link href={block.link}>
-                        <motion.button
+                        <m.button
                             whileHover={{ scale: 1.03 }}
                             whileTap={{ scale: 0.97 }}
                             className="bg-secondary text-primary font-contrax py-3 px-8 rounded-full hover:bg-white transition-all duration-300 text-sm inline-flex items-center gap-2"
                         >
                             {block.linkText} <BiRightArrowAlt size={16} />
-                        </motion.button>
+                        </m.button>
                     </Link>
                 </div>
             );
@@ -138,7 +138,7 @@ export default function BlogPostContent({ post }) {
             {/* Hero */}
             <section className="pt-44 pb-0 relative z-10">
                 <div className="container mx-auto px-6 lg:px-16 max-w-4xl">
-                    <motion.div
+                    <m.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.7 }}
@@ -168,7 +168,7 @@ export default function BlogPostContent({ post }) {
                         <p className="text-lg text-gray-400 font-atpinko leading-relaxed mb-10 max-w-3xl">
                             {post.excerpt}
                         </p>
-                    </motion.div>
+                    </m.div>
                 </div>
             </section>
 
@@ -188,7 +188,7 @@ export default function BlogPostContent({ post }) {
             {/* Article Body */}
             <section className="py-16">
                 <div className="container mx-auto px-6 lg:px-16 max-w-4xl">
-                    <motion.div
+                    <m.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
@@ -196,7 +196,7 @@ export default function BlogPostContent({ post }) {
                         {post.content.map((block, i) => (
                             <ContentBlock key={i} block={block} />
                         ))}
-                    </motion.div>
+                    </m.div>
 
                     {/* Author Footer */}
                     <div className="mt-16 pt-10 border-t border-white/10 flex items-start gap-5">
@@ -216,7 +216,7 @@ export default function BlogPostContent({ post }) {
             {/* Related Articles */}
             <section className="bg-[#191919] py-24">
                 <div className="container mx-auto px-6 lg:px-16">
-                    <motion.div
+                    <m.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -225,11 +225,11 @@ export default function BlogPostContent({ post }) {
                         <h2 className="text-2xl md:text-4xl font-contrax text-white uppercase">
                             More <span className="text-secondary">Articles</span>
                         </h2>
-                    </motion.div>
+                    </m.div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {relatedPosts.map((p, i) => (
-                            <motion.article
+                            <m.article
                                 key={p.slug}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -261,7 +261,7 @@ export default function BlogPostContent({ post }) {
                                         READ <BiRightArrowAlt size={14} />
                                     </Link>
                                 </div>
-                            </motion.article>
+                            </m.article>
                         ))}
                     </div>
 
@@ -276,7 +276,7 @@ export default function BlogPostContent({ post }) {
             {/* Final CTA */}
             <section className="py-24">
                 <div className="container mx-auto px-6 lg:px-16 text-center max-w-3xl">
-                    <motion.div
+                    <m.div
                         initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
@@ -289,25 +289,25 @@ export default function BlogPostContent({ post }) {
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link href="/contact">
-                                <motion.button
+                                <m.button
                                     whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(159,227,0,0.4)" }}
                                     whileTap={{ scale: 0.95 }}
                                     className="bg-secondary text-primary font-contrax text-lg py-5 px-14 rounded-full hover:bg-white transition-all duration-300"
                                 >
                                     CONTACT US TODAY
-                                </motion.button>
+                                </m.button>
                             </Link>
                             <a href="tel:+18048334600">
-                                <motion.button
+                                <m.button
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
                                     className="flex items-center justify-center gap-3 border border-white/20 text-white font-contrax text-lg py-5 px-14 rounded-full hover:border-secondary hover:text-secondary transition-all duration-300"
                                 >
                                     (804) 833-4600
-                                </motion.button>
+                                </m.button>
                             </a>
                         </div>
-                    </motion.div>
+                    </m.div>
                 </div>
             </section>
         </div>

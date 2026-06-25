@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import LightGallery from 'lightgallery/react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { m, AnimatePresence } from 'framer-motion';
 
 import 'lightgallery/css/lightgallery.css';
 import 'lightgallery/css/lg-zoom.css';
@@ -23,7 +23,7 @@ export default function GalleryContent() {
     return (
         <section className="bg-[#1e1e1e] text-white py-20 min-h-screen">
             {/* Header */}
-            <motion.div
+            <m.div
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
@@ -36,10 +36,10 @@ export default function GalleryContent() {
                 <p className="mt-6 text-gray-400 text-lg font-atpinko tracking-wide">
                     Explore our finest craftsmanship across Richmond, VA and surrounding areas
                 </p>
-            </motion.div>
+            </m.div>
 
             {/* Category Filter */}
-            <motion.div
+            <m.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
@@ -64,11 +64,11 @@ export default function GalleryContent() {
                     {filtered.length} {filtered.length === 1 ? "photo" : "photos"}
                     {activeCategory !== "All" && ` · ${activeCategory}`}
                 </p>
-            </motion.div>
+            </m.div>
 
             {/* Gallery Grid */}
             <AnimatePresence mode="wait">
-                <motion.div
+                <m.div
                     key={activeCategory}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -82,7 +82,7 @@ export default function GalleryContent() {
                         elementClassNames="columns-1 md:columns-2 lg:columns-4 gap-4 space-y-4"
                     >
                         {filtered.map((image, index) => (
-                            <motion.a
+                            <m.a
                                 key={image.src}
                                 href={image.src}
                                 data-src={image.src}
@@ -109,10 +109,10 @@ export default function GalleryContent() {
                                         </span>
                                     </div>
                                 </div>
-                            </motion.a>
+                            </m.a>
                         ))}
                     </LightGallery>
-                </motion.div>
+                </m.div>
             </AnimatePresence>
         </section>
     );
