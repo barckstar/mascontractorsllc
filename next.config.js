@@ -28,7 +28,7 @@ const nextConfig = {
             // Redirect legacy specialties routes to relevant service pages
             {
                 source: '/specialties/tile',
-                destination: '/services/bathroom-remodeling',
+                destination: '/services/tile-work',
                 permanent: true,
             },
             {

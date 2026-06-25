@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FaPhoneAlt } from "react-icons/fa";
@@ -10,6 +10,22 @@ import data from "../lib/data.json";
 
 export const Navbar = () => {
   const [open, setOpen] = useState(false);
+  // Auto-hide: se esconde al bajar, reaparece al subir.
+  const [hidden, setHidden] = useState(false);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const y = window.scrollY;
+      // Umbral de 6px para ignorar micro-scroll; se oculta solo tras pasar el alto del navbar (~150px).
+      if (Math.abs(y - lastScrollY.current) > 6) {
+        setHidden(y > lastScrollY.current && y > 150);
+        lastScrollY.current = y;
+      }
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const topBarItems = [
     {
@@ -36,7 +52,7 @@ export const Navbar = () => {
   ];
 
   return (
-    <nav className="w-full bg-[#1e1e1e]/70 backdrop-blur-md shadow-md fixed top-0 left-0 z-50 font-atpinko">
+    <nav className={`w-full bg-[#1e1e1e]/70 backdrop-blur-md shadow-md fixed top-0 left-0 z-50 font-atpinko transition-transform duration-300 ${hidden && !open ? "-translate-y-full" : "translate-y-0"}`}>
       {/* Top Bar */}
       <div className="bg-[#1e1e1e]/90 shadow border-b border-white/5 h-16 flex items-center overflow-hidden relative">
         {/* Desktop View (All items) */}

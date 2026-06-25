@@ -390,7 +390,7 @@ a {
 @keyframes social-slide-in {
     from {
         opacity: 0;
-        transform: translateX(-100px) translateY(-50%);
+        transform: translateX(100px) translateY(-50%);
     }
 
     to {
@@ -404,7 +404,7 @@ a {
 }
 
 .social-icon-hover:hover {
-    transform: scale(1.2) translateX(5px);
+    transform: scale(1.2) translateX(-5px);
 }
 
 .social-icon-hover:active {
