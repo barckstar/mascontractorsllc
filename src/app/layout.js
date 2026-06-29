@@ -51,7 +51,7 @@ export default function RootLayout({ children }) {
     "logo": "https://mascontractors.com/logo-3D.png",
     "url": "https://mascontractors.com",
     "telephone": "+18048334600",
-    "email": "mascontractorsllc@gmail.com",
+    "email": "info@mascontractors.com",
     "foundingYear": "2014",
     "address": {
       "@type": "PostalAddress",
