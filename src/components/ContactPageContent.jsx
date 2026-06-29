@@ -35,7 +35,7 @@ const contactCards = [
     {
         icon: <BiCalendar size={22} />,
         label: "Office Hours",
-        lines: ["Monday – Friday", "7:00 AM – 4:00 PM"],
+        lines: ["Monday – Friday", "8:00 AM – 5:00 PM"],
     },
     {
         icon: <AiOutlineMail size={22} />,
@@ -209,7 +209,7 @@ export default function ContactPageContent() {
                                 <div>
                                     <p className="text-[10px] text-[#9fe300] font-contrax uppercase tracking-widest mb-1.5">Hours</p>
                                     <p className="text-gray-300 font-atpinko text-sm leading-relaxed">
-                                        Mon – Fri<br />7:00 AM – 4:00 PM
+                                        Mon – Fri<br />8:00 AM – 5:00 PM
                                     </p>
                                 </div>
                                 <div>
