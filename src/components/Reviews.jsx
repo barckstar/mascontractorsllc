@@ -204,7 +204,7 @@ export default function Reviews() {
                         Did we work on your home? We&apos;d love to hear from you.
                     </p>
                     <Link
-                        href="https://g.page/r/PLACEHOLDER/review"
+                        href="https://maps.app.goo.gl/bvfykYDomsbJJxzk7"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 border border-secondary/40 text-secondary font-contrax text-sm tracking-widest py-3 px-8 rounded-full hover:bg-secondary hover:text-primary transition-all duration-300"

@@ -8,7 +8,17 @@ import Certifications from "./Certifications";
 import { BiRightArrowAlt } from "react-icons/bi";
 import LocalBusiness from "./LocalBusiness";
 import Reviews from "./Reviews";
+import FAQ from "./FAQ";
 import { blogData } from "@/lib/blogData";
+
+const HOME_SERVICE_SLUGS = {
+    "HOME ADDITIONS": "home-additions",
+    "KITCHEN": "kitchen-remodeling",
+    "BATHROOMS": "bathroom-remodeling",
+    "DECKS": "decks-porches",
+    "ROOFING": "roofing",
+    "SIDING": "siding",
+};
 
 export default function HomeContent() {
     // Animation variants
@@ -55,7 +65,7 @@ export default function HomeContent() {
                             BUILDING LEGACIES
                         </h2>
                         <p className="text-base max-[400px]:text-sm md:text-xl text-gray-300 font-atpinko max-w-2xl mx-auto mb-10 leading-relaxed">
-                            Welcome to MAS Contractors. Where expertise meets innovation and unparalleled quality to turn your vision into lasting realities.
+                            Welcome to MAS Contractors. Where expertise meets innovation and unparalleled quality to turn your vision into lasting reality.
                         </p>
 
                         <div className="flex flex-col md:flex-row gap-6 justify-center items-center mb-10">
@@ -68,6 +78,12 @@ export default function HomeContent() {
                                     GET A QUOTE
                                 </m.button>
                             </Link>
+                        </div>
+                        <div className="flex items-center justify-center gap-3 mb-10">
+                            <span className="w-2 h-2 rounded-full bg-[#9fe300] animate-pulse" />
+                            <span className="text-gray-400 font-atpinko text-sm">
+                                Free estimates · Response within 48 hours
+                            </span>
                         </div>
                         <h2 className="text-2xl max-[400px]:text-xl md:text-6xl font-contrax text-white mb-4">
                             <span className="text-[#9fe300]">Commercial & </span>Residential
@@ -287,7 +303,7 @@ export default function HomeContent() {
                         Explore Our <span className="text-[#9fe300]">Services</span>
                     </h2>
                     <p className="text-gray-400 font-atpinko text-lg max-w-3xl mx-auto">
-                        From groundbreaking commercial to beautifully designed residential communities, our portfolio showcases the transformation power of our expertise.
+                        From groundbreaking commercial projects to beautifully designed residential communities, our portfolio showcases the transformation power of our expertise.
                     </p>
                 </m.div>
 
@@ -318,33 +334,40 @@ export default function HomeContent() {
                                 IconComponent = require("react-icons/fa").FaHammer;
                         }
 
+                        const slug = HOME_SERVICE_SLUGS[service.title];
+                        const href = slug ? `/services/${slug}` : "/services";
+
                         return (
-                            <m.div
-                                key={index}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: index * 0.1 }}
-                                className="bg-[#252525] p-8 rounded-3xl border border-white/5 hover:border-[#9fe300] hover:-translate-y-2 transition-all duration-300 group flex flex-col items-center text-center relative overflow-hidden"
-                            >
-                                <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
-                                    {IconComponent && <IconComponent size={120} color="#9fe300" />}
-                                </div>
+                            <Link key={index} href={href} className="block">
+                                <m.div
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: index * 0.1 }}
+                                    className="h-full bg-[#252525] p-8 rounded-3xl border border-white/5 hover:border-[#9fe300] hover:-translate-y-2 transition-all duration-300 group flex flex-col items-center text-center relative overflow-hidden cursor-pointer"
+                                >
+                                    <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                                        {IconComponent && <IconComponent size={120} color="#9fe300" />}
+                                    </div>
 
-                                <div className="w-24 h-24 bg-[#1e1e1e] rounded-full flex items-center justify-center mb-6 border border-[#9fe300]/30 group-hover:border-[#9fe300] transition-colors shadow-[0_0_15px_rgba(159,227,0,0.1)] group-hover:shadow-[0_0_25px_rgba(159,227,0,0.3)]">
-                                    {IconComponent && <IconComponent size={40} color="#9fe300" />}
-                                </div>
+                                    <div className="w-24 h-24 bg-[#1e1e1e] rounded-full flex items-center justify-center mb-6 border border-[#9fe300]/30 group-hover:border-[#9fe300] transition-colors shadow-[0_0_15px_rgba(159,227,0,0.1)] group-hover:shadow-[0_0_25px_rgba(159,227,0,0.3)]">
+                                        {IconComponent && <IconComponent size={40} color="#9fe300" />}
+                                    </div>
 
-                                <h3 className="text-2xl font-contrax text-white mb-2 group-hover:text-[#9fe300] transition-colors uppercase relative z-10">
-                                    {service.title}
-                                </h3>
-                                <p className="text-[#9fe300] font-atpinko text-sm mb-4 uppercase tracking-wider relative z-10">
-                                    {service.subTitle}
-                                </p>
-                                <p className="text-gray-400 font-atpinko leading-relaxed group-hover:text-gray-300 transition-colors relative z-10">
-                                    {service.text}
-                                </p>
-                            </m.div>
+                                    <h3 className="text-2xl font-contrax text-white mb-2 group-hover:text-[#9fe300] transition-colors uppercase relative z-10">
+                                        {service.title}
+                                    </h3>
+                                    <p className="text-[#9fe300] font-atpinko text-sm mb-4 uppercase tracking-wider relative z-10">
+                                        {service.subTitle}
+                                    </p>
+                                    <p className="text-gray-400 font-atpinko leading-relaxed group-hover:text-gray-300 transition-colors relative z-10 mb-6">
+                                        {service.text}
+                                    </p>
+                                    <span className="inline-flex items-center gap-2 text-[#9fe300] font-contrax text-xs tracking-widest uppercase relative z-10 group-hover:gap-4 transition-all mt-auto">
+                                        Learn More <BiRightArrowAlt size={16} />
+                                    </span>
+                                </m.div>
+                            </Link>
                         );
                     })}
                 </div>
@@ -355,6 +378,9 @@ export default function HomeContent() {
                     </Link>
                 </div>
             </section>
+
+            {/* 7b. FAQ */}
+            <FAQ />
 
             {/* 6. Free Visit CTA */}
 

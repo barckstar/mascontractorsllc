@@ -28,11 +28,25 @@ export default function LocalBusiness() {
                         Trusted <span className="text-[#9fe300]">General Contractor</span> in Richmond, VA
                     </h2>
 
-                    <p className="text-gray-400 font-atpinko text-lg mb-10 leading-relaxed max-w-xl">
+                    <p className="text-gray-400 font-atpinko text-lg mb-8 leading-relaxed max-w-xl">
                         MAS Contractors LLC is a licensed and insured general contractor providing
                         high-quality residential and commercial construction services throughout
                         Richmond, VA and surrounding areas. We build with integrity and precision.
                     </p>
+
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10 max-w-xl">
+                        {[
+                            { label: "Years of Experience", value: "11+" },
+                            { label: "Projects Completed", value: "500+" },
+                            { label: "Google Rating", value: "4.9★" },
+                            { label: "Customer Reviews", value: "47+" },
+                        ].map((stat) => (
+                            <div key={stat.label} className="text-center">
+                                <p className="text-2xl md:text-3xl font-contrax text-[#9fe300] mb-1">{stat.value}</p>
+                                <p className="text-gray-500 font-atpinko text-[11px] uppercase tracking-wider leading-tight">{stat.label}</p>
+                            </div>
+                        ))}
+                    </div>
 
                     <div className="grid sm:grid-cols-2 gap-6 font-atpinko text-gray-300">
                         <div className="flex items-start gap-4 p-4 rounded-xl hover:bg-white/5 transition-colors duration-300">
