@@ -42,11 +42,28 @@ const faqs = [
     },
 ];
 
+const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map((faq) => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer,
+        },
+    })),
+};
+
 export default function FAQ() {
     const [activeIndex, setActiveIndex] = useState(null);
 
     return (
         <section className="py-24 bg-[#151515]">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+            />
             <div className="container mx-auto px-6 md:px-16 max-w-4xl">
                 <m.div
                     initial={{ opacity: 0, y: 20 }}
