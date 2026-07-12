@@ -25,8 +25,11 @@ function formatDate(dateStr) {
 }
 
 export default function BlogContent() {
-    const featured = blogData[0];
-    const rest = blogData.slice(1);
+    const sortedPosts = [...blogData].sort(
+        (a, b) => new Date(b.publishDate) - new Date(a.publishDate)
+    );
+    const featured = sortedPosts[0];
+    const rest = sortedPosts.slice(1);
 
     return (
         <div className="bg-primary min-h-screen overflow-hidden">
