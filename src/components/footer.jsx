@@ -88,6 +88,15 @@ export const Footer = () => {
               </ul>
             </div>
           </div>
+          {/* Visit Us / NAP */}
+          <div className="flex flex-col items-center text-center gap-1 pb-10 px-6 border-t border-[#515151] pt-8 mx-6 md:mx-16">
+            <p className="text-[#9fe300] font-contrax text-xl mb-1 footer-title">Visit Us</p>
+            <p className="text-white text-base font-atpinko footer-text">MAS Contractors LLC</p>
+            <p className="text-white text-base font-atpinko footer-text">411 Branchway Rd Suite 107, North Chesterfield, VA 23236</p>
+            <a href="tel:+18048334600" className="text-white text-base font-atpinko hover:text-[#9fe300] transition footer-text">
+              (804) 833-4600
+            </a>
+          </div>
           {/* Copyright */}
           <div className="flex flex-col text-center items-center justify-between py-6 border-t border-[#515151] px-6 md:px-32 lg:flex-row lg:text-left lg:justify-between gap-4">
             <p className="text-[#9fe300] text-sm font-atpinko">
