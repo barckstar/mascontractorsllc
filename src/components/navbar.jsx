@@ -41,7 +41,7 @@ export const Navbar = () => {
     {
       icon: <FaPhoneAlt size={24} color="#9fe300" />,
       title: "Office Number",
-      subtitle: "(804) 833-4600 / (540) 376-4453"
+      subtitle: "(804) 833-4600 / (540) 376-4453 / (804) 593-9468"
     },
     {
       icon: <IoIosMail size={26} color="#9fe300" />,

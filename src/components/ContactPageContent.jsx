@@ -23,7 +23,7 @@ const contactCards = [
     {
         icon: <BiPhoneCall size={22} />,
         label: "Call Us",
-        lines: ["+1 (804) 833-4600", "+1 (540) 376-4453"],
+        lines: ["+1 (804) 833-4600", "+1 (540) 376-4453", "+1 (804) 593-9468"],
         href: "tel:+18048334600",
         cta: "Call now",
     },
@@ -219,6 +219,9 @@ export default function ContactPageContent() {
                                     </a>
                                     <a href="tel:+15403764453" className="block text-gray-300 font-atpinko text-sm hover:text-[#9fe300] transition-colors">
                                         (540) 376-4453
+                                    </a>
+                                    <a href="tel:+18045939468" className="block text-gray-300 font-atpinko text-sm hover:text-[#9fe300] transition-colors">
+                                        (804) 593-9468
                                     </a>
                                 </div>
                                 <div>
