@@ -67,6 +67,7 @@ export default function LocalBusiness() {
                                 <h3 className="text-white font-bold mb-1">Contact Us</h3>
                                 <p className="text-sm text-gray-400">(804) 833-4600</p>
                                 <p className="text-sm text-gray-400">(540) 376-4453</p>
+                                <p className="text-sm text-gray-400">(804) 593-9468</p>
                             </div>
                         </div>
 
