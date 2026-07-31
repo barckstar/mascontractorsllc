@@ -27,6 +27,9 @@ export const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const phoneNumbers = ["(804) 833-4600", "(540) 376-4453", "(804) 593-9468"];
+
+  // Desktop: 4 static boxes; the phone box cycles its 3 numbers internally (CSS-only).
   const topBarItems = [
     {
       icon: <RiMedalLine size={24} color="#9fe300" />,
@@ -41,7 +44,7 @@ export const Navbar = () => {
     {
       icon: <FaPhoneAlt size={24} color="#9fe300" />,
       title: "Office Number",
-      subtitle: "(804) 833-4600 / (540) 376-4453 / (804) 593-9468"
+      isPhone: true
     },
     {
       icon: <IoIosMail size={26} color="#9fe300" />,
@@ -49,6 +52,20 @@ export const Navbar = () => {
       subtitle: "info@mascontractors.com",
       link: "/contact#email"
     }
+  ];
+
+  // Mobile slider: each phone number gets its own full slide so the
+  // CSS-only slider can never cut one off mid-cycle — same guarantee
+  // the other slides already have.
+  const mobileTopBarItems = [
+    topBarItems[0],
+    topBarItems[1],
+    ...phoneNumbers.map((number) => ({
+      icon: <FaPhoneAlt size={24} color="#9fe300" />,
+      title: "Office Number",
+      subtitle: number
+    })),
+    topBarItems[3],
   ];
 
   return (
@@ -67,6 +84,20 @@ export const Navbar = () => {
                     <span className="block text-xs lg:text-sm text-white font-medium group-hover:text-[#9fe300] transition-colors">{item.subtitle}</span>
                   </div>
                 </Link>
+              ) : item.isPhone ? (
+                <>
+                  {item.icon}
+                  <div className="text-left">
+                    <span className="block text-xs lg:text-sm text-[#9fe300] leading-tight">{item.title}</span>
+                    <span className="phone-cycle block text-xs lg:text-sm text-white font-medium">
+                      <span className="phone-cycle-track">
+                        {phoneNumbers.map((number) => (
+                          <span key={number} className="phone-cycle-item">{number}</span>
+                        ))}
+                      </span>
+                    </span>
+                  </div>
+                </>
               ) : (
                 <>
                   {item.icon}
@@ -83,7 +114,7 @@ export const Navbar = () => {
         {/* Mobile View (CSS-only Slider) */}
         <div className="md:hidden w-full h-full relative">
           <div className="topbar-slider">
-            {topBarItems.map((item, index) => (
+            {mobileTopBarItems.map((item, index) => (
               <div key={index} className="topbar-slide flex items-center gap-3">
                 {item.icon}
                 <div className="text-left">
