@@ -110,6 +110,24 @@ export const galleryData = [
         alt: "Finished custom room addition by MAS Contractors in Chesterfield County, VA",
         category: "Home Addition",
     },
+    {
+        src: "/gallery/RoomAddition-Foundation.jpeg",
+        width: 1200, height: 1600,
+        alt: "New brick foundation and floor framing for a room addition in North Chesterfield, VA by MAS Contractors",
+        category: "Home Addition",
+    },
+    {
+        src: "/gallery/RoomAddition-BlockWall.jpeg",
+        width: 1600, height: 1200,
+        alt: "Block and brick foundation wall under construction for a home addition in Richmond, VA by MAS Contractors",
+        category: "Home Addition",
+    },
+    {
+        src: "/gallery/RoomAddition-FootingTrench.jpeg",
+        width: 1600, height: 1200,
+        alt: "Footing trench and foundation block piers for a home addition in Richmond, VA by MAS Contractors",
+        category: "Home Addition",
+    },
 
     // ── Trim & Carpentry ─────────────────────────────────────────────────────
     {
@@ -215,6 +233,12 @@ export const galleryData = [
         src: "/gallery/TileGalery6.png",
         width: 681, height: 907,
         alt: "Bathroom tile remodel in Richmond, VA by MAS Contractors — walk-in shower with bench",
+        category: "Tile Work",
+    },
+    {
+        src: "/gallery/TileWork-BathroomFloor.jpeg",
+        width: 1600, height: 1200,
+        alt: "White basketweave mosaic tile bathroom floor installed by MAS Contractors in Richmond, VA — freestanding tub surround",
         category: "Tile Work",
     },
 
@@ -366,6 +390,24 @@ export const galleryData = [
         src: "/gallery/Doors.jpeg",
         width: 800, height: 1067,
         alt: "Entry door installation by MAS Contractors in Richmond, VA — fiberglass exterior door with trim",
+        category: "Windows & Doors",
+    },
+    {
+        src: "/gallery/WindowReplacement-Exterior.jpeg",
+        width: 1200, height: 1600,
+        alt: "New double-hung vinyl window replacement on brick home exterior in North Chesterfield, VA by MAS Contractors",
+        category: "Windows & Doors",
+    },
+    {
+        src: "/gallery/WindowReplacement-Closeup.jpeg",
+        width: 1200, height: 1600,
+        alt: "Close-up of new double-hung window with white casing trim installed by MAS Contractors in Richmond, VA",
+        category: "Windows & Doors",
+    },
+    {
+        src: "/gallery/FrontDoorInstall.jpeg",
+        width: 1200, height: 1600,
+        alt: "New fiberglass entry door installation with decorative glass by MAS Contractors in Richmond, VA",
         category: "Windows & Doors",
     },
 
