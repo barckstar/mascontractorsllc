@@ -125,7 +125,7 @@ export default function AboutPageContent() {
                     viewport={{ once: true }}
                     variants={fadeInUp}
                 >
-                    <div className="bg-[#2a2a2a] p-6 rounded-xl border border-[#9fe300]/30 flex flex-wrap justify-center mt-10 items-center gap-8">
+                    <div className="bg-[#2a2a2a] p-4 sm:p-6 rounded-xl border border-[#9fe300]/30 flex flex-wrap justify-center mt-10 items-center gap-8">
                         <div className="text-center">
                             <div className="bg-white p-3 rounded-lg mb-2 inline-block shadow-lg">
                                 <Image src="/DPOR.png" alt="DPOR License - Licensed Contractor in Richmond VA" width={100} height={50} className="object-contain" />
@@ -138,6 +138,18 @@ export default function AboutPageContent() {
                                 <Image src="/OSHA-Logo.png" alt="OSHA Safety Certification Logo for MAS Contractors in Richmond VA" width={100} height={50} className="object-contain" />
                             </div>
                             <p className="text-white text-xs font-atpinko opacity-70">Safety Certified</p>
+                        </div>
+                        <div className="w-px h-16 bg-white/10 hidden sm:block" />
+                        <div className="text-center">
+                            <iframe
+                                title="BBB Accredited Business - MAS Contractors LLC"
+                                loading="lazy"
+                                scrolling="no"
+                                src="https://seal-richmond.bbb.org/frame/blue-seal-293-61-whitetxt-bbb-63417310.png?chk=9087F100C0"
+                                style={{ border: 0, height: "61px", width: "293px" }}
+                                className="mb-2 max-w-full"
+                            />
+                            <p className="text-white text-xs font-atpinko opacity-70">BBB Accredited</p>
                         </div>
                     </div>
                 </m.div>
