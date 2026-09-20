@@ -77,6 +77,12 @@ export const galleryData = [
         alt: "Complete bathroom remodel in Richmond, VA by MAS Contractors — modern fixtures and large tile",
         category: "Bathroom",
     },
+    {
+        src: "/gallery/BathroomRemodel-FreestandingTub.jpeg",
+        width: 1600, height: 1200,
+        alt: "Bathroom remodel in Richmond, VA by MAS Contractors — freestanding tub with large-format marble-veined tile and basketweave mosaic floor",
+        category: "Bathroom",
+    },
 
     // ── Home Addition ────────────────────────────────────────────────────────
     {
