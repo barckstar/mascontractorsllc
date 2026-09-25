@@ -47,7 +47,12 @@ export default function HomeContent({ reviews, posts }) {
     return (
         <div className="bg-[#1e1e1e] min-h-screen overflow-hidden">
             {/* 1. Hero Section */}
-            <section className="relative w-full h-screen flex items-center justify-center overflow-hidden mt-10">
+            {/* min-h (not h-screen) + padding: on short windows or with a longer
+                headline (Spanish wraps to four lines) the content used to be taller
+                than the screen, so the title slid under the fixed navbar and the
+                scroll indicator sat on top of the last line. pt clears the navbar,
+                pb leaves room for the indicator. */}
+            <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden mt-10 pt-36 pb-28">
                 {/* Background Image with Overlay */}
                 <div className="absolute inset-0 z-0">
                     <Image
@@ -63,7 +68,7 @@ export default function HomeContent({ reviews, posts }) {
                 </div>
 
                 {/* Hero Content — estático (sin entrada animada) para que el LCP pinte de inmediato */}
-                <div className="relative z-10 text-center px-4 max-w-5xl mx-auto mt-10">
+                <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
                     <div>
                         <h1 className="text-3xl max-[400px]:text-2xl md:text-7xl lg:text-8xl font-contrax text-white mb-2 tracking-wider">
                             {h.heroTitleA} <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9fe300] to-[#7ab300]">{h.heroTitleB}</span>
