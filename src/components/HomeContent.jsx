@@ -20,7 +20,7 @@ const HOME_SERVICE_SLUGS = {
     "SIDING": "siding",
 };
 
-export default function HomeContent() {
+export default function HomeContent({ reviews }) {
     // Animation variants
     const fadeInUp = {
         hidden: { opacity: 0, y: 30 },
@@ -105,7 +105,7 @@ export default function HomeContent() {
             </section>
 
 
-            <LocalBusiness />
+            <LocalBusiness reviews={reviews} />
 
             {/* 2. Certifications Bar */}
             <section className="relative z-20 -mt-10 px-4">
@@ -220,7 +220,7 @@ export default function HomeContent() {
             </section>
 
             {/* 5. Reviews */}
-            <Reviews />
+            <Reviews data={reviews} />
 
             {/* 6. Blog Teaser */}
             <section className="py-20 px-6 md:px-16 max-w-7xl mx-auto">

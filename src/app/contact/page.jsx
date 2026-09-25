@@ -1,4 +1,5 @@
 import dynamic from "next/dynamic";
+import { getGoogleReviews } from "@/lib/googleReviews";
 
 const ContactPageContent = dynamic(() => import("@/components/ContactPageContent"), {
   loading: () => (
@@ -40,6 +41,7 @@ export const metadata = {
   },
 };
 
-export default function ContactPage() {
-  return <ContactPageContent />;
+export default async function ContactPage() {
+  const reviews = await getGoogleReviews();
+  return <ContactPageContent reviews={reviews} />;
 }

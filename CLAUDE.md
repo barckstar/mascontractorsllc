@@ -83,13 +83,32 @@ public/
 
 | Archivo | Schemas |
 |---|---|
-| `app/layout.js` | `["GeneralContractor","LocalBusiness"]` raíz — con `AggregateRating`, `OfferCatalog`/`Service`, `OpeningHoursSpecification`, `PostalAddress`, `GeoCoordinates`, `areaServed` |
+| `app/layout.js` | `["GeneralContractor","LocalBusiness"]` raíz — con `OfferCatalog`/`Service`, `OpeningHoursSpecification`, `PostalAddress`, `GeoCoordinates`, `areaServed` |
 | `app/services/[slug]/page.jsx` | `GeneralContractor`, `Service`, `FAQPage`, `BreadcrumbList`, `Offer` |
 | `app/blog/[slug]/page.jsx` | `BlogPosting`, `BreadcrumbList`, `WebPage`, `Organization`, `ImageObject` |
 | `components/FAQ.jsx` | `FAQPage` — va **dentro del componente**, así que aplica donde sea que se renderice `<FAQ />` (hoy: home y services) |
-| `components/Reviews.jsx` | `GeneralContractor` + `Review` + `AggregateRating` |
+
+**Sin `AggregateRating` ni `Review` a propósito.** Google considera
+"self-serving" las reseñas que un negocio marca en su propia web sobre sí mismo
+y no les da estrellas; y el 4.9/47 que había no cuadraba con Google (7 reseñas
+el 25/09/2026). Las estrellas del buscador salen del Perfil de Negocio.
 
 Al tocar schema, ojo con duplicar: `FAQ.jsx` y `services/[slug]` ambos emiten `FAQPage`.
+
+## Reseñas de Google (en vivo)
+
+`lib/googleReviews.js` las lee de la Places API (New) en el servidor, con
+`revalidate` de 6 h. `app/page.jsx` y `app/contact/page.jsx` las piden y las
+pasan como prop a los componentes cliente. Variables solo de servidor:
+`GOOGLE_PLACES_API_KEY` y `GOOGLE_PLACE_ID`. Sin ellas, o si Google falla, se
+usa `lib/reviewsSnapshot.js` — números reales copiados a mano, **sin textos**:
+nunca se muestran reseñas escritas por nosotros.
+
+La API da como máximo 5 reseñas (las "más relevantes"). Para todas hace falta
+la Business Profile API, con OAuth del dueño y aprobación de Google.
+
+`/review` (`app/review/route.js`) redirige al cuadro de "escribir reseña" de
+Google. Es el enlace para el QR y el mensaje de entrega de obra.
 
 ## Stack
 

@@ -1,4 +1,5 @@
 import dynamic from "next/dynamic";
+import { getGoogleReviews } from "@/lib/googleReviews";
 
 const HomeContent = dynamic(() => import("@/components/HomeContent"), {
   loading: () => (
@@ -51,7 +52,8 @@ export const metadata = {
   },
 };
 
-export default function Home() {
-  return <HomeContent />;
+export default async function Home() {
+  const reviews = await getGoogleReviews();
+  return <HomeContent reviews={reviews} />;
 }
 

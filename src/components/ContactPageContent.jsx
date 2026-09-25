@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { m } from "framer-motion";
+import { REVIEWS_SNAPSHOT } from "@/lib/reviewsSnapshot";
 import Contact from "@/components/contact";
 import Mapa from "@/components/mapa";
 import { BiPhoneCall, BiSolidStore, BiCalendar } from "react-icons/bi";
@@ -46,7 +47,7 @@ const contactCards = [
     },
 ];
 
-export default function ContactPageContent() {
+export default function ContactPageContent({ reviews = REVIEWS_SNAPSHOT }) {
     return (
         <div className="bg-[#111111] min-h-screen overflow-hidden">
 
@@ -241,7 +242,7 @@ export default function ContactPageContent() {
                             transition={{ delay: 0.35 }}
                             className="flex flex-wrap gap-3"
                         >
-                            {["4.9★ Google Rating", "47+ Reviews", "Class A Licensed", "Free Estimates", "Founded 2014"].map((badge) => (
+                            {[`${reviews.rating.toFixed(1)}★ Google Rating`, `${reviews.count} Google Reviews`, "Class A Licensed", "Free Estimates", "Founded 2014"].map((badge) => (
                                 <span
                                     key={badge}
                                     className="text-xs font-atpinko text-gray-400 border border-white/10 rounded-full px-4 py-1.5"

@@ -2,9 +2,10 @@
 import React from "react";
 import Link from "next/link";
 import { m } from "framer-motion";
+import { REVIEWS_SNAPSHOT } from "@/lib/reviewsSnapshot";
 import { FaMapMarkerAlt, FaPhoneAlt, FaHammer, FaShieldAlt, FaCheckCircle, FaStar } from "react-icons/fa";
 
-export default function LocalBusiness() {
+export default function LocalBusiness({ reviews = REVIEWS_SNAPSHOT }) {
     return (
         <section className="relative  py-24 bg-[#151515] overflow-hidden">
             {/* Decorative Background Elements */}
@@ -38,8 +39,8 @@ export default function LocalBusiness() {
                         {[
                             { label: "Years of Experience", value: "11+" },
                             { label: "Projects Completed", value: "500+" },
-                            { label: "Google Rating", value: "4.9★" },
-                            { label: "Customer Reviews", value: "47+" },
+                            { label: "Google Rating", value: `${reviews.rating.toFixed(1)}★` },
+                            { label: "Google Reviews", value: String(reviews.count) },
                         ].map((stat) => (
                             <div key={stat.label} className="text-center">
                                 <p className="text-2xl md:text-3xl font-contrax text-[#9fe300] mb-1">{stat.value}</p>
