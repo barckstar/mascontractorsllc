@@ -17,6 +17,9 @@ const nextConfig = {
     },
     async redirects() {
         return [
+            // English has no /en prefix; send anyone who types one to the real URL.
+            { source: '/en', destination: '/', permanent: true },
+            { source: '/en/:path*', destination: '/:path*', permanent: true },
             // Redirect www to non-www
             {
                 source: '/:path*',

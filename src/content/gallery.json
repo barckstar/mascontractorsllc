@@ -1,0 +1,713 @@
+{
+  "categories": [
+    "All",
+    "Kitchen",
+    "Bathroom",
+    "Home Addition",
+    "Trim & Carpentry",
+    "Tile Work",
+    "Full Renovation",
+    "Deck",
+    "Roofing",
+    "Siding",
+    "Windows & Doors",
+    "Commercial"
+  ],
+  "images": [
+    {
+      "src": "/gallery/Kitchen.jpeg",
+      "width": 1200,
+      "height": 900,
+      "alt": {
+        "en": "Kitchen remodel by MAS Contractors in Richmond, VA — custom cabinets and quartz countertops",
+        "es": "Remodelación de cocina de MAS Contractors en Richmond, VA — gabinetes a medida y encimeras de cuarzo"
+      },
+      "category": "Kitchen",
+      "featured": true
+    },
+    {
+      "src": "/gallery/Bathroom.jpeg",
+      "width": 1200,
+      "height": 1600,
+      "alt": {
+        "en": "Custom bathroom remodel by MAS Contractors in Chesterfield, VA — tile shower and modern vanity",
+        "es": "Remodelación de baño a medida de MAS Contractors en Chesterfield, VA — ducha de azulejo y tocador moderno"
+      },
+      "category": "Bathroom",
+      "featured": true
+    },
+    {
+      "src": "/gallery/multiple_bathrooms.jpg",
+      "width": 1920,
+      "height": 1440,
+      "alt": {
+        "en": "Bathroom remodel in Richmond, VA by MAS Contractors — custom tile and modern fixtures",
+        "es": "Remodelación de baño en Richmond, VA de MAS Contractors — azulejo a medida y grifería moderna"
+      },
+      "category": "Bathroom"
+    },
+    {
+      "src": "/gallery/multiple_bathrooms1.jpg",
+      "width": 1920,
+      "height": 1440,
+      "alt": {
+        "en": "Bathroom renovation in Chesterfield, VA by MAS Contractors — custom tile and fixtures",
+        "es": "Renovación de baño en Chesterfield, VA de MAS Contractors — azulejo y acabados a medida"
+      },
+      "category": "Bathroom"
+    },
+    {
+      "src": "/gallery/multiple_bathrooms2.JPG",
+      "width": 960,
+      "height": 1280,
+      "alt": {
+        "en": "Full bathroom remodel in Midlothian, VA by MAS Contractors LLC",
+        "es": "Remodelación completa de baño en Midlothian, VA de MAS Contractors LLC"
+      },
+      "category": "Bathroom"
+    },
+    {
+      "src": "/gallery/multiple_bathrooms3.JPG",
+      "width": 960,
+      "height": 1280,
+      "alt": {
+        "en": "Bathroom tile installation in North Chesterfield, VA by MAS Contractors — walk-in shower",
+        "es": "Instalación de azulejo en baño en North Chesterfield, VA de MAS Contractors — ducha sin puerta"
+      },
+      "category": "Bathroom"
+    },
+    {
+      "src": "/gallery/multiple_bathrooms4.JPG",
+      "width": 960,
+      "height": 1280,
+      "alt": {
+        "en": "Master bathroom remodel in Henrico, VA by MAS Contractors — double vanity and soaking tub",
+        "es": "Remodelación de baño principal en Henrico, VA de MAS Contractors — tocador doble y tina de remojo"
+      },
+      "category": "Bathroom"
+    },
+    {
+      "src": "/gallery/multiple_bathrooms5.jpg",
+      "width": 1920,
+      "height": 1440,
+      "alt": {
+        "en": "Bathroom renovation in Glen Allen, VA by MAS Contractors — freestanding tub and tile surround",
+        "es": "Renovación de baño en Glen Allen, VA de MAS Contractors — tina independiente con azulejo alrededor"
+      },
+      "category": "Bathroom"
+    },
+    {
+      "src": "/gallery/multiple_bathrooms6.jpg",
+      "width": 1920,
+      "height": 1440,
+      "alt": {
+        "en": "Complete bathroom remodel in Richmond, VA by MAS Contractors — modern fixtures and large tile",
+        "es": "Remodelación completa de baño en Richmond, VA de MAS Contractors — grifería moderna y azulejo grande"
+      },
+      "category": "Bathroom"
+    },
+    {
+      "src": "/gallery/BathroomRemodel-FreestandingTub.jpeg",
+      "width": 1600,
+      "height": 1200,
+      "alt": {
+        "en": "Bathroom remodel in Richmond, VA by MAS Contractors — freestanding tub with large-format marble-veined tile and basketweave mosaic floor",
+        "es": "Remodelación de baño en Richmond, VA de MAS Contractors — tina independiente con azulejo grande tipo mármol y piso de mosaico tejido"
+      },
+      "category": "Bathroom"
+    },
+    {
+      "src": "/gallery/Additions.jpeg",
+      "width": 1200,
+      "height": 1600,
+      "alt": {
+        "en": "Home addition project completed by MAS Contractors in Richmond, VA — room addition with matching exterior finishes",
+        "es": "Ampliación de casa terminada por MAS Contractors en Richmond, VA — habitación nueva con acabados exteriores iguales a los de la casa"
+      },
+      "category": "Home Addition",
+      "featured": true
+    },
+    {
+      "src": "/gallery/CustomRoomAdditions.png",
+      "width": 358,
+      "height": 306,
+      "alt": {
+        "en": "Custom room addition built by MAS Contractors in North Chesterfield, VA — seamless exterior match",
+        "es": "Ampliación de habitación a medida de MAS Contractors en North Chesterfield, VA — exterior integrado sin diferencias"
+      },
+      "category": "Home Addition"
+    },
+    {
+      "src": "/gallery/CustomRoomAdditions1.png",
+      "width": 639,
+      "height": 857,
+      "alt": {
+        "en": "Custom home addition by MAS Contractors in Richmond, VA — framing and structure phase",
+        "es": "Ampliación de casa a medida de MAS Contractors en Richmond, VA — etapa de estructura"
+      },
+      "category": "Home Addition"
+    },
+    {
+      "src": "/gallery/CustomRoomAdditions2.png",
+      "width": 612,
+      "height": 822,
+      "alt": {
+        "en": "Room addition construction in Midlothian, VA by MAS Contractors — interior framing detail",
+        "es": "Construcción de ampliación en Midlothian, VA de MAS Contractors — detalle de la estructura interior"
+      },
+      "category": "Home Addition"
+    },
+    {
+      "src": "/gallery/CustomRoomAdditions3.png",
+      "width": 618,
+      "height": 833,
+      "alt": {
+        "en": "Finished custom room addition by MAS Contractors in Chesterfield County, VA",
+        "es": "Ampliación de habitación a medida terminada por MAS Contractors en el condado de Chesterfield, VA"
+      },
+      "category": "Home Addition"
+    },
+    {
+      "src": "/gallery/RoomAddition-Foundation.jpeg",
+      "width": 1200,
+      "height": 1600,
+      "alt": {
+        "en": "New brick foundation and floor framing for a room addition in North Chesterfield, VA by MAS Contractors",
+        "es": "Cimentación nueva de ladrillo y estructura de piso para una ampliación en North Chesterfield, VA de MAS Contractors"
+      },
+      "category": "Home Addition"
+    },
+    {
+      "src": "/gallery/RoomAddition-BlockWall.jpeg",
+      "width": 1600,
+      "height": 1200,
+      "alt": {
+        "en": "Block and brick foundation wall under construction for a home addition in Richmond, VA by MAS Contractors",
+        "es": "Muro de cimentación de bloque y ladrillo en construcción para una ampliación en Richmond, VA de MAS Contractors"
+      },
+      "category": "Home Addition"
+    },
+    {
+      "src": "/gallery/RoomAddition-FootingTrench.jpeg",
+      "width": 1600,
+      "height": 1200,
+      "alt": {
+        "en": "Footing trench and foundation block piers for a home addition in Richmond, VA by MAS Contractors",
+        "es": "Zanja de zapata y pilares de bloque para una ampliación en Richmond, VA de MAS Contractors"
+      },
+      "category": "Home Addition"
+    },
+    {
+      "src": "/gallery/Trim.jpeg",
+      "width": 1600,
+      "height": 1200,
+      "alt": {
+        "en": "Trim carpentry and crown molding installation by MAS Contractors in Richmond, VA",
+        "es": "Instalación de molduras y molduras de corona de MAS Contractors en Richmond, VA"
+      },
+      "category": "Trim & Carpentry",
+      "featured": true
+    },
+    {
+      "src": "/gallery/FinishCarpentry.png",
+      "width": 584,
+      "height": 392,
+      "alt": {
+        "en": "Finish carpentry and trim work by MAS Contractors in Richmond, VA — crown molding installation",
+        "es": "Carpintería de acabados y molduras de MAS Contractors en Richmond, VA — instalación de moldura de corona"
+      },
+      "category": "Trim & Carpentry"
+    },
+    {
+      "src": "/gallery/FinishCarpentryGalery1.png",
+      "width": 401,
+      "height": 543,
+      "alt": {
+        "en": "Crown molding installation in Richmond, VA by MAS Contractors — detail view",
+        "es": "Instalación de moldura de corona en Richmond, VA de MAS Contractors — vista de detalle"
+      },
+      "category": "Trim & Carpentry"
+    },
+    {
+      "src": "/gallery/FinishCarpentryGalery2.png",
+      "width": 443,
+      "height": 597,
+      "alt": {
+        "en": "Custom trim carpentry by MAS Contractors in Chesterfield, VA — wainscoting and baseboard detail",
+        "es": "Molduras a medida de MAS Contractors en Chesterfield, VA — detalle de zócalo de madera y rodapié"
+      },
+      "category": "Trim & Carpentry"
+    },
+    {
+      "src": "/gallery/FinishCarpentryGalery3.png",
+      "width": 366,
+      "height": 547,
+      "alt": {
+        "en": "Coffered ceiling installation by MAS Contractors in Richmond, VA — finish carpentry work",
+        "es": "Instalación de techo artesonado de MAS Contractors en Richmond, VA — carpintería de acabados"
+      },
+      "category": "Trim & Carpentry"
+    },
+    {
+      "src": "/gallery/FinishCarpentryGalery4.png",
+      "width": 472,
+      "height": 606,
+      "alt": {
+        "en": "Built-in shelving and finish carpentry by MAS Contractors in Midlothian, VA",
+        "es": "Estanterías empotradas y carpintería de acabados de MAS Contractors en Midlothian, VA"
+      },
+      "category": "Trim & Carpentry"
+    },
+    {
+      "src": "/gallery/FinishCarpentryGalery5.png",
+      "width": 889,
+      "height": 573,
+      "alt": {
+        "en": "Interior trim carpentry by MAS Contractors in North Chesterfield, VA — door casing and crown molding",
+        "es": "Molduras interiores de MAS Contractors en North Chesterfield, VA — marcos de puerta y moldura de corona"
+      },
+      "category": "Trim & Carpentry"
+    },
+    {
+      "src": "/gallery/FinishCarpentryGalery6.png",
+      "width": 460,
+      "height": 613,
+      "alt": {
+        "en": "Custom millwork and trim installation by MAS Contractors in Henrico, VA",
+        "es": "Carpintería y molduras a medida de MAS Contractors en Henrico, VA"
+      },
+      "category": "Trim & Carpentry"
+    },
+    {
+      "src": "/gallery/FinishCarpentryGalery7.png",
+      "width": 454,
+      "height": 557,
+      "alt": {
+        "en": "Finish carpentry detail — wainscoting panel installation by MAS Contractors in Richmond, VA",
+        "es": "Detalle de carpintería de acabados — instalación de paneles de zócalo de MAS Contractors en Richmond, VA"
+      },
+      "category": "Trim & Carpentry"
+    },
+    {
+      "src": "/gallery/FinishCarpentryGalery8.png",
+      "width": 844,
+      "height": 582,
+      "alt": {
+        "en": "Custom built-in bookcase by MAS Contractors in Chesterfield County, VA",
+        "es": "Librero empotrado a medida de MAS Contractors en el condado de Chesterfield, VA"
+      },
+      "category": "Trim & Carpentry"
+    },
+    {
+      "src": "/gallery/Tile.png",
+      "width": 428,
+      "height": 573,
+      "alt": {
+        "en": "Tile installation by MAS Contractors in Richmond, VA — large format floor tile in bathroom",
+        "es": "Instalación de azulejo de MAS Contractors en Richmond, VA — piso de baño con azulejo de gran formato"
+      },
+      "category": "Tile Work"
+    },
+    {
+      "src": "/gallery/TileGalery1.png",
+      "width": 1251,
+      "height": 833,
+      "alt": {
+        "en": "Custom tile work by MAS Contractors in Chesterfield, VA — bathroom floor and wall tile",
+        "es": "Azulejo a medida de MAS Contractors en Chesterfield, VA — piso y paredes del baño"
+      },
+      "category": "Tile Work"
+    },
+    {
+      "src": "/gallery/TileGalery2.png",
+      "width": 617,
+      "height": 921,
+      "alt": {
+        "en": "Tile shower installation in Richmond, VA by MAS Contractors — subway tile with niche",
+        "es": "Instalación de ducha de azulejo en Richmond, VA de MAS Contractors — azulejo tipo metro con nicho"
+      },
+      "category": "Tile Work"
+    },
+    {
+      "src": "/gallery/TileGalery3.png",
+      "width": 671,
+      "height": 918,
+      "alt": {
+        "en": "Porcelain tile installation by MAS Contractors in Henrico, VA — kitchen backsplash",
+        "es": "Instalación de azulejo de porcelana de MAS Contractors en Henrico, VA — salpicadero de cocina"
+      },
+      "category": "Tile Work"
+    },
+    {
+      "src": "/gallery/TileGalery4.png",
+      "width": 644,
+      "height": 860,
+      "alt": {
+        "en": "Custom tile work in Midlothian, VA by MAS Contractors — large format tile floor",
+        "es": "Azulejo a medida en Midlothian, VA de MAS Contractors — piso de azulejo de gran formato"
+      },
+      "category": "Tile Work"
+    },
+    {
+      "src": "/gallery/TileGalery5.png",
+      "width": 648,
+      "height": 873,
+      "alt": {
+        "en": "Tile installation detail by MAS Contractors in North Chesterfield, VA — herringbone pattern",
+        "es": "Detalle de instalación de azulejo de MAS Contractors en North Chesterfield, VA — patrón de espiga"
+      },
+      "category": "Tile Work"
+    },
+    {
+      "src": "/gallery/TileGalery6.png",
+      "width": 681,
+      "height": 907,
+      "alt": {
+        "en": "Bathroom tile remodel in Richmond, VA by MAS Contractors — walk-in shower with bench",
+        "es": "Remodelación de azulejo en baño en Richmond, VA de MAS Contractors — ducha sin puerta con banco"
+      },
+      "category": "Tile Work"
+    },
+    {
+      "src": "/gallery/TileWork-BathroomFloor.jpeg",
+      "width": 1600,
+      "height": 1200,
+      "alt": {
+        "en": "White basketweave mosaic tile bathroom floor installed by MAS Contractors in Richmond, VA — freestanding tub surround",
+        "es": "Piso de baño con mosaico blanco tejido instalado por MAS Contractors en Richmond, VA — alrededor de tina independiente"
+      },
+      "category": "Tile Work"
+    },
+    {
+      "src": "/gallery/the_haven.jpg",
+      "width": 1840,
+      "height": 1920,
+      "alt": {
+        "en": "The Haven — full home renovation by MAS Contractors in Richmond, VA",
+        "es": "The Haven — renovación completa de casa de MAS Contractors en Richmond, VA"
+      },
+      "category": "Full Renovation",
+      "project": "The Haven",
+      "featured": true
+    },
+    {
+      "src": "/gallery/the_haven1.jpg",
+      "width": 1440,
+      "height": 1920,
+      "alt": {
+        "en": "The Haven renovation by MAS Contractors — kitchen and living area transformation in Richmond, VA",
+        "es": "Renovación The Haven de MAS Contractors — transformación de cocina y sala en Richmond, VA"
+      },
+      "category": "Full Renovation",
+      "project": "The Haven"
+    },
+    {
+      "src": "/gallery/the_haven2.jpg",
+      "width": 1440,
+      "height": 1920,
+      "alt": {
+        "en": "The Haven project by MAS Contractors in Richmond, VA — custom finish carpentry and built-ins",
+        "es": "Proyecto The Haven de MAS Contractors en Richmond, VA — carpintería de acabados y muebles empotrados a medida"
+      },
+      "category": "Full Renovation",
+      "project": "The Haven"
+    },
+    {
+      "src": "/gallery/the_haven3.jpg",
+      "width": 1440,
+      "height": 1920,
+      "alt": {
+        "en": "The Haven home renovation in Richmond, VA by MAS Contractors — completed interior",
+        "es": "Renovación de la casa The Haven en Richmond, VA de MAS Contractors — interior terminado"
+      },
+      "category": "Full Renovation",
+      "project": "The Haven"
+    },
+    {
+      "src": "/gallery/FR1.jpg",
+      "width": 1332,
+      "height": 1920,
+      "alt": {
+        "en": "Full home renovation project by MAS Contractors in Richmond, VA — before and during construction",
+        "es": "Renovación completa de casa de MAS Contractors en Richmond, VA — antes y durante la obra"
+      },
+      "category": "Full Renovation"
+    },
+    {
+      "src": "/gallery/FR2.jpg",
+      "width": 1920,
+      "height": 1280,
+      "alt": {
+        "en": "Full renovation by MAS Contractors in Richmond, VA — framing and structural work",
+        "es": "Renovación completa de MAS Contractors en Richmond, VA — estructura y trabajo estructural"
+      },
+      "category": "Full Renovation"
+    },
+    {
+      "src": "/gallery/FR3.jpg",
+      "width": 1920,
+      "height": 1280,
+      "alt": {
+        "en": "Home renovation in Chesterfield, VA by MAS Contractors — interior demo and rebuild",
+        "es": "Renovación de casa en Chesterfield, VA de MAS Contractors — demolición interior y reconstrucción"
+      },
+      "category": "Full Renovation"
+    },
+    {
+      "src": "/gallery/FR4.jpg",
+      "width": 1920,
+      "height": 1280,
+      "alt": {
+        "en": "Full gut renovation completed by MAS Contractors in the Richmond, VA area",
+        "es": "Renovación total terminada por MAS Contractors en el área de Richmond, VA"
+      },
+      "category": "Full Renovation"
+    },
+    {
+      "src": "/gallery/FR5.jpg",
+      "width": 1920,
+      "height": 1280,
+      "alt": {
+        "en": "Richmond, VA home renovation by MAS Contractors — drywall and finish phase",
+        "es": "Renovación de casa en Richmond, VA de MAS Contractors — etapa de drywall y acabados"
+      },
+      "category": "Full Renovation"
+    },
+    {
+      "src": "/gallery/FR6.jpg",
+      "width": 1920,
+      "height": 1280,
+      "alt": {
+        "en": "Complete home renovation in Henrico, VA by MAS Contractors LLC",
+        "es": "Renovación completa de casa en Henrico, VA de MAS Contractors LLC"
+      },
+      "category": "Full Renovation"
+    },
+    {
+      "src": "/gallery/FR7.jpg",
+      "width": 1920,
+      "height": 1280,
+      "alt": {
+        "en": "Full interior renovation by MAS Contractors in Chesterfield County, VA",
+        "es": "Renovación interior completa de MAS Contractors en el condado de Chesterfield, VA"
+      },
+      "category": "Full Renovation"
+    },
+    {
+      "src": "/gallery/FR8.jpg",
+      "width": 1920,
+      "height": 1280,
+      "alt": {
+        "en": "Home remodel project by MAS Contractors in Midlothian, VA — finished interior",
+        "es": "Remodelación de casa de MAS Contractors en Midlothian, VA — interior terminado"
+      },
+      "category": "Full Renovation"
+    },
+    {
+      "src": "/gallery/FR9.jpg",
+      "width": 1920,
+      "height": 1280,
+      "alt": {
+        "en": "Full renovation project in North Chesterfield, VA by MAS Contractors — kitchen and living area",
+        "es": "Proyecto de renovación completa en North Chesterfield, VA de MAS Contractors — cocina y sala"
+      },
+      "category": "Full Renovation"
+    },
+    {
+      "src": "/gallery/FR10.jpg",
+      "width": 1920,
+      "height": 1280,
+      "alt": {
+        "en": "Residential renovation completed by MAS Contractors in Richmond, VA — open floor plan remodel",
+        "es": "Renovación residencial terminada por MAS Contractors en Richmond, VA — remodelación de concepto abierto"
+      },
+      "category": "Full Renovation"
+    },
+    {
+      "src": "/gallery/FR11.jpg",
+      "width": 1920,
+      "height": 1280,
+      "alt": {
+        "en": "Full gut renovation in Richmond, VA by MAS Contractors — finished result",
+        "es": "Renovación total en Richmond, VA de MAS Contractors — resultado final"
+      },
+      "category": "Full Renovation"
+    },
+    {
+      "src": "/gallery/FR12.jpg",
+      "width": 1920,
+      "height": 1280,
+      "alt": {
+        "en": "Home renovation in Glen Allen, VA completed by MAS Contractors LLC",
+        "es": "Renovación de casa en Glen Allen, VA terminada por MAS Contractors LLC"
+      },
+      "category": "Full Renovation"
+    },
+    {
+      "src": "/gallery/FR13.jpg",
+      "width": 1920,
+      "height": 1280,
+      "alt": {
+        "en": "Full home renovation project in the Richmond, VA metro by MAS Contractors",
+        "es": "Proyecto de renovación completa de casa en el área metropolitana de Richmond, VA de MAS Contractors"
+      },
+      "category": "Full Renovation"
+    },
+    {
+      "src": "/gallery/Deck.jpeg",
+      "width": 1146,
+      "height": 1600,
+      "alt": {
+        "en": "Custom composite deck built by MAS Contractors in Chesterfield County, VA — Trex decking with railing",
+        "es": "Deck compuesto a medida construido por MAS Contractors en el condado de Chesterfield, VA — deck Trex con barandal"
+      },
+      "category": "Deck",
+      "featured": true
+    },
+    {
+      "src": "/gallery/Roofing.jpeg",
+      "width": 1516,
+      "height": 852,
+      "alt": {
+        "en": "Roof replacement by MAS Contractors in Chesterfield County, VA — architectural shingle installation",
+        "es": "Reemplazo de techo de MAS Contractors en el condado de Chesterfield, VA — instalación de tejas arquitectónicas"
+      },
+      "category": "Roofing",
+      "featured": true
+    },
+    {
+      "src": "/gallery/Siding.jpeg",
+      "width": 1024,
+      "height": 682,
+      "alt": {
+        "en": "James Hardie fiber cement siding installed by MAS Contractors in Richmond, VA — certified Hardie installer",
+        "es": "Revestimiento de fibrocemento James Hardie instalado por MAS Contractors en Richmond, VA — instalador certificado Hardie"
+      },
+      "category": "Siding",
+      "featured": true
+    },
+    {
+      "src": "/gallery/Windows.jpeg",
+      "width": 1200,
+      "height": 900,
+      "alt": {
+        "en": "Energy-efficient window replacement by MAS Contractors in Chesterfield, VA — double-hung vinyl windows",
+        "es": "Reemplazo de ventanas de eficiencia energética de MAS Contractors en Chesterfield, VA — ventanas de vinilo de guillotina doble"
+      },
+      "category": "Windows & Doors",
+      "featured": true
+    },
+    {
+      "src": "/gallery/Doors.jpeg",
+      "width": 800,
+      "height": 1067,
+      "alt": {
+        "en": "Entry door installation by MAS Contractors in Richmond, VA — fiberglass exterior door with trim",
+        "es": "Instalación de puerta de entrada de MAS Contractors en Richmond, VA — puerta exterior de fibra de vidrio con molduras"
+      },
+      "category": "Windows & Doors"
+    },
+    {
+      "src": "/gallery/WindowReplacement-Exterior.jpeg",
+      "width": 1200,
+      "height": 1600,
+      "alt": {
+        "en": "New double-hung vinyl window replacement on brick home exterior in North Chesterfield, VA by MAS Contractors",
+        "es": "Reemplazo por ventana nueva de vinilo de guillotina doble en fachada de ladrillo en North Chesterfield, VA de MAS Contractors"
+      },
+      "category": "Windows & Doors"
+    },
+    {
+      "src": "/gallery/WindowReplacement-Closeup.jpeg",
+      "width": 1200,
+      "height": 1600,
+      "alt": {
+        "en": "Close-up of new double-hung window with white casing trim installed by MAS Contractors in Richmond, VA",
+        "es": "Detalle de ventana nueva de guillotina doble con marco blanco instalada por MAS Contractors en Richmond, VA"
+      },
+      "category": "Windows & Doors"
+    },
+    {
+      "src": "/gallery/FrontDoorInstall.jpeg",
+      "width": 1200,
+      "height": 1600,
+      "alt": {
+        "en": "New fiberglass entry door installation with decorative glass by MAS Contractors in Richmond, VA",
+        "es": "Instalación de puerta de entrada nueva de fibra de vidrio con vidrio decorativo de MAS Contractors en Richmond, VA"
+      },
+      "category": "Windows & Doors"
+    },
+    {
+      "src": "/gallery/Berkadia4.jpg",
+      "width": 1440,
+      "height": 1920,
+      "alt": {
+        "en": "Commercial construction project for Berkadia in Richmond, VA — completed by MAS Contractors LLC",
+        "es": "Proyecto de construcción comercial para Berkadia en Richmond, VA — terminado por MAS Contractors LLC"
+      },
+      "category": "Commercial",
+      "project": "Berkadia",
+      "featured": true
+    },
+    {
+      "src": "/gallery/RC1.JPG",
+      "width": 1024,
+      "height": 683,
+      "alt": {
+        "en": "Residential construction project by MAS Contractors in Richmond, VA — structural framing phase",
+        "es": "Proyecto de construcción residencial de MAS Contractors en Richmond, VA — etapa de estructura"
+      },
+      "category": "Commercial"
+    },
+    {
+      "src": "/gallery/RC2.JPG",
+      "width": 1024,
+      "height": 683,
+      "alt": {
+        "en": "Residential remodeling by MAS Contractors in Chesterfield, VA — construction in progress",
+        "es": "Remodelación residencial de MAS Contractors en Chesterfield, VA — obra en curso"
+      },
+      "category": "Commercial"
+    },
+    {
+      "src": "/gallery/RC3.JPG",
+      "width": 924,
+      "height": 1385,
+      "alt": {
+        "en": "Home construction project in North Chesterfield, VA by MAS Contractors LLC",
+        "es": "Proyecto de construcción de casa en North Chesterfield, VA de MAS Contractors LLC"
+      },
+      "category": "Commercial"
+    },
+    {
+      "src": "/gallery/RC4.JPG",
+      "width": 1024,
+      "height": 683,
+      "alt": {
+        "en": "Residential construction in Midlothian, VA by MAS Contractors — foundation and framing",
+        "es": "Construcción residencial en Midlothian, VA de MAS Contractors — cimentación y estructura"
+      },
+      "category": "Commercial"
+    },
+    {
+      "src": "/gallery/RC5.JPG",
+      "width": 1024,
+      "height": 683,
+      "alt": {
+        "en": "Construction project completed by MAS Contractors in Henrico County, VA",
+        "es": "Proyecto de construcción terminado por MAS Contractors en el condado de Henrico, VA"
+      },
+      "category": "Commercial"
+    },
+    {
+      "src": "/gallery/RC6.jpg",
+      "width": 958,
+      "height": 683,
+      "alt": {
+        "en": "Residential building project in Richmond, VA by MAS Contractors — exterior construction",
+        "es": "Proyecto de construcción residencial en Richmond, VA de MAS Contractors — obra exterior"
+      },
+      "category": "Commercial"
+    }
+  ]
+}

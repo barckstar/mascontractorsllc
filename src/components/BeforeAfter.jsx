@@ -1,8 +1,10 @@
 "use client";
 import { useState, useRef, useCallback } from "react";
 import Image from "next/image";
+import { useI18n } from "@/i18n/I18nProvider";
 
 export default function BeforeAfter({ before, after, label }) {
+    const ba = useI18n().t.beforeAfter;
     const [position, setPosition] = useState(50);
     const containerRef = useRef(null);
     const isDragging = useRef(false);
@@ -81,16 +83,16 @@ export default function BeforeAfter({ before, after, label }) {
 
             {/* BEFORE label */}
             <div className="absolute bottom-4 left-4 bg-black/70 text-white font-contrax text-xs tracking-widest px-3 py-1.5 rounded-full uppercase pointer-events-none">
-                BEFORE
+                {ba.before}
             </div>
 
             {/* AFTER label */}
             <div className="absolute bottom-4 right-4 bg-secondary text-primary font-contrax text-xs tracking-widest px-3 py-1.5 rounded-full uppercase pointer-events-none">
-                AFTER
+                {ba.after}
             </div>
 
             {label && (
-                <div className="absolute top-4 left-1/2 -translate-x-1/2 bg-black/60 text-white/90 font-atpinko text-xs px-4 py-1.5 rounded-full whitespace-nowrap pointer-events-none">
+                <div className="absolute top-4 left-1/2 -translate-x-1/2 bg-black/60 text-white/90 font-body text-xs px-4 py-1.5 rounded-full whitespace-nowrap pointer-events-none">
                     {label}
                 </div>
             )}

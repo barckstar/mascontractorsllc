@@ -9,10 +9,31 @@
     font-display: swap;
 }
 
+/* Body text: Sora (SIL Open Font License, free for commercial use; license in
+   public/fonts/Sora-OFL.txt). Replaced AT Pinko, whose file here was the
+   free "personal use only" demo: no commercial license, and no accented
+   letters or ñ, so Spanish text fell back to a system font mid-word. The
+   files are the Latin subset, which covers every Spanish character. */
 @font-face {
-    font-family: 'At Pinko';
-    src: url('/fonts/ATPinko-Regular.ttf') format('truetype');
+    font-family: 'Sora';
+    src: url('/fonts/Sora-400.woff2') format('woff2');
     font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sora';
+    src: url('/fonts/Sora-600.woff2') format('woff2');
+    font-weight: 500 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sora';
+    src: url('/fonts/Sora-700.woff2') format('woff2');
+    font-weight: 700 900;
     font-style: normal;
     font-display: swap;
 }
@@ -34,13 +55,44 @@ a {
     color: inherit
 }
 
+/* Scrollbar in the site's colours: dark track, brand-green thumb.
+   scrollbar-color covers Firefox and recent Chrome/Edge; the ::-webkit-*
+   rules cover Safari and older Chromium. */
+html {
+    scrollbar-color: #9fe300 #151515;
+    scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #151515;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #9fe300;
+    border-radius: 999px;
+    border: 2px solid #151515;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #b8ff1a;
+}
+
+::-webkit-scrollbar-corner {
+    background: #151515;
+}
+
 
 .font-contrax {
     font-family: Contrax Heavy !important;
 }
 
-.font-atpinko {
-    font-family: At Pinko !important;
+.font-body {
+    font-family: 'Sora', system-ui, sans-serif !important;
 }
 
 .container {
@@ -481,4 +533,11 @@ a {
     50% {
         opacity: 0.7;
     }
+}
+/* Spanish words run long ("remodelación", "especializados") and the display
+   font is wide: on phones a single word can be wider than the screen. Let
+   Spanish headings hyphenate instead of overflowing. English is left as is. */
+html[lang="es"] :is(h1, h2, h3) {
+  overflow-wrap: break-word;
+  hyphens: auto;
 }

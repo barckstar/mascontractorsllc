@@ -3,7 +3,7 @@ import React from "react";
 import { AiFillFacebook, AiFillInstagram, AiFillGoogleCircle } from "react-icons/ai";
 import { FaT } from "react-icons/fa6";
 import Link from "next/link";
-import data from "@/lib/data.json";
+import social from "@/content/social.json";
 
 const socialIcons = {
   Facebook: AiFillFacebook,
@@ -18,7 +18,7 @@ export const SocialMediaBar = () => {
       {/* Interior: encogido en reposo, tamaño normal al pasar el cursor. origin-right
           lo mantiene pegado al borde derecho al escalar. */}
       <div className="flex flex-col gap-6 p-4 bg-black/20 backdrop-blur-md border-y border-l border-white/10 rounded-l-2xl shadow-[0_0_20px_rgba(0,0,0,0.3)] origin-right scale-75 opacity-70 group-hover/bar:scale-100 group-hover/bar:opacity-100 transition-all duration-300">
-        {data.social_media.map((social, index) => {
+        {social.map((social, index) => {
           const Icon = socialIcons[social.name];
           return (
             <Link key={index} href={social.link} target="_blank" className="relative group">

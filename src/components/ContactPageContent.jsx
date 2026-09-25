@@ -3,6 +3,8 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { m } from "framer-motion";
+import { REVIEWS_SNAPSHOT } from "@/lib/reviewsSnapshot";
+import { useI18n, fill } from "@/i18n/I18nProvider";
 import Contact from "@/components/contact";
 import Mapa from "@/components/mapa";
 import { BiPhoneCall, BiSolidStore, BiCalendar } from "react-icons/bi";
@@ -19,34 +21,35 @@ const stagger = {
     visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
 };
 
-const contactCards = [
-    {
-        icon: <BiPhoneCall size={22} />,
-        label: "Call Us",
-        lines: ["+1 (804) 833-4600", "+1 (540) 376-4453", "+1 (804) 593-9468"],
-        href: "tel:+18048334600",
-        cta: "Call now",
-    },
-    {
-        icon: <BiSolidStore size={22} />,
-        label: "Our Office",
-        lines: ["411 Branchway Rd Suite 107", "North Chesterfield, VA 23236"],
-    },
-    {
-        icon: <BiCalendar size={22} />,
-        label: "Office Hours",
-        lines: ["Monday – Friday", "8:00 AM – 5:00 PM"],
-    },
-    {
-        icon: <AiOutlineMail size={22} />,
-        label: "Email",
-        lines: ["info@mascontractors.com"],
-        href: "mailto:info@mascontractors.com",
-        cta: "Send email",
-    },
-];
+export default function ContactPageContent({ reviews = REVIEWS_SNAPSHOT }) {
+    const c = useI18n().t.contactPage;
+    const contactCards = [
+        {
+            icon: <BiPhoneCall size={22} />,
+            label: c.callLabel,
+            lines: ["+1 (804) 833-4600", "+1 (540) 376-4453", "+1 (804) 593-9468"],
+            href: "tel:+18048334600",
+            cta: c.callCta,
+        },
+        {
+            icon: <BiSolidStore size={22} />,
+            label: c.officeLabel,
+            lines: ["411 Branchway Rd Suite 107", "North Chesterfield, VA 23236"],
+        },
+        {
+            icon: <BiCalendar size={22} />,
+            label: c.hoursLabel,
+            lines: [c.hoursDays, "8:00 AM – 5:00 PM"],
+        },
+        {
+            icon: <AiOutlineMail size={22} />,
+            label: c.emailLabel,
+            lines: ["info@mascontractors.com"],
+            href: "mailto:info@mascontractors.com",
+            cta: c.emailCta,
+        },
+    ];
 
-export default function ContactPageContent() {
     return (
         <div className="bg-[#111111] min-h-screen overflow-hidden">
 
@@ -55,7 +58,7 @@ export default function ContactPageContent() {
                 <div className="absolute inset-0 z-0">
                     <Image
                         src="/img-9.jpg"
-                        alt="Contact MAS Contractors — General Contractor Richmond VA"
+                        alt={c.heroAlt}
                         fill
                         className="object-cover opacity-20"
                         priority
@@ -71,7 +74,7 @@ export default function ContactPageContent() {
                         transition={{ duration: 0.6 }}
                         className="text-[#9fe300] font-contrax tracking-[0.35em] text-xs uppercase mb-5"
                     >
-                        Free Estimates · 48-hr Response · Richmond, VA
+                        {c.eyebrow}
                     </m.p>
 
                     <m.h1
@@ -80,18 +83,17 @@ export default function ContactPageContent() {
                         transition={{ duration: 0.8, delay: 0.1 }}
                         className="text-5xl sm:text-7xl md:text-[90px] font-contrax text-white uppercase leading-[0.95] mb-7 tracking-tight"
                     >
-                        Let&apos;s Build<br />
-                        <span className="text-[#9fe300]">Together</span>
+                        {c.titleA}<br />
+                        <span className="text-[#9fe300]">{c.titleB}</span>
                     </m.h1>
 
                     <m.p
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.3 }}
-                        className="text-gray-400 font-atpinko text-lg max-w-2xl mx-auto leading-relaxed"
+                        className="text-gray-400 font-body text-lg max-w-2xl mx-auto leading-relaxed"
                     >
-                        Richmond&apos;s trusted Class A general contractor for residential and commercial projects.
-                        Tell us your vision &mdash; we&apos;ll handle the rest.
+                        {c.intro}
                     </m.p>
 
                     <m.div
@@ -101,8 +103,8 @@ export default function ContactPageContent() {
                         className="mt-10 flex items-center justify-center gap-3"
                     >
                         <span className="w-2 h-2 rounded-full bg-[#9fe300] animate-pulse" />
-                        <span className="text-gray-500 font-atpinko text-sm">
-                            Typically responds within one business day
+                        <span className="text-gray-500 font-body text-sm">
+                            {c.responds}
                         </span>
                     </m.div>
                 </div>
@@ -127,13 +129,13 @@ export default function ContactPageContent() {
                                 {card.icon}
                             </div>
                             <p className="text-[10px] text-gray-500 font-contrax uppercase tracking-widest mb-2">{card.label}</p>
-                            <div className="text-gray-300 font-atpinko text-sm space-y-0.5 leading-relaxed">
+                            <div className="text-gray-300 font-body text-sm space-y-0.5 leading-relaxed">
                                 {card.lines.map((line, j) => <p key={j}>{line}</p>)}
                             </div>
                             {card.href && (
                                 <a
                                     href={card.href}
-                                    className="mt-3 inline-flex items-center gap-1 text-[#9fe300] font-atpinko text-xs hover:gap-2 transition-all"
+                                    className="mt-3 inline-flex items-center gap-1 text-[#9fe300] font-body text-xs hover:gap-2 transition-all"
                                 >
                                     {card.cta} <BiRightArrowAlt size={14} />
                                 </a>
@@ -156,11 +158,10 @@ export default function ContactPageContent() {
                             className="mb-8"
                         >
                             <h2 className="text-3xl md:text-5xl font-contrax text-white uppercase leading-tight mb-4">
-                                Tell Us About <span className="text-[#9fe300]">Your Project</span>
+                                {c.formTitleA}<span className="text-[#9fe300]">{c.formTitleB}</span>
                             </h2>
-                            <p className="text-gray-400 font-atpinko text-lg leading-relaxed max-w-xl">
-                                From kitchens and bathrooms to full commercial build-outs — we do it all.
-                                Fill out the form and we&apos;ll get back to you with a free, no-obligation estimate.
+                            <p className="text-gray-400 font-body text-lg leading-relaxed max-w-xl">
+                                {c.formIntro}
                             </p>
                         </m.div>
 
@@ -195,39 +196,39 @@ export default function ContactPageContent() {
                             <div className="flex items-center gap-3 mb-7">
                                 <div className="w-1.5 h-8 bg-[#9fe300] rounded-full" />
                                 <h3 className="text-white font-contrax text-base uppercase tracking-wider">
-                                    Visit Our Office
+                                    {c.visitTitle}
                                 </h3>
                             </div>
 
                             <div className="grid grid-cols-2 gap-6">
                                 <div>
-                                    <p className="text-[10px] text-[#9fe300] font-contrax uppercase tracking-widest mb-1.5">Address</p>
-                                    <p className="text-gray-300 font-atpinko text-sm leading-relaxed">
+                                    <p className="text-[10px] text-[#9fe300] font-contrax uppercase tracking-widest mb-1.5">{c.address}</p>
+                                    <p className="text-gray-300 font-body text-sm leading-relaxed">
                                         411 Branchway Rd Suite 107<br />North Chesterfield, VA 23236
                                     </p>
                                 </div>
                                 <div>
-                                    <p className="text-[10px] text-[#9fe300] font-contrax uppercase tracking-widest mb-1.5">Hours</p>
-                                    <p className="text-gray-300 font-atpinko text-sm leading-relaxed">
-                                        Mon – Fri<br />8:00 AM – 5:00 PM
+                                    <p className="text-[10px] text-[#9fe300] font-contrax uppercase tracking-widest mb-1.5">{c.hours}</p>
+                                    <p className="text-gray-300 font-body text-sm leading-relaxed">
+                                        {c.hoursShort}<br />8:00 AM – 5:00 PM
                                     </p>
                                 </div>
                                 <div>
-                                    <p className="text-[10px] text-[#9fe300] font-contrax uppercase tracking-widest mb-1.5">Phone</p>
-                                    <a href="tel:+18048334600" className="block text-gray-300 font-atpinko text-sm hover:text-[#9fe300] transition-colors">
+                                    <p className="text-[10px] text-[#9fe300] font-contrax uppercase tracking-widest mb-1.5">{c.phone}</p>
+                                    <a href="tel:+18048334600" className="block text-gray-300 font-body text-sm hover:text-[#9fe300] transition-colors">
                                         (804) 833-4600
                                     </a>
-                                    <a href="tel:+15403764453" className="block text-gray-300 font-atpinko text-sm hover:text-[#9fe300] transition-colors">
+                                    <a href="tel:+15403764453" className="block text-gray-300 font-body text-sm hover:text-[#9fe300] transition-colors">
                                         (540) 376-4453
                                     </a>
-                                    <a href="tel:+18045939468" className="block text-gray-300 font-atpinko text-sm hover:text-[#9fe300] transition-colors">
+                                    <a href="tel:+18045939468" className="block text-gray-300 font-body text-sm hover:text-[#9fe300] transition-colors">
                                         (804) 593-9468
                                     </a>
                                 </div>
                                 <div>
-                                    <p className="text-[10px] text-[#9fe300] font-contrax uppercase tracking-widest mb-1.5">License</p>
-                                    <p className="text-gray-300 font-atpinko text-sm leading-relaxed">
-                                        Virginia Class A<br />Fully Insured
+                                    <p className="text-[10px] text-[#9fe300] font-contrax uppercase tracking-widest mb-1.5">{c.license}</p>
+                                    <p className="text-gray-300 font-body text-sm leading-relaxed">
+                                        {c.licenseA}<br />{c.licenseB}
                                     </p>
                                 </div>
                             </div>
@@ -241,10 +242,10 @@ export default function ContactPageContent() {
                             transition={{ delay: 0.35 }}
                             className="flex flex-wrap gap-3"
                         >
-                            {["4.9★ Google Rating", "47+ Reviews", "Class A Licensed", "Free Estimates", "Founded 2014"].map((badge) => (
+                            {[fill(c.badgeRating, { rating: reviews.rating.toFixed(1) }), fill(c.badgeReviews, { count: reviews.count }), ...c.badges].map((badge) => (
                                 <span
                                     key={badge}
-                                    className="text-xs font-atpinko text-gray-400 border border-white/10 rounded-full px-4 py-1.5"
+                                    className="text-xs font-body text-gray-400 border border-white/10 rounded-full px-4 py-1.5"
                                 >
                                     {badge}
                                 </span>

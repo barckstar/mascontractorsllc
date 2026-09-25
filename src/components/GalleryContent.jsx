@@ -10,11 +10,16 @@ import 'lightgallery/css/lg-thumbnail.css';
 import lgThumbnail from 'lightgallery/plugins/thumbnail';
 import lgZoom from 'lightgallery/plugins/zoom';
 
-import { galleryData, CATEGORIES } from '@/lib/galleryData';
+import { useI18n, fill } from '@/i18n/I18nProvider';
 import Image from 'next/image';
 
-export default function GalleryContent() {
+// `gallery` comes from the page with alt text already in this language;
+// categories stay as English keys and are labelled through the dictionary.
+export default function GalleryContent({ gallery }) {
     const [activeCategory, setActiveCategory] = useState("All");
+    const g = useI18n().t.galleryPage;
+    const galleryData = gallery.images;
+    const CATEGORIES = gallery.categories;
 
     const filtered = activeCategory === "All"
         ? galleryData
@@ -30,11 +35,11 @@ export default function GalleryContent() {
                 className="text-center mb-12"
             >
                 <h1 className="font-contrax text-5xl md:text-7xl font-medium text-[#9fe300] mb-4 tracking-wider mt-40 md:mt-20">
-                    GALLERY
+                    {g.title}
                 </h1>
                 <div className="w-24 h-1 bg-[#9fe300] mx-auto rounded-full shadow-[0_0_10px_#9fe300]" />
-                <p className="mt-6 text-gray-400 text-lg font-atpinko tracking-wide">
-                    Explore our finest craftsmanship across Richmond, VA and surrounding areas
+                <p className="mt-6 text-gray-400 text-lg font-body tracking-wide">
+                    {g.subtitle}
                 </p>
             </m.div>
 
@@ -56,13 +61,13 @@ export default function GalleryContent() {
                                     : "bg-[#252525] text-gray-400 border border-white/10 hover:border-[#9fe300]/40 hover:text-white"
                             }`}
                         >
-                            {cat}
+                            {g.categories[cat]}
                         </button>
                     ))}
                 </div>
-                <p className="text-center text-gray-600 font-atpinko text-sm mt-4">
-                    {filtered.length} {filtered.length === 1 ? "photo" : "photos"}
-                    {activeCategory !== "All" && ` · ${activeCategory}`}
+                <p className="text-center text-gray-600 font-body text-sm mt-4">
+                    {fill(filtered.length === 1 ? g.photoOne : g.photoMany, { count: filtered.length })}
+                    {activeCategory !== "All" && ` · ${g.categories[activeCategory]}`}
                 </p>
             </m.div>
 
@@ -104,8 +109,8 @@ export default function GalleryContent() {
                                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
                                     />
                                     <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                                        <span className="text-white font-atpinko text-xs leading-snug opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-75">
-                                            {image.category}{image.project ? ` · ${image.project}` : ""}
+                                        <span className="text-white font-body text-xs leading-snug opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-75">
+                                            {g.categories[image.category]}{image.project ? ` · ${image.project}` : ""}
                                         </span>
                                     </div>
                                 </div>

@@ -32,7 +32,7 @@ Secondary: Richmond VA, Henrico VA, Glen Allen VA, Short Pump VA, Bon Air VA, Br
 - Address: 411 Branchway Rd Suite 107, North Chesterfield, VA 23236
 - License: Virginia Class A Contractor License
 - Insurance: General Liability + Workers Compensation
-- Google Reviews: 4.9 stars (47+ reviews)
+- Google Reviews: 4.9 stars on Google (https://maps.app.goo.gl/bvfykYDomsbJJxzk7)
 
 ## Key Pages
 
@@ -42,6 +42,7 @@ Secondary: Richmond VA, Henrico VA, Glen Allen VA, Short Pump VA, Bon Air VA, Br
 - [Blog](https://mascontractors.com/blog): Cost guides, permit guides, and how-to resources for Virginia homeowners
 - [Contact](https://mascontractors.com/contact): Request a free estimate
 - [About](https://mascontractors.com/about): Company history and team
+- [Español](https://mascontractors.com/es): Full Spanish version of the site — every page above is also available under /es (e.g. /es/services, /es/blog)
 
 ## Blog & Resources
 

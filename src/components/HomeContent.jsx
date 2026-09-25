@@ -3,24 +3,31 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { m } from "framer-motion";
-import data from "@/lib/data.json";
+import { useI18n } from "@/i18n/I18nProvider";
 import Certifications from "./Certifications";
 import { BiRightArrowAlt } from "react-icons/bi";
 import LocalBusiness from "./LocalBusiness";
 import Reviews from "./Reviews";
 import FAQ from "./FAQ";
-import { blogData } from "@/lib/blogData";
+import { MdAddHome, MdDeck, MdRoofing } from "react-icons/md";
+import { TbToolsKitchen2 } from "react-icons/tb";
+import { FaBath, FaHammer } from "react-icons/fa";
+import { GiBrickWall } from "react-icons/gi";
 
-const HOME_SERVICE_SLUGS = {
-    "HOME ADDITIONS": "home-additions",
-    "KITCHEN": "kitchen-remodeling",
-    "BATHROOMS": "bathroom-remodeling",
-    "DECKS": "decks-porches",
-    "ROOFING": "roofing",
-    "SIDING": "siding",
+// Keyed by the service slug, not the (translated) card title.
+const SERVICE_ICONS = {
+    "home-additions": MdAddHome,
+    "kitchen-remodeling": TbToolsKitchen2,
+    "bathroom-remodeling": FaBath,
+    "decks-porches": MdDeck,
+    "roofing": MdRoofing,
+    "siding": GiBrickWall,
 };
 
-export default function HomeContent() {
+export default function HomeContent({ reviews, posts }) {
+    const { t, href } = useI18n();
+    const h = t.home;
+    const data = t.site;
     // Animation variants
     const fadeInUp = {
         hidden: { opacity: 0, y: 30 },
@@ -40,12 +47,17 @@ export default function HomeContent() {
     return (
         <div className="bg-[#1e1e1e] min-h-screen overflow-hidden">
             {/* 1. Hero Section */}
-            <section className="relative w-full h-screen flex items-center justify-center overflow-hidden mt-10">
+            {/* min-h (not h-screen) + padding: on short windows or with a longer
+                headline (Spanish wraps to four lines) the content used to be taller
+                than the screen, so the title slid under the fixed navbar and the
+                scroll indicator sat on top of the last line. pt clears the navbar,
+                pb leaves room for the indicator. */}
+            <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden mt-10 pt-36 pb-28">
                 {/* Background Image with Overlay */}
                 <div className="absolute inset-0 z-0">
                     <Image
                         src="/img-2.jpg" // Using a high-quality image
-                        alt="MAS Contractors commercial construction site in Richmond VA with heavy machinery"
+                        alt={h.heroImgAlt}
                         fill
                         className="object-cover"
                         priority
@@ -56,37 +68,37 @@ export default function HomeContent() {
                 </div>
 
                 {/* Hero Content — estático (sin entrada animada) para que el LCP pinte de inmediato */}
-                <div className="relative z-10 text-center px-4 max-w-5xl mx-auto mt-10">
+                <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
                     <div>
                         <h1 className="text-3xl max-[400px]:text-2xl md:text-7xl lg:text-8xl font-contrax text-white mb-2 tracking-wider">
-                            TRANSFORMING <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9fe300] to-[#7ab300]">SPACES</span>
+                            {h.heroTitleA} <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9fe300] to-[#7ab300]">{h.heroTitleB}</span>
                         </h1>
                         <h2 className="text-2xl max-[400px]:text-xl md:text-6xl lg:text-7xl font-contrax text-white mb-8 tracking-wide">
-                            BUILDING LEGACIES
+                            {h.heroSubtitle}
                         </h2>
-                        <p className="text-base max-[400px]:text-sm md:text-xl text-gray-300 font-atpinko max-w-2xl mx-auto mb-10 leading-relaxed">
-                            Welcome to MAS Contractors. Where expertise meets innovation and unparalleled quality to turn your vision into lasting reality.
+                        <p className="text-base max-[400px]:text-sm md:text-xl text-gray-300 font-body max-w-2xl mx-auto mb-10 leading-relaxed">
+                            {h.heroText}
                         </p>
 
                         <div className="flex flex-col md:flex-row gap-6 justify-center items-center mb-10">
-                            <Link href="/contact#email">
+                            <Link href={href("/contact#email")}>
                                 <m.button
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
                                     className="bg-[#9fe300] text-[#1e1e1e] font-contrax text-base max-[400px]:text-sm py-4 px-10 rounded-full hover:bg-white transition-all duration-300 shadow-[0_0_20px_rgba(159,227,0,0.3)]"
                                 >
-                                    GET A QUOTE
+                                    {h.getQuote}
                                 </m.button>
                             </Link>
                         </div>
                         <div className="flex items-center justify-center gap-3 mb-10">
                             <span className="w-2 h-2 rounded-full bg-[#9fe300] animate-pulse" />
-                            <span className="text-gray-400 font-atpinko text-sm">
-                                Free estimates · Response within 48 hours
+                            <span className="text-gray-400 font-body text-sm">
+                                {h.freeEstimatesNote}
                             </span>
                         </div>
                         <h2 className="text-2xl max-[400px]:text-xl md:text-6xl font-contrax text-white mb-4">
-                            <span className="text-[#9fe300]">Commercial & </span>Residential
+                            <span className="text-[#9fe300]">{h.commercialA}</span>{h.commercialB}
                         </h2>
                     </div>
                 </div>
@@ -105,7 +117,7 @@ export default function HomeContent() {
             </section>
 
 
-            <LocalBusiness />
+            <LocalBusiness reviews={reviews} />
 
             {/* 2. Certifications Bar */}
             <section className="relative z-20 -mt-10 px-4">
@@ -132,7 +144,7 @@ export default function HomeContent() {
                         <div className="relative z-10">
                             <Image
                                 src="/logo-3D.png"
-                                alt="MAS Contractors 3D Logo - Premier General Contractor in Richmond VA"
+                                alt={h.logo3dAlt}
                                 width={500}
                                 height={500}
                                 className="w-full max-w-md mx-auto drop-shadow-2xl"
@@ -150,14 +162,14 @@ export default function HomeContent() {
                         className="relative z-10"
                     >
                         <h2 className="text-2xl max-[400px]:text-xl md:text-6xl font-contrax text-white mb-6">
-                            <span className="text-[#9fe300]">About</span> Us
+                            <span className="text-[#9fe300]">{h.aboutA}</span>{h.aboutB}
                         </h2>
-                        <p className="text-gray-300 font-atpinko text-lg mb-8 leading-relaxed">
+                        <p className="text-gray-300 font-body text-lg mb-8 leading-relaxed">
                             {data.heroAbout.text}
                         </p>
-                        <Link href="/about" aria-label="Read more about MAS Contractors history and mission">
+                        <Link href={href("/about")} aria-label={h.aboutLinkLabel}>
                             <span className="inline-flex items-center gap-2 text-[#9fe300] font-contrax hover:gap-4 transition-all cursor-pointer group">
-                                READ MORE ABOUT MAS CONTRACTORS <BiRightArrowAlt size={24} className="group-hover:text-white transition-colors" />
+                                {h.aboutLink} <BiRightArrowAlt size={24} className="group-hover:text-white transition-colors" />
                             </span>
                         </Link>
                     </m.div>
@@ -175,7 +187,7 @@ export default function HomeContent() {
                         className="text-center mb-16"
                     >
                         <h2 className="text-2xl max-[400px]:text-xl md:text-6xl font-contrax text-white mb-4">
-                            Featured <span className="text-[#9fe300]">Projects</span>
+                            {h.featuredA}<span className="text-[#9fe300]">{h.featuredB}</span>
                         </h2>
                     </m.div>
 
@@ -203,7 +215,7 @@ export default function HomeContent() {
                                     <h3 className="text-xl font-contrax text-white mb-2 uppercase tracking-wide group-hover:text-[#9fe300] transition-colors">
                                         {project.title}
                                     </h3>
-                                    <p className="text-gray-400 font-atpinko text-sm line-clamp-2 group-hover:text-white transition-colors">
+                                    <p className="text-gray-400 font-body text-sm line-clamp-2 group-hover:text-white transition-colors">
                                         {project.text}
                                     </p>
                                 </div>
@@ -212,15 +224,15 @@ export default function HomeContent() {
                     </div>
 
                     <div className="text-center mt-12">
-                        <Link href="/gallery" className="inline-flex items-center gap-2 text-[#9fe300] font-contrax hover:gap-4 transition-all group">
-                            VIEW OUR WORK <BiRightArrowAlt size={24} className="group-hover:text-white transition-colors" />
+                        <Link href={href("/gallery")} className="inline-flex items-center gap-2 text-[#9fe300] font-contrax hover:gap-4 transition-all group">
+                            {h.viewWork} <BiRightArrowAlt size={24} className="group-hover:text-white transition-colors" />
                         </Link>
                     </div>
                 </div>
             </section>
 
             {/* 5. Reviews */}
-            <Reviews />
+            <Reviews data={reviews} />
 
             {/* 6. Blog Teaser */}
             <section className="py-20 px-6 md:px-16 max-w-7xl mx-auto">
@@ -232,18 +244,18 @@ export default function HomeContent() {
                     className="flex items-end justify-between mb-12"
                 >
                     <div>
-                        <span className="text-[#9fe300] font-contrax tracking-[0.3em] uppercase text-xs mb-3 block">Tips & Guides</span>
+                        <span className="text-[#9fe300] font-contrax tracking-[0.3em] uppercase text-xs mb-3 block">{h.blogEyebrow}</span>
                         <h2 className="text-2xl md:text-5xl font-contrax text-white uppercase leading-tight">
-                            From the <span className="text-[#9fe300]">Blog</span>
+                            {h.blogA}<span className="text-[#9fe300]">{h.blogB}</span>
                         </h2>
                     </div>
-                    <Link href="/blog" className="hidden md:inline-flex items-center gap-2 text-[#9fe300] font-contrax text-sm tracking-widest hover:gap-4 transition-all">
-                        ALL ARTICLES <BiRightArrowAlt size={18} />
+                    <Link href={href("/blog")} className="hidden md:inline-flex items-center gap-2 text-[#9fe300] font-contrax text-sm tracking-widest hover:gap-4 transition-all">
+                        {h.allArticles} <BiRightArrowAlt size={18} />
                     </Link>
                 </m.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {blogData.slice(0, 3).map((post, index) => (
+                    {posts.slice(0, 3).map((post, index) => (
                         <m.div
                             key={post.slug}
                             initial={{ opacity: 0, y: 25 }}
@@ -252,7 +264,7 @@ export default function HomeContent() {
                             transition={{ delay: index * 0.1 }}
                             className="group bg-[#252525] rounded-2xl overflow-hidden border border-white/5 hover:border-[#9fe300]/30 hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(159,227,0,0.08)] transition-all duration-500"
                         >
-                            <Link href={`/blog/${post.slug}`} className="block">
+                            <Link href={href(`/blog/${post.slug}`)} className="block">
                                 <div className="relative h-48 overflow-hidden">
                                     <Image
                                         src={post.image}
@@ -270,11 +282,11 @@ export default function HomeContent() {
                                     <h3 className="text-base font-contrax text-white uppercase leading-snug mb-3 group-hover:text-[#9fe300] transition-colors line-clamp-2">
                                         {post.title}
                                     </h3>
-                                    <p className="text-gray-500 font-atpinko text-sm leading-relaxed line-clamp-2 mb-4">
+                                    <p className="text-gray-500 font-body text-sm leading-relaxed line-clamp-2 mb-4">
                                         {post.excerpt}
                                     </p>
                                     <span className="inline-flex items-center gap-2 text-[#9fe300] font-contrax text-xs tracking-widest group-hover:gap-4 transition-all">
-                                        READ ARTICLE <BiRightArrowAlt size={14} />
+                                        {h.readArticle} <BiRightArrowAlt size={14} />
                                     </span>
                                 </div>
                             </Link>
@@ -283,8 +295,8 @@ export default function HomeContent() {
                 </div>
 
                 <div className="text-center mt-8 md:hidden">
-                    <Link href="/blog" className="inline-flex items-center gap-2 text-[#9fe300] font-contrax text-sm tracking-widest hover:gap-4 transition-all">
-                        ALL ARTICLES <BiRightArrowAlt size={18} />
+                    <Link href={href("/blog")} className="inline-flex items-center gap-2 text-[#9fe300] font-contrax text-sm tracking-widest hover:gap-4 transition-all">
+                        {h.allArticles} <BiRightArrowAlt size={18} />
                     </Link>
                 </div>
             </section>
@@ -300,45 +312,20 @@ export default function HomeContent() {
                     className="text-center mb-16"
                 >
                     <h2 className="text-2xl max-[400px]:text-xl md:text-6xl font-contrax text-white mb-4">
-                        Explore Our <span className="text-[#9fe300]">Services</span>
+                        {h.servicesA}<span className="text-[#9fe300]">{h.servicesB}</span>
                     </h2>
-                    <p className="text-gray-400 font-atpinko text-lg max-w-3xl mx-auto">
-                        From groundbreaking commercial projects to beautifully designed residential communities, our portfolio showcases the transformation power of our expertise.
+                    <p className="text-gray-400 font-body text-lg max-w-3xl mx-auto">
+                        {h.servicesText}
                     </p>
                 </m.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {data.homeGreenCards.map((service, index) => {
-                        // Icon mapping based on service title
-                        let IconComponent;
-                        switch (service.title) {
-                            case "HOME ADDITIONS":
-                                IconComponent = require("react-icons/md").MdAddHome;
-                                break;
-                            case "KITCHEN":
-                                IconComponent = require("react-icons/tb").TbToolsKitchen2;
-                                break;
-                            case "BATHROOMS":
-                                IconComponent = require("react-icons/fa").FaBath;
-                                break;
-                            case "DECKS":
-                                IconComponent = require("react-icons/md").MdDeck;
-                                break;
-                            case "ROOFING":
-                                IconComponent = require("react-icons/md").MdRoofing;
-                                break;
-                            case "SIDING":
-                                IconComponent = require("react-icons/gi").GiBrickWall;
-                                break;
-                            default:
-                                IconComponent = require("react-icons/fa").FaHammer;
-                        }
-
-                        const slug = HOME_SERVICE_SLUGS[service.title];
-                        const href = slug ? `/services/${slug}` : "/services";
+                        const IconComponent = SERVICE_ICONS[service.slug] ?? FaHammer;
+                        const cardHref = href(service.slug ? `/services/${service.slug}` : "/services");
 
                         return (
-                            <Link key={index} href={href} className="block">
+                            <Link key={index} href={cardHref} className="block">
                                 <m.div
                                     initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
@@ -357,14 +344,14 @@ export default function HomeContent() {
                                     <h3 className="text-2xl font-contrax text-white mb-2 group-hover:text-[#9fe300] transition-colors uppercase relative z-10">
                                         {service.title}
                                     </h3>
-                                    <p className="text-[#9fe300] font-atpinko text-sm mb-4 uppercase tracking-wider relative z-10">
+                                    <p className="text-[#9fe300] font-body text-sm mb-4 uppercase tracking-wider relative z-10">
                                         {service.subTitle}
                                     </p>
-                                    <p className="text-gray-400 font-atpinko leading-relaxed group-hover:text-gray-300 transition-colors relative z-10 mb-6">
+                                    <p className="text-gray-400 font-body leading-relaxed group-hover:text-gray-300 transition-colors relative z-10 mb-6">
                                         {service.text}
                                     </p>
                                     <span className="inline-flex items-center gap-2 text-[#9fe300] font-contrax text-xs tracking-widest uppercase relative z-10 group-hover:gap-4 transition-all mt-auto">
-                                        Learn More <BiRightArrowAlt size={16} />
+                                        {h.learnMore} <BiRightArrowAlt size={16} />
                                     </span>
                                 </m.div>
                             </Link>
@@ -373,8 +360,8 @@ export default function HomeContent() {
                 </div>
 
                 <div className="text-center mt-12">
-                    <Link href="/services" className="inline-flex items-center gap-2 text-[#9fe300] font-contrax hover:gap-4 transition-all group">
-                        VIEW ALL SERVICES <BiRightArrowAlt size={24} className="group-hover:text-white transition-colors" />
+                    <Link href={href("/services")} className="inline-flex items-center gap-2 text-[#9fe300] font-contrax hover:gap-4 transition-all group">
+                        {h.viewAllServices} <BiRightArrowAlt size={24} className="group-hover:text-white transition-colors" />
                     </Link>
                 </div>
             </section>
@@ -396,14 +383,14 @@ export default function HomeContent() {
                     <div className="flex flex-col md:flex-row items-center gap-12 relative z-10">
                         <div className="md:w-2/3">
                             <h2 className="text-2xl max-[400px]:text-xl md:text-5xl font-contrax text-white mb-6">
-                                Free <span className="text-[#9fe300]">Visit</span> & Estimate
+                                {h.visitA}<span className="text-[#9fe300]">{h.visitB}</span>{h.visitC}
                             </h2>
-                            <p className="text-gray-300 font-atpinko text-lg mb-6 leading-relaxed">
-                                We come directly to your project site to take precise measurements and discuss materials, requirements, and expectations before providing any estimate. Our evaluations are completely free, with no obligation.
+                            <p className="text-gray-300 font-body text-lg mb-6 leading-relaxed">
+                                {h.visitText}
                             </p>
-                            <Link href="/contact#email">
+                            <Link href={href("/contact#email")}>
                                 <button className="bg-[#9fe300] text-[#1e1e1e] font-contrax py-4 px-8 rounded-full hover:bg-white transition-colors shadow-lg">
-                                    REQUEST YOUR FREE ESTIMATE
+                                    {h.visitButton}
                                 </button>
                             </Link>
                         </div>
@@ -411,7 +398,7 @@ export default function HomeContent() {
                             <div className="relative h-64 w-full rounded-2xl overflow-hidden border-2 border-[#9fe300]/20 shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500">
                                 <Image
                                     src="/car.png"
-                                    alt="MAS Contractors fleet vehicle for free estimate site visits in Richmond VA"
+                                    alt={h.carAlt}
                                     fill
                                     className="object-cover"
                                     sizes="(max-width: 768px) 100vw, 33vw"
@@ -436,14 +423,14 @@ export default function HomeContent() {
                             <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 group">
                                 <Image
                                     src="/work.png"
-                                    alt="MAS Contractors team discussing blueprints and project plans in Richmond VA"
+                                    alt={h.workAlt}
                                     width={600}
                                     height={800}
                                     className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                                 <div className="absolute bottom-8 left-8">
-                                    <p className="text-[#9fe300] font-contrax text-xl">ILLUMINATING THE FUTURE</p>
+                                    <p className="text-[#9fe300] font-contrax text-xl">{h.futureBadge}</p>
                                 </div>
                             </div>
                         </m.div>
@@ -455,13 +442,13 @@ export default function HomeContent() {
                             className="md:w-1/2"
                         >
                             <h2 className="text-2xl max-[400px]:text-xl md:text-5xl font-contrax text-white mb-6">
-                                Unlocking <span className="text-[#9fe300]">Collaborative Excellence</span>
+                                {h.collabA}<span className="text-[#9fe300]">{h.collabB}</span>
                             </h2>
-                            <p className="text-gray-300 font-atpinko text-lg mb-6 leading-relaxed">
-                                Collaboration is at the heart of every successful project. We work closely with our clients, listening to their needs and incorporating their feedback at every stage.
+                            <p className="text-gray-300 font-body text-lg mb-6 leading-relaxed">
+                                {h.collabText1}
                             </p>
-                            <p className="text-gray-300 font-atpinko text-lg mb-8 leading-relaxed">
-                                At MAS Contractors, we believe that the best results come from working together. Our collaborative approach not only enhances creativity and innovation but also builds lasting relationships based on trust.
+                            <p className="text-gray-300 font-body text-lg mb-8 leading-relaxed">
+                                {h.collabText2}
                             </p>
                         </m.div>
                     </div>
@@ -477,15 +464,15 @@ export default function HomeContent() {
                     viewport={{ once: true }}
                 >
                     <h2 className="text-2xl max-[400px]:text-xl md:text-7xl font-contrax text-white mb-8">
-                        <span className="text-[#9fe300]">Elevating</span> Your<br />
-                        Construction Journey
+                        <span className="text-[#9fe300]">{h.finalA}</span>{h.finalB}<br />
+                        {h.finalC}
                     </h2>
-                    <p className="text-gray-400 font-atpinko text-xl mb-10 max-w-2xl mx-auto">
-                        As contractors, we understand that every project is unique, and we are committed to delivering tailored solutions that meet your specific needs.
+                    <p className="text-gray-400 font-body text-xl mb-10 max-w-2xl mx-auto">
+                        {h.finalText}
                     </p>
-                    <Link href="/contact#email">
+                    <Link href={href("/contact#email")}>
                         <button className="bg-[#9fe300] text-[#1e1e1e] font-contrax text-xl py-5 px-12 rounded-full hover:bg-white transition-all duration-300 shadow-[0_0_30px_rgba(159,227,0,0.4)] hover:shadow-[0_0_50px_rgba(255,255,255,0.4)]">
-                            GET A QUOTE NOW
+                            {h.finalButton}
                         </button>
                     </Link>
                 </m.div>

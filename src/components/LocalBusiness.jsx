@@ -2,9 +2,13 @@
 import React from "react";
 import Link from "next/link";
 import { m } from "framer-motion";
+import { REVIEWS_SNAPSHOT } from "@/lib/reviewsSnapshot";
+import { useI18n } from "@/i18n/I18nProvider";
 import { FaMapMarkerAlt, FaPhoneAlt, FaHammer, FaShieldAlt, FaCheckCircle, FaStar } from "react-icons/fa";
 
-export default function LocalBusiness() {
+export default function LocalBusiness({ reviews = REVIEWS_SNAPSHOT }) {
+    const { t, href } = useI18n();
+    const lb = t.localBusiness;
     return (
         <section className="relative  py-24 bg-[#151515] overflow-hidden">
             {/* Decorative Background Elements */}
@@ -21,41 +25,39 @@ export default function LocalBusiness() {
                 >
                     <div className="inline-flex items-center gap-2 bg-[#252525] border border-white/10 rounded-full px-4 py-2 mb-6">
                         <FaStar className="text-[#9fe300]" />
-                        <span className="text-gray-300 text-sm font-atpinko tracking-wide">Top Rated in Richmond</span>
+                        <span className="text-gray-300 text-sm font-body tracking-wide">{lb.badge}</span>
                     </div>
 
                     <h2 className="text-3xl md:text-5xl font-contrax text-white mb-6 uppercase leading-tight">
-                        Trusted <span className="text-[#9fe300]">General Contractor</span> in Richmond, VA
+                        {lb.titleA}<span className="text-[#9fe300]">{lb.titleB}</span>{lb.titleC}
                     </h2>
 
-                    <p className="text-gray-400 font-atpinko text-lg mb-8 leading-relaxed max-w-xl">
-                        MAS Contractors LLC is a licensed and insured general contractor providing
-                        high-quality residential and commercial construction services throughout
-                        Richmond, VA and surrounding areas. We build with integrity and precision.
+                    <p className="text-gray-400 font-body text-lg mb-8 leading-relaxed max-w-xl">
+                        {lb.text}
                     </p>
 
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10 max-w-xl">
                         {[
-                            { label: "Years of Experience", value: "11+" },
-                            { label: "Projects Completed", value: "500+" },
-                            { label: "Google Rating", value: "4.9★" },
-                            { label: "Customer Reviews", value: "47+" },
+                            { label: lb.statYears, value: "11+" },
+                            { label: lb.statProjects, value: "500+" },
+                            { label: lb.statRating, value: `${reviews.rating.toFixed(1)}★` },
+                            { label: lb.statReviews, value: String(reviews.count) },
                         ].map((stat) => (
                             <div key={stat.label} className="text-center">
                                 <p className="text-2xl md:text-3xl font-contrax text-[#9fe300] mb-1">{stat.value}</p>
-                                <p className="text-gray-500 font-atpinko text-[11px] uppercase tracking-wider leading-tight">{stat.label}</p>
+                                <p className="text-gray-500 font-body text-[11px] uppercase tracking-wider leading-tight">{stat.label}</p>
                             </div>
                         ))}
                     </div>
 
-                    <div className="grid sm:grid-cols-2 gap-6 font-atpinko text-gray-300">
+                    <div className="grid sm:grid-cols-2 gap-6 font-body text-gray-300">
                         <div className="flex items-start gap-4 p-4 rounded-xl hover:bg-white/5 transition-colors duration-300">
                             <div className="bg-[#252525] p-3 rounded-lg text-[#9fe300]">
                                 <FaMapMarkerAlt size={20} />
                             </div>
                             <div>
-                                <h3 className="text-white font-bold mb-1">Service Area</h3>
-                                <p className="text-sm text-gray-400">Serving Richmond, VA & Chesterfield County</p>
+                                <h3 className="text-white font-bold mb-1">{lb.areaTitle}</h3>
+                                <p className="text-sm text-gray-400">{lb.areaText}</p>
                             </div>
                         </div>
 
@@ -64,7 +66,7 @@ export default function LocalBusiness() {
                                 <FaPhoneAlt size={20} />
                             </div>
                             <div>
-                                <h3 className="text-white font-bold mb-1">Contact Us</h3>
+                                <h3 className="text-white font-bold mb-1">{lb.contactTitle}</h3>
                                 <p className="text-sm text-gray-400">(804) 833-4600</p>
                                 <p className="text-sm text-gray-400">(540) 376-4453</p>
                                 <p className="text-sm text-gray-400">(804) 593-9468</p>
@@ -76,8 +78,8 @@ export default function LocalBusiness() {
                                 <FaHammer size={20} />
                             </div>
                             <div>
-                                <h3 className="text-white font-bold mb-1">Expertise</h3>
-                                <p className="text-sm text-gray-400">Residential & Commercial Construction</p>
+                                <h3 className="text-white font-bold mb-1">{lb.expertiseTitle}</h3>
+                                <p className="text-sm text-gray-400">{lb.expertiseText}</p>
                             </div>
                         </div>
 
@@ -86,8 +88,8 @@ export default function LocalBusiness() {
                                 <FaShieldAlt size={20} />
                             </div>
                             <div>
-                                <h3 className="text-white font-bold mb-1">Peace of Mind</h3>
-                                <p className="text-sm text-gray-400">Licensed & Insured in Virginia</p>
+                                <h3 className="text-white font-bold mb-1">{lb.peaceTitle}</h3>
+                                <p className="text-sm text-gray-400">{lb.peaceText}</p>
                             </div>
                         </div>
                     </div>
@@ -106,35 +108,30 @@ export default function LocalBusiness() {
 
                         <div className="relative z-10">
                             <h3 className="text-3xl font-contrax text-white mb-8 uppercase">
-                                Why Choose <span className="text-[#9fe300]">MAS Contractors?</span>
+                                {lb.whyA}<span className="text-[#9fe300]">{lb.whyB}</span>
                             </h3>
 
                             <ul className="space-y-6 mb-10">
-                                {[
-                                    "Free, no-obligation estimates",
-                                    "High-quality craftsmanship",
-                                    "Local Richmond contractor you can trust",
-                                    "On-time and on-budget delivery"
-                                ].map((item, idx) => (
+                                {lb.whyList.map((item, idx) => (
                                     <li key={idx} className="flex gap-4 items-center group/item">
                                         <FaCheckCircle className="text-[#9fe300] min-w-[20px] group-hover/item:scale-110 transition-transform" />
-                                        <span className="text-gray-200 font-atpinko text-lg">{item}</span>
+                                        <span className="text-gray-200 font-body text-lg">{item}</span>
                                     </li>
                                 ))}
                             </ul>
 
-                            <Link href="/contact#email" className="block">
+                            <Link href={href("/contact#email")} className="block">
                                 <m.button
                                     whileHover={{ scale: 1.02 }}
                                     whileTap={{ scale: 0.98 }}
                                     className="w-full bg-[#9fe300] text-[#1e1e1e] font-contrax text-lg py-5 rounded-xl hover:bg-white transition-all duration-300 shadow-[0_0_20px_rgba(159,227,0,0.2)]"
                                 >
-                                    GET A FREE ESTIMATE
+                                    {lb.button}
                                 </m.button>
                             </Link>
 
-                            <p className="mt-4 text-center text-gray-500 text-sm font-atpinko">
-                                Ready to start your project? Let&apos;s talk.
+                            <p className="mt-4 text-center text-gray-500 text-sm font-body">
+                                {lb.ready}
                             </p>
                         </div>
                     </div>

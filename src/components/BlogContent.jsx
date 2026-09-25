@@ -5,9 +5,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { BiRightArrowAlt } from "react-icons/bi";
 import { FaClock, FaTag } from "react-icons/fa";
-import { blogData } from "@/lib/blogData";
+import { useI18n } from "@/i18n/I18nProvider";
+import { DATE_LOCALE } from "@/i18n/config";
 
-const CATEGORY_COLORS = {
+// Keyed by `categoryId` (English, never translated), not the displayed category.
+export const CATEGORY_COLORS = {
     "Kitchen Remodeling": "bg-black/70 border border-white/10 text-secondary",
     "Decks & Porches": "bg-black/70 border border-white/10 text-blue-300",
     "Siding": "bg-black/70 border border-white/10 text-orange-300",
@@ -16,16 +18,21 @@ const CATEGORY_COLORS = {
     "Bathroom Remodeling": "bg-black/70 border border-white/10 text-teal-300",
 };
 
-function formatDate(dateStr) {
-    return new Date(dateStr).toLocaleDateString("en-US", {
+// publishDate is a plain YYYY-MM-DD; formatting it in UTC keeps US time zones
+// from showing the day before.
+export function formatDate(dateStr, lang) {
+    return new Date(dateStr).toLocaleDateString(DATE_LOCALE[lang], {
         year: "numeric",
         month: "long",
         day: "numeric",
+        timeZone: "UTC",
     });
 }
 
-export default function BlogContent() {
-    const sortedPosts = [...blogData].sort(
+export default function BlogContent({ posts }) {
+    const { t, lang, href } = useI18n();
+    const b = t.blogPage;
+    const sortedPosts = [...posts].sort(
         (a, b) => new Date(b.publishDate) - new Date(a.publishDate)
     );
     const featured = sortedPosts[0];
@@ -43,13 +50,13 @@ export default function BlogContent() {
                         transition={{ duration: 0.7 }}
                     >
                         <span className="text-secondary font-contrax tracking-[0.3em] uppercase text-xs mb-6 block">
-                            Richmond VA Home Improvement
+                            {b.eyebrow}
                         </span>
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-contrax text-white mb-6 uppercase tracking-wider leading-tight">
-                            Contractor <span className="text-secondary">Resources</span> & Tips
+                            {b.titleA}<span className="text-secondary">{b.titleB}</span>{b.titleC}
                         </h1>
-                        <p className="text-lg md:text-xl text-gray-400 font-atpinko max-w-2xl mx-auto leading-relaxed">
-                            Real answers to real questions from Richmond homeowners — costs, permits, materials, and what to expect when working with a general contractor.
+                        <p className="text-lg md:text-xl text-gray-400 font-body max-w-2xl mx-auto leading-relaxed">
+                            {b.intro}
                         </p>
                     </m.div>
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-64 bg-secondary/5 blur-[120px] rounded-full -z-10" />
@@ -59,7 +66,7 @@ export default function BlogContent() {
             {/* Featured Post */}
             <section className="bg-[#191919] py-16">
                 <div className="container mx-auto px-6 lg:px-16">
-                    <p className="text-secondary font-contrax text-xs tracking-widest uppercase mb-8">Latest Article</p>
+                    <p className="text-secondary font-contrax text-xs tracking-widest uppercase mb-8">{b.latest}</p>
                     <m.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -80,26 +87,26 @@ export default function BlogContent() {
                         </div>
                         <div className="bg-[#1a1a1a] p-10 lg:p-14 flex flex-col justify-center">
                             <div className="flex items-center gap-3 mb-6">
-                                <span className={`text-xs font-contrax tracking-wider px-3 py-1 rounded-full ${CATEGORY_COLORS[featured.category] || "bg-white/5 text-gray-400"}`}>
+                                <span className={`text-xs font-contrax tracking-wider px-3 py-1 rounded-full ${CATEGORY_COLORS[featured.categoryId] || "bg-white/5 text-gray-400"}`}>
                                     {featured.category}
                                 </span>
-                                <span className="text-gray-500 font-atpinko text-xs flex items-center gap-1">
+                                <span className="text-gray-500 font-body text-xs flex items-center gap-1">
                                     <FaClock size={11} /> {featured.readTime}
                                 </span>
                             </div>
                             <h2 className="text-2xl md:text-3xl font-contrax text-white mb-5 uppercase leading-tight group-hover:text-secondary transition-colors duration-300">
                                 {featured.title}
                             </h2>
-                            <p className="text-gray-400 font-atpinko text-base leading-relaxed mb-8">
+                            <p className="text-gray-400 font-body text-base leading-relaxed mb-8">
                                 {featured.excerpt}
                             </p>
                             <div className="flex items-center justify-between">
-                                <span className="text-gray-600 font-atpinko text-sm">{formatDate(featured.publishDate)}</span>
+                                <span className="text-gray-600 font-body text-sm">{formatDate(featured.publishDate, lang)}</span>
                                 <Link
-                                    href={`/blog/${featured.slug}`}
+                                    href={href(`/blog/${featured.slug}`)}
                                     className="inline-flex items-center gap-2 text-secondary font-contrax text-sm tracking-widest hover:gap-4 transition-all"
                                 >
-                                    READ ARTICLE <BiRightArrowAlt size={18} />
+                                    {b.readArticle} <BiRightArrowAlt size={18} />
                                 </Link>
                             </div>
                         </div>
@@ -130,29 +137,29 @@ export default function BlogContent() {
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-[#1e1e1e] via-[#1e1e1e]/20 to-transparent" />
                                     <div className="absolute top-4 left-4">
-                                        <span className={`text-xs font-contrax tracking-wider px-3 py-1 rounded-full backdrop-blur-sm ${CATEGORY_COLORS[post.category] || "bg-white/10 text-gray-300"}`}>
+                                        <span className={`text-xs font-contrax tracking-wider px-3 py-1 rounded-full backdrop-blur-sm ${CATEGORY_COLORS[post.categoryId] || "bg-white/10 text-gray-300"}`}>
                                             {post.category}
                                         </span>
                                     </div>
                                 </div>
 
                                 <div className="p-7 flex flex-col flex-1">
-                                    <div className="flex items-center gap-3 mb-4 text-gray-600 font-atpinko text-xs">
+                                    <div className="flex items-center gap-3 mb-4 text-gray-600 font-body text-xs">
                                         <span className="flex items-center gap-1"><FaClock size={10} /> {post.readTime}</span>
                                         <span>·</span>
-                                        <span>{formatDate(post.publishDate)}</span>
+                                        <span>{formatDate(post.publishDate, lang)}</span>
                                     </div>
                                     <h2 className="text-lg font-contrax text-white mb-3 uppercase leading-snug group-hover:text-secondary transition-colors duration-300 flex-1">
                                         {post.title}
                                     </h2>
-                                    <p className="text-gray-500 font-atpinko text-sm leading-relaxed mb-6 line-clamp-3">
+                                    <p className="text-gray-500 font-body text-sm leading-relaxed mb-6 line-clamp-3">
                                         {post.excerpt}
                                     </p>
                                     <Link
-                                        href={`/blog/${post.slug}`}
+                                        href={href(`/blog/${post.slug}`)}
                                         className="inline-flex items-center gap-2 text-secondary font-contrax text-xs tracking-widest hover:gap-4 transition-all mt-auto"
                                     >
-                                        READ ARTICLE <BiRightArrowAlt size={16} />
+                                        {b.readArticle} <BiRightArrowAlt size={16} />
                                     </Link>
                                 </div>
                             </m.article>
@@ -170,18 +177,18 @@ export default function BlogContent() {
                         viewport={{ once: true }}
                     >
                         <h2 className="text-3xl md:text-5xl font-contrax text-white mb-6 uppercase leading-tight">
-                            Ready for a <span className="text-secondary">Free Estimate</span>?
+                            {b.ctaA}<span className="text-secondary">{b.ctaB}</span>{b.ctaC}
                         </h2>
-                        <p className="text-gray-400 font-atpinko text-lg mb-10">
-                            MAS Contractors is a licensed Class A general contractor serving Richmond, Chesterfield, Henrico, and Midlothian. Let&apos;s talk about your project.
+                        <p className="text-gray-400 font-body text-lg mb-10">
+                            {b.ctaText}
                         </p>
-                        <Link href="/contact">
+                        <Link href={href("/contact")}>
                             <m.button
                                 whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(159,227,0,0.4)" }}
                                 whileTap={{ scale: 0.95 }}
                                 className="bg-secondary text-primary font-contrax text-lg py-5 px-14 rounded-full hover:bg-white transition-all duration-300"
                             >
-                                CONTACT US TODAY
+                                {b.ctaButton}
                             </m.button>
                         </Link>
                     </m.div>
