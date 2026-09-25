@@ -42,22 +42,26 @@ En producción estas keys están en las Environment Variables de Vercel.
 ```
 src/
   app/
-    [lang]/               # TODAS las páginas cuelgan de aquí (en, es)
-      layout.js           # layout raíz por idioma: <html lang>, I18nProvider, JSON-LD
-      page.jsx            # Home
-      about/, contact/, gallery/, services/, blog/
-      services/[slug]/, blog/[slug]/
-      not-found.js        # 404 propia, dentro del layout del idioma
-      [...rest]/page.js   # atrapa las URL que no existen para que rendericen esa 404
+    layout.js             # ÚNICO layout raíz: <html lang> sale del primer segmento de la URL (LangHtml)
+    (en)/                 # páginas en inglés, en sus URL de siempre (/about, /services/…)
+      layout.js           # SiteLayout en inglés: diccionario, navbar, footer, JSON-LD
+      page.jsx, about/, contact/, gallery/, services/[slug]/, blog/[slug]/
+      [...rest]/page.js   # URL inexistentes → not-found.js dentro del layout inglés
+      not-found.js
+    es/                   # la misma estructura, en español (/es/about, /es/services/…)
     review/route.js       # /review → cuadro de "escribir reseña" de Google
     robots.js, sitemap.js # el sitemap lleva las dos versiones de cada página con hreflang
 
+  views/                  # cada página escrita UNA vez: home.jsx, about.jsx, service.jsx…
+                          # leen params.lang; los page.jsx de (en)/ y es/ son envoltorios
+                          # de 3 líneas que fijan el idioma con bind() (i18n/bind.js)
   i18n/
     config.js             # LOCALES, localePath(), stripLocale(), alternatesFor()
     dictionaries/en.json  # textos de interfaz + metadatos SEO (meta.*)
     dictionaries/es.json
     I18nProvider.jsx      # useI18n() → { t, lang, href }
     metadata.js           # pageMetadata(): title, description, canonical, hreflang, OG
+    bind.js
   content/
     en/services.json, en/blog.json   # contenido largo, un archivo por idioma
     es/services.json, es/blog.json
@@ -76,10 +80,22 @@ public/llms.txt
 
 - **El inglés conserva sus URL de siempre** (`/about`, `/services/roofing`) para no
   perder posicionamiento. El español vive bajo `/es/...` con los **mismos slugs**.
-  `next.config.js` reescribe (afterFiles) toda URL sin prefijo a `/en/...`, y
-  redirige `/en/...` → `/...` con 301 para que nadie indexe la ruta interna.
+  Las URL coinciden con las carpetas (`app/(en)/`, `app/es/`): **no hay rewrites**.
+  `/en/...` redirige con 301 a `/...`.
+- **Cambiar de idioma no recarga la página.** Los dos idiomas cuelgan del mismo
+  layout raíz, así que Next navega en el cliente y solo baja el contenido y el
+  diccionario de la página nueva. No partir el layout raíz por idioma: Next hace
+  una carga completa al cruzar entre layouts raíz distintos.
+- **Historia, para no repetirla:** hubo una versión con `app/[lang]` y un rewrite
+  de las URL sin prefijo a `/en/...`. Next 16 predice la ruta en el cliente sin
+  conocer los rewrites, interpretaba `/about` como `[lang]=about` y cada prefetch
+  de un enlace en inglés daba 404. Con `proxy.js` pasaba lo mismo.
+- **No poner un `app/not-found.js` raíz que envuelva el layout del sitio**: Next lo
+  incluye en el payload de TODAS las páginas y metía el diccionario inglés entero
+  en cada página en español. Los 404 van por `[...rest]` dentro de cada idioma.
 - **Agregar un idioma**: añadirlo a `LOCALES` en `i18n/config.js`, crear
-  `dictionaries/<lang>.json` y `content/<lang>/*.json`, y los `alt` de la galería.
+  `dictionaries/<lang>.json` y `content/<lang>/*.json`, los `alt` de la galería, y
+  copiar `app/es/` a `app/<lang>/` cambiando el idioma de cada `bind()`.
   `npm run build` lista todo lo que falta.
 - **`scripts/check-i18n.mjs`** exige las mismas claves y longitudes de arrays que
   el inglés, y que los campos que son identificadores (`slug`, `url`, `id`, `img`,
@@ -88,12 +104,6 @@ public/llms.txt
 - **Enlaces internos**: siempre `href(path)` de `useI18n()`, nunca `"/contact"` a
   secas. En el contenido JSON (`cta.link` del blog) los enlaces van **sin** prefijo;
   el componente les pone el del idioma.
-- **El selector EN | ES es un `<a>`, no `next/link`, a propósito.** El router del
-  cliente no ve el rewrite: tras una navegación suave entre idiomas se queda con
-  `/en/...` como ruta actual y cada prefetch de un enlace en inglés da 404. Cambiar
-  de idioma es raro; una carga completa deja el router limpio.
-- **`usePathname()` en páginas en inglés puede devolver `/en/about`** (la ruta
-  interna). Por eso `stripLocale()` quita también el prefijo `en`.
 - El formulario de contacto manda `user_language` oculto y los **valores** de los
   servicios en inglés (`id`), para que la oficina reciba siempre lo mismo. Hay que
   agregar `{{user_language}}` a la plantilla de EmailJS para verlo.

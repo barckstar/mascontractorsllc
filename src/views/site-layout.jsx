@@ -1,20 +1,12 @@
-import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { SocialMediaBar } from "@/components/socialMedia";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Script from "next/script";
 import MotionProvider from "@/components/MotionProvider";
-import { notFound } from "next/navigation";
 import { I18nProvider } from "@/i18n/I18nProvider";
 import { getDictionary } from "@/i18n/dictionaries";
-import { LOCALES, OG_LOCALE, SITE_URL, isLocale, localePath } from "@/i18n/config";
-
-export const dynamicParams = false;
-
-export function generateStaticParams() {
-  return LOCALES.map((lang) => ({ lang }));
-}
+import { OG_LOCALE, SITE_URL, localePath } from "@/i18n/config";
 
 export async function generateMetadata({ params }) {
   const { lang } = await params;
@@ -40,11 +32,12 @@ export async function generateMetadata({ params }) {
   };
 }
 
-// Root layout per language: <html lang> has to change with the language, and
-// only a root layout renders <html>.
-export default async function RootLayout({ children, params }) {
+// Everything around a page in one language: dictionary, navbar, footer and the
+// organization JSON-LD. Used by app/(en)/layout.js and app/es/layout.js; the
+// <html> itself comes from the single root layout (app/layout.js), which is
+// what lets Next switch languages without a full page load.
+export default async function SiteLayout({ children, params }) {
   const { lang } = await params;
-  if (!isLocale(lang)) notFound();
   const dict = getDictionary(lang);
   const m = dict.meta.site;
   // `meta` is only read on the server; keep it out of the client payload.
@@ -116,8 +109,7 @@ export default async function RootLayout({ children, params }) {
   };
 
   return (
-    <html lang={lang}>
-      <body>
+    <>
         <I18nProvider lang={lang} dict={clientDict}>
         <MotionProvider>
           <Navbar />
@@ -132,7 +124,6 @@ export default async function RootLayout({ children, params }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-      </body>
-    </html>
+    </>
   );
 }

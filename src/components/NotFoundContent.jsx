@@ -2,7 +2,8 @@
 import Link from 'next/link';
 import { useI18n } from '@/i18n/I18nProvider';
 
-export default function NotFound() {
+// Body of the 404, shared by app/not-found.js (English) and app/es/not-found.js.
+export default function NotFoundContent() {
     const { t, href } = useI18n();
     const n = t.notFound;
     return (

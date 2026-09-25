@@ -15,21 +15,9 @@ const nextConfig = {
             { protocol: 'https', hostname: 'mascontractors.com' },
         ],
     },
-    // English keeps its original, unprefixed URLs: /about is served by
-    // app/[lang]/about with lang=en. afterFiles runs after public/ and static
-    // routes (/review, /sitemap.xml, images) but before dynamic routes, so only
-    // page URLs are rewritten. /es/... matches app/[lang] directly.
-    async rewrites() {
-        return {
-            afterFiles: [
-                { source: '/', destination: '/en' },
-                { source: '/:path((?!es(?:/|$)|en(?:/|$)|_next/).*)', destination: '/en/:path' },
-            ],
-        };
-    },
     async redirects() {
         return [
-            // /en/... is an internal path; send anyone who types it to the real URL.
+            // English has no /en prefix; send anyone who types one to the real URL.
             { source: '/en', destination: '/', permanent: true },
             { source: '/en/:path*', destination: '/:path*', permanent: true },
             // Redirect www to non-www

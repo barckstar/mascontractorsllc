@@ -1,9 +1,11 @@
 // Languages the site serves. English is the default and keeps the original,
-// unprefixed URLs (/about, /services/…) so nothing that already ranks moves.
-// Every other language lives under its own prefix (/es/about, /es/services/…).
+// unprefixed URLs (/about, /services/…) so nothing that already ranks moves:
+// its pages live in app/(en)/. Every other language lives under its own prefix
+// and folder (app/es/ → /es/about, /es/services/…).
 //
 // Adding a language: add it here, add dictionaries/<lang>.json and
-// content/<lang>/*.json. `npm run build` runs scripts/check-i18n.mjs first and
+// content/<lang>/*.json, and copy app/es/ to app/<lang>/ changing the "es" in
+// each bind() call. `npm run build` runs scripts/check-i18n.mjs first and
 // fails listing every key the new language is missing.
 
 export const LOCALES = ["en", "es"];
@@ -25,9 +27,8 @@ export function localePath(lang, path = "/") {
     return path === "/" ? `/${lang}` : `/${lang}${path}`;
 }
 
-// The inverse: the language-neutral path of a URL pathname. Strips the default
-// locale too: on English pages usePathname() can return the internal
-// rewritten path (/en/about), not the public one (/about).
+// The inverse: the language-neutral path of a URL pathname. Also strips an
+// explicit /en prefix, which only exists as a redirect.
 export function stripLocale(pathname = "/") {
     const [, first, ...rest] = pathname.split("/");
     if (isLocale(first)) return "/" + rest.join("/");

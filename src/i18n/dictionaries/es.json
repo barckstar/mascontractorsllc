@@ -28,19 +28,19 @@
     ],
     "homeCards": [
       {
-        "title": "Techos resistentes, protección garantizada",
+        "title": "Techos que protegen",
         "text": "Nos especializamos en techos de alta calidad que resisten el paso del tiempo. Nuestro equipo protege su hogar con materiales duraderos y mano de obra experta.",
         "img": "/img-5.png",
         "alt": "Instalación y reparación de techos residenciales por MAS Contractors en Richmond VA"
       },
       {
-        "title": "Su oasis personal, diseños exquisitos",
+        "title": "Su oasis personal",
         "text": "Convierta su baño en un refugio de lujo con nuestros servicios de remodelación. Desde grifería elegante hasta distribuciones modernas, creamos espacios que unen funcionalidad y estilo.",
         "img": "/img-7.png",
         "alt": "Remodelación moderna de baño con acabados de lujo en Richmond VA"
       },
       {
-        "title": "Porches que inspiran, elegancia al aire libre",
+        "title": "Porches con elegancia",
         "text": "Creamos espacios exteriores que realzan la fachada de su casa y le dan el lugar perfecto para descansar y recibir visitas. Diseñamos cada porche a la medida de su estilo y sus necesidades.",
         "img": "/img-8.png",
         "alt": "Construcción de patio y porche a medida para vivir al aire libre en Richmond VA"
@@ -577,7 +577,7 @@
     "emailLabel": "Correo",
     "emailCta": "Enviar correo",
     "heroAlt": "Contacte a MAS Contractors — Contratista general en Richmond VA",
-    "eyebrow": "Presupuestos gratis · Respuesta en 48 h · Richmond, VA",
+    "eyebrow": "Presupuesto gratis · Respuesta en 48 h",
     "titleA": "Manos a",
     "titleB": "la obra",
     "intro": "El contratista general Clase A de confianza en Richmond para proyectos residenciales y comerciales. Cuéntenos su idea: nosotros nos encargamos del resto.",
