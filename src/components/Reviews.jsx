@@ -52,19 +52,19 @@ function ReviewCard({ review, index }) {
         >
             <div className="flex items-center justify-between mb-5">
                 <StarRow count={review.rating} />
-                <span className="flex items-center gap-1.5 text-gray-500 font-atpinko text-xs">
+                <span className="flex items-center gap-1.5 text-gray-500 font-body text-xs">
                     <FaGoogle size={13} className="text-[#4285F4]" aria-hidden="true" /> Google
                 </span>
             </div>
 
             <div className="relative flex-1">
                 <FaQuoteLeft className="text-secondary/20 absolute -top-1 -left-1" size={24} aria-hidden="true" />
-                <p className="text-gray-400 font-atpinko text-sm leading-relaxed pl-5 whitespace-pre-line">{text}</p>
+                <p className="text-gray-400 font-body text-sm leading-relaxed pl-5 whitespace-pre-line">{text}</p>
                 {long && (
                     <button
                         type="button"
                         onClick={() => setOpen((v) => !v)}
-                        className="pl-5 mt-2 text-secondary font-atpinko text-xs hover:underline"
+                        className="pl-5 mt-2 text-secondary font-body text-xs hover:underline"
                     >
                         {open ? r.showLess : r.readMore}
                     </button>
@@ -81,7 +81,7 @@ function ReviewCard({ review, index }) {
                     ) : (
                         <p className="text-white font-contrax text-sm uppercase tracking-wide truncate">{review.author}</p>
                     )}
-                    {review.when && <p className="text-gray-500 font-atpinko text-xs mt-0.5">{review.when}</p>}
+                    {review.when && <p className="text-gray-500 font-body text-xs mt-0.5">{review.when}</p>}
                 </div>
             </div>
         </m.article>
@@ -124,12 +124,12 @@ export default function Reviews({ data = REVIEWS_SNAPSHOT }) {
                     >
                         <div className="text-center">
                             <p className="text-4xl font-contrax text-white leading-none">{rating.toFixed(1)}</p>
-                            <p className="text-gray-500 font-atpinko text-xs mt-1">{r.outOf5}</p>
+                            <p className="text-gray-500 font-body text-xs mt-1">{r.outOf5}</p>
                         </div>
                         <div className="w-px h-10 bg-white/10" />
                         <div className="text-left">
                             <StarRow count={rating} />
-                            <p className="text-gray-400 font-atpinko text-sm mt-1.5">
+                            <p className="text-gray-400 font-body text-sm mt-1.5">
                                 {fill(count === 1 ? r.countOne : r.countMany, { count })}
                             </p>
                         </div>
@@ -144,7 +144,7 @@ export default function Reviews({ data = REVIEWS_SNAPSHOT }) {
                         ))}
                     </div>
                 ) : (
-                    <p className="text-center text-gray-400 font-atpinko max-w-xl mx-auto">
+                    <p className="text-center text-gray-400 font-body max-w-xl mx-auto">
                         {r.emptyText}{" "}
                         <a href={mapsUrl} target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">
                             {r.emptyLink}
@@ -160,7 +160,7 @@ export default function Reviews({ data = REVIEWS_SNAPSHOT }) {
                     viewport={{ once: true }}
                     className="text-center mt-14 flex flex-col sm:flex-row items-center justify-center gap-4"
                 >
-                    <p className="text-gray-500 font-atpinko text-sm sm:mr-2">
+                    <p className="text-gray-500 font-body text-sm sm:mr-2">
                         {r.ctaText}
                     </p>
                     <a
@@ -174,7 +174,7 @@ export default function Reviews({ data = REVIEWS_SNAPSHOT }) {
                 </m.div>
 
                 {live && (
-                    <p className="text-center text-gray-600 font-atpinko text-xs mt-8">
+                    <p className="text-center text-gray-600 font-body text-xs mt-8">
                         {r.liveNote}
                     </p>
                 )}

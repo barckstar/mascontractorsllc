@@ -92,7 +92,7 @@ export default function BeforeAfter({ before, after, label }) {
             </div>
 
             {label && (
-                <div className="absolute top-4 left-1/2 -translate-x-1/2 bg-black/60 text-white/90 font-atpinko text-xs px-4 py-1.5 rounded-full whitespace-nowrap pointer-events-none">
+                <div className="absolute top-4 left-1/2 -translate-x-1/2 bg-black/60 text-white/90 font-body text-xs px-4 py-1.5 rounded-full whitespace-nowrap pointer-events-none">
                     {label}
                 </div>
             )}

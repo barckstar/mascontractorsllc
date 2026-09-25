@@ -73,7 +73,7 @@ export const Navbar = () => {
   ];
 
   return (
-    <nav className={`w-full bg-[#1e1e1e]/70 backdrop-blur-md shadow-md fixed top-0 left-0 z-50 font-atpinko transition-transform duration-300 ${hidden && !open ? "-translate-y-full" : "translate-y-0"}`}>
+    <nav className={`w-full bg-[#1e1e1e]/70 backdrop-blur-md shadow-md fixed top-0 left-0 z-50 font-body transition-transform duration-300 ${hidden && !open ? "-translate-y-full" : "translate-y-0"}`}>
       {/* Top Bar */}
       <div className="bg-[#1e1e1e]/90 shadow border-b border-white/5 h-16 flex items-center overflow-hidden relative">
         {/* Desktop View (All items) */}
@@ -199,7 +199,7 @@ export const Navbar = () => {
             <Link
               key={link.url}
               href={href(link.url)}
-              className="text-white text-lg font-atpinko py-2 border-b border-white/5 hover:text-[#9fe300] hover:pl-2 transition-all"
+              className="text-white text-lg font-body py-2 border-b border-white/5 hover:text-[#9fe300] hover:pl-2 transition-all"
               onClick={() => setOpen(false)}
             >
               {link.title}

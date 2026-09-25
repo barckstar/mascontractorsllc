@@ -38,7 +38,7 @@ export default function GalleryContent({ gallery }) {
                     {g.title}
                 </h1>
                 <div className="w-24 h-1 bg-[#9fe300] mx-auto rounded-full shadow-[0_0_10px_#9fe300]" />
-                <p className="mt-6 text-gray-400 text-lg font-atpinko tracking-wide">
+                <p className="mt-6 text-gray-400 text-lg font-body tracking-wide">
                     {g.subtitle}
                 </p>
             </m.div>
@@ -65,7 +65,7 @@ export default function GalleryContent({ gallery }) {
                         </button>
                     ))}
                 </div>
-                <p className="text-center text-gray-600 font-atpinko text-sm mt-4">
+                <p className="text-center text-gray-600 font-body text-sm mt-4">
                     {fill(filtered.length === 1 ? g.photoOne : g.photoMany, { count: filtered.length })}
                     {activeCategory !== "All" && ` · ${g.categories[activeCategory]}`}
                 </p>
@@ -109,7 +109,7 @@ export default function GalleryContent({ gallery }) {
                                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
                                     />
                                     <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                                        <span className="text-white font-atpinko text-xs leading-snug opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-75">
+                                        <span className="text-white font-body text-xs leading-snug opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-75">
                                             {g.categories[image.category]}{image.project ? ` · ${image.project}` : ""}
                                         </span>
                                     </div>

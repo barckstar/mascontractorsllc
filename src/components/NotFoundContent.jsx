@@ -18,7 +18,7 @@ export default function NotFoundContent() {
                     {n.title}
                 </h2>
 
-                <p className="text-gray-400 font-atpinko text-lg mb-12 leading-relaxed">
+                <p className="text-gray-400 font-body text-lg mb-12 leading-relaxed">
                     {n.text}
                 </p>
 
@@ -31,7 +31,7 @@ export default function NotFoundContent() {
                             className="bg-[#252525] border border-white/10 rounded-2xl p-5 hover:border-[#9fe300]/50 hover:-translate-y-1 transition-all duration-300 group"
                         >
                             <span className="block text-[#9fe300] font-contrax text-sm mb-1 group-hover:text-white transition-colors">{link.title}</span>
-                            <span className="block text-gray-500 font-atpinko text-xs">{link.sub}</span>
+                            <span className="block text-gray-500 font-body text-xs">{link.sub}</span>
                         </Link>
                     ))}
                 </div>

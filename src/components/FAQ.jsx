@@ -37,7 +37,7 @@ export default function FAQ() {
                     <h2 className="text-3xl md:text-5xl font-contrax text-white mb-6 uppercase tracking-wide">
                         {f.titleA}<span className="text-secondary">{f.titleB}</span>
                     </h2>
-                    <p className="text-gray-400 font-atpinko text-lg max-w-xl mx-auto">
+                    <p className="text-gray-400 font-body text-lg max-w-xl mx-auto">
                         {f.subtitle}
                     </p>
                     <div className="w-20 h-1 bg-secondary mx-auto rounded-full mt-6" />
@@ -85,7 +85,7 @@ export default function FAQ() {
                                         transition={{ duration: 0.3 }}
                                     >
                                         <div className="px-6 md:px-7 pb-7">
-                                            <p className="text-gray-400 font-atpinko text-base leading-relaxed border-t border-white/5 pt-5">
+                                            <p className="text-gray-400 font-body text-base leading-relaxed border-t border-white/5 pt-5">
                                                 {faq.answer}
                                             </p>
                                         </div>

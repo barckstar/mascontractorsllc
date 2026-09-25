@@ -48,7 +48,7 @@ function Contact() {
   };
 
   const inputClass =
-    "w-full bg-[#0f0f0f] border border-white/10 hover:border-white/20 focus:border-[#9fe300] rounded-xl py-3.5 px-4 text-white outline-none transition-colors duration-200 font-atpinko text-base";
+    "w-full bg-[#0f0f0f] border border-white/10 hover:border-white/20 focus:border-[#9fe300] rounded-xl py-3.5 px-4 text-white outline-none transition-colors duration-200 font-body text-base";
   const labelClass =
     "block text-[11px] text-gray-500 font-contrax uppercase tracking-widest mb-2";
 
@@ -184,7 +184,7 @@ function Contact() {
             <m.div
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
-              className={`mt-5 p-4 rounded-xl text-center font-atpinko text-sm ${
+              className={`mt-5 p-4 rounded-xl text-center font-body text-sm ${
                 status.type === "success"
                   ? "bg-[#9fe300]/10 text-[#9fe300] border border-[#9fe300]/20"
                   : "bg-red-500/10 text-red-400 border border-red-500/20"

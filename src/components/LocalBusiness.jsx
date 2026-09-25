@@ -25,14 +25,14 @@ export default function LocalBusiness({ reviews = REVIEWS_SNAPSHOT }) {
                 >
                     <div className="inline-flex items-center gap-2 bg-[#252525] border border-white/10 rounded-full px-4 py-2 mb-6">
                         <FaStar className="text-[#9fe300]" />
-                        <span className="text-gray-300 text-sm font-atpinko tracking-wide">{lb.badge}</span>
+                        <span className="text-gray-300 text-sm font-body tracking-wide">{lb.badge}</span>
                     </div>
 
                     <h2 className="text-3xl md:text-5xl font-contrax text-white mb-6 uppercase leading-tight">
                         {lb.titleA}<span className="text-[#9fe300]">{lb.titleB}</span>{lb.titleC}
                     </h2>
 
-                    <p className="text-gray-400 font-atpinko text-lg mb-8 leading-relaxed max-w-xl">
+                    <p className="text-gray-400 font-body text-lg mb-8 leading-relaxed max-w-xl">
                         {lb.text}
                     </p>
 
@@ -45,12 +45,12 @@ export default function LocalBusiness({ reviews = REVIEWS_SNAPSHOT }) {
                         ].map((stat) => (
                             <div key={stat.label} className="text-center">
                                 <p className="text-2xl md:text-3xl font-contrax text-[#9fe300] mb-1">{stat.value}</p>
-                                <p className="text-gray-500 font-atpinko text-[11px] uppercase tracking-wider leading-tight">{stat.label}</p>
+                                <p className="text-gray-500 font-body text-[11px] uppercase tracking-wider leading-tight">{stat.label}</p>
                             </div>
                         ))}
                     </div>
 
-                    <div className="grid sm:grid-cols-2 gap-6 font-atpinko text-gray-300">
+                    <div className="grid sm:grid-cols-2 gap-6 font-body text-gray-300">
                         <div className="flex items-start gap-4 p-4 rounded-xl hover:bg-white/5 transition-colors duration-300">
                             <div className="bg-[#252525] p-3 rounded-lg text-[#9fe300]">
                                 <FaMapMarkerAlt size={20} />
@@ -115,7 +115,7 @@ export default function LocalBusiness({ reviews = REVIEWS_SNAPSHOT }) {
                                 {lb.whyList.map((item, idx) => (
                                     <li key={idx} className="flex gap-4 items-center group/item">
                                         <FaCheckCircle className="text-[#9fe300] min-w-[20px] group-hover/item:scale-110 transition-transform" />
-                                        <span className="text-gray-200 font-atpinko text-lg">{item}</span>
+                                        <span className="text-gray-200 font-body text-lg">{item}</span>
                                     </li>
                                 ))}
                             </ul>
@@ -130,7 +130,7 @@ export default function LocalBusiness({ reviews = REVIEWS_SNAPSHOT }) {
                                 </m.button>
                             </Link>
 
-                            <p className="mt-4 text-center text-gray-500 text-sm font-atpinko">
+                            <p className="mt-4 text-center text-gray-500 text-sm font-body">
                                 {lb.ready}
                             </p>
                         </div>

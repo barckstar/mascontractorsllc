@@ -71,7 +71,7 @@ export default function HomeContent({ reviews, posts }) {
                         <h2 className="text-2xl max-[400px]:text-xl md:text-6xl lg:text-7xl font-contrax text-white mb-8 tracking-wide">
                             {h.heroSubtitle}
                         </h2>
-                        <p className="text-base max-[400px]:text-sm md:text-xl text-gray-300 font-atpinko max-w-2xl mx-auto mb-10 leading-relaxed">
+                        <p className="text-base max-[400px]:text-sm md:text-xl text-gray-300 font-body max-w-2xl mx-auto mb-10 leading-relaxed">
                             {h.heroText}
                         </p>
 
@@ -88,7 +88,7 @@ export default function HomeContent({ reviews, posts }) {
                         </div>
                         <div className="flex items-center justify-center gap-3 mb-10">
                             <span className="w-2 h-2 rounded-full bg-[#9fe300] animate-pulse" />
-                            <span className="text-gray-400 font-atpinko text-sm">
+                            <span className="text-gray-400 font-body text-sm">
                                 {h.freeEstimatesNote}
                             </span>
                         </div>
@@ -159,7 +159,7 @@ export default function HomeContent({ reviews, posts }) {
                         <h2 className="text-2xl max-[400px]:text-xl md:text-6xl font-contrax text-white mb-6">
                             <span className="text-[#9fe300]">{h.aboutA}</span>{h.aboutB}
                         </h2>
-                        <p className="text-gray-300 font-atpinko text-lg mb-8 leading-relaxed">
+                        <p className="text-gray-300 font-body text-lg mb-8 leading-relaxed">
                             {data.heroAbout.text}
                         </p>
                         <Link href={href("/about")} aria-label={h.aboutLinkLabel}>
@@ -210,7 +210,7 @@ export default function HomeContent({ reviews, posts }) {
                                     <h3 className="text-xl font-contrax text-white mb-2 uppercase tracking-wide group-hover:text-[#9fe300] transition-colors">
                                         {project.title}
                                     </h3>
-                                    <p className="text-gray-400 font-atpinko text-sm line-clamp-2 group-hover:text-white transition-colors">
+                                    <p className="text-gray-400 font-body text-sm line-clamp-2 group-hover:text-white transition-colors">
                                         {project.text}
                                     </p>
                                 </div>
@@ -277,7 +277,7 @@ export default function HomeContent({ reviews, posts }) {
                                     <h3 className="text-base font-contrax text-white uppercase leading-snug mb-3 group-hover:text-[#9fe300] transition-colors line-clamp-2">
                                         {post.title}
                                     </h3>
-                                    <p className="text-gray-500 font-atpinko text-sm leading-relaxed line-clamp-2 mb-4">
+                                    <p className="text-gray-500 font-body text-sm leading-relaxed line-clamp-2 mb-4">
                                         {post.excerpt}
                                     </p>
                                     <span className="inline-flex items-center gap-2 text-[#9fe300] font-contrax text-xs tracking-widest group-hover:gap-4 transition-all">
@@ -309,7 +309,7 @@ export default function HomeContent({ reviews, posts }) {
                     <h2 className="text-2xl max-[400px]:text-xl md:text-6xl font-contrax text-white mb-4">
                         {h.servicesA}<span className="text-[#9fe300]">{h.servicesB}</span>
                     </h2>
-                    <p className="text-gray-400 font-atpinko text-lg max-w-3xl mx-auto">
+                    <p className="text-gray-400 font-body text-lg max-w-3xl mx-auto">
                         {h.servicesText}
                     </p>
                 </m.div>
@@ -339,10 +339,10 @@ export default function HomeContent({ reviews, posts }) {
                                     <h3 className="text-2xl font-contrax text-white mb-2 group-hover:text-[#9fe300] transition-colors uppercase relative z-10">
                                         {service.title}
                                     </h3>
-                                    <p className="text-[#9fe300] font-atpinko text-sm mb-4 uppercase tracking-wider relative z-10">
+                                    <p className="text-[#9fe300] font-body text-sm mb-4 uppercase tracking-wider relative z-10">
                                         {service.subTitle}
                                     </p>
-                                    <p className="text-gray-400 font-atpinko leading-relaxed group-hover:text-gray-300 transition-colors relative z-10 mb-6">
+                                    <p className="text-gray-400 font-body leading-relaxed group-hover:text-gray-300 transition-colors relative z-10 mb-6">
                                         {service.text}
                                     </p>
                                     <span className="inline-flex items-center gap-2 text-[#9fe300] font-contrax text-xs tracking-widest uppercase relative z-10 group-hover:gap-4 transition-all mt-auto">
@@ -380,7 +380,7 @@ export default function HomeContent({ reviews, posts }) {
                             <h2 className="text-2xl max-[400px]:text-xl md:text-5xl font-contrax text-white mb-6">
                                 {h.visitA}<span className="text-[#9fe300]">{h.visitB}</span>{h.visitC}
                             </h2>
-                            <p className="text-gray-300 font-atpinko text-lg mb-6 leading-relaxed">
+                            <p className="text-gray-300 font-body text-lg mb-6 leading-relaxed">
                                 {h.visitText}
                             </p>
                             <Link href={href("/contact#email")}>
@@ -439,10 +439,10 @@ export default function HomeContent({ reviews, posts }) {
                             <h2 className="text-2xl max-[400px]:text-xl md:text-5xl font-contrax text-white mb-6">
                                 {h.collabA}<span className="text-[#9fe300]">{h.collabB}</span>
                             </h2>
-                            <p className="text-gray-300 font-atpinko text-lg mb-6 leading-relaxed">
+                            <p className="text-gray-300 font-body text-lg mb-6 leading-relaxed">
                                 {h.collabText1}
                             </p>
-                            <p className="text-gray-300 font-atpinko text-lg mb-8 leading-relaxed">
+                            <p className="text-gray-300 font-body text-lg mb-8 leading-relaxed">
                                 {h.collabText2}
                             </p>
                         </m.div>
@@ -462,7 +462,7 @@ export default function HomeContent({ reviews, posts }) {
                         <span className="text-[#9fe300]">{h.finalA}</span>{h.finalB}<br />
                         {h.finalC}
                     </h2>
-                    <p className="text-gray-400 font-atpinko text-xl mb-10 max-w-2xl mx-auto">
+                    <p className="text-gray-400 font-body text-xl mb-10 max-w-2xl mx-auto">
                         {h.finalText}
                     </p>
                     <Link href={href("/contact#email")}>

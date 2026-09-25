@@ -156,6 +156,17 @@ la Business Profile API, con OAuth del dueño y aprobación de Google.
 `/review` (`app/review/route.js`) redirige al cuadro de "escribir reseña" de
 Google. Es el enlace para el QR y el mensaje de entrega de obra.
 
+## Tipografías
+
+- **Texto: Sora** (`font-body`), licencia SIL OFL, en `public/fonts/Sora-*.woff2` con
+  su licencia al lado. Solo el subconjunto Latin, que cubre todo el español.
+- **Títulos: Conthrax** (`font-contrax`), de Typodermic Fonts. Pendiente de
+  confirmar que su licencia cubre el uso web comercial.
+- ⚠️ **No volver a AT Pinko** sin comprar su licencia comercial. El archivo que
+  había era la demo «free for personal use only» de Ardyana Types: no permite uso
+  comercial y no trae acentos ni ñ, así que en español cada «á» o «ñ» salía en la
+  fuente del sistema, a mitad de palabra. Se detectó al traducir el sitio.
+
 ## Stack
 
 Next.js 16, React 19, Tailwind 3, Framer Motion 12 (vía `LazyMotion` + componente `m`, ver `MotionProvider.jsx`), EmailJS (formulario de contacto), Google ReCAPTCHA v2, react-icons, lightgallery, sharp.

@@ -42,7 +42,7 @@ export default function ServicePageContent({ service, services }) {
                                 : service.title
                             }
                         </h1>
-                        <p className="text-lg md:text-xl text-gray-400 font-atpinko max-w-2xl mx-auto leading-relaxed mb-10">
+                        <p className="text-lg md:text-xl text-gray-400 font-body max-w-2xl mx-auto leading-relaxed mb-10">
                             {service.heroText}
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -108,17 +108,17 @@ export default function ServicePageContent({ service, services }) {
                             <h2 className="text-2xl md:text-4xl font-contrax text-white mb-6 uppercase leading-tight">
                                 {s.whyTitle}
                             </h2>
-                            <p className="text-gray-400 font-atpinko text-lg mb-6 leading-relaxed">
+                            <p className="text-gray-400 font-body text-lg mb-6 leading-relaxed">
                                 {service.description}
                             </p>
-                            <p className="text-gray-400 font-atpinko text-lg mb-10 leading-relaxed">
+                            <p className="text-gray-400 font-body text-lg mb-10 leading-relaxed">
                                 {service.description2}
                             </p>
                             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 {service.benefits.map((benefit, i) => (
                                     <li key={i} className="flex items-start gap-3">
                                         <FaCheckCircle className="text-secondary mt-1 flex-shrink-0" size={14} />
-                                        <span className="text-gray-300 font-atpinko text-sm leading-snug">{benefit}</span>
+                                        <span className="text-gray-300 font-body text-sm leading-snug">{benefit}</span>
                                     </li>
                                 ))}
                             </ul>
@@ -160,7 +160,7 @@ export default function ServicePageContent({ service, services }) {
                                     <h3 className="text-white font-contrax uppercase text-sm tracking-wider mb-3">
                                         {item.title}
                                     </h3>
-                                    <p className="text-gray-400 font-atpinko text-sm leading-relaxed">
+                                    <p className="text-gray-400 font-body text-sm leading-relaxed">
                                         {item.desc}
                                     </p>
                                     {i < service.process.length - 1 && (
@@ -191,7 +191,7 @@ export default function ServicePageContent({ service, services }) {
                                 transition={{ delay: i * 0.08 }}
                             >
                                 <p className="text-4xl md:text-5xl font-contrax text-secondary mb-2">{stat.value}</p>
-                                <p className="text-gray-400 font-atpinko text-sm uppercase tracking-wider">{stat.label}</p>
+                                <p className="text-gray-400 font-body text-sm uppercase tracking-wider">{stat.label}</p>
                             </m.div>
                         ))}
                     </div>
@@ -237,7 +237,7 @@ export default function ServicePageContent({ service, services }) {
                                         {service.costGuide.range}
                                     </p>
                                     {service.costGuide.average && (
-                                        <p className="text-gray-500 font-atpinko text-sm">
+                                        <p className="text-gray-500 font-body text-sm">
                                             {s.mostProjects} <span className="text-gray-300">{service.costGuide.average}</span>
                                         </p>
                                     )}
@@ -254,7 +254,7 @@ export default function ServicePageContent({ service, services }) {
                                     <p className="text-3xl md:text-4xl font-contrax text-white mb-2">
                                         {service.costGuide.timeline}
                                     </p>
-                                    <p className="text-gray-500 font-atpinko text-sm">
+                                    <p className="text-gray-500 font-body text-sm">
                                         {s.permitNote}
                                     </p>
                                 </div>
@@ -273,14 +273,14 @@ export default function ServicePageContent({ service, services }) {
                                     {service.costGuide.factors.map((factor, i) => (
                                         <li key={i} className="flex items-start gap-3">
                                             <FaCheckCircle className="text-secondary mt-1 flex-shrink-0" size={13} />
-                                            <span className="text-gray-300 font-atpinko text-sm leading-snug">
+                                            <span className="text-gray-300 font-body text-sm leading-snug">
                                                 {factor}
                                             </span>
                                         </li>
                                     ))}
                                 </ul>
                                 <div className="border-t border-white/5 pt-6">
-                                    <p className="text-gray-500 font-atpinko text-sm leading-relaxed mb-6">
+                                    <p className="text-gray-500 font-body text-sm leading-relaxed mb-6">
                                         {s.rangesNote}
                                     </p>
                                     <Link href={href("/contact")}>
@@ -335,7 +335,7 @@ export default function ServicePageContent({ service, services }) {
                                         {service.challenges.map((c, i) => (
                                             <div key={i} className="bg-[#1a1a1a] rounded-2xl p-6 border border-orange-500/10">
                                                 <p className="text-orange-400 font-contrax text-xs tracking-wider uppercase mb-2">{c.title}</p>
-                                                <p className="text-gray-400 font-atpinko text-sm leading-relaxed">{c.desc}</p>
+                                                <p className="text-gray-400 font-body text-sm leading-relaxed">{c.desc}</p>
                                             </div>
                                         ))}
                                     </div>
@@ -359,7 +359,7 @@ export default function ServicePageContent({ service, services }) {
                                         {service.proTips.map((tip, i) => (
                                             <div key={i} className="flex items-start gap-4 bg-[#1a1a1a] rounded-2xl p-5 border border-secondary/10">
                                                 <span className="text-secondary font-contrax text-xs mt-0.5 flex-shrink-0">{String(i + 1).padStart(2, "0")}</span>
-                                                <p className="text-gray-300 font-atpinko text-sm leading-relaxed">{tip}</p>
+                                                <p className="text-gray-300 font-body text-sm leading-relaxed">{tip}</p>
                                             </div>
                                         ))}
                                     </div>
@@ -383,7 +383,7 @@ export default function ServicePageContent({ service, services }) {
                                 </div>
                                 <div className="flex flex-wrap gap-3">
                                     {service.safetyGear.map((item, i) => (
-                                        <span key={i} className="bg-[#252525] text-gray-300 font-atpinko text-sm px-4 py-2 rounded-full border border-white/5">
+                                        <span key={i} className="bg-[#252525] text-gray-300 font-body text-sm px-4 py-2 rounded-full border border-white/5">
                                             {item}
                                         </span>
                                     ))}
@@ -410,7 +410,7 @@ export default function ServicePageContent({ service, services }) {
                             <h2 className="text-3xl md:text-5xl font-contrax text-white mb-4 uppercase tracking-wide">
                                 {s.baA}<span className="text-secondary">{s.baB}</span>
                             </h2>
-                            <p className="text-gray-400 font-atpinko text-lg max-w-xl mx-auto">
+                            <p className="text-gray-400 font-body text-lg max-w-xl mx-auto">
                                 {s.baText}
                             </p>
                         </m.div>
@@ -494,7 +494,7 @@ export default function ServicePageContent({ service, services }) {
                                             transition={{ duration: 0.3 }}
                                         >
                                             <div className="px-6 md:px-7 pb-7">
-                                                <p className="text-gray-400 font-atpinko text-base leading-relaxed border-t border-white/5 pt-5">
+                                                <p className="text-gray-400 font-body text-base leading-relaxed border-t border-white/5 pt-5">
                                                     {item.answer}
                                                 </p>
                                             </div>
@@ -555,7 +555,7 @@ export default function ServicePageContent({ service, services }) {
                         ))}
                     </div>
                     <div className="text-center mt-10">
-                        <Link href={href("/services")} className="inline-flex items-center gap-2 text-gray-400 font-atpinko hover:text-secondary transition-colors text-sm">
+                        <Link href={href("/services")} className="inline-flex items-center gap-2 text-gray-400 font-body hover:text-secondary transition-colors text-sm">
                             {s.viewAll} <BiRightArrowAlt size={16} />
                         </Link>
                     </div>
@@ -574,7 +574,7 @@ export default function ServicePageContent({ service, services }) {
                         <h2 className="text-3xl md:text-5xl font-contrax text-white mb-6 uppercase leading-tight">
                             {s.ctaA}<span className="text-secondary">{s.ctaB}</span>{s.ctaC}
                         </h2>
-                        <p className="text-gray-400 font-atpinko text-lg mb-10 max-w-xl mx-auto">
+                        <p className="text-gray-400 font-body text-lg mb-10 max-w-xl mx-auto">
                             {s.ctaText}
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">

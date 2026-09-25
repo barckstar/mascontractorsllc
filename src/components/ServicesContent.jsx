@@ -30,7 +30,7 @@ export default function ServicesContent() {
                     <h1 className="text-4xl md:text-7xl font-contrax text-white mb-6 uppercase tracking-wider">
                         {s.titleA}<span className="text-secondary">{s.titleB}</span>
                     </h1>
-                    <p className="text-lg md:text-xl text-gray-400 font-atpinko max-w-2xl mx-auto leading-relaxed mb-12">
+                    <p className="text-lg md:text-xl text-gray-400 font-body max-w-2xl mx-auto leading-relaxed mb-12">
                         {s.intro}
                     </p>
                 </m.div>
@@ -69,7 +69,7 @@ export default function ServicesContent() {
                                 </div>
                             </Link>
                             <div className="p-8">
-                                <p className="text-gray-400 font-atpinko mb-8 leading-relaxed line-clamp-3 group-hover:text-gray-300 transition-colors">
+                                <p className="text-gray-400 font-body mb-8 leading-relaxed line-clamp-3 group-hover:text-gray-300 transition-colors">
                                     {service.description}
                                 </p>
                                 <Link
@@ -135,10 +135,10 @@ export default function ServicesContent() {
                                     <h3 className="text-3xl md:text-5xl font-contrax text-white mb-8 uppercase leading-tight">
                                         {spec.title}
                                     </h3>
-                                    <p className="text-gray-400 font-atpinko text-lg mb-10 leading-relaxed">
+                                    <p className="text-gray-400 font-body text-lg mb-10 leading-relaxed">
                                         {spec.description}
                                     </p>
-                                    <p className="text-gray-400 font-atpinko text-lg mb-10 leading-relaxed italic">
+                                    <p className="text-gray-400 font-body text-lg mb-10 leading-relaxed italic">
                                         &quot;{spec.descriptionLarge}&quot;
                                     </p>
 
@@ -146,7 +146,7 @@ export default function ServicesContent() {
                                         {spec.list.map((item, id) => (
                                             <li key={id} className="flex items-start gap-4 group/item">
                                                 <FaCheckCircle className="text-secondary mt-1 flex-shrink-0 group-hover/item:scale-125 transition-transform" />
-                                                <span className="text-gray-300 font-atpinko text-base">{item.item}</span>
+                                                <span className="text-gray-300 font-body text-base">{item.item}</span>
                                             </li>
                                         ))}
                                     </ul>
@@ -195,7 +195,7 @@ export default function ServicesContent() {
                     <h2 className="text-3xl md:text-6xl font-contrax text-white mb-8 uppercase leading-tight">
                         {s.ctaA}<span className="text-secondary">{s.ctaB}</span>{s.ctaC}
                     </h2>
-                    <p className="text-gray-400 font-atpinko text-xl mb-12 max-w-2xl mx-auto">
+                    <p className="text-gray-400 font-body text-xl mb-12 max-w-2xl mx-auto">
                         {s.ctaText}
                     </p>
                     <Link href={href("/contact")}>
@@ -208,7 +208,7 @@ export default function ServicesContent() {
                         </m.button>
                     </Link>
                     <div className="mt-6">
-                        <Link href={href("/about")} className="inline-flex items-center gap-2 text-gray-400 font-atpinko hover:text-secondary transition-colors">
+                        <Link href={href("/about")} className="inline-flex items-center gap-2 text-gray-400 font-body hover:text-secondary transition-colors">
                             {s.aboutLink} <BiRightArrowAlt size={20} />
                         </Link>
                     </div>

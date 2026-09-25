@@ -13,13 +13,13 @@ function ContentBlock({ block }) {
     switch (block.type) {
         case "lead":
             return (
-                <p className="text-xl md:text-2xl text-gray-300 font-atpinko leading-relaxed mb-10 border-l-4 border-secondary pl-6">
+                <p className="text-xl md:text-2xl text-gray-300 font-body leading-relaxed mb-10 border-l-4 border-secondary pl-6">
                     {block.text}
                 </p>
             );
         case "p":
             return (
-                <p className="text-gray-400 font-atpinko text-lg leading-relaxed mb-6">
+                <p className="text-gray-400 font-body text-lg leading-relaxed mb-6">
                     {block.text}
                 </p>
             );
@@ -41,7 +41,7 @@ function ContentBlock({ block }) {
                     {block.items.map((item, i) => (
                         <li key={i} className="flex items-start gap-3">
                             <FaCheckCircle className="text-secondary mt-1.5 flex-shrink-0" size={13} />
-                            <span className="text-gray-400 font-atpinko text-base leading-relaxed">{item}</span>
+                            <span className="text-gray-400 font-body text-base leading-relaxed">{item}</span>
                         </li>
                     ))}
                 </ul>
@@ -54,7 +54,7 @@ function ContentBlock({ block }) {
                             <span className="flex-shrink-0 w-7 h-7 rounded-full bg-secondary/10 border border-secondary/30 text-secondary font-contrax text-xs flex items-center justify-center mt-0.5">
                                 {i + 1}
                             </span>
-                            <span className="text-gray-400 font-atpinko text-base leading-relaxed">{item}</span>
+                            <span className="text-gray-400 font-body text-base leading-relaxed">{item}</span>
                         </li>
                     ))}
                 </ol>
@@ -62,7 +62,7 @@ function ContentBlock({ block }) {
         case "table":
             return (
                 <div className="overflow-x-auto mb-10 rounded-2xl border border-white/10">
-                    <table className="w-full text-sm font-atpinko">
+                    <table className="w-full text-sm font-body">
                         <thead>
                             <tr className="bg-[#252525] border-b border-white/10">
                                 {block.headers.map((h, i) => (
@@ -90,7 +90,7 @@ function ContentBlock({ block }) {
             return (
                 <div className="my-12 bg-[#191919] border border-secondary/20 rounded-2xl p-8 md:p-10">
                     <h3 className="text-xl md:text-2xl font-contrax text-white uppercase mb-3">{block.title}</h3>
-                    <p className="text-gray-400 font-atpinko text-base mb-6 leading-relaxed">{block.text}</p>
+                    <p className="text-gray-400 font-body text-base mb-6 leading-relaxed">{block.text}</p>
                     <Link href={href(block.link)}>
                         <m.button
                             whileHover={{ scale: 1.03 }}
@@ -106,7 +106,7 @@ function ContentBlock({ block }) {
             return (
                 <div className="my-8 flex items-start gap-4 bg-secondary/5 border border-secondary/20 rounded-2xl p-6">
                     <FaLightbulb className="text-secondary flex-shrink-0 mt-1" size={18} />
-                    <p className="text-gray-300 font-atpinko text-base leading-relaxed">{block.text}</p>
+                    <p className="text-gray-300 font-body text-base leading-relaxed">{block.text}</p>
                 </div>
             );
         default:
@@ -142,17 +142,17 @@ export default function BlogPostContent({ post, posts }) {
                             <span className={`text-xs font-contrax tracking-wider px-3 py-1.5 rounded-full ${CATEGORY_COLORS[post.categoryId] || "bg-white/5 text-gray-400"}`}>
                                 {post.category}
                             </span>
-                            <span className="text-gray-500 font-atpinko text-sm flex items-center gap-1.5">
+                            <span className="text-gray-500 font-body text-sm flex items-center gap-1.5">
                                 <FaClock size={12} /> {post.readTime}
                             </span>
-                            <span className="text-gray-600 font-atpinko text-sm">{formatDate(post.publishDate, lang)}</span>
+                            <span className="text-gray-600 font-body text-sm">{formatDate(post.publishDate, lang)}</span>
                         </div>
 
                         <h1 className="text-3xl md:text-5xl lg:text-6xl font-contrax text-white mb-8 uppercase tracking-wide leading-tight">
                             {post.title}
                         </h1>
 
-                        <p className="text-lg text-gray-400 font-atpinko leading-relaxed mb-10 max-w-3xl">
+                        <p className="text-lg text-gray-400 font-body leading-relaxed mb-10 max-w-3xl">
                             {post.excerpt}
                         </p>
                     </m.div>
@@ -192,7 +192,7 @@ export default function BlogPostContent({ post, posts }) {
                         </div>
                         <div>
                             <p className="text-white font-contrax text-sm uppercase tracking-wider mb-1">MAS Contractors LLC</p>
-                            <p className="text-gray-500 font-atpinko text-sm leading-relaxed">
+                            <p className="text-gray-500 font-body text-sm leading-relaxed">
                                 {b.authorBio}
                             </p>
                         </div>
@@ -235,7 +235,7 @@ export default function BlogPostContent({ post, posts }) {
                                     <div className="absolute inset-0 bg-gradient-to-t from-[#252525] via-[#252525]/20 to-transparent" />
                                 </div>
                                 <div className="p-6">
-                                    <span className="text-gray-500 font-atpinko text-xs flex items-center gap-1 mb-3">
+                                    <span className="text-gray-500 font-body text-xs flex items-center gap-1 mb-3">
                                         <FaClock size={10} /> {p.readTime}
                                     </span>
                                     <h3 className="text-base font-contrax text-white uppercase leading-snug mb-4 group-hover:text-secondary transition-colors">
@@ -253,7 +253,7 @@ export default function BlogPostContent({ post, posts }) {
                     </div>
 
                     <div className="text-center mt-12">
-                        <Link href={href("/blog")} className="inline-flex items-center gap-2 text-gray-400 font-atpinko hover:text-secondary transition-colors text-sm">
+                        <Link href={href("/blog")} className="inline-flex items-center gap-2 text-gray-400 font-body hover:text-secondary transition-colors text-sm">
                             {b.viewAll} <BiRightArrowAlt size={16} />
                         </Link>
                     </div>
@@ -271,7 +271,7 @@ export default function BlogPostContent({ post, posts }) {
                         <h2 className="text-3xl md:text-5xl font-contrax text-white mb-6 uppercase leading-tight">
                             {b.ctaA}<span className="text-secondary">{b.ctaB}</span>{b.ctaC}
                         </h2>
-                        <p className="text-gray-400 font-atpinko text-lg mb-10">
+                        <p className="text-gray-400 font-body text-lg mb-10">
                             {b.ctaText}
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">

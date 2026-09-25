@@ -91,7 +91,7 @@ export default function ContactPageContent({ reviews = REVIEWS_SNAPSHOT }) {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.3 }}
-                        className="text-gray-400 font-atpinko text-lg max-w-2xl mx-auto leading-relaxed"
+                        className="text-gray-400 font-body text-lg max-w-2xl mx-auto leading-relaxed"
                     >
                         {c.intro}
                     </m.p>
@@ -103,7 +103,7 @@ export default function ContactPageContent({ reviews = REVIEWS_SNAPSHOT }) {
                         className="mt-10 flex items-center justify-center gap-3"
                     >
                         <span className="w-2 h-2 rounded-full bg-[#9fe300] animate-pulse" />
-                        <span className="text-gray-500 font-atpinko text-sm">
+                        <span className="text-gray-500 font-body text-sm">
                             {c.responds}
                         </span>
                     </m.div>
@@ -129,13 +129,13 @@ export default function ContactPageContent({ reviews = REVIEWS_SNAPSHOT }) {
                                 {card.icon}
                             </div>
                             <p className="text-[10px] text-gray-500 font-contrax uppercase tracking-widest mb-2">{card.label}</p>
-                            <div className="text-gray-300 font-atpinko text-sm space-y-0.5 leading-relaxed">
+                            <div className="text-gray-300 font-body text-sm space-y-0.5 leading-relaxed">
                                 {card.lines.map((line, j) => <p key={j}>{line}</p>)}
                             </div>
                             {card.href && (
                                 <a
                                     href={card.href}
-                                    className="mt-3 inline-flex items-center gap-1 text-[#9fe300] font-atpinko text-xs hover:gap-2 transition-all"
+                                    className="mt-3 inline-flex items-center gap-1 text-[#9fe300] font-body text-xs hover:gap-2 transition-all"
                                 >
                                     {card.cta} <BiRightArrowAlt size={14} />
                                 </a>
@@ -160,7 +160,7 @@ export default function ContactPageContent({ reviews = REVIEWS_SNAPSHOT }) {
                             <h2 className="text-3xl md:text-5xl font-contrax text-white uppercase leading-tight mb-4">
                                 {c.formTitleA}<span className="text-[#9fe300]">{c.formTitleB}</span>
                             </h2>
-                            <p className="text-gray-400 font-atpinko text-lg leading-relaxed max-w-xl">
+                            <p className="text-gray-400 font-body text-lg leading-relaxed max-w-xl">
                                 {c.formIntro}
                             </p>
                         </m.div>
@@ -203,31 +203,31 @@ export default function ContactPageContent({ reviews = REVIEWS_SNAPSHOT }) {
                             <div className="grid grid-cols-2 gap-6">
                                 <div>
                                     <p className="text-[10px] text-[#9fe300] font-contrax uppercase tracking-widest mb-1.5">{c.address}</p>
-                                    <p className="text-gray-300 font-atpinko text-sm leading-relaxed">
+                                    <p className="text-gray-300 font-body text-sm leading-relaxed">
                                         411 Branchway Rd Suite 107<br />North Chesterfield, VA 23236
                                     </p>
                                 </div>
                                 <div>
                                     <p className="text-[10px] text-[#9fe300] font-contrax uppercase tracking-widest mb-1.5">{c.hours}</p>
-                                    <p className="text-gray-300 font-atpinko text-sm leading-relaxed">
+                                    <p className="text-gray-300 font-body text-sm leading-relaxed">
                                         {c.hoursShort}<br />8:00 AM – 5:00 PM
                                     </p>
                                 </div>
                                 <div>
                                     <p className="text-[10px] text-[#9fe300] font-contrax uppercase tracking-widest mb-1.5">{c.phone}</p>
-                                    <a href="tel:+18048334600" className="block text-gray-300 font-atpinko text-sm hover:text-[#9fe300] transition-colors">
+                                    <a href="tel:+18048334600" className="block text-gray-300 font-body text-sm hover:text-[#9fe300] transition-colors">
                                         (804) 833-4600
                                     </a>
-                                    <a href="tel:+15403764453" className="block text-gray-300 font-atpinko text-sm hover:text-[#9fe300] transition-colors">
+                                    <a href="tel:+15403764453" className="block text-gray-300 font-body text-sm hover:text-[#9fe300] transition-colors">
                                         (540) 376-4453
                                     </a>
-                                    <a href="tel:+18045939468" className="block text-gray-300 font-atpinko text-sm hover:text-[#9fe300] transition-colors">
+                                    <a href="tel:+18045939468" className="block text-gray-300 font-body text-sm hover:text-[#9fe300] transition-colors">
                                         (804) 593-9468
                                     </a>
                                 </div>
                                 <div>
                                     <p className="text-[10px] text-[#9fe300] font-contrax uppercase tracking-widest mb-1.5">{c.license}</p>
-                                    <p className="text-gray-300 font-atpinko text-sm leading-relaxed">
+                                    <p className="text-gray-300 font-body text-sm leading-relaxed">
                                         {c.licenseA}<br />{c.licenseB}
                                     </p>
                                 </div>
@@ -245,7 +245,7 @@ export default function ContactPageContent({ reviews = REVIEWS_SNAPSHOT }) {
                             {[fill(c.badgeRating, { rating: reviews.rating.toFixed(1) }), fill(c.badgeReviews, { count: reviews.count }), ...c.badges].map((badge) => (
                                 <span
                                     key={badge}
-                                    className="text-xs font-atpinko text-gray-400 border border-white/10 rounded-full px-4 py-1.5"
+                                    className="text-xs font-body text-gray-400 border border-white/10 rounded-full px-4 py-1.5"
                                 >
                                     {badge}
                                 </span>

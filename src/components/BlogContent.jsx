@@ -55,7 +55,7 @@ export default function BlogContent({ posts }) {
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-contrax text-white mb-6 uppercase tracking-wider leading-tight">
                             {b.titleA}<span className="text-secondary">{b.titleB}</span>{b.titleC}
                         </h1>
-                        <p className="text-lg md:text-xl text-gray-400 font-atpinko max-w-2xl mx-auto leading-relaxed">
+                        <p className="text-lg md:text-xl text-gray-400 font-body max-w-2xl mx-auto leading-relaxed">
                             {b.intro}
                         </p>
                     </m.div>
@@ -90,18 +90,18 @@ export default function BlogContent({ posts }) {
                                 <span className={`text-xs font-contrax tracking-wider px-3 py-1 rounded-full ${CATEGORY_COLORS[featured.categoryId] || "bg-white/5 text-gray-400"}`}>
                                     {featured.category}
                                 </span>
-                                <span className="text-gray-500 font-atpinko text-xs flex items-center gap-1">
+                                <span className="text-gray-500 font-body text-xs flex items-center gap-1">
                                     <FaClock size={11} /> {featured.readTime}
                                 </span>
                             </div>
                             <h2 className="text-2xl md:text-3xl font-contrax text-white mb-5 uppercase leading-tight group-hover:text-secondary transition-colors duration-300">
                                 {featured.title}
                             </h2>
-                            <p className="text-gray-400 font-atpinko text-base leading-relaxed mb-8">
+                            <p className="text-gray-400 font-body text-base leading-relaxed mb-8">
                                 {featured.excerpt}
                             </p>
                             <div className="flex items-center justify-between">
-                                <span className="text-gray-600 font-atpinko text-sm">{formatDate(featured.publishDate, lang)}</span>
+                                <span className="text-gray-600 font-body text-sm">{formatDate(featured.publishDate, lang)}</span>
                                 <Link
                                     href={href(`/blog/${featured.slug}`)}
                                     className="inline-flex items-center gap-2 text-secondary font-contrax text-sm tracking-widest hover:gap-4 transition-all"
@@ -144,7 +144,7 @@ export default function BlogContent({ posts }) {
                                 </div>
 
                                 <div className="p-7 flex flex-col flex-1">
-                                    <div className="flex items-center gap-3 mb-4 text-gray-600 font-atpinko text-xs">
+                                    <div className="flex items-center gap-3 mb-4 text-gray-600 font-body text-xs">
                                         <span className="flex items-center gap-1"><FaClock size={10} /> {post.readTime}</span>
                                         <span>·</span>
                                         <span>{formatDate(post.publishDate, lang)}</span>
@@ -152,7 +152,7 @@ export default function BlogContent({ posts }) {
                                     <h2 className="text-lg font-contrax text-white mb-3 uppercase leading-snug group-hover:text-secondary transition-colors duration-300 flex-1">
                                         {post.title}
                                     </h2>
-                                    <p className="text-gray-500 font-atpinko text-sm leading-relaxed mb-6 line-clamp-3">
+                                    <p className="text-gray-500 font-body text-sm leading-relaxed mb-6 line-clamp-3">
                                         {post.excerpt}
                                     </p>
                                     <Link
@@ -179,7 +179,7 @@ export default function BlogContent({ posts }) {
                         <h2 className="text-3xl md:text-5xl font-contrax text-white mb-6 uppercase leading-tight">
                             {b.ctaA}<span className="text-secondary">{b.ctaB}</span>{b.ctaC}
                         </h2>
-                        <p className="text-gray-400 font-atpinko text-lg mb-10">
+                        <p className="text-gray-400 font-body text-lg mb-10">
                             {b.ctaText}
                         </p>
                         <Link href={href("/contact")}>

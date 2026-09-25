@@ -22,7 +22,7 @@ export const Footer = () => {
               <ul className="space-y-2">
                 {f.links.map((link) => (
                   <li key={link.url}>
-                    <Link href={href(link.url)} className="text-white text-lg font-atpinko hover:text-[#9fe300] transition footer-text">
+                    <Link href={href(link.url)} className="text-white text-lg font-body hover:text-[#9fe300] transition footer-text">
                       {link.title}
                     </Link>
                   </li>
@@ -35,7 +35,7 @@ export const Footer = () => {
               <p className="text-[#9fe300] font-contrax text-3xl mb-4 footer-title">{f.commercial}</p>
               <ul className="space-y-2">
                 {data.commercial.map((commercial, index) => (
-                  <li key={index} className="text-white text-lg font-atpinko hover:text-[#9fe300] transition footer-text">
+                  <li key={index} className="text-white text-lg font-body hover:text-[#9fe300] transition footer-text">
                     {commercial.text}
                   </li>
                 ))}
@@ -46,7 +46,7 @@ export const Footer = () => {
               <p className="text-[#9fe300] font-contrax text-3xl mb-4 footer-title">{f.residential}</p>
               <ul className="space-y-2">
                 {data.residential.map((residential, index) => (
-                  <li key={index} className="text-white text-lg font-atpinko hover:text-[#9fe300] transition footer-text">
+                  <li key={index} className="text-white text-lg font-body hover:text-[#9fe300] transition footer-text">
                     {residential.text}
                   </li>
                 ))}
@@ -60,7 +60,7 @@ export const Footer = () => {
                   <li key={index}>
                     <Link
                       href={social_media.link}
-                      className="text-white text-lg font-atpinko hover:text-[#9fe300] transition footer-text"
+                      className="text-white text-lg font-body hover:text-[#9fe300] transition footer-text"
                     >
                       {social_media.name}
                     </Link>
@@ -72,15 +72,15 @@ export const Footer = () => {
           {/* Visit Us / NAP */}
           <div className="flex flex-col items-center text-center gap-1 pb-10 px-6 border-t border-[#515151] pt-8 mx-6 md:mx-16">
             <p className="text-[#9fe300] font-contrax text-xl mb-1 footer-title">{f.visitUs}</p>
-            <p className="text-white text-base font-atpinko footer-text">MAS Contractors LLC</p>
-            <p className="text-white text-base font-atpinko footer-text">411 Branchway Rd Suite 107, North Chesterfield, VA 23236</p>
-            <a href="tel:+18048334600" className="text-white text-base font-atpinko hover:text-[#9fe300] transition footer-text">
+            <p className="text-white text-base font-body footer-text">MAS Contractors LLC</p>
+            <p className="text-white text-base font-body footer-text">411 Branchway Rd Suite 107, North Chesterfield, VA 23236</p>
+            <a href="tel:+18048334600" className="text-white text-base font-body hover:text-[#9fe300] transition footer-text">
               (804) 833-4600
             </a>
           </div>
           {/* Copyright */}
           <div className="flex flex-col text-center items-center justify-between py-6 border-t border-[#515151] px-6 md:px-32 lg:flex-row lg:text-left lg:justify-between gap-4">
-            <p className="text-[#9fe300] text-sm font-atpinko">
+            <p className="text-[#9fe300] text-sm font-body">
               © 2024 - 2026 MAS Contractors LLC <br /> {f.rights}
             </p>
             {/* Logo */}

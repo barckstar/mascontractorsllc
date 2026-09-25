@@ -17,7 +17,7 @@ const Certifications = () => {
                         className="object-contain h-12 w-auto"
                     />
                 </div>
-                <p className="text-white text-xs font-atpinko opacity-70 group-hover:text-[#9fe300] transition-colors">
+                <p className="text-white text-xs font-body opacity-70 group-hover:text-[#9fe300] transition-colors">
                     {c.dpor}
                 </p>
             </div>
@@ -34,7 +34,7 @@ const Certifications = () => {
                         className="object-contain h-12 w-auto"
                     />
                 </div>
-                <p className="text-white text-xs font-atpinko opacity-70 group-hover:text-[#9fe300] transition-colors">
+                <p className="text-white text-xs font-body opacity-70 group-hover:text-[#9fe300] transition-colors">
                     {c.osha}
                 </p>
             </div>
@@ -50,7 +50,7 @@ const Certifications = () => {
                     style={{ border: 0, height: "61px", width: "293px" }}
                     className="mb-2 max-w-full"
                 />
-                <p className="text-white text-xs font-atpinko opacity-70">
+                <p className="text-white text-xs font-body opacity-70">
                     {c.bbb}
                 </p>
             </div>

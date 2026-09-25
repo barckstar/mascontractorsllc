@@ -79,7 +79,7 @@ export default function AboutPageContent() {
                             {data.about.title}
                         </h2>
                         <div className="space-y-6">
-                            <p className="text-white text-lg font-atpinko leading-relaxed">
+                            <p className="text-white text-lg font-body leading-relaxed">
                                 {data.heroAbout.text}
                             </p>
                             <div className="space-y-4">
@@ -93,7 +93,7 @@ export default function AboutPageContent() {
                                         className="flex items-start gap-3"
                                     >
                                         <span className="text-[#9fe300] mt-1">➤</span>
-                                        <p className="text-white/90 font-atpinko">
+                                        <p className="text-white/90 font-body">
                                             <span className="text-[#9fe300] font-bold">{item.subTitle}</span> - {item.description}
                                         </p>
                                     </m.div>
@@ -134,14 +134,14 @@ export default function AboutPageContent() {
                             <div className="bg-white p-3 rounded-lg mb-2 inline-block shadow-lg">
                                 <Image src="/DPOR.png" alt={c.dporAlt} width={100} height={50} className="object-contain" />
                             </div>
-                            <p className="text-white text-xs font-atpinko opacity-70">{c.dpor}</p>
+                            <p className="text-white text-xs font-body opacity-70">{c.dpor}</p>
                         </div>
                         <div className="w-px h-16 bg-white/10 hidden sm:block" />
                         <div className="text-center">
                             <div className="bg-white p-3 rounded-lg mb-2 inline-block shadow-lg">
                                 <Image src="/OSHA-Logo.png" alt={c.oshaAlt} width={100} height={50} className="object-contain" />
                             </div>
-                            <p className="text-white text-xs font-atpinko opacity-70">{c.osha}</p>
+                            <p className="text-white text-xs font-body opacity-70">{c.osha}</p>
                         </div>
                         <div className="w-px h-16 bg-white/10 hidden sm:block" />
                         <div className="text-center">
@@ -153,7 +153,7 @@ export default function AboutPageContent() {
                                 style={{ border: 0, height: "61px", width: "293px" }}
                                 className="mb-2 max-w-full"
                             />
-                            <p className="text-white text-xs font-atpinko opacity-70">{c.bbb}</p>
+                            <p className="text-white text-xs font-body opacity-70">{c.bbb}</p>
                         </div>
                     </div>
                 </m.div>
@@ -175,7 +175,7 @@ export default function AboutPageContent() {
                                 <FaClipboardCheck size={80} color="#9fe300" />
                             </div>
                             <h3 className="text-3xl font-contrax text-[#9fe300] mb-4">{a.missionTitle}</h3>
-                            <p className="text-white/80 font-atpinko leading-relaxed">
+                            <p className="text-white/80 font-body leading-relaxed">
                                 {a.missionText}
                             </p>
                         </m.div>
@@ -186,7 +186,7 @@ export default function AboutPageContent() {
                                 <FaHardHat size={80} color="#9fe300" />
                             </div>
                             <h3 className="text-3xl font-contrax text-[#9fe300] mb-4">{a.visionTitle}</h3>
-                            <p className="text-white/80 font-atpinko leading-relaxed">
+                            <p className="text-white/80 font-body leading-relaxed">
                                 {a.visionText}
                             </p>
                         </m.div>
@@ -197,7 +197,7 @@ export default function AboutPageContent() {
                                 <FaHandshake size={80} color="#9fe300" />
                             </div>
                             <h3 className="text-3xl font-contrax text-[#9fe300] mb-4">{a.valuesTitle}</h3>
-                            <ul className="space-y-3 text-white/80 font-atpinko">
+                            <ul className="space-y-3 text-white/80 font-body">
                                 {a.values.map((value) => (
                                     <li key={value} className="flex items-center gap-2"><span className="text-[#9fe300]">✓</span> {value}</li>
                                 ))}
@@ -216,7 +216,7 @@ export default function AboutPageContent() {
                     className="text-center mb-16"
                 >
                     <h2 className="text-4xl md:text-5xl font-contrax text-[#9fe300] mb-4">{a.processTitle}</h2>
-                    <p className="text-white/60 font-atpinko">{a.processSubtitle}</p>
+                    <p className="text-white/60 font-body">{a.processSubtitle}</p>
                 </m.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-6">
@@ -239,7 +239,7 @@ export default function AboutPageContent() {
                                 {step.icon}
                             </div>
                             <h3 className="text-xl font-contrax text-white mb-3 group-hover:text-[#9fe300] transition-colors">{step.title}</h3>
-                            <p className="text-white/70 text-sm font-atpinko leading-relaxed">
+                            <p className="text-white/70 text-sm font-body leading-relaxed">
                                 {step.text}
                             </p>
                         </m.div>
