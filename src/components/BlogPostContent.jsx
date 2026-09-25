@@ -5,26 +5,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { BiRightArrowAlt } from "react-icons/bi";
 import { FaClock, FaCheckCircle, FaLightbulb } from "react-icons/fa";
-import { blogData } from "@/lib/blogData";
-
-const CATEGORY_COLORS = {
-    "Kitchen Remodeling": "bg-black/70 border border-white/10 text-secondary",
-    "Decks & Porches": "bg-black/70 border border-white/10 text-blue-300",
-    "Siding": "bg-black/70 border border-white/10 text-orange-300",
-    "Home Improvement Tips": "bg-black/70 border border-white/10 text-purple-300",
-    "Roofing": "bg-black/70 border border-white/10 text-red-300",
-    "Bathroom Remodeling": "bg-black/70 border border-white/10 text-teal-300",
-};
-
-function formatDate(dateStr) {
-    return new Date(dateStr).toLocaleDateString("en-US", {
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-    });
-}
+import { useI18n } from "@/i18n/I18nProvider";
+import { CATEGORY_COLORS, formatDate } from "./BlogContent";
 
 function ContentBlock({ block }) {
+    const { href } = useI18n();
     switch (block.type) {
         case "lead":
             return (
@@ -106,7 +91,7 @@ function ContentBlock({ block }) {
                 <div className="my-12 bg-[#191919] border border-secondary/20 rounded-2xl p-8 md:p-10">
                     <h3 className="text-xl md:text-2xl font-contrax text-white uppercase mb-3">{block.title}</h3>
                     <p className="text-gray-400 font-atpinko text-base mb-6 leading-relaxed">{block.text}</p>
-                    <Link href={block.link}>
+                    <Link href={href(block.link)}>
                         <m.button
                             whileHover={{ scale: 1.03 }}
                             whileTap={{ scale: 0.97 }}
@@ -129,8 +114,10 @@ function ContentBlock({ block }) {
     }
 }
 
-export default function BlogPostContent({ post }) {
-    const relatedPosts = blogData.filter((p) => p.slug !== post.slug).slice(0, 3);
+export default function BlogPostContent({ post, posts }) {
+    const { t, lang, href } = useI18n();
+    const b = t.blogPost;
+    const relatedPosts = posts.filter((p) => p.slug !== post.slug).slice(0, 3);
 
     return (
         <div className="bg-primary min-h-screen overflow-hidden">
@@ -144,21 +131,21 @@ export default function BlogPostContent({ post }) {
                         transition={{ duration: 0.7 }}
                     >
                         <Link
-                            href="/blog"
+                            href={href("/blog")}
                             className="inline-flex items-center gap-2 text-secondary font-contrax text-xs tracking-widest mb-8 hover:gap-4 transition-all"
                         >
                             <span className="rotate-180 inline-block"><BiRightArrowAlt size={16} /></span>
-                            ALL ARTICLES
+                            {b.allArticles}
                         </Link>
 
                         <div className="flex items-center gap-3 mb-6">
-                            <span className={`text-xs font-contrax tracking-wider px-3 py-1.5 rounded-full ${CATEGORY_COLORS[post.category] || "bg-white/5 text-gray-400"}`}>
+                            <span className={`text-xs font-contrax tracking-wider px-3 py-1.5 rounded-full ${CATEGORY_COLORS[post.categoryId] || "bg-white/5 text-gray-400"}`}>
                                 {post.category}
                             </span>
                             <span className="text-gray-500 font-atpinko text-sm flex items-center gap-1.5">
                                 <FaClock size={12} /> {post.readTime}
                             </span>
-                            <span className="text-gray-600 font-atpinko text-sm">{formatDate(post.publishDate)}</span>
+                            <span className="text-gray-600 font-atpinko text-sm">{formatDate(post.publishDate, lang)}</span>
                         </div>
 
                         <h1 className="text-3xl md:text-5xl lg:text-6xl font-contrax text-white mb-8 uppercase tracking-wide leading-tight">
@@ -206,7 +193,7 @@ export default function BlogPostContent({ post }) {
                         <div>
                             <p className="text-white font-contrax text-sm uppercase tracking-wider mb-1">MAS Contractors LLC</p>
                             <p className="text-gray-500 font-atpinko text-sm leading-relaxed">
-                                Licensed Class A General Contractor · Richmond, VA · Serving Chesterfield, Henrico, Midlothian & surrounding areas since 2013.
+                                {b.authorBio}
                             </p>
                         </div>
                     </div>
@@ -223,7 +210,7 @@ export default function BlogPostContent({ post }) {
                         className="mb-12"
                     >
                         <h2 className="text-2xl md:text-4xl font-contrax text-white uppercase">
-                            More <span className="text-secondary">Articles</span>
+                            {b.moreA}<span className="text-secondary">{b.moreB}</span>
                         </h2>
                     </m.div>
 
@@ -255,10 +242,10 @@ export default function BlogPostContent({ post }) {
                                         {p.title}
                                     </h3>
                                     <Link
-                                        href={`/blog/${p.slug}`}
+                                        href={href(`/blog/${p.slug}`)}
                                         className="inline-flex items-center gap-2 text-secondary font-contrax text-xs tracking-widest hover:gap-4 transition-all"
                                     >
-                                        READ <BiRightArrowAlt size={14} />
+                                        {b.read} <BiRightArrowAlt size={14} />
                                     </Link>
                                 </div>
                             </m.article>
@@ -266,8 +253,8 @@ export default function BlogPostContent({ post }) {
                     </div>
 
                     <div className="text-center mt-12">
-                        <Link href="/blog" className="inline-flex items-center gap-2 text-gray-400 font-atpinko hover:text-secondary transition-colors text-sm">
-                            View all articles <BiRightArrowAlt size={16} />
+                        <Link href={href("/blog")} className="inline-flex items-center gap-2 text-gray-400 font-atpinko hover:text-secondary transition-colors text-sm">
+                            {b.viewAll} <BiRightArrowAlt size={16} />
                         </Link>
                     </div>
                 </div>
@@ -282,19 +269,19 @@ export default function BlogPostContent({ post }) {
                         viewport={{ once: true }}
                     >
                         <h2 className="text-3xl md:text-5xl font-contrax text-white mb-6 uppercase leading-tight">
-                            Ready for Your <span className="text-secondary">Free Estimate</span>?
+                            {b.ctaA}<span className="text-secondary">{b.ctaB}</span>{b.ctaC}
                         </h2>
                         <p className="text-gray-400 font-atpinko text-lg mb-10">
-                            Serving Richmond, North Chesterfield, Midlothian, Glen Allen, and Henrico. Licensed, insured, and ready to start.
+                            {b.ctaText}
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Link href="/contact">
+                            <Link href={href("/contact")}>
                                 <m.button
                                     whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(159,227,0,0.4)" }}
                                     whileTap={{ scale: 0.95 }}
                                     className="bg-secondary text-primary font-contrax text-lg py-5 px-14 rounded-full hover:bg-white transition-all duration-300"
                                 >
-                                    CONTACT US TODAY
+                                    {b.ctaButton}
                                 </m.button>
                             </Link>
                             <a href="tel:+18048334600">

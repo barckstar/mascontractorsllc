@@ -22,7 +22,7 @@ node scripts/optimize-images.js   # opcional, re-comprime imágenes en public/ga
 
 ⚠️ **`npm run lint` está roto.** El script sigue siendo `next lint`, pero Next 16 eliminó ese subcomando: ahora interpreta `lint` como un directorio y falla con *"Invalid project directory provided, no such directory: .../lint"*. Para arreglarlo hay que migrar a la CLI de ESLint directamente (`eslint .`) con un `eslint.config.mjs` (flat config).
 
-No hay test runner configurado. La verificación real es `npm run build` (debe generar las 36 páginas sin error) más revisión visual en el navegador.
+No hay test runner configurado. La verificación real es `npm run build` (debe generar 70 páginas estáticas —32 por idioma más robots, sitemap y 404— sin error; antes corre `scripts/check-i18n.mjs`) más revisión visual en el navegador.
 
 ## Variables de entorno
 
@@ -41,35 +41,71 @@ En producción estas keys están en las Environment Variables de Vercel.
 
 ```
 src/
-  app/                    # App Router
-    page.jsx              # Home
-    about/, contact/, gallery/, services/, blog/
-    services/[slug]/      # páginas dinámicas por servicio
-    blog/[slug]/          # páginas dinámicas por post
-    layout.js             # metadata raíz, fonts, JSON-LD, Navbar/Footer/SpeedInsights
-    robots.js, sitemap.js
-    not-found.js           # página 404 propia con links internos (NO redirige a Home)
+  app/
+    [lang]/               # TODAS las páginas cuelgan de aquí (en, es)
+      layout.js           # layout raíz por idioma: <html lang>, I18nProvider, JSON-LD
+      page.jsx            # Home
+      about/, contact/, gallery/, services/, blog/
+      services/[slug]/, blog/[slug]/
+      not-found.js        # 404 propia, dentro del layout del idioma
+      [...rest]/page.js   # atrapa las URL que no existen para que rendericen esa 404
+    review/route.js       # /review → cuadro de "escribir reseña" de Google
+    robots.js, sitemap.js # el sitemap lleva las dos versiones de cada página con hreflang
 
-  components/             # *Content.jsx = lógica/vista de cada página, el resto son piezas reutilizables (navbar, footer, contact form, FAQ, etc.)
+  i18n/
+    config.js             # LOCALES, localePath(), stripLocale(), alternatesFor()
+    dictionaries/en.json  # textos de interfaz + metadatos SEO (meta.*)
+    dictionaries/es.json
+    I18nProvider.jsx      # useI18n() → { t, lang, href }
+    metadata.js           # pageMetadata(): title, description, canonical, hreflang, OG
+  content/
+    en/services.json, en/blog.json   # contenido largo, un archivo por idioma
+    es/services.json, es/blog.json
+    gallery.json          # estructura compartida; alt: { en, es } por foto
+    social.json           # redes (no se traduce)
+    index.js              # getServices(lang), getPosts(lang), getGallery(lang)…
 
-  lib/                    # contenido como datos, separado del código
-    data.json             # textos generales (navbar, home cards, etc.)
-    servicesData.js        # contenido de /services
-    blogData.js             # posts del blog
-    galleryData.js          # ⚠️ fuente real de la galería (ver nota abajo)
-    gallery.json             # ⚠️ archivo muerto — no se importa en ningún lado
+  components/             # *Content.jsx = vista de cada página; leen textos con useI18n()
+  lib/                    # googleReviews.js, reviewsSnapshot.js
 
-public/
-  gallery/                # imágenes de la galería
-  llms.txt                # archivo de SEO para AI crawlers (AI-friendliness)
+scripts/check-i18n.mjs    # corre en prebuild; rompe el build si falta una traducción
+public/llms.txt
 ```
+
+## Idiomas (inglés + español)
+
+- **El inglés conserva sus URL de siempre** (`/about`, `/services/roofing`) para no
+  perder posicionamiento. El español vive bajo `/es/...` con los **mismos slugs**.
+  `next.config.js` reescribe (afterFiles) toda URL sin prefijo a `/en/...`, y
+  redirige `/en/...` → `/...` con 301 para que nadie indexe la ruta interna.
+- **Agregar un idioma**: añadirlo a `LOCALES` en `i18n/config.js`, crear
+  `dictionaries/<lang>.json` y `content/<lang>/*.json`, y los `alt` de la galería.
+  `npm run build` lista todo lo que falta.
+- **`scripts/check-i18n.mjs`** exige las mismas claves y longitudes de arrays que
+  el inglés, y que los campos que son identificadores (`slug`, `url`, `id`, `img`,
+  `image`, `link`, `categoryId`, `publishDate`…) sean **idénticos** al inglés.
+  `I18N_VERBOSE=1 npm run check-i18n` lista los textos que siguen igual que en inglés.
+- **Enlaces internos**: siempre `href(path)` de `useI18n()`, nunca `"/contact"` a
+  secas. En el contenido JSON (`cta.link` del blog) los enlaces van **sin** prefijo;
+  el componente les pone el del idioma.
+- **El selector EN | ES es un `<a>`, no `next/link`, a propósito.** El router del
+  cliente no ve el rewrite: tras una navegación suave entre idiomas se queda con
+  `/en/...` como ruta actual y cada prefetch de un enlace en inglés da 404. Cambiar
+  de idioma es raro; una carga completa deja el router limpio.
+- **`usePathname()` en páginas en inglés puede devolver `/en/about`** (la ruta
+  interna). Por eso `stripLocale()` quita también el prefijo `en`.
+- El formulario de contacto manda `user_language` oculto y los **valores** de los
+  servicios en inglés (`id`), para que la oficina reciba siempre lo mismo. Hay que
+  agregar `{{user_language}}` a la plantilla de EmailJS para verlo.
+- Los títulos en español usan `hyphens: auto` (globals.css): las palabras largas en
+  la tipografía ancha se salían de la pantalla en móvil.
 
 ## Notas importantes / discrepancias conocidas
 
-- **El README menciona `npm run generate-gallery` y que el build lo corre automáticamente.** Eso no existe en el código actual: no hay tal script en `package.json` ni archivo `scripts/generate-gallery.js`. La galería real se mantiene a mano en `src/lib/galleryData.js` (cada entrada tiene `src, width, height, alt, category, project?, featured?`). El comentario en ese archivo es la fuente de verdad: *"To add a new image: drop the file in /public/gallery/ and add an entry here."* Si vas a tocar el flujo de galería, revisa esto primero — el README está desactualizado en este punto.
+- **El README menciona `npm run generate-gallery` y que el build lo corre automáticamente.** Eso no existe: la galería se mantiene a mano en `src/content/gallery.json` (cada entrada: `src, width, height, alt: { en, es }, category, project?, featured?`). Para agregar una foto: dejarla en `public/gallery/` y añadir la entrada con el `alt` en los dos idiomas. `category` es una clave en inglés; su etiqueta visible sale de `galleryPage.categories` en cada diccionario. El README está desactualizado en este punto.
 - `scripts/optimize-images.js` sí existe y es manual (`node scripts/optimize-images.js`), reemplaza las imágenes in-place — no hay backup automático.
 - `next.config.js` tiene varios redirects 301 heredados de URLs viejas (Search Console / Cloudflare email protection / rutas `/specialties/*` y `/projects/*`) — no borrar sin revisar Search Console primero. Que Google reporte esas URLs como "Página con redirección" es el comportamiento **correcto y permanente**, no un bug que haya que arreglar.
-- **Bloque de certificaciones duplicado.** `components/Certifications.jsx` (lo usa la home) y `components/AboutPageContent.jsx` (copia inline) tienen el mismo bloque de badges DPOR / OSHA / sello BBB. Cambiar un badge obliga a tocar **los dos archivos**. Deuda técnica pendiente de unificar.
+- **Bloque de certificaciones duplicado.** `components/Certifications.jsx` (lo usa la home) y `components/AboutPageContent.jsx` (copia inline) tienen el mismo bloque de badges DPOR / OSHA / sello BBB. Los textos ya salen de la misma sección del diccionario (`certifications`), pero el marcado sigue duplicado: cambiar un badge obliga a tocar **los dos archivos**.
 - El dominio pasa por un **proxy (Cloudflare) delante de Vercel**, que lo marca con "Proxy Detected". Rompe la mitigación de DDoS/bots de Vercel y degrada rendimiento. La huella está en el redirect de `/cdn-cgi/l/email-protection` del `next.config.js`. Se arregla poniendo los registros DNS de `@` y `www` en "DNS only" (nube gris).
 
 ## SEO
@@ -83,9 +119,9 @@ public/
 
 | Archivo | Schemas |
 |---|---|
-| `app/layout.js` | `["GeneralContractor","LocalBusiness"]` raíz — con `OfferCatalog`/`Service`, `OpeningHoursSpecification`, `PostalAddress`, `GeoCoordinates`, `areaServed` |
-| `app/services/[slug]/page.jsx` | `GeneralContractor`, `Service`, `FAQPage`, `BreadcrumbList`, `Offer` |
-| `app/blog/[slug]/page.jsx` | `BlogPosting`, `BreadcrumbList`, `WebPage`, `Organization`, `ImageObject` |
+| `app/[lang]/layout.js` | `["GeneralContractor","LocalBusiness"]` raíz — con `OfferCatalog`/`Service`, `OpeningHoursSpecification`, `PostalAddress`, `GeoCoordinates`, `areaServed` |
+| `app/[lang]/services/[slug]/page.jsx` | `GeneralContractor`, `Service`, `FAQPage`, `BreadcrumbList`, `Offer` |
+| `app/[lang]/blog/[slug]/page.jsx` | `BlogPosting`, `BreadcrumbList`, `WebPage`, `Organization`, `ImageObject` |
 | `components/FAQ.jsx` | `FAQPage` — va **dentro del componente**, así que aplica donde sea que se renderice `<FAQ />` (hoy: home y services) |
 
 **Sin `AggregateRating` ni `Review` a propósito.** Google considera

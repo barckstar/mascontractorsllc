@@ -5,9 +5,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/check-i18n.mjs",
     "build": "next build --webpack",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "check-i18n": "node scripts/check-i18n.mjs"
   },
   "dependencies": {
     "@emailjs/browser": "^4.3.3",

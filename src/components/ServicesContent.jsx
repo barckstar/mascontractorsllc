@@ -1,33 +1,17 @@
 "use client";
 import React from "react";
 import { m } from "framer-motion";
-import data from "@/lib/data.json";
+import { useI18n, fill } from "@/i18n/I18nProvider";
 import Image from "next/image";
 import Link from "next/link";
 import { FaCheckCircle } from "react-icons/fa";
 import { BiRightArrowAlt } from "react-icons/bi";
 import FAQ from "./FAQ";
 
-const SERVICE_SLUGS = {
-    TRIM: "trim-carpentry",
-    ROOFING: "roofing",
-    KITCHEN: "kitchen-remodeling",
-    BATHROOMS: "bathroom-remodeling",
-    DOORS: "door-installation",
-    DECKS: "decks-porches",
-    SIDING: "siding",
-    WINDOWS: "window-replacement",
-    "HOME ADDITIONS": "home-additions",
-};
-
-const SPECIALTY_PAGE_SLUGS = {
-    "commercial_cabinetry": "room-additions",
-    "tile": "tile-work",
-    "finish_trim_carpentry": "trim-carpentry",
-};
-
 export default function ServicesContent() {
-    const { contact_services, specialties } = data;
+    const { t, href } = useI18n();
+    const { contact_services, specialties } = t.site;
+    const s = t.servicesPage;
 
     const fadeInUp = {
         hidden: { opacity: 0, y: 30 },
@@ -44,10 +28,10 @@ export default function ServicesContent() {
                     transition={{ duration: 0.8 }}
                 >
                     <h1 className="text-4xl md:text-7xl font-contrax text-white mb-6 uppercase tracking-wider">
-                        Construction & Remodeling Services in <span className="text-secondary">Richmond, VA</span>
+                        {s.titleA}<span className="text-secondary">{s.titleB}</span>
                     </h1>
                     <p className="text-lg md:text-xl text-gray-400 font-atpinko max-w-2xl mx-auto leading-relaxed mb-12">
-                        MAS Contractors LLC is a trusted general contractor in Richmond, VA, providing high-end residential remodeling and commercial construction services with proven craftsmanship.
+                        {s.intro}
                     </p>
                 </m.div>
 
@@ -58,22 +42,22 @@ export default function ServicesContent() {
             {/* Main Services Grid */}
             <section className="container mx-auto px-6 md:px-16  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-32 pb-24">
                 {contact_services.map((service, index) => {
-                    const slug = SERVICE_SLUGS[service.title];
-                    const href = slug ? `/services/${slug}` : "/contact";
+                    const slug = service.slug;
+                    const cardHref = href(slug ? `/services/${slug}` : "/contact");
                     return (
                         <m.div
-                            key={service.title}
+                            key={service.id}
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
                             className="group bg-[#252525] rounded-3xl overflow-hidden border border-white/5 hover:border-secondary/50 hover:-translate-y-1.5 hover:shadow-[0_25px_60px_rgba(159,227,0,0.12)] transition-all duration-500 shadow-2xl"
                         >
-                            <Link href={href} className="block">
+                            <Link href={cardHref} className="block">
                                 <div className="relative h-72 overflow-hidden">
                                     <Image
                                         src={service.img}
-                                        alt={`${service.title2} services in Richmond VA by MAS Contractors`}
+                                        alt={fill(s.cardAlt, { name: service.title2 })}
                                         fill
                                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                         className="object-cover transition-all duration-700 group-hover:brightness-110"
@@ -89,10 +73,10 @@ export default function ServicesContent() {
                                     {service.description}
                                 </p>
                                 <Link
-                                    href={href}
+                                    href={cardHref}
                                     className="inline-flex items-center text-secondary font-contrax text-sm tracking-widest hover:gap-4 transition-all"
                                 >
-                                    {slug ? `Learn more about ${service.title2}` : `Get a free estimate for ${service.title2} in Richmond VA`}
+                                    {fill(slug ? s.cardLink : s.cardEstimate, { name: service.title2 })}
                                     <BiRightArrowAlt size={20} className="ml-2" />
                                 </Link>
                             </div>
@@ -101,8 +85,8 @@ export default function ServicesContent() {
                 })}
 
                 <div className="col-span-full text-center mt-8">
-                    <Link href="/gallery" className="inline-flex items-center gap-2 text-secondary font-contrax text-sm tracking-widest hover:gap-4 transition-all">
-                        VIEW OUR PROJECT GALLERY <BiRightArrowAlt size={20} className="ml-2" />
+                    <Link href={href("/gallery")} className="inline-flex items-center gap-2 text-secondary font-contrax text-sm tracking-widest hover:gap-4 transition-all">
+                        {s.viewGallery} <BiRightArrowAlt size={20} className="ml-2" />
                     </Link>
                 </div>
             </section>
@@ -117,14 +101,14 @@ export default function ServicesContent() {
                     >
                         <div className="text-center mb-20">
                             <h2 className="text-3xl md:text-6xl font-contrax text-white mb-4 uppercase">
-                                Specialized Construction Services in <span className="text-secondary">Richmond, VA</span>
+                                {s.specialtiesA}<span className="text-secondary">{s.specialtiesB}</span>
                             </h2>
                             <div className="w-24 h-1 bg-secondary mx-auto rounded-full" />
                         </div></m.div>
 
                     <div className="space-y-32">
                         {specialties.map((spec, index) => {
-                            const servicePage = SPECIALTY_PAGE_SLUGS[spec.slug];
+                            const servicePage = spec.servicePage;
                             return (
                             <m.div
                                 key={spec.slug}
@@ -138,7 +122,7 @@ export default function ServicesContent() {
                                     <div className="relative h-[300px] md:h-[500px] w-full rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/5 group">
                                         <Image
                                             src={spec.image}
-                                            alt={`${spec.title} in Richmond VA`}
+                                            alt={fill(s.specialtyAlt, { name: spec.title })}
                                             fill
                                             sizes="(max-width: 1024px) 100vw, 50vw"
                                             className="object-cover transform group-hover:scale-105 transition-transform duration-1000"
@@ -147,7 +131,7 @@ export default function ServicesContent() {
                                     </div>
                                 </div>
                                 <div className="w-full lg:w-1/2">
-                                    <span className="text-secondary font-contrax tracking-[0.3em] uppercase text-xs mb-4 block">Specialty focus</span>
+                                    <span className="text-secondary font-contrax tracking-[0.3em] uppercase text-xs mb-4 block">{s.specialtyEyebrow}</span>
                                     <h3 className="text-3xl md:text-5xl font-contrax text-white mb-8 uppercase leading-tight">
                                         {spec.title}
                                     </h3>
@@ -167,21 +151,21 @@ export default function ServicesContent() {
                                         ))}
                                     </ul>
                                     <div className="flex flex-col sm:flex-row gap-4">
-                                        <Link href="/contact">
+                                        <Link href={href("/contact")}>
                                             <m.button
                                                 whileHover={{ scale: 1.05 }}
                                                 whileTap={{ scale: 0.95 }}
                                                 className="bg-secondary text-primary font-contrax py-4 px-10 rounded-full hover:bg-white transition-all duration-300 shadow-[0_0_20px_rgba(159,227,0,0.3)]"
                                             >
-                                                FREE ESTIMATE
+                                                {s.freeEstimate}
                                             </m.button>
                                         </Link>
                                         {servicePage && (
                                             <Link
-                                                href={`/services/${servicePage}`}
+                                                href={href(`/services/${servicePage}`)}
                                                 className="inline-flex items-center gap-2 border border-secondary/50 text-secondary font-contrax py-4 px-8 rounded-full hover:border-secondary hover:bg-secondary/5 transition-all duration-300 text-sm tracking-widest"
                                             >
-                                                FULL SERVICE PAGE <BiRightArrowAlt size={16} />
+                                                {s.fullServicePage} <BiRightArrowAlt size={16} />
                                             </Link>
                                         )}
                                     </div>
@@ -209,23 +193,23 @@ export default function ServicesContent() {
                     className="max-w-4xl mx-auto"
                 >
                     <h2 className="text-3xl md:text-6xl font-contrax text-white mb-8 uppercase leading-tight">
-                        Need a Licensed <span className="text-secondary">Contractor</span> in Richmond?
+                        {s.ctaA}<span className="text-secondary">{s.ctaB}</span>{s.ctaC}
                     </h2>
                     <p className="text-gray-400 font-atpinko text-xl mb-12 max-w-2xl mx-auto">
-                        Whether it&apos;s a small repair or a large-scale commercial project, our team is ready to deliver excellence.
+                        {s.ctaText}
                     </p>
-                    <Link href="/contact">
+                    <Link href={href("/contact")}>
                         <m.button
                             whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(159,227,0,0.4)" }}
                             whileTap={{ scale: 0.95 }}
                             className="bg-secondary text-primary font-contrax text-xl py-5 px-14 rounded-full hover:bg-white transition-all duration-300"
                         >
-                            CONTACT US TODAY
+                            {s.ctaButton}
                         </m.button>
                     </Link>
                     <div className="mt-6">
-                        <Link href="/about" className="inline-flex items-center gap-2 text-gray-400 font-atpinko hover:text-secondary transition-colors">
-                            Learn more about MAS Contractors <BiRightArrowAlt size={20} />
+                        <Link href={href("/about")} className="inline-flex items-center gap-2 text-gray-400 font-atpinko hover:text-secondary transition-colors">
+                            {s.aboutLink} <BiRightArrowAlt size={20} />
                         </Link>
                     </div>
                 </m.div>

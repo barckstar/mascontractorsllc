@@ -6,9 +6,13 @@ import { m } from "framer-motion";
 import { BiPhoneCall } from "react-icons/bi";
 import { TbBrandCashapp } from "react-icons/tb";
 import { FaHardHat, FaClipboardCheck, FaHandshake } from "react-icons/fa";
-import data from "../lib/data.json";
+import { useI18n } from "@/i18n/I18nProvider";
 
 export default function AboutPageContent() {
+    const { t, href } = useI18n();
+    const data = t.site;
+    const a = t.aboutPage;
+    const c = t.certifications;
     // Animation variants
     const fadeInUp = {
         hidden: { opacity: 0, y: 30 },
@@ -33,7 +37,7 @@ export default function AboutPageContent() {
                 <div className="absolute inset-0 z-0">
                     <Image
                         src="/img-4.jpg" // Using a high-quality image from gallery as hero bg
-                        alt="About MAS Contractors - Licensed and Insured General Contractor Team in Richmond VA"
+                        alt={a.heroAlt}
                         fill
                         className="object-cover opacity-40"
                         priority
@@ -109,7 +113,7 @@ export default function AboutPageContent() {
                         <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 group">
                             <Image
                                 src="/uniform-1.png"
-                                alt="MAS Contractors team member in uniform in Richmond VA"
+                                alt={a.uniformAlt}
                                 width={640}
                                 height={400}
                                 className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
@@ -128,28 +132,28 @@ export default function AboutPageContent() {
                     <div className="bg-[#2a2a2a] p-4 sm:p-6 rounded-xl border border-[#9fe300]/30 flex flex-wrap justify-center mt-10 items-center gap-8">
                         <div className="text-center">
                             <div className="bg-white p-3 rounded-lg mb-2 inline-block shadow-lg">
-                                <Image src="/DPOR.png" alt="DPOR License - Licensed Contractor in Richmond VA" width={100} height={50} className="object-contain" />
+                                <Image src="/DPOR.png" alt={c.dporAlt} width={100} height={50} className="object-contain" />
                             </div>
-                            <p className="text-white text-xs font-atpinko opacity-70">Licensed & Insured</p>
+                            <p className="text-white text-xs font-atpinko opacity-70">{c.dpor}</p>
                         </div>
                         <div className="w-px h-16 bg-white/10 hidden sm:block" />
                         <div className="text-center">
                             <div className="bg-white p-3 rounded-lg mb-2 inline-block shadow-lg">
-                                <Image src="/OSHA-Logo.png" alt="OSHA Safety Certification Logo for MAS Contractors in Richmond VA" width={100} height={50} className="object-contain" />
+                                <Image src="/OSHA-Logo.png" alt={c.oshaAlt} width={100} height={50} className="object-contain" />
                             </div>
-                            <p className="text-white text-xs font-atpinko opacity-70">Safety Certified</p>
+                            <p className="text-white text-xs font-atpinko opacity-70">{c.osha}</p>
                         </div>
                         <div className="w-px h-16 bg-white/10 hidden sm:block" />
                         <div className="text-center">
                             <iframe
-                                title="BBB Accredited Business - MAS Contractors LLC"
+                                title={c.bbbTitle}
                                 loading="lazy"
                                 scrolling="no"
                                 src="https://seal-richmond.bbb.org/frame/blue-seal-293-61-whitetxt-bbb-63417310.png?chk=9087F100C0"
                                 style={{ border: 0, height: "61px", width: "293px" }}
                                 className="mb-2 max-w-full"
                             />
-                            <p className="text-white text-xs font-atpinko opacity-70">BBB Accredited</p>
+                            <p className="text-white text-xs font-atpinko opacity-70">{c.bbb}</p>
                         </div>
                     </div>
                 </m.div>
@@ -170,9 +174,9 @@ export default function AboutPageContent() {
                             <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                                 <FaClipboardCheck size={80} color="#9fe300" />
                             </div>
-                            <h3 className="text-3xl font-contrax text-[#9fe300] mb-4">MISSION</h3>
+                            <h3 className="text-3xl font-contrax text-[#9fe300] mb-4">{a.missionTitle}</h3>
                             <p className="text-white/80 font-atpinko leading-relaxed">
-                                Build high quality projects, providing innovative and comfortable solutions that improve people&apos;s lives. We are committed to safety, compliance with deadlines, and total satisfaction of our clients.
+                                {a.missionText}
                             </p>
                         </m.div>
 
@@ -181,9 +185,9 @@ export default function AboutPageContent() {
                             <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                                 <FaHardHat size={80} color="#9fe300" />
                             </div>
-                            <h3 className="text-3xl font-contrax text-[#9fe300] mb-4">VISION</h3>
+                            <h3 className="text-3xl font-contrax text-[#9fe300] mb-4">{a.visionTitle}</h3>
                             <p className="text-white/80 font-atpinko leading-relaxed">
-                                Be recognized for the quality of construction nationwide, delivering excellence, efficiency, and personal development in every project. We aspire to be the preferred choice for clients, subcontractors, and employees.
+                                {a.visionText}
                             </p>
                         </m.div>
 
@@ -192,13 +196,11 @@ export default function AboutPageContent() {
                             <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                                 <FaHandshake size={80} color="#9fe300" />
                             </div>
-                            <h3 className="text-3xl font-contrax text-[#9fe300] mb-4">VALUES</h3>
+                            <h3 className="text-3xl font-contrax text-[#9fe300] mb-4">{a.valuesTitle}</h3>
                             <ul className="space-y-3 text-white/80 font-atpinko">
-                                <li className="flex items-center gap-2"><span className="text-[#9fe300]">✓</span> Safety & Compliance</li>
-                                <li className="flex items-center gap-2"><span className="text-[#9fe300]">✓</span> Quality & Innovation</li>
-                                <li className="flex items-center gap-2"><span className="text-[#9fe300]">✓</span> Integrity & Transparency</li>
-                                <li className="flex items-center gap-2"><span className="text-[#9fe300]">✓</span> Teamwork & Respect</li>
-                                <li className="flex items-center gap-2"><span className="text-[#9fe300]">✓</span> Customer Satisfaction</li>
+                                {a.values.map((value) => (
+                                    <li key={value} className="flex items-center gap-2"><span className="text-[#9fe300]">✓</span> {value}</li>
+                                ))}
                             </ul>
                         </m.div>
                     </m.div>
@@ -213,18 +215,18 @@ export default function AboutPageContent() {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-4xl md:text-5xl font-contrax text-[#9fe300] mb-4">Our Process</h2>
-                    <p className="text-white/60 font-atpinko">How we bring your vision to life</p>
+                    <h2 className="text-4xl md:text-5xl font-contrax text-[#9fe300] mb-4">{a.processTitle}</h2>
+                    <p className="text-white/60 font-atpinko">{a.processSubtitle}</p>
                 </m.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-6">
                     {[
-                        { icon: <BiPhoneCall size={50} />, title: "Contact", text: "Reach us by phone or email. We respond quickly and schedule your free on-site visit." },
-                        { icon: <Image src="/car.png" alt="Free Construction Site Visit in Richmond VA" width={60} height={60} />, title: "Free Site Visit", text: "We visit your location to assess the project and provide a detailed, no-obligation estimate." },
-                        { icon: <Image src="/material.jpg" alt="Quality Construction Materials Sample in Richmond VA" width={60} height={60} className="rounded-full object-cover" />, title: "Materials & Quality", text: "We discuss materials, quality standards, and project details to ensure your satisfaction." },
-                        { icon: <Image src="/contrat.png" alt="Construction Contract Agreement Icon in Richmond VA" width={60} height={60} />, title: "Agreement", text: "Once agreed, we send a detailed contract with pricing for materials and labor." },
-                        { icon: <TbBrandCashapp size={50} />, title: "Completion", text: "50% upfront, 50% upon completion. We deliver quality and transparency." }
-                    ].map((step, index) => (
+                        <BiPhoneCall key="contact" size={50} />,
+                        <Image key="visit" src="/car.png" alt={a.steps[1].iconAlt} width={60} height={60} />,
+                        <Image key="materials" src="/material.jpg" alt={a.steps[2].iconAlt} width={60} height={60} className="rounded-full object-cover" />,
+                        <Image key="agreement" src="/contrat.png" alt={a.steps[3].iconAlt} width={60} height={60} />,
+                        <TbBrandCashapp key="completion" size={50} />,
+                    ].map((icon, index) => ({ icon, ...a.steps[index] })).map((step, index) => (
                         <m.div
                             key={index}
                             initial={{ opacity: 0, y: 30 }}
@@ -257,7 +259,7 @@ export default function AboutPageContent() {
                     >
                         {data.about.aboutFooter}
                     </m.h2>
-                    <Link href="/contact#email">
+                    <Link href={href("/contact#email")}>
                         <m.button
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}

@@ -4,9 +4,12 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
 import { m } from "framer-motion";
-import data from "@/lib/data.json";
+import { useI18n } from "@/i18n/I18nProvider";
 
 function Contact() {
+  const { t, lang } = useI18n();
+  const data = t.site;
+  const f = t.contactForm;
   const [captchaValue, setCaptchaValue] = useState(null);
   const [status, setStatus] = useState(null); // null | { type: 'success'|'error', text: string }
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
@@ -32,14 +35,14 @@ function Contact() {
           { publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY }
         )
         .then(
-          () => setStatus({ type: "success", text: "Message sent! We'll respond within 24–48 hours with your free estimate." }),
+          () => setStatus({ type: "success", text: f.success }),
           (error) => {
-            setStatus({ type: "error", text: "Failed to send. Please call us directly at (804) 833-4600." });
+            setStatus({ type: "error", text: f.error });
             console.error("EmailJS error:", error.text);
           }
         );
     } else {
-      setStatus({ type: "error", text: "Please complete the CAPTCHA verification." });
+      setStatus({ type: "error", text: f.captchaMissing });
       setIsButtonDisabled(false);
     }
   };
@@ -63,26 +66,28 @@ function Contact() {
 
         <div className="p-8 md:p-10">
           <form id="contactForm" onSubmit={sendEmail} ref={form} className="space-y-5">
+            {/* Tells the office which language to answer in. Add {{user_language}} to the EmailJS template to see it. */}
+            <input type="hidden" name="user_language" value={lang} />
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div>
-                <label htmlFor="first_name" className={labelClass}>First Name</label>
+                <label htmlFor="first_name" className={labelClass}>{f.firstName}</label>
                 <input
                   type="text"
                   id="first_name"
                   name="user_first_name"
                   required
-                  placeholder="John"
+                  placeholder={f.firstNamePh}
                   className={inputClass}
                 />
               </div>
               <div>
-                <label htmlFor="last_name" className={labelClass}>Last Name</label>
+                <label htmlFor="last_name" className={labelClass}>{f.lastName}</label>
                 <input
                   type="text"
                   id="last_name"
                   name="user_last_name"
                   required
-                  placeholder="Smith"
+                  placeholder={f.lastNamePh}
                   className={inputClass}
                 />
               </div>
@@ -90,18 +95,18 @@ function Contact() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div>
-                <label htmlFor="user-email" className={labelClass}>Email Address</label>
+                <label htmlFor="user-email" className={labelClass}>{f.email}</label>
                 <input
                   type="email"
                   id="user-email"
                   name="user_email"
                   required
-                  placeholder="john@email.com"
+                  placeholder={f.emailPh}
                   className={inputClass}
                 />
               </div>
               <div>
-                <label htmlFor="phone" className={labelClass}>Phone Number</label>
+                <label htmlFor="phone" className={labelClass}>{f.phone}</label>
                 <input
                   type="tel"
                   id="phone"
@@ -114,7 +119,7 @@ function Contact() {
             </div>
 
             <div>
-              <label htmlFor="subject" className={labelClass}>Service Needed</label>
+              <label htmlFor="subject" className={labelClass}>{f.service}</label>
               <select
                 id="subject"
                 name="user_subject"
@@ -122,30 +127,31 @@ function Contact() {
                 defaultValue="default"
                 className={`${inputClass} cursor-pointer`}
               >
-                <option value="default" disabled>Select a service...</option>
+                <option value="default" disabled>{f.servicePh}</option>
+                {/* Values stay in English so the office gets the same labels in every language. */}
                 {data.contact_services.map((service) => (
-                  <option key={service.title} value={service.title2}>
+                  <option key={service.id} value={service.id}>
                     {service.title2}
                   </option>
                 ))}
                 {data.specialties.map((specialty) => (
-                  <option key={specialty.title} value={specialty.title}>
+                  <option key={specialty.id} value={specialty.id}>
                     {specialty.title}
                   </option>
                 ))}
-                <option value="General Inquiry">General Inquiry</option>
-                <option value="Support">Support</option>
-                <option value="Feedback">Feedback</option>
+                <option value="General Inquiry">{f.optGeneral}</option>
+                <option value="Support">{f.optSupport}</option>
+                <option value="Feedback">{f.optFeedback}</option>
               </select>
             </div>
 
             <div>
-              <label htmlFor="message" className={labelClass}>Tell Us About Your Project</label>
+              <label htmlFor="message" className={labelClass}>{f.message}</label>
               <textarea
                 id="message"
                 name="message"
                 rows={5}
-                placeholder="Describe your project, budget range, timeline, and any specific requirements..."
+                placeholder={f.messagePh}
                 className={`${inputClass} resize-none leading-relaxed`}
               />
             </div>
@@ -156,6 +162,7 @@ function Contact() {
                   sitekey={key}
                   onChange={onChangeCaptcha}
                   theme="dark"
+                  hl={lang}
                 />
               )}
             </div>
@@ -169,7 +176,7 @@ function Contact() {
                   : "bg-[#9fe300] text-[#111111] hover:bg-white hover:shadow-[0_0_40px_rgba(159,227,0,0.35)] cursor-pointer"
               }`}
             >
-              {isButtonDisabled ? "Complete Captcha to Submit" : "Send Free Estimate Request →"}
+              {isButtonDisabled ? f.submitDisabled : f.submit}
             </button>
           </form>
 

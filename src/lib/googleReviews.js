@@ -10,15 +10,18 @@
 
 import { REVIEWS_SNAPSHOT } from "./reviewsSnapshot";
 
-const REVALIDATE_SECONDS = 6 * 60 * 60; // ~120 calls/month, well inside the free tier
+const REVALIDATE_SECONDS = 6 * 60 * 60; // ~120 calls/month per language, well inside the free tier
 
-export async function getGoogleReviews() {
+// `lang` only changes Google's relative dates ("a month ago" / "hace un mes");
+// review texts are always shown as the author wrote them (originalText).
+export async function getGoogleReviews(lang = "en") {
     const key = process.env.GOOGLE_PLACES_API_KEY;
     const placeId = process.env.GOOGLE_PLACE_ID;
     if (!key || !placeId) return REVIEWS_SNAPSHOT;
 
     try {
-        const res = await fetch(`https://places.googleapis.com/v1/places/${encodeURIComponent(placeId)}`, {
+        const url = `https://places.googleapis.com/v1/places/${encodeURIComponent(placeId)}?languageCode=${lang}`;
+        const res = await fetch(url, {
             headers: {
                 "X-Goog-Api-Key": key,
                 "X-Goog-FieldMask": "rating,userRatingCount,reviews,googleMapsUri",

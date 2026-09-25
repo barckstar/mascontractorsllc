@@ -482,3 +482,10 @@ a {
         opacity: 0.7;
     }
 }
+/* Spanish words run long ("remodelación", "especializados") and the display
+   font is wide: on phones a single word can be wider than the screen. Let
+   Spanish headings hyphenate instead of overflowing. English is left as is. */
+html[lang="es"] :is(h1, h2, h3) {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}

@@ -1,5 +1,7 @@
 import { notFound } from "next/navigation";
-import { servicesData, getServiceBySlug } from "@/lib/servicesData";
+import { getServices, getServiceBySlug } from "@/content";
+import { getDictionary } from "@/i18n/dictionaries";
+import { OG_LOCALE, SITE_URL, alternatesFor, localePath } from "@/i18n/config";
 import dynamic from "next/dynamic";
 
 const ServicePageContent = dynamic(() => import("@/components/ServicePageContent"), {
@@ -10,29 +12,30 @@ const ServicePageContent = dynamic(() => import("@/components/ServicePageContent
     ),
 });
 
+// Same slugs in every language (en is the source of truth); scripts/check-i18n.mjs
+// fails the build if a language is missing one.
 export async function generateStaticParams() {
-    return servicesData.map((service) => ({ slug: service.slug }));
+    return getServices("en").map((service) => ({ slug: service.slug }));
 }
 
 export async function generateMetadata({ params }) {
-    const { slug } = await params;
-    const service = getServiceBySlug(slug);
+    const { lang, slug } = await params;
+    const service = getServiceBySlug(lang, slug);
     if (!service) return {};
+    const path = `/services/${service.slug}`;
 
     return {
         title: service.metaTitle,
         description: service.metaDescription,
         keywords: service.keywords,
-        alternates: {
-            canonical: `https://mascontractors.com/services/${service.slug}`,
-        },
+        alternates: alternatesFor(lang, path),
         openGraph: {
             title: service.metaTitle,
             description: service.metaDescription,
-            url: `https://mascontractors.com/services/${service.slug}`,
+            url: SITE_URL + localePath(lang, path),
             siteName: "MAS Contractors LLC",
             images: [{ url: service.img, width: 1200, height: 630, alt: service.imgAlt }],
-            locale: "en_US",
+            locale: OG_LOCALE[lang],
             type: "website",
         },
         robots: { index: true, follow: true },
@@ -40,9 +43,11 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function ServicePage({ params }) {
-    const { slug } = await params;
-    const service = getServiceBySlug(slug);
+    const { lang, slug } = await params;
+    const service = getServiceBySlug(lang, slug);
     if (!service) notFound();
+    const t = getDictionary(lang);
+    const url = SITE_URL + localePath(lang, `/services/${service.slug}`);
 
     const jsonLd = {
         "@context": "https://schema.org",
@@ -70,10 +75,11 @@ export default async function ServicePage({ params }) {
             { "@type": "City", "name": "Glen Allen" },
             { "@type": "City", "name": "Henrico" }
         ],
-        "url": `https://mascontractors.com/services/${service.slug}`,
+        "url": url,
+        "inLanguage": lang,
         "offers": {
             "@type": "Offer",
-            "description": "Free Estimate",
+            "description": t.serviceSchema.freeEstimate,
             "price": "0",
             "priceCurrency": "USD"
         }
@@ -96,9 +102,9 @@ export default async function ServicePage({ params }) {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mascontractors.com" },
-            { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://mascontractors.com/services" },
-            { "@type": "ListItem", "position": 3, "name": service.title, "item": `https://mascontractors.com/services/${service.slug}` }
+            { "@type": "ListItem", "position": 1, "name": t.breadcrumbs.home, "item": SITE_URL + localePath(lang, "/") },
+            { "@type": "ListItem", "position": 2, "name": t.breadcrumbs.services, "item": SITE_URL + localePath(lang, "/services") },
+            { "@type": "ListItem", "position": 3, "name": service.title, "item": url }
         ]
     };
 
@@ -116,7 +122,7 @@ export default async function ServicePage({ params }) {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
             />
-            <ServicePageContent service={service} />
+            <ServicePageContent service={service} services={getServices(lang)} />
         </>
     );
 }

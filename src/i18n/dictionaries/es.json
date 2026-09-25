@@ -1,0 +1,899 @@
+{
+  "site": {
+    "url_navbar": [
+      {
+        "url": "/",
+        "title": "Inicio"
+      },
+      {
+        "url": "/gallery",
+        "title": "Galería"
+      },
+      {
+        "url": "/blog",
+        "title": "Blog"
+      },
+      {
+        "url": "/services",
+        "title": "Servicios"
+      },
+      {
+        "url": "/about",
+        "title": "Nosotros"
+      },
+      {
+        "url": "/contact",
+        "title": "Contacto"
+      }
+    ],
+    "homeCards": [
+      {
+        "title": "Techos resistentes, protección garantizada",
+        "text": "Nos especializamos en techos de alta calidad que resisten el paso del tiempo. Nuestro equipo protege su hogar con materiales duraderos y mano de obra experta.",
+        "img": "/img-5.png",
+        "alt": "Instalación y reparación de techos residenciales por MAS Contractors en Richmond VA"
+      },
+      {
+        "title": "Su oasis personal, diseños exquisitos",
+        "text": "Convierta su baño en un refugio de lujo con nuestros servicios de remodelación. Desde grifería elegante hasta distribuciones modernas, creamos espacios que unen funcionalidad y estilo.",
+        "img": "/img-7.png",
+        "alt": "Remodelación moderna de baño con acabados de lujo en Richmond VA"
+      },
+      {
+        "title": "Porches que inspiran, elegancia al aire libre",
+        "text": "Creamos espacios exteriores que realzan la fachada de su casa y le dan el lugar perfecto para descansar y recibir visitas. Diseñamos cada porche a la medida de su estilo y sus necesidades.",
+        "img": "/img-8.png",
+        "alt": "Construcción de patio y porche a medida para vivir al aire libre en Richmond VA"
+      }
+    ],
+    "homeGreenCards": [
+      {
+        "slug": "home-additions",
+        "title": "AMPLIACIONES",
+        "subTitle": "Más espacio, mejor vida.",
+        "text": "Diseñamos y construimos ampliaciones a medida que se integran con la estructura de su casa y le dan el espacio extra que necesita su familia o su estilo de vida."
+      },
+      {
+        "slug": "kitchen-remodeling",
+        "title": "COCINAS",
+        "subTitle": "La cocina de sus sueños, hecha realidad",
+        "text": "Desde renovaciones modernas hasta diseños clásicos, creamos cocinas tan bonitas como funcionales. Somos los profesionales de confianza para instalar granito y cuarzo con un acabado perfecto."
+      },
+      {
+        "slug": "bathroom-remodeling",
+        "title": "BAÑOS",
+        "subTitle": "Su oasis personal, diseños exquisitos",
+        "text": "Convierta su baño en un refugio de lujo con nuestros servicios de remodelación. Desde grifería elegante hasta distribuciones modernas, creamos espacios que unen funcionalidad y estilo."
+      },
+      {
+        "slug": "decks-porches",
+        "title": "DECKS",
+        "subTitle": "Lo mejor de vivir al aire libre",
+        "text": "Construimos decks bonitos y funcionales que mejoran su espacio exterior, ideales para descansar y recibir visitas. Cada diseño se adapta a su estilo de vida y a sus gustos."
+      },
+      {
+        "slug": "roofing",
+        "title": "TECHOS",
+        "subTitle": "Protección superior para su hogar",
+        "text": "Ofrecemos servicios completos de techos —reparación, reemplazo e instalación— para proteger su casa del clima. Usamos materiales de alta calidad y mano de obra experta para entregar techos duraderos y confiables."
+      },
+      {
+        "slug": "siding",
+        "title": "REVESTIMIENTO",
+        "subTitle": "Protección versátil para su hogar",
+        "text": "Mejore el exterior de su casa con nuestro servicio de revestimiento (siding). Ofrecemos varios estilos y materiales que mejoran la apariencia de su hogar y lo protegen del clima durante muchos años."
+      }
+    ],
+    "heroAbout": {
+      "title": "Nosotros",
+      "text": "MAS Contractors es una empresa familiar con más de 11 años de experiencia en la construcción. No queremos ser su contratista para una sola obra, sino para toda la vida. Por eso tratamos cada proyecto con respeto, atención al detalle y la calidad de trabajo por la que ya nos conocen en la zona."
+    },
+    "about": {
+      "title": "Elija MAS Contractors porque somos:",
+      "list": [
+        {
+          "subTitle": "Calificados",
+          "description": "Tenemos licencia y seguro completos para su protección."
+        },
+        {
+          "subTitle": "Experimentados",
+          "description": "Llevamos más de una década en el negocio de la remodelación."
+        },
+        {
+          "subTitle": "Cuidadosos",
+          "description": "Cuidamos su casa como si fuera la nuestra."
+        },
+        {
+          "subTitle": "Comprometidos",
+          "description": "No terminamos hasta atender cada detalle."
+        },
+        {
+          "subTitle": "Profesionales",
+          "description": "Su satisfacción es nuestra prioridad."
+        }
+      ],
+      "aboutFooter": "MAS Contractors ha completado cientos de remodelaciones y proyectos comerciales en Richmond, VA y sus alrededores.",
+      "buttonText": "¡TRABAJE CON NOSOTROS!"
+    },
+    "contact_services": [
+      {
+        "id": "TRIM",
+        "slug": "trim-carpentry",
+        "title2": "Molduras",
+        "description": "Instalamos puertas interiores, molduras de corona, techos artesonados, paneles de pared y estanterías empotradas tal como usted las imaginó.",
+        "img": "/gallery/Trim.jpeg"
+      },
+      {
+        "id": "ROOFING",
+        "slug": "roofing",
+        "title2": "Techos",
+        "description": "Ya sea una reparación menor o un techo viejo que necesita reemplazo completo, le acompañamos en cada paso del proceso.",
+        "img": "/img-5.png"
+      },
+      {
+        "id": "KITCHEN",
+        "slug": "kitchen-remodeling",
+        "title2": "Cocinas",
+        "description": "La cocina es el corazón del hogar. Permítanos transformarla con gabinetes, encimeras, salpicadero de azulejo, pisos y electrodomésticos.",
+        "img": "/gallery/Kitchen.jpeg"
+      },
+      {
+        "id": "BATHROOMS",
+        "slug": "bathroom-remodeling",
+        "title2": "Baños",
+        "description": "Aumente el valor de su casa. Instalamos gabinetes de baño nuevos, tinas de remojo, closets de almacenamiento y azulejo nuevo en la ducha.",
+        "img": "/img-7.png"
+      },
+      {
+        "id": "DOORS",
+        "slug": "door-installation",
+        "title2": "Puertas",
+        "description": "Instalamos puertas contra tormentas, puertas corredizas de vidrio, puertas francesas y puertas de entrada con mecanismos de seguridad integrados, en gran variedad de diseños, colores y paneles de vidrio.",
+        "img": "/gallery/Doors.jpeg"
+      },
+      {
+        "id": "DECKS",
+        "slug": "decks-porches",
+        "title2": "Decks",
+        "description": "Reemplazamos decks y construimos decks a medida, además de porches y pérgolas. Le ofrecemos varios materiales para que su deck dure muchos años.",
+        "img": "/img-8.png"
+      },
+      {
+        "id": "SIDING",
+        "slug": "siding",
+        "title2": "Revestimiento",
+        "description": "Un revestimiento nuevo no solo renueva el exterior de su casa: también reduce el mantenimiento que necesita.",
+        "img": "/gallery/Siding.jpeg"
+      },
+      {
+        "id": "WINDOWS",
+        "slug": "window-replacement",
+        "title2": "Ventanas",
+        "description": "Trabajamos con muchos fabricantes, así que podemos cambiar cualquier ventana por una de alta calidad y eficiencia energética.",
+        "img": "/gallery/Windows.jpeg"
+      },
+      {
+        "id": "HOME ADDITIONS",
+        "slug": "home-additions",
+        "title2": "Ampliaciones",
+        "description": "Aumente el valor de su casa con el espacio adicional que desea. Nos encargamos de todos los permisos municipales y del trabajo de plomería y electricidad. Sus sueños se harán realidad.",
+        "img": "/img-9.jpg"
+      }
+    ],
+    "specialties": [
+      {
+        "slug": "commercial_cabinetry",
+        "id": "Custom Room Additions",
+        "title": "Ampliaciones de habitaciones a medida",
+        "description": "Una habitación nueva le dará años de disfrute y aumentará el valor de su casa.",
+        "descriptionLarge": "MAS Contractors LLC ofrece servicios de renovación de primera calidad. Ya sea actualizar la cocina, modernizar el baño o renovar la casa por completo, nuestro equipo hace realidad su visión. Descubra la excelencia de MAS Contractors LLC hoy mismo.",
+        "list": [],
+        "image": "/gallery/CustomRoomAdditions.png",
+        "servicePage": "room-additions"
+      },
+      {
+        "slug": "tile",
+        "id": "Tile",
+        "title": "Azulejo",
+        "description": "Le ayudamos a elegir azulejo entre una variedad infinita de colores, diseños y materiales.",
+        "descriptionLarge": "El azulejo funciona muy bien en muchos espacios de la casa, e incluso en locales comerciales. Es muy duradero y ofrece gran libertad de diseño gracias a la variedad de colores y patrones. En MAS usamos barreras impermeables contra la humedad cuando hace falta, para lograr una superficie lisa y resistente que dure.",
+        "list": [
+          {
+            "item": "Azulejo de ducha"
+          },
+          {
+            "item": "Salpicadero (backsplash)"
+          },
+          {
+            "item": "Azulejo para pisos"
+          },
+          {
+            "item": "Azulejo de pared"
+          },
+          {
+            "item": "Duchas de vapor"
+          },
+          {
+            "item": "Bancos de ducha"
+          }
+        ],
+        "image": "/gallery/Tile.png",
+        "servicePage": "tile-work"
+      },
+      {
+        "slug": "finish_trim_carpentry",
+        "id": "Finish & Trim Carpentry",
+        "title": "Carpintería de acabados y molduras",
+        "description": "Convierta la obra gris de cualquier casa o edificio en un espacio útil y agradable a la vista.",
+        "descriptionLarge": "Nuestros carpinteros aplican las mejores técnicas de acabado en una etapa clave de la construcción. Ofrecemos carpintería completa para proyectos residenciales y comerciales, que incluye",
+        "list": [
+          {
+            "item": "Instalación de carpintería a medida"
+          },
+          {
+            "item": "Libreros y muebles empotrados"
+          },
+          {
+            "item": "Trabajos en madera a medida"
+          },
+          {
+            "item": "Molduras y rodapiés"
+          },
+          {
+            "item": "Vigas decorativas"
+          },
+          {
+            "item": "Zócalos de madera (wainscoting)"
+          },
+          {
+            "item": "Techos artesonados"
+          },
+          {
+            "item": "Escaleras y barandales"
+          },
+          {
+            "item": "Instalación de puertas interiores"
+          }
+        ],
+        "image": "/gallery/FinishCarpentry.png",
+        "servicePage": "trim-carpentry"
+      }
+    ],
+    "commercial": [
+      {
+        "text": "Techos TPO"
+      },
+      {
+        "text": "Techos de caucho EPDM"
+      },
+      {
+        "text": "Techos metálicos"
+      },
+      {
+        "text": "Techos de pizarra"
+      },
+      {
+        "text": "Plomería gruesa y de acabado"
+      },
+      {
+        "text": "Drywall, acabados y aislamiento"
+      },
+      {
+        "text": "Estructura metálica"
+      },
+      {
+        "text": "Puertas y ventanas"
+      },
+      {
+        "text": "Pintura y acabados"
+      },
+      {
+        "text": "Instalación de pisos LVP"
+      },
+      {
+        "text": "Instalación de revestimiento James Hardie®"
+      }
+    ],
+    "residential": [
+      {
+        "text": "Patios y decks"
+      },
+      {
+        "text": "Renovaciones"
+      },
+      {
+        "text": "Aislamiento"
+      },
+      {
+        "text": "Plomería"
+      },
+      {
+        "text": "Pisos"
+      },
+      {
+        "text": "Remodelaciones"
+      },
+      {
+        "text": "Puertas y ventanas"
+      },
+      {
+        "text": "Drywall y pintura"
+      },
+      {
+        "text": "Estructura"
+      },
+      {
+        "text": "Canaletas y revestimiento"
+      },
+      {
+        "text": "Techos planos"
+      },
+      {
+        "text": "Techos TPO"
+      },
+      {
+        "text": "Revestimiento Hardie"
+      }
+    ]
+  },
+  "home": {
+    "heroImgAlt": "Obra de construcción comercial de MAS Contractors en Richmond VA con maquinaria pesada",
+    "heroTitleA": "RENOVAMOS",
+    "heroTitleB": "ESPACIOS",
+    "heroSubtitle": "CONSTRUIMOS LEGADOS",
+    "heroText": "Bienvenido a MAS Contractors, donde la experiencia se une a la innovación y a una calidad excepcional para convertir su visión en una realidad duradera.",
+    "getQuote": "PIDA UN PRESUPUESTO",
+    "freeEstimatesNote": "Presupuestos gratis · Respuesta en 48 horas",
+    "commercialA": "Comercial y ",
+    "commercialB": "Residencial",
+    "logo3dAlt": "Logo 3D de MAS Contractors - Contratista general líder en Richmond VA",
+    "aboutA": "Sobre",
+    "aboutB": " nosotros",
+    "aboutLinkLabel": "Conozca más sobre la historia y la misión de MAS Contractors",
+    "aboutLink": "CONOZCA MÁS SOBRE MAS CONTRACTORS",
+    "featuredA": "Proyectos ",
+    "featuredB": "destacados",
+    "viewWork": "VEA NUESTRO TRABAJO",
+    "blogEyebrow": "Consejos y guías",
+    "blogA": "Del ",
+    "blogB": "blog",
+    "allArticles": "TODOS LOS ARTÍCULOS",
+    "readArticle": "LEER ARTÍCULO",
+    "servicesA": "Conozca nuestros ",
+    "servicesB": "servicios",
+    "servicesText": "Desde grandes proyectos comerciales hasta comunidades residenciales bien diseñadas, nuestro portafolio muestra lo que nuestra experiencia puede transformar.",
+    "learnMore": "Ver más",
+    "viewAllServices": "VER TODOS LOS SERVICIOS",
+    "visitA": "Visita y ",
+    "visitB": "presupuesto",
+    "visitC": " gratis",
+    "visitText": "Vamos directamente al lugar de su proyecto para tomar medidas exactas y hablar de materiales, requisitos y expectativas antes de darle cualquier presupuesto. La evaluación es totalmente gratis y sin compromiso.",
+    "visitButton": "PIDA SU PRESUPUESTO GRATIS",
+    "carAlt": "Vehículo de MAS Contractors para visitas de presupuesto gratis en Richmond VA",
+    "workAlt": "Equipo de MAS Contractors revisando planos del proyecto en Richmond VA",
+    "futureBadge": "ILUMINANDO EL FUTURO",
+    "collabA": "El poder de ",
+    "collabB": "trabajar en equipo",
+    "collabText1": "La colaboración es el corazón de todo proyecto exitoso. Trabajamos de cerca con nuestros clientes, escuchamos sus necesidades e incorporamos sus comentarios en cada etapa.",
+    "collabText2": "En MAS Contractors creemos que los mejores resultados salen de trabajar juntos. Esa forma de trabajar impulsa la creatividad y la innovación, y construye relaciones duraderas basadas en la confianza.",
+    "finalA": "Llevamos",
+    "finalB": " su proyecto",
+    "finalC": "al siguiente nivel",
+    "finalText": "Como contratistas, sabemos que cada proyecto es único, y nos comprometemos a entregar soluciones a la medida de lo que usted necesita.",
+    "finalButton": "PIDA SU PRESUPUESTO AHORA"
+  },
+  "localBusiness": {
+    "badge": "Los mejor calificados en Richmond",
+    "titleA": "Su ",
+    "titleB": "contratista general",
+    "titleC": " de confianza en Richmond, VA",
+    "text": "MAS Contractors LLC es un contratista general con licencia y seguro que ofrece servicios de construcción residencial y comercial de alta calidad en Richmond, VA y sus alrededores. Construimos con integridad y precisión.",
+    "statYears": "Años de experiencia",
+    "statProjects": "Proyectos terminados",
+    "statRating": "Calificación en Google",
+    "statReviews": "Reseñas en Google",
+    "areaTitle": "Área de servicio",
+    "areaText": "Richmond, VA y el condado de Chesterfield",
+    "contactTitle": "Contáctenos",
+    "expertiseTitle": "Especialidad",
+    "expertiseText": "Construcción residencial y comercial",
+    "peaceTitle": "Tranquilidad",
+    "peaceText": "Con licencia y seguro en Virginia",
+    "whyA": "¿Por qué elegir ",
+    "whyB": "MAS Contractors?",
+    "whyList": [
+      "Presupuestos gratis y sin compromiso",
+      "Mano de obra de alta calidad",
+      "Contratista local de Richmond en quien puede confiar",
+      "Entrega a tiempo y dentro del presupuesto"
+    ],
+    "button": "PIDA UN PRESUPUESTO GRATIS",
+    "ready": "¿Listo para empezar su proyecto? Hablemos."
+  },
+  "certifications": {
+    "dporAlt": "Licencia DPOR - Contratista de Virginia",
+    "dpor": "Con licencia y seguro",
+    "oshaAlt": "Contratista con certificación de seguridad OSHA",
+    "osha": "Certificación de seguridad",
+    "bbbTitle": "Empresa acreditada por el BBB - MAS Contractors LLC",
+    "bbb": "Acreditados por el BBB"
+  },
+  "faq": {
+    "eyebrow": "¿Tiene preguntas?",
+    "titleA": "Preguntas ",
+    "titleB": "frecuentes",
+    "subtitle": "Todo lo que preguntan los propietarios de Richmond antes de contratar a un contratista general.",
+    "items": [
+      {
+        "question": "¿Cuánto cuesta una remodelación en Richmond, VA?",
+        "answer": "El costo depende del alcance y los materiales. Una remodelación de cocina suele costar entre $15,000 y $60,000+, un baño entre $8,000 y $35,000, y una renovación de toda la casa entre $50,000 y $200,000+. Los decks empiezan en unos $8,000 y las ampliaciones en $30,000. Le damos un presupuesto escrito, detallado y gratis, para que sepa exactamente qué paga antes de empezar."
+      },
+      {
+        "question": "¿Tienen licencia y seguro en Virginia?",
+        "answer": "Sí. MAS Contractors LLC tiene licencia de contratista Clase A de Virginia y seguro completo de responsabilidad civil, además de seguro de compensación para trabajadores. Tramitamos todos los permisos necesarios ante el condado de Chesterfield, el condado de Henrico y la ciudad de Richmond, para que su proyecto sea legal, esté inspeccionado y quede totalmente protegido."
+      },
+      {
+        "question": "¿Ofrecen presupuestos gratis?",
+        "answer": "Sí, siempre. Ofrecemos presupuestos gratis y sin compromiso en su casa para cualquier proyecto. Visitamos su propiedad, escuchamos lo que quiere, tomamos medidas y le entregamos una cotización escrita y detallada. Sin presión, sin cargos ocultos y sin sorpresas."
+      },
+      {
+        "question": "¿Qué zonas del área de Richmond atienden?",
+        "answer": "Atendemos todo el área metropolitana de Richmond, VA, incluidos North Chesterfield, Midlothian, Glen Allen, el condado de Henrico, Chester, Colonial Heights, Mechanicsville y Short Pump. Si está a menos de 45 minutos de Richmond, llámenos: vamos a donde usted esté."
+      },
+      {
+        "question": "¿Cuánto tarda una remodelación típica?",
+        "answer": "Depende del alcance. Un baño suele tardar de 2 a 4 semanas, una cocina de 4 a 8, un deck de 1 a 3 y una ampliación completa de 2 a 4 meses. Le damos un calendario firme desde el principio y le avisamos de inmediato si algo cambia. En proyectos estructurales grandes, la aprobación del permiso en Chesterfield o Henrico puede sumar de 2 a 4 semanas."
+      },
+      {
+        "question": "¿Necesito permiso para mi proyecto en Virginia?",
+        "answer": "La mayoría de los trabajos estructurales, eléctricos, de plomería y mecánicos en Virginia requieren permiso, incluidas las remodelaciones de cocina, las ampliaciones, los decks nuevos de más de 200 pies cuadrados, el reemplazo de techos y, en algunas jurisdicciones, el cambio de ventanas. MAS Contractors se encarga de todo el trámite: solicitud, inspecciones y aprobación final. Nunca nos saltamos un permiso: protege su inversión y lo exigen los seguros y la venta de la casa."
+      },
+      {
+        "question": "¿Tengo que mudarme durante la renovación?",
+        "answer": "En la mayoría de los casos, no. En cocinas y baños trabajamos por etapas para que el resto de la casa siga funcionando. Para ampliaciones grandes o renovaciones que afectan varios sistemas, vemos juntos las mejores opciones durante la visita de presupuesto. Nuestros equipos trabajan de lunes a viernes (y sábados si hace falta) para molestar lo menos posible y terminar a tiempo."
+      },
+      {
+        "question": "¿Qué hacen si surge un problema inesperado durante la obra?",
+        "answer": "Las casas antiguas de Richmond a veces esconden sorpresas: daños por agua, cableado viejo o estructura podrida detrás de las paredes. Cuando encontramos algo inesperado, detenemos el trabajo, lo documentamos con fotos, le explicamos el problema con claridad y le entregamos una orden de cambio por escrito con el costo y el efecto en el calendario antes de seguir. Usted siempre decide qué se aprueba."
+      },
+      {
+        "question": "¿Cómo son los pagos?",
+        "answer": "Pedimos un depósito para reservar la fecha de inicio (normalmente entre el 10 y el 30 %, según el tamaño del proyecto), pagos parciales ligados a etapas terminadas y el pago final solo después de que usted haya revisado la obra y esté satisfecho. Nunca pedimos el pago completo por adelantado: con cualquier contratista, eso es una señal de alerta."
+      }
+    ]
+  },
+  "reviews": {
+    "starsLabel": "{count} de 5 estrellas",
+    "readMore": "Leer más",
+    "showLess": "Ver menos",
+    "live": "En vivo desde Google",
+    "eyebrow": "Reseñas de Google",
+    "titleA": "Lo que dicen los propietarios ",
+    "titleB": "de Richmond",
+    "outOf5": "de 5",
+    "countOne": "{count} reseña en Google",
+    "countMany": "{count} reseñas en Google",
+    "emptyText": "Cada reseña viene de un propietario real del área de Richmond.",
+    "emptyLink": "Léalas en Google",
+    "ctaText": "¿Trabajamos en su casa? Nos encantaría saber su opinión.",
+    "ctaButton": "DÉJENOS UNA RESEÑA EN GOOGLE",
+    "liveNote": "Reseñas tal como se publicaron en Google. Se actualizan solas."
+  },
+  "beforeAfter": {
+    "before": "ANTES",
+    "after": "DESPUÉS"
+  },
+  "aboutPage": {
+    "heroAlt": "Sobre MAS Contractors - Equipo de contratistas generales con licencia y seguro en Richmond VA",
+    "uniformAlt": "Miembro del equipo de MAS Contractors con uniforme en Richmond VA",
+    "missionTitle": "MISIÓN",
+    "missionText": "Construir proyectos de alta calidad con soluciones innovadoras y cómodas que mejoren la vida de las personas. Nos comprometemos con la seguridad, el cumplimiento de plazos y la satisfacción total de nuestros clientes.",
+    "visionTitle": "VISIÓN",
+    "visionText": "Ser reconocidos a nivel nacional por la calidad de nuestras obras, con excelencia, eficiencia y crecimiento personal en cada proyecto. Aspiramos a ser la primera opción para clientes, subcontratistas y empleados.",
+    "valuesTitle": "VALORES",
+    "values": [
+      "Seguridad y cumplimiento",
+      "Calidad e innovación",
+      "Integridad y transparencia",
+      "Trabajo en equipo y respeto",
+      "Satisfacción del cliente"
+    ],
+    "processTitle": "Nuestro proceso",
+    "processSubtitle": "Cómo hacemos realidad su visión",
+    "steps": [
+      {
+        "title": "Contacto",
+        "text": "Llámenos o escríbanos. Respondemos rápido y agendamos su visita gratis al lugar."
+      },
+      {
+        "title": "Visita gratis",
+        "text": "Visitamos el lugar para evaluar el proyecto y le damos un presupuesto detallado y sin compromiso.",
+        "iconAlt": "Visita gratis a la obra en Richmond VA"
+      },
+      {
+        "title": "Materiales y calidad",
+        "text": "Hablamos de materiales, estándares de calidad y detalles del proyecto para asegurar su satisfacción.",
+        "iconAlt": "Muestra de materiales de construcción de calidad en Richmond VA"
+      },
+      {
+        "title": "Acuerdo",
+        "text": "Una vez de acuerdo, le enviamos un contrato detallado con los precios de materiales y mano de obra.",
+        "iconAlt": "Icono de contrato de construcción en Richmond VA"
+      },
+      {
+        "title": "Entrega",
+        "text": "50 % por adelantado y 50 % al terminar. Entregamos calidad con total transparencia."
+      }
+    ]
+  },
+  "servicesPage": {
+    "titleA": "Servicios de construcción y remodelación en ",
+    "titleB": "Richmond, VA",
+    "intro": "MAS Contractors LLC es un contratista general de confianza en Richmond, VA, que ofrece remodelación residencial de alto nivel y construcción comercial con una calidad comprobada.",
+    "cardAlt": "Servicios de {name} en Richmond VA por MAS Contractors",
+    "cardLink": "Más sobre {name}",
+    "cardEstimate": "Presupuesto gratis de {name} en Richmond VA",
+    "viewGallery": "VEA NUESTRA GALERÍA DE PROYECTOS",
+    "specialtiesA": "Servicios de construcción especializados en ",
+    "specialtiesB": "Richmond, VA",
+    "specialtyAlt": "{name} en Richmond VA",
+    "specialtyEyebrow": "Especialidad",
+    "freeEstimate": "PRESUPUESTO GRATIS",
+    "fullServicePage": "VER EL SERVICIO COMPLETO",
+    "ctaA": "¿Necesita un ",
+    "ctaB": "contratista",
+    "ctaC": " con licencia en Richmond?",
+    "ctaText": "Desde una reparación pequeña hasta un gran proyecto comercial, nuestro equipo está listo para dar lo mejor.",
+    "ctaButton": "CONTÁCTENOS HOY",
+    "aboutLink": "Conozca más sobre MAS Contractors"
+  },
+  "contactForm": {
+    "success": "¡Mensaje enviado! Le responderemos en 24 a 48 horas con su presupuesto gratis.",
+    "error": "No se pudo enviar. Llámenos directamente al (804) 833-4600.",
+    "captchaMissing": "Complete la verificación CAPTCHA.",
+    "firstName": "Nombre",
+    "firstNamePh": "Juan",
+    "lastName": "Apellido",
+    "lastNamePh": "Pérez",
+    "email": "Correo electrónico",
+    "emailPh": "juan@correo.com",
+    "phone": "Teléfono",
+    "service": "Servicio que necesita",
+    "servicePh": "Elija un servicio...",
+    "optGeneral": "Consulta general",
+    "optSupport": "Soporte",
+    "optFeedback": "Comentarios",
+    "message": "Cuéntenos sobre su proyecto",
+    "messagePh": "Describa su proyecto, presupuesto aproximado, plazos y cualquier requisito especial...",
+    "submitDisabled": "Complete el CAPTCHA para enviar",
+    "submit": "Pedir presupuesto gratis →"
+  },
+  "contactPage": {
+    "callLabel": "Llámenos",
+    "callCta": "Llamar ahora",
+    "officeLabel": "Nuestra oficina",
+    "hoursLabel": "Horario de oficina",
+    "hoursDays": "Lunes a viernes",
+    "emailLabel": "Correo",
+    "emailCta": "Enviar correo",
+    "heroAlt": "Contacte a MAS Contractors — Contratista general en Richmond VA",
+    "eyebrow": "Presupuestos gratis · Respuesta en 48 h · Richmond, VA",
+    "titleA": "Manos a",
+    "titleB": "la obra",
+    "intro": "El contratista general Clase A de confianza en Richmond para proyectos residenciales y comerciales. Cuéntenos su idea: nosotros nos encargamos del resto.",
+    "responds": "Normalmente respondemos en un día hábil",
+    "formTitleA": "Cuéntenos sobre ",
+    "formTitleB": "su proyecto",
+    "formIntro": "Desde cocinas y baños hasta locales comerciales completos: lo hacemos todo. Llene el formulario y le enviaremos un presupuesto gratis y sin compromiso.",
+    "visitTitle": "Visite nuestra oficina",
+    "address": "Dirección",
+    "hours": "Horario",
+    "hoursShort": "Lun – Vie",
+    "phone": "Teléfono",
+    "license": "Licencia",
+    "licenseA": "Clase A de Virginia",
+    "licenseB": "Totalmente asegurados",
+    "badgeRating": "{rating}★ en Google",
+    "badgeReviews": "{count} reseñas en Google",
+    "badges": [
+      "Licencia Clase A",
+      "Presupuestos gratis",
+      "Fundada en 2014"
+    ]
+  },
+  "galleryPage": {
+    "title": "GALERÍA",
+    "subtitle": "Conozca lo mejor de nuestro trabajo en Richmond, VA y sus alrededores",
+    "photoOne": "{count} foto",
+    "photoMany": "{count} fotos",
+    "categories": {
+      "All": "Todo",
+      "Kitchen": "Cocina",
+      "Bathroom": "Baño",
+      "Home Addition": "Ampliación",
+      "Trim & Carpentry": "Molduras y carpintería",
+      "Tile Work": "Azulejo",
+      "Full Renovation": "Renovación completa",
+      "Deck": "Deck",
+      "Roofing": "Techos",
+      "Siding": "Revestimiento",
+      "Windows & Doors": "Ventanas y puertas",
+      "Commercial": "Comercial"
+    }
+  },
+  "common": {
+    "mapTitle": "MAS Contractors LLC — 411 Branchway Rd, North Chesterfield, VA",
+    "logoAlt": "Logo de MAS Contractors LLC - Contratista general en Richmond VA"
+  },
+  "blogPage": {
+    "eyebrow": "Mejoras para el hogar en Richmond, VA",
+    "titleA": "Guías y ",
+    "titleB": "consejos",
+    "titleC": " de un contratista",
+    "intro": "Respuestas reales a las preguntas de los propietarios de Richmond: costos, permisos, materiales y qué esperar al trabajar con un contratista general.",
+    "latest": "Último artículo",
+    "readArticle": "LEER ARTÍCULO",
+    "ctaA": "¿Listo para su ",
+    "ctaB": "presupuesto gratis",
+    "ctaC": "?",
+    "ctaText": "MAS Contractors es un contratista general Clase A con licencia que atiende Richmond, Chesterfield, Henrico y Midlothian. Hablemos de su proyecto.",
+    "ctaButton": "CONTÁCTENOS HOY"
+  },
+  "blogPost": {
+    "allArticles": "TODOS LOS ARTÍCULOS",
+    "authorBio": "Contratista general Clase A con licencia · Richmond, VA · Al servicio de Chesterfield, Henrico, Midlothian y alrededores desde 2013.",
+    "moreA": "Más ",
+    "moreB": "artículos",
+    "read": "LEER",
+    "viewAll": "Ver todos los artículos",
+    "ctaA": "¿Listo para su ",
+    "ctaB": "presupuesto gratis",
+    "ctaC": "?",
+    "ctaText": "Atendemos Richmond, North Chesterfield, Midlothian, Glen Allen y Henrico. Con licencia, con seguro y listos para empezar.",
+    "ctaButton": "CONTÁCTENOS HOY"
+  },
+  "serviceDetail": {
+    "allServices": "TODOS LOS SERVICIOS",
+    "heroButton": "PRESUPUESTO GRATIS",
+    "whyEyebrow": "Richmond, VA · Con licencia y seguro",
+    "whyTitle": "¿Por qué elegir MAS Contractors?",
+    "processEyebrow": "Simple y transparente",
+    "processA": "Nuestro ",
+    "processB": "proceso",
+    "statYears": "Años de experiencia",
+    "statProjects": "Proyectos terminados",
+    "statSatisfaction": "Satisfacción",
+    "statEstimate": "Presupuesto gratis",
+    "statEstimateValue": "Siempre",
+    "costEyebrow": "Mercado de Richmond, VA",
+    "costA": "Guía de ",
+    "costB": "costos",
+    "costC": " y plazos",
+    "investmentRange": "Rango de inversión",
+    "mostProjects": "La mayoría de los proyectos:",
+    "typicalTimeline": "Plazo típico",
+    "permitNote": "La aprobación del permiso puede sumar de 2 a 4 semanas en algunos proyectos",
+    "factorsTitle": "Qué afecta el costo",
+    "rangesNote": "Estos son rangos típicos del mercado de Richmond, VA. Cada proyecto es único: le damos un presupuesto escrito gratis en el lugar, sin sorpresas y sin presión.",
+    "costButton": "PIDA SU PRESUPUESTO GRATIS",
+    "insightsEyebrow": "11 años de experiencia en obra",
+    "insightsA": "Lo que todo propietario ",
+    "insightsB": "debe saber",
+    "challenges": "Problemas comunes",
+    "proTips": "Consejos de nuestro equipo",
+    "safety": "Equipo de seguridad en cada obra",
+    "baEyebrow": "Transformaciones reales",
+    "baA": "Antes ",
+    "baB": "y después",
+    "baText": "Deslice la barra para ver la transformación completa.",
+    "faqEyebrow": "Preguntas comunes",
+    "faqA": "Preguntas ",
+    "faqB": "frecuentes",
+    "otherA": "Otros servicios en ",
+    "otherB": "Richmond, VA",
+    "learnMore": "VER MÁS",
+    "viewAll": "Ver todos los servicios",
+    "ctaA": "¿Listo para su ",
+    "ctaB": "presupuesto gratis",
+    "ctaC": "?",
+    "ctaText": "Atendemos Richmond, North Chesterfield, Midlothian, Glen Allen y Henrico. Con licencia, con seguro y listos para empezar.",
+    "ctaButton": "CONTÁCTENOS HOY"
+  },
+  "footer": {
+    "quickLinks": "Enlaces rápidos",
+    "links": [
+      {
+        "url": "/",
+        "title": "Inicio"
+      },
+      {
+        "url": "/services",
+        "title": "Servicios"
+      },
+      {
+        "url": "/gallery",
+        "title": "Galería"
+      },
+      {
+        "url": "/blog",
+        "title": "Blog y guías"
+      },
+      {
+        "url": "/about",
+        "title": "Nosotros"
+      },
+      {
+        "url": "/contact",
+        "title": "Contacto"
+      }
+    ],
+    "commercial": "Servicios comerciales",
+    "residential": "Servicios residenciales",
+    "connect": "Síganos",
+    "visitUs": "Visítenos",
+    "rights": "Todos los derechos reservados"
+  },
+  "nav": {
+    "classA": "Contratista general Clase A",
+    "classASub": "Licencia - Seguro - Fianza",
+    "trusted": "Profesionales de confianza",
+    "trustedSub": "Capacitados y con experiencia",
+    "office": "Teléfono de oficina",
+    "email": "Escríbanos",
+    "toggleMenu": "Abrir o cerrar el menú",
+    "languageLabel": "Idioma"
+  },
+  "meta": {
+    "site": {
+      "title": "MAS Contractors | Contratista general en Richmond, VA | Presupuestos gratis",
+      "template": "%s | MAS Contractors LLC",
+      "description": "¿Busca una remodelación de calidad en Richmond, VA? MAS Contractors se especializa en cocinas, baños y construcción comercial. Satisfacción garantizada. ¡Pida su presupuesto gratis hoy!",
+      "keywords": [
+        "contratista general Richmond VA",
+        "remodelación de cocinas",
+        "remodelación de baños",
+        "construcción comercial Richmond",
+        "renovación de casas Virginia"
+      ],
+      "ogTitle": "MAS Contractors | Remodelación experta en Richmond, VA",
+      "ogDescription": "Construcción y remodelación de calidad. De cocinas a locales comerciales.",
+      "orgDescription": "MAS Contractors LLC es un contratista general Clase A con licencia, con sede en North Chesterfield, Virginia. Nos especializamos en remodelación de cocinas y baños, ampliaciones, techos, revestimiento, molduras, azulejo y construcción comercial en Richmond, el condado de Chesterfield, Midlothian, Glen Allen y Henrico, VA. Instaladores certificados de James Hardie. Presupuestos gratis.",
+      "catalogName": "Servicios de construcción y remodelación",
+      "catalog": [
+        "Remodelación de cocinas",
+        "Remodelación de baños",
+        "Ampliaciones",
+        "Techos",
+        "Instalación de revestimiento",
+        "Carpintería de molduras",
+        "Azulejo",
+        "Construcción comercial"
+      ]
+    },
+    "home": {
+      "title": "Contratista general en Richmond, Chesterfield y Midlothian VA | MAS Contractors",
+      "description": "Contratista general Clase A en Richmond, el condado de Chesterfield, Midlothian, Henrico y Glen Allen, VA. Cocinas desde $15K, baños desde $8K, decks desde $8K. Con licencia y seguro. Presupuestos gratis.",
+      "keywords": [
+        "contratista general Richmond VA",
+        "contratista general condado de Chesterfield VA",
+        "contratista general Midlothian VA",
+        "empresa de construcción Richmond",
+        "construcción comercial Richmond",
+        "contratista residencial Richmond VA",
+        "remodelación de cocinas Richmond VA",
+        "remodelación de baños Chesterfield VA",
+        "ampliación de casa Midlothian VA",
+        "mejoras para el hogar Virginia",
+        "MAS Contractors"
+      ],
+      "ogTitle": "Contratista general en Richmond, Chesterfield y Midlothian VA | MAS Contractors",
+      "ogDescription": "Contratista general Clase A con licencia en Richmond, Chesterfield, Midlothian y Henrico. Cocinas, baños, ampliaciones, decks, techos y más. Presupuestos gratis.",
+      "ogImageAlt": "MAS Contractors – Contratista general en Richmond VA"
+    },
+    "about": {
+      "title": "Sobre MAS Contractors | Contratista general con licencia en Richmond VA",
+      "description": "Conozca a MAS Contractors LLC, un contratista general Clase A familiar, con licencia y seguro, que atiende Richmond, VA y sus alrededores. Confianza, calidad e integridad.",
+      "keywords": [
+        "sobre MAS Contractors",
+        "contratista general Richmond VA",
+        "contratista con licencia Virginia",
+        "empresa de construcción familiar Richmond",
+        "contratista residencial y comercial Richmond",
+        "MAS Contractors LLC"
+      ],
+      "ogTitle": "Sobre MAS Contractors | Contratista general en Richmond VA",
+      "ogDescription": "La historia de MAS Contractors LLC, un contratista general familiar y de confianza que ofrece construcción residencial y comercial en Richmond, VA."
+    },
+    "contact": {
+      "title": "Contacte a MAS Contractors | Contratista general en Richmond VA",
+      "description": "Contacte a MAS Contractors LLC, contratista general con licencia y seguro en Richmond, VA y alrededores. Llame al (804) 833-4600 y pida su presupuesto gratis hoy.",
+      "keywords": [
+        "contacto contratista general Richmond VA",
+        "contacto MAS Contractors",
+        "empresa de construcción Richmond VA",
+        "contratista de remodelación Richmond",
+        "construcción comercial Richmond VA",
+        "contratista residencial Richmond",
+        "presupuesto de construcción gratis Richmond VA",
+        "teléfono MAS Contractors LLC"
+      ],
+      "ogTitle": "Contacte a MAS Contractors | Contratista general en Richmond VA",
+      "ogDescription": "Contacte a MAS Contractors LLC para construcción residencial o comercial en Richmond, VA. Llame ya y pida su presupuesto gratis."
+    },
+    "gallery": {
+      "title": "Galería de proyectos de construcción | MAS Contractors Richmond VA",
+      "description": "Vea nuestro portafolio de proyectos de construcción comercial y residencial en Richmond, VA: cocinas, baños, techos, patios y más.",
+      "keywords": [
+        "galería de construcción Richmond",
+        "portafolio de remodelación VA",
+        "fotos de remodelación de cocinas",
+        "galería de renovación de baños",
+        "proyectos de construcción comercial",
+        "trabajos de MAS Contractors"
+      ],
+      "ogDescription": "Recorra nuestra galería de proyectos de construcción y remodelación terminados en Richmond, VA. Una calidad que se ve.",
+      "ogImageAlt": "Galería de proyectos de MAS Contractors"
+    },
+    "services": {
+      "title": "Contratista general y servicios de construcción en Richmond, VA | MAS Contractors",
+      "description": "Conozca nuestros servicios de construcción comercial y residencial en Richmond, VA. Especialistas en cocinas, baños, pisos, azulejo, techos y ampliaciones. Con licencia y seguro.",
+      "keywords": [
+        "servicios de construcción Richmond VA",
+        "remodelación de cocinas Richmond",
+        "remodelación de baños VA",
+        "construcción comercial Richmond",
+        "contratistas residenciales Richmond",
+        "instalación de azulejo VA",
+        "servicios de techos",
+        "ampliaciones Richmond"
+      ],
+      "ogTitle": "Contratista general y servicios de construcción en Richmond VA | MAS Contractors",
+      "ogDescription": "Contratista general de confianza en Richmond, VA: remodelación de cocinas y baños, techos, azulejo, pisos y ampliaciones. Con licencia y seguro. Presupuestos gratis.",
+      "ogImageAlt": "Servicios de MAS Contractors"
+    },
+    "blog": {
+      "title": "Guías y consejos para mejorar su hogar | MAS Contractors Richmond VA",
+      "description": "Respuestas reales para propietarios de Richmond, VA: costos de remodelación, permisos, comparación de materiales y qué esperar al trabajar con un contratista general con licencia.",
+      "ogTitle": "Guías para mejorar su hogar | MAS Contractors LLC Richmond VA",
+      "ogDescription": "Consejos de un contratista para propietarios de Richmond, Chesterfield, Henrico y Midlothian."
+    },
+    "notFound": {
+      "title": "Página no encontrada"
+    }
+  },
+  "breadcrumbs": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "blog": "Blog"
+  },
+  "serviceSchema": {
+    "freeEstimate": "Presupuesto gratis"
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "text": "Lo sentimos, la página que busca no existe o se cambió de lugar. Use los enlaces de abajo para encontrar lo que necesita.",
+    "links": [
+      {
+        "url": "/",
+        "title": "Inicio",
+        "sub": "Página principal"
+      },
+      {
+        "url": "/services",
+        "title": "Servicios",
+        "sub": "Lo que hacemos"
+      },
+      {
+        "url": "/gallery",
+        "title": "Galería",
+        "sub": "Nuestro trabajo"
+      },
+      {
+        "url": "/contact",
+        "title": "Contacto",
+        "sub": "Escríbanos"
+      }
+    ],
+    "button": "IR A LA PÁGINA DE INICIO"
+  }
+}

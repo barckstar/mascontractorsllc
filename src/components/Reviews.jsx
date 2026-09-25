@@ -4,6 +4,7 @@ import { m } from "framer-motion";
 import { FaStar, FaGoogle, FaQuoteLeft } from "react-icons/fa";
 import { BiRightArrowAlt } from "react-icons/bi";
 import { REVIEWS_SNAPSHOT } from "@/lib/reviewsSnapshot";
+import { useI18n, fill } from "@/i18n/I18nProvider";
 
 // No JSON-LD here on purpose: Google treats review markup that a business puts
 // on its own site about itself as "self-serving" and won't show stars for it.
@@ -12,8 +13,9 @@ import { REVIEWS_SNAPSHOT } from "@/lib/reviewsSnapshot";
 const CLAMP_AT = 280;
 
 function StarRow({ count = 5, size = 13 }) {
+    const r = useI18n().t.reviews;
     return (
-        <div className="flex gap-0.5" role="img" aria-label={`${count} out of 5 stars`}>
+        <div className="flex gap-0.5" role="img" aria-label={fill(r.starsLabel, { count })}>
             {Array.from({ length: 5 }).map((_, i) => (
                 <FaStar key={i} size={size} className={i < Math.round(count) ? "text-yellow-400" : "text-white/15"} aria-hidden="true" />
             ))}
@@ -36,6 +38,7 @@ function Avatar({ name, photo }) {
 
 function ReviewCard({ review, index }) {
     const [open, setOpen] = useState(false);
+    const r = useI18n().t.reviews;
     const long = review.text.length > CLAMP_AT;
     const text = long && !open ? `${review.text.slice(0, CLAMP_AT).trimEnd()}…` : review.text;
 
@@ -63,7 +66,7 @@ function ReviewCard({ review, index }) {
                         onClick={() => setOpen((v) => !v)}
                         className="pl-5 mt-2 text-secondary font-atpinko text-xs hover:underline"
                     >
-                        {open ? "Show less" : "Read more"}
+                        {open ? r.showLess : r.readMore}
                     </button>
                 )}
             </div>
@@ -87,6 +90,7 @@ function ReviewCard({ review, index }) {
 
 export default function Reviews({ data = REVIEWS_SNAPSHOT }) {
     const { rating, count, reviews, mapsUrl, live } = data;
+    const r = useI18n().t.reviews;
 
     return (
         <section className="py-24 bg-[#151515]">
@@ -105,10 +109,10 @@ export default function Reviews({ data = REVIEWS_SNAPSHOT }) {
                                 <span className="relative inline-flex rounded-full h-2 w-2 bg-secondary" />
                             </span>
                         )}
-                        {live ? "Live from Google" : "Google Reviews"}
+                        {live ? r.live : r.eyebrow}
                     </span>
                     <h2 className="text-3xl md:text-6xl font-contrax text-white mb-6 uppercase leading-tight">
-                        What Richmond Homeowners <span className="text-secondary">Are Saying</span>
+                        {r.titleA}<span className="text-secondary">{r.titleB}</span>
                     </h2>
 
                     {/* Aggregate badge — always the real Google numbers */}
@@ -120,13 +124,13 @@ export default function Reviews({ data = REVIEWS_SNAPSHOT }) {
                     >
                         <div className="text-center">
                             <p className="text-4xl font-contrax text-white leading-none">{rating.toFixed(1)}</p>
-                            <p className="text-gray-500 font-atpinko text-xs mt-1">out of 5</p>
+                            <p className="text-gray-500 font-atpinko text-xs mt-1">{r.outOf5}</p>
                         </div>
                         <div className="w-px h-10 bg-white/10" />
                         <div className="text-left">
                             <StarRow count={rating} />
                             <p className="text-gray-400 font-atpinko text-sm mt-1.5">
-                                {count} {count === 1 ? "review" : "reviews"} on Google
+                                {fill(count === 1 ? r.countOne : r.countMany, { count })}
                             </p>
                         </div>
                         <FaGoogle size={22} className="text-[#4285F4]" aria-hidden="true" />
@@ -141,9 +145,9 @@ export default function Reviews({ data = REVIEWS_SNAPSHOT }) {
                     </div>
                 ) : (
                     <p className="text-center text-gray-400 font-atpinko max-w-xl mx-auto">
-                        Every review comes from a real Richmond-area homeowner.{" "}
+                        {r.emptyText}{" "}
                         <a href={mapsUrl} target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">
-                            Read them on Google
+                            {r.emptyLink}
                         </a>
                         .
                     </p>
@@ -157,7 +161,7 @@ export default function Reviews({ data = REVIEWS_SNAPSHOT }) {
                     className="text-center mt-14 flex flex-col sm:flex-row items-center justify-center gap-4"
                 >
                     <p className="text-gray-500 font-atpinko text-sm sm:mr-2">
-                        Did we work on your home? We&apos;d love to hear from you.
+                        {r.ctaText}
                     </p>
                     <a
                         href="/review"
@@ -165,13 +169,13 @@ export default function Reviews({ data = REVIEWS_SNAPSHOT }) {
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 border border-secondary/40 text-secondary font-contrax text-sm tracking-widest py-3 px-8 rounded-full hover:bg-secondary hover:text-primary transition-all duration-300"
                     >
-                        <FaGoogle size={14} aria-hidden="true" /> LEAVE US A GOOGLE REVIEW <BiRightArrowAlt size={16} aria-hidden="true" />
+                        <FaGoogle size={14} aria-hidden="true" /> {r.ctaButton} <BiRightArrowAlt size={16} aria-hidden="true" />
                     </a>
                 </m.div>
 
                 {live && (
                     <p className="text-center text-gray-600 font-atpinko text-xs mt-8">
-                        Reviews shown as published on Google. Updated automatically.
+                        {r.liveNote}
                     </p>
                 )}
             </div>

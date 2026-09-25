@@ -6,12 +6,14 @@ import Link from "next/link";
 import { FaCheckCircle, FaPlus, FaMinus, FaPhoneAlt, FaClock, FaDollarSign, FaExclamationTriangle, FaLightbulb, FaShieldAlt } from "react-icons/fa";
 import BeforeAfter from "@/components/BeforeAfter";
 import { BiRightArrowAlt } from "react-icons/bi";
-import { servicesData } from "@/lib/servicesData";
+import { useI18n } from "@/i18n/I18nProvider";
 
-export default function ServicePageContent({ service }) {
+export default function ServicePageContent({ service, services }) {
     const [activeIndex, setActiveIndex] = useState(null);
+    const { t, href } = useI18n();
+    const s = t.serviceDetail;
 
-    const relatedServices = servicesData
+    const relatedServices = services
         .filter((s) => s.slug !== service.slug)
         .slice(0, 3);
 
@@ -28,11 +30,11 @@ export default function ServicePageContent({ service }) {
                         className="text-center"
                     >
                         <Link
-                            href="/services"
+                            href={href("/services")}
                             className="inline-flex items-center gap-2 text-secondary font-contrax text-xs tracking-widest mb-8 hover:gap-4 transition-all"
                         >
                             <span className="rotate-180 inline-block"><BiRightArrowAlt size={16} /></span>
-                            ALL SERVICES
+                            {s.allServices}
                         </Link>
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-contrax text-white mb-6 uppercase tracking-wider leading-tight">
                             {service.title.includes(", VA")
@@ -44,13 +46,13 @@ export default function ServicePageContent({ service }) {
                             {service.heroText}
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Link href="/contact">
+                            <Link href={href("/contact")}>
                                 <m.button
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
                                     className="bg-secondary text-primary font-contrax py-4 px-10 rounded-full hover:bg-white transition-all duration-300 shadow-[0_0_20px_rgba(159,227,0,0.3)]"
                                 >
-                                    GET FREE ESTIMATE
+                                    {s.heroButton}
                                 </m.button>
                             </Link>
                             <a href="tel:+18048334600">
@@ -101,10 +103,10 @@ export default function ServicePageContent({ service }) {
                             className="w-full lg:w-1/2"
                         >
                             <span className="text-secondary font-contrax tracking-[0.3em] uppercase text-xs mb-4 block">
-                                Richmond, VA · Licensed & Insured
+                                {s.whyEyebrow}
                             </span>
                             <h2 className="text-2xl md:text-4xl font-contrax text-white mb-6 uppercase leading-tight">
-                                Why Choose MAS Contractors?
+                                {s.whyTitle}
                             </h2>
                             <p className="text-gray-400 font-atpinko text-lg mb-6 leading-relaxed">
                                 {service.description}
@@ -136,10 +138,10 @@ export default function ServicePageContent({ service }) {
                             className="text-center mb-16"
                         >
                             <span className="text-secondary font-contrax tracking-[0.3em] uppercase text-xs mb-4 block">
-                                Simple & Transparent
+                                {s.processEyebrow}
                             </span>
                             <h2 className="text-3xl md:text-5xl font-contrax text-white uppercase tracking-wide">
-                                Our <span className="text-secondary">Process</span>
+                                {s.processA}<span className="text-secondary">{s.processB}</span>
                             </h2>
                         </m.div>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -176,10 +178,10 @@ export default function ServicePageContent({ service }) {
                 <div className="container mx-auto px-6 lg:px-16">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                         {[
-                            { label: "Years of Experience", value: "11+" },
-                            { label: "Projects Completed", value: "500+" },
-                            { label: "Satisfaction Rate", value: "100%" },
-                            { label: "Free Estimate", value: "Always" },
+                            { label: s.statYears, value: "11+" },
+                            { label: s.statProjects, value: "500+" },
+                            { label: s.statSatisfaction, value: "100%" },
+                            { label: s.statEstimate, value: s.statEstimateValue },
                         ].map((stat, i) => (
                             <m.div
                                 key={stat.label}
@@ -207,10 +209,10 @@ export default function ServicePageContent({ service }) {
                             className="text-center mb-16"
                         >
                             <span className="text-secondary font-contrax tracking-[0.3em] uppercase text-xs mb-4 block">
-                                Richmond, VA Market
+                                {s.costEyebrow}
                             </span>
                             <h2 className="text-3xl md:text-5xl font-contrax text-white uppercase tracking-wide">
-                                Cost & <span className="text-secondary">Timeline</span> Guide
+                                {s.costA}<span className="text-secondary">{s.costB}</span>{s.costC}
                             </h2>
                         </m.div>
 
@@ -228,7 +230,7 @@ export default function ServicePageContent({ service }) {
                                             <FaDollarSign className="text-secondary" size={14} />
                                         </div>
                                         <span className="text-gray-400 font-contrax text-xs tracking-widest uppercase">
-                                            Investment Range
+                                            {s.investmentRange}
                                         </span>
                                     </div>
                                     <p className="text-3xl md:text-4xl font-contrax text-white mb-2">
@@ -236,7 +238,7 @@ export default function ServicePageContent({ service }) {
                                     </p>
                                     {service.costGuide.average && (
                                         <p className="text-gray-500 font-atpinko text-sm">
-                                            Most projects: <span className="text-gray-300">{service.costGuide.average}</span>
+                                            {s.mostProjects} <span className="text-gray-300">{service.costGuide.average}</span>
                                         </p>
                                     )}
                                 </div>
@@ -246,14 +248,14 @@ export default function ServicePageContent({ service }) {
                                             <FaClock className="text-secondary" size={13} />
                                         </div>
                                         <span className="text-gray-400 font-contrax text-xs tracking-widest uppercase">
-                                            Typical Timeline
+                                            {s.typicalTimeline}
                                         </span>
                                     </div>
                                     <p className="text-3xl md:text-4xl font-contrax text-white mb-2">
                                         {service.costGuide.timeline}
                                     </p>
                                     <p className="text-gray-500 font-atpinko text-sm">
-                                        Permit approval times may add 2–4 weeks for certain projects
+                                        {s.permitNote}
                                     </p>
                                 </div>
                             </m.div>
@@ -265,7 +267,7 @@ export default function ServicePageContent({ service }) {
                                 viewport={{ once: true }}
                             >
                                 <h3 className="text-white font-contrax uppercase tracking-wider mb-6 text-base">
-                                    What Affects Your Cost
+                                    {s.factorsTitle}
                                 </h3>
                                 <ul className="space-y-4 mb-8">
                                     {service.costGuide.factors.map((factor, i) => (
@@ -279,15 +281,15 @@ export default function ServicePageContent({ service }) {
                                 </ul>
                                 <div className="border-t border-white/5 pt-6">
                                     <p className="text-gray-500 font-atpinko text-sm leading-relaxed mb-6">
-                                        These are typical ranges for the Richmond, VA market. Every project is unique — we provide free on-site written estimates with no surprises and no pressure.
+                                        {s.rangesNote}
                                     </p>
-                                    <Link href="/contact">
+                                    <Link href={href("/contact")}>
                                         <m.button
                                             whileHover={{ scale: 1.03 }}
                                             whileTap={{ scale: 0.97 }}
                                             className="bg-secondary text-primary font-contrax py-3 px-8 rounded-full hover:bg-white transition-all duration-300 text-sm"
                                         >
-                                            GET YOUR FREE ESTIMATE
+                                            {s.costButton}
                                         </m.button>
                                     </Link>
                                 </div>
@@ -308,10 +310,10 @@ export default function ServicePageContent({ service }) {
                             className="text-center mb-16"
                         >
                             <span className="text-secondary font-contrax tracking-[0.3em] uppercase text-xs mb-4 block">
-                                11 Years of Field Experience
+                                {s.insightsEyebrow}
                             </span>
                             <h2 className="text-3xl md:text-5xl font-contrax text-white uppercase tracking-wide">
-                                What Every Homeowner <span className="text-secondary">Should Know</span>
+                                {s.insightsA}<span className="text-secondary">{s.insightsB}</span>
                             </h2>
                         </m.div>
 
@@ -327,7 +329,7 @@ export default function ServicePageContent({ service }) {
                                         <div className="w-8 h-8 rounded-full bg-orange-500/10 flex items-center justify-center flex-shrink-0">
                                             <FaExclamationTriangle className="text-orange-400" size={13} />
                                         </div>
-                                        <h3 className="text-white font-contrax uppercase tracking-wider text-xs">Common Challenges</h3>
+                                        <h3 className="text-white font-contrax uppercase tracking-wider text-xs">{s.challenges}</h3>
                                     </div>
                                     <div className="space-y-4">
                                         {service.challenges.map((c, i) => (
@@ -351,7 +353,7 @@ export default function ServicePageContent({ service }) {
                                         <div className="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0">
                                             <FaLightbulb className="text-secondary" size={13} />
                                         </div>
-                                        <h3 className="text-white font-contrax uppercase tracking-wider text-xs">Pro Tips from Our Team</h3>
+                                        <h3 className="text-white font-contrax uppercase tracking-wider text-xs">{s.proTips}</h3>
                                     </div>
                                     <div className="space-y-3">
                                         {service.proTips.map((tip, i) => (
@@ -377,7 +379,7 @@ export default function ServicePageContent({ service }) {
                                     <div className="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0">
                                         <FaShieldAlt className="text-secondary" size={13} />
                                     </div>
-                                    <h3 className="text-white font-contrax uppercase tracking-wider text-xs">Safety Equipment on Every Job</h3>
+                                    <h3 className="text-white font-contrax uppercase tracking-wider text-xs">{s.safety}</h3>
                                 </div>
                                 <div className="flex flex-wrap gap-3">
                                     {service.safetyGear.map((item, i) => (
@@ -403,13 +405,13 @@ export default function ServicePageContent({ service }) {
                             className="text-center mb-14"
                         >
                             <span className="text-secondary font-contrax tracking-[0.3em] uppercase text-xs mb-4 block">
-                                Real Transformations
+                                {s.baEyebrow}
                             </span>
                             <h2 className="text-3xl md:text-5xl font-contrax text-white mb-4 uppercase tracking-wide">
-                                Before <span className="text-secondary">&amp; After</span>
+                                {s.baA}<span className="text-secondary">{s.baB}</span>
                             </h2>
                             <p className="text-gray-400 font-atpinko text-lg max-w-xl mx-auto">
-                                Drag the slider to see the full transformation.
+                                {s.baText}
                             </p>
                         </m.div>
                         <div className="space-y-12">
@@ -443,10 +445,10 @@ export default function ServicePageContent({ service }) {
                         className="text-center mb-14"
                     >
                         <span className="text-secondary font-contrax tracking-[0.3em] uppercase text-xs mb-4 block">
-                            Common Questions
+                            {s.faqEyebrow}
                         </span>
                         <h2 className="text-3xl md:text-5xl font-contrax text-white mb-4 uppercase tracking-wide">
-                            Frequently Asked <span className="text-secondary">Questions</span>
+                            {s.faqA}<span className="text-secondary">{s.faqB}</span>
                         </h2>
                         <div className="w-20 h-1 bg-secondary mx-auto rounded-full" />
                     </m.div>
@@ -515,11 +517,11 @@ export default function ServicePageContent({ service }) {
                         className="text-center mb-12"
                     >
                         <h2 className="text-2xl md:text-4xl font-contrax text-white uppercase">
-                            Other Services in <span className="text-secondary">Richmond, VA</span>
+                            {s.otherA}<span className="text-secondary">{s.otherB}</span>
                         </h2>
                     </m.div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {relatedServices.map((s, i) => (
+                        {relatedServices.map((rel, i) => (
                             <m.div
                                 key={s.slug}
                                 initial={{ opacity: 0, y: 20 }}
@@ -530,31 +532,31 @@ export default function ServicePageContent({ service }) {
                             >
                                 <div className="relative h-48 overflow-hidden">
                                     <Image
-                                        src={s.img}
-                                        alt={s.imgAlt}
+                                        src={rel.img}
+                                        alt={rel.imgAlt}
                                         fill
                                         sizes="(max-width: 768px) 100vw, 33vw"
                                         className="object-cover transition-all duration-700 group-hover:brightness-110"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-[#252525] via-[#252525]/20 to-transparent" />
                                     <h3 className="absolute bottom-4 left-6 text-lg font-contrax text-white uppercase group-hover:text-secondary transition-colors">
-                                        {s.shortTitle}
+                                        {rel.shortTitle}
                                     </h3>
                                 </div>
                                 <div className="p-6">
                                     <Link
-                                        href={`/services/${s.slug}`}
+                                        href={href(`/services/${rel.slug}`)}
                                         className="inline-flex items-center gap-2 text-secondary font-contrax text-xs tracking-widest hover:gap-4 transition-all"
                                     >
-                                        LEARN MORE <BiRightArrowAlt size={16} />
+                                        {s.learnMore} <BiRightArrowAlt size={16} />
                                     </Link>
                                 </div>
                             </m.div>
                         ))}
                     </div>
                     <div className="text-center mt-10">
-                        <Link href="/services" className="inline-flex items-center gap-2 text-gray-400 font-atpinko hover:text-secondary transition-colors text-sm">
-                            View all services <BiRightArrowAlt size={16} />
+                        <Link href={href("/services")} className="inline-flex items-center gap-2 text-gray-400 font-atpinko hover:text-secondary transition-colors text-sm">
+                            {s.viewAll} <BiRightArrowAlt size={16} />
                         </Link>
                     </div>
                 </div>
@@ -570,19 +572,19 @@ export default function ServicePageContent({ service }) {
                         className="max-w-3xl mx-auto text-center"
                     >
                         <h2 className="text-3xl md:text-5xl font-contrax text-white mb-6 uppercase leading-tight">
-                            Ready for Your <span className="text-secondary">Free Estimate</span>?
+                            {s.ctaA}<span className="text-secondary">{s.ctaB}</span>{s.ctaC}
                         </h2>
                         <p className="text-gray-400 font-atpinko text-lg mb-10 max-w-xl mx-auto">
-                            Serving Richmond, North Chesterfield, Midlothian, Glen Allen, and Henrico. Licensed, insured, and ready to start.
+                            {s.ctaText}
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Link href="/contact">
+                            <Link href={href("/contact")}>
                                 <m.button
                                     whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(159,227,0,0.4)" }}
                                     whileTap={{ scale: 0.95 }}
                                     className="bg-secondary text-primary font-contrax text-lg py-5 px-14 rounded-full hover:bg-white transition-all duration-300"
                                 >
-                                    CONTACT US TODAY
+                                    {s.ctaButton}
                                 </m.button>
                             </Link>
                             <a href="tel:+18048334600">

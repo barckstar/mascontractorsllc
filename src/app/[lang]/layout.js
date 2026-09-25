@@ -5,48 +5,57 @@ import { SocialMediaBar } from "@/components/socialMedia";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Script from "next/script";
 import MotionProvider from "@/components/MotionProvider";
+import { notFound } from "next/navigation";
+import { I18nProvider } from "@/i18n/I18nProvider";
+import { getDictionary } from "@/i18n/dictionaries";
+import { LOCALES, OG_LOCALE, SITE_URL, isLocale, localePath } from "@/i18n/config";
 
-export const metadata = {
-  metadataBase: new URL("https://mascontractors.com"),
-  title: {
-    default: "MAS Contractors | General Contractor in Richmond, VA | Free Estimates",
-    template: "%s | MAS Contractors LLC"
-  },
-  description: "Looking for expert remodeling in Richmond, VA? MAS Contractors specializes in kitchens, bathrooms, and commercial construction. 100% satisfaction guaranteed. Get your free quote today!",
-  keywords: ["General Contractor Richmond VA", "Kitchen Remodeling", "Bathroom Remodeling", "Commercial Construction Richmond", "Home Renovation Virginia"],
-  authors: [{ name: "MAS Contractors LLC" }],
-  creator: "MAS Contractors LLC",
-  publisher: "MAS Contractors LLC",
-  formatDetection: {
-    email: false,
-    address: true,
-    telephone: true,
-  },
-  openGraph: {
-    title: "MAS Contractors | Expert Remodeling in Richmond, VA",
-    description: "Quality construction and remodeling services. From kitchens to commercial spaces.",
-    url: "https://mascontractors.com",
-    siteName: "MAS Contractors LLC",
-    images: [
-      {
-        url: "/logo-3D.png",
-        width: 800,
-        height: 600,
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-};
+export const dynamicParams = false;
 
-export default function RootLayout({ children }) {
+export function generateStaticParams() {
+  return LOCALES.map((lang) => ({ lang }));
+}
+
+export async function generateMetadata({ params }) {
+  const { lang } = await params;
+  const m = getDictionary(lang).meta.site;
+  return {
+    metadataBase: new URL(SITE_URL),
+    title: { default: m.title, template: m.template },
+    description: m.description,
+    keywords: m.keywords,
+    authors: [{ name: "MAS Contractors LLC" }],
+    creator: "MAS Contractors LLC",
+    publisher: "MAS Contractors LLC",
+    formatDetection: { email: false, address: true, telephone: true },
+    openGraph: {
+      title: m.ogTitle,
+      description: m.ogDescription,
+      url: SITE_URL + localePath(lang, "/"),
+      siteName: "MAS Contractors LLC",
+      images: [{ url: "/logo-3D.png", width: 800, height: 600 }],
+      locale: OG_LOCALE[lang],
+      type: "website",
+    },
+  };
+}
+
+// Root layout per language: <html lang> has to change with the language, and
+// only a root layout renders <html>.
+export default async function RootLayout({ children, params }) {
+  const { lang } = await params;
+  if (!isLocale(lang)) notFound();
+  const dict = getDictionary(lang);
+  const m = dict.meta.site;
+  // `meta` is only read on the server; keep it out of the client payload.
+  const { meta, ...clientDict } = dict;
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": ["GeneralContractor", "LocalBusiness"],
     "@id": "https://mascontractors.com/#organization",
     "name": "MAS Contractors LLC",
     "legalName": "MAS Contractors LLC",
-    "description": "MAS Contractors LLC is a licensed Class A General Contractor based in North Chesterfield, Virginia. We specialize in kitchen remodeling, bathroom remodeling, home additions, roofing, siding, trim carpentry, tile work, and commercial construction throughout Richmond, Chesterfield County, Midlothian, Glen Allen, and Henrico, VA. Certified James Hardie installer. Free estimates.",
+    "description": m.orgDescription,
     "image": "https://mascontractors.com/logo-3D.png",
     "logo": "https://mascontractors.com/logo-3D.png",
     "url": "https://mascontractors.com",
@@ -76,17 +85,8 @@ export default function RootLayout({ children }) {
     ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Construction & Remodeling Services",
-      "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kitchen Remodeling" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bathroom Remodeling" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Home Additions" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Roofing" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Siding Installation" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Trim Carpentry" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tile Work" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial Construction" } }
-      ]
+      "name": m.catalogName,
+      "itemListElement": m.catalog.map((name) => ({ "@type": "Offer", "itemOffered": { "@type": "Service", "name": name } }))
     },
     "knowsAbout": [
       "General Contracting",
@@ -116,8 +116,9 @@ export default function RootLayout({ children }) {
   };
 
   return (
-    <html lang="en">
+    <html lang={lang}>
       <body>
+        <I18nProvider lang={lang} dict={clientDict}>
         <MotionProvider>
           <Navbar />
           <SocialMediaBar />
@@ -125,6 +126,7 @@ export default function RootLayout({ children }) {
           <SpeedInsights />
           <Footer />
         </MotionProvider>
+        </I18nProvider>
         <Script
           id="json-ld-schema"
           type="application/ld+json"

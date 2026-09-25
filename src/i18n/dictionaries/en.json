@@ -1,0 +1,899 @@
+{
+  "site": {
+    "url_navbar": [
+      {
+        "url": "/",
+        "title": "Home"
+      },
+      {
+        "url": "/gallery",
+        "title": "Gallery"
+      },
+      {
+        "url": "/blog",
+        "title": "Blog"
+      },
+      {
+        "url": "/services",
+        "title": "Services"
+      },
+      {
+        "url": "/about",
+        "title": "About"
+      },
+      {
+        "url": "/contact",
+        "title": "Contact"
+      }
+    ],
+    "homeCards": [
+      {
+        "title": "Robust Roofs, Guaranteed Protection",
+        "text": "We specialize in high-quality roofing solutions that stand the test of time. Our expert team ensures your home is protected with durable materials and expert craftsmanship.",
+        "img": "/img-5.png",
+        "alt": "Residential roofing installation and repair by MAS Contractors Richmond VA"
+      },
+      {
+        "title": "Your Personal Oasis, Exquisite Designs",
+        "text": "Transform your bathroom into a luxurious retreat with our expert remodeling services. From elegant fixtures to modern layouts, we create spaces that blend functionality with style.",
+        "img": "/img-7.png",
+        "alt": "Modern bathroom remodeling and renovation showing luxury fixtures in Richmond VA"
+      },
+      {
+        "title": "Inspiring Porches, Outdoor Elegance",
+        "text": "We create stunning outdoor spaces that enhance your home's curb appeal and provide a perfect retreat for relaxation and entertainment. Our custom porch designs are tailored to your style and needs.",
+        "img": "/img-8.png",
+        "alt": "Custom patio and porch design construction for outdoor living spaces in Richmond VA"
+      }
+    ],
+    "homeGreenCards": [
+      {
+        "slug": "home-additions",
+        "title": "HOME ADDITIONS",
+        "subTitle": "Expand your space. Enhance your life.",
+        "text": "We design and build custom home additions that seamlessly blend with your existing structure, providing you with the extra space you need for your growing family or lifestyle."
+      },
+      {
+        "slug": "kitchen-remodeling",
+        "title": "KITCHEN",
+        "subTitle": "Your dream kitchen, come to life",
+        "text": "From sleek, modern makeovers to timeless, classic designs, we specialize in creating kitchens that are both stunning and highly functional. We are the trusted professionals for high-quality granite and quartz installation, ensuring a perfect, luxurious finish."
+      },
+      {
+        "slug": "bathroom-remodeling",
+        "title": "BATHROOMS",
+        "subTitle": "Your personal oasis, exquisite designs",
+        "text": "Transform your bathroom into a luxurious retreat with our expert remodeling services. From elegant fixtures to modern layouts, we create spaces that blend functionality with style."
+      },
+      {
+        "slug": "decks-porches",
+        "title": "DECKS",
+        "subTitle": "Outdoor living at its finest",
+        "text": "We create beautiful and functional decks that enhance your outdoor space, providing the perfect setting for relaxation and entertainment. Our custom designs are tailored to your lifestyle and preferences."
+      },
+      {
+        "slug": "roofing",
+        "title": "ROOFING",
+        "subTitle": "Superior protection for your home",
+        "text": "We offer comprehensive roofing services, including repairs, replacements, and installations, to ensure your home is protected from the elements. Our team uses high-quality materials and expert craftsmanship to deliver durable and reliable roofing solutions."
+      },
+      {
+        "slug": "siding",
+        "title": "SIDING",
+        "subTitle": "Flexible protection for your home",
+        "text": "Enhance your home's exterior with our top-notch siding services. We provide a variety of styles and materials to improve your home's appearance and protect it from the elements, ensuring long-lasting durability and curb appeal."
+      }
+    ],
+    "heroAbout": {
+      "title": "About Us",
+      "text": "MAS Contractors is a family-owned business with over 11 years of experience in the construction industry. We don't just want to be your contractor for life. That's why we approach every project with respect, attention to detail, and quality craftsmanship, which we've become known for in the local area."
+    },
+    "about": {
+      "title": "Choose MAS Contractors because we are:",
+      "list": [
+        {
+          "subTitle": "Qualified",
+          "description": "We're fully licensed and insured for your protection."
+        },
+        {
+          "subTitle": "Experienced",
+          "description": "We've been in the remodeling business for over a decade."
+        },
+        {
+          "subTitle": "Careful",
+          "description": "We'll take care of your home like it's our own."
+        },
+        {
+          "subTitle": "Dedicated",
+          "description": "We won't stop before we've taken care of every detail."
+        },
+        {
+          "subTitle": "Professional",
+          "description": "We'll prioritize your satisfaction above all."
+        }
+      ],
+      "aboutFooter": "MAS Contractors has completed hundreds of home remodeling and commercial projects in and around the Richmond, VA area.",
+      "buttonText": "WORK WITH US !"
+    },
+    "contact_services": [
+      {
+        "id": "TRIM",
+        "slug": "trim-carpentry",
+        "title2": "Trim",
+        "description": "We install interior doors, crown molding, coffered ceilings, wall panels and built-in shelves exactly as you imagined it.",
+        "img": "/gallery/Trim.jpeg"
+      },
+      {
+        "id": "ROOFING",
+        "slug": "roofing",
+        "title2": "Roofing",
+        "description": "Whether it’s a minor roof repair, an older roof in need of a full replacement. We provide all the assistance you need to help service you every step of the way!",
+        "img": "/img-5.png"
+      },
+      {
+        "id": "KITCHEN",
+        "slug": "kitchen-remodeling",
+        "title2": "Kitchen",
+        "description": "The kitchen is the heart of the home, let us transform it by installing cabinets, countertops, tile backsplash, flooring, and appliances.",
+        "img": "/gallery/Kitchen.jpeg"
+      },
+      {
+        "id": "BATHROOMS",
+        "slug": "bathroom-remodeling",
+        "title2": "Bathrooms",
+        "description": "Increase the value of your home. We love adding new bathroom cabinets, adding soaking tubs, new storage closets, and new shower tile.",
+        "img": "/img-7.png"
+      },
+      {
+        "id": "DOORS",
+        "slug": "door-installation",
+        "title2": "Doors",
+        "description": "We can install storm doors, sliding glass doors, french doors and front entry doors that come with built-in safety mechanisms and in a variety of patterns, colors, and glass panels.",
+        "img": "/gallery/Doors.jpeg"
+      },
+      {
+        "id": "DECKS",
+        "slug": "decks-porches",
+        "title2": "Decks",
+        "description": "We offer deck replacements and custom deck builds including porches and pergolas. We offer various materials to choose from for it to be long lasting for your home.",
+        "img": "/img-8.png"
+      },
+      {
+        "id": "SIDING",
+        "slug": "siding",
+        "title2": "Siding",
+        "description": "New siding doesn’t only bring new life to your home’s exterior but also can reduce the amount of maintenance needed to upkeep your home.",
+        "img": "/gallery/Siding.jpeg"
+      },
+      {
+        "id": "WINDOWS",
+        "slug": "window-replacement",
+        "title2": "Windows",
+        "description": "With our expansive offering of numerous manufacturers, we can help you change any window to a high quality and energy efficient window.",
+        "img": "/gallery/Windows.jpeg"
+      },
+      {
+        "id": "HOME ADDITIONS",
+        "slug": "home-additions",
+        "title2": "Home Additions",
+        "description": "Add value to your home with your desired additional space. We take care of all required city permits, plumbing and electrical work. Your dreams will become a reality.",
+        "img": "/img-9.jpg"
+      }
+    ],
+    "specialties": [
+      {
+        "slug": "commercial_cabinetry",
+        "id": "Custom Room Additions",
+        "title": "Custom Room Additions",
+        "description": "Your room addition will provide you with a lifetime of enjoyment while increasing the value of your home.",
+        "descriptionLarge": "MAS Contractors LLC offers top-quality home renovation services. Whether it's a kitchen update, bathroom modernization, or a complete overhaul, our expert team brings your vision to life. Experience excellence with MAS Contractors LLC today.",
+        "list": [],
+        "image": "/gallery/CustomRoomAdditions.png",
+        "servicePage": "room-additions"
+      },
+      {
+        "slug": "tile",
+        "id": "Tile",
+        "title": "Tile",
+        "description": "Let us assist you in choosing tile from an endless array of colors, designs, and materials.",
+        "descriptionLarge": "Tiles can be great for use in a number of different settings around your home, or even in a commercial setting. They offer amazing durability and have real design flexibility, given all the colors, patterns, and designs that you can choose from. MAS ensures to use waterproofing moisture barriers as needed to create a smooth and durable surface that will last.",
+        "list": [
+          {
+            "item": "Shower tile"
+          },
+          {
+            "item": "Backsplash"
+          },
+          {
+            "item": "Flooring tile"
+          },
+          {
+            "item": "Wall tiles"
+          },
+          {
+            "item": "Steam showers"
+          },
+          {
+            "item": "Shower benches"
+          }
+        ],
+        "image": "/gallery/Tile.png",
+        "servicePage": "tile-work"
+      },
+      {
+        "slug": "finish_trim_carpentry",
+        "id": "Finish & Trim Carpentry",
+        "title": "Finish & Trim Carpentry",
+        "description": "Transform the bare bones of any house or building into a usable and visually pleasing space.",
+        "descriptionLarge": "Our carpenters use the best trim carpentry techniques during the vital stage of building. We provide a full spectrum of carpentry for residential and commercial projects including",
+        "list": [
+          {
+            "item": "Custom Carpentry Installation"
+          },
+          {
+            "item": "Bookshelves & Built-Ins"
+          },
+          {
+            "item": "Custom Woodworking"
+          },
+          {
+            "item": "Trim and Molding"
+          },
+          {
+            "item": "Beamwork"
+          },
+          {
+            "item": "Wainscoting"
+          },
+          {
+            "item": "Coffered Ceilings"
+          },
+          {
+            "item": "Staircases & Railings"
+          },
+          {
+            "item": "Interior Door Installation"
+          }
+        ],
+        "image": "/gallery/FinishCarpentry.png",
+        "servicePage": "trim-carpentry"
+      }
+    ],
+    "commercial": [
+      {
+        "text": "TPO Roofing"
+      },
+      {
+        "text": "EPDM Rubber Roofing"
+      },
+      {
+        "text": "Metal Roofing"
+      },
+      {
+        "text": "Slate Roofing"
+      },
+      {
+        "text": "Rough & Finish Plumbing"
+      },
+      {
+        "text": "Drywall & Finish. Insulation"
+      },
+      {
+        "text": "Metal Framing"
+      },
+      {
+        "text": "Doors and Windows"
+      },
+      {
+        "text": "Paint & Finish"
+      },
+      {
+        "text": "LVP Flooring Installation"
+      },
+      {
+        "text": "James Hardie® Siding Installation"
+      }
+    ],
+    "residential": [
+      {
+        "text": "Patios & Decks"
+      },
+      {
+        "text": "Renovations"
+      },
+      {
+        "text": "Insulation"
+      },
+      {
+        "text": "Plumbing"
+      },
+      {
+        "text": "Flooring"
+      },
+      {
+        "text": "Remodels"
+      },
+      {
+        "text": "Doors & Windows"
+      },
+      {
+        "text": "Drywall & Paint"
+      },
+      {
+        "text": "Framing"
+      },
+      {
+        "text": "Gutters & Siding"
+      },
+      {
+        "text": "Flat Roofing"
+      },
+      {
+        "text": "TPO Roofing"
+      },
+      {
+        "text": "Hardie Siding"
+      }
+    ]
+  },
+  "home": {
+    "heroImgAlt": "MAS Contractors commercial construction site in Richmond VA with heavy machinery",
+    "heroTitleA": "TRANSFORMING",
+    "heroTitleB": "SPACES",
+    "heroSubtitle": "BUILDING LEGACIES",
+    "heroText": "Welcome to MAS Contractors. Where expertise meets innovation and unparalleled quality to turn your vision into lasting reality.",
+    "getQuote": "GET A QUOTE",
+    "freeEstimatesNote": "Free estimates · Response within 48 hours",
+    "commercialA": "Commercial & ",
+    "commercialB": "Residential",
+    "logo3dAlt": "MAS Contractors 3D Logo - Premier General Contractor in Richmond VA",
+    "aboutA": "About",
+    "aboutB": " Us",
+    "aboutLinkLabel": "Read more about MAS Contractors history and mission",
+    "aboutLink": "READ MORE ABOUT MAS CONTRACTORS",
+    "featuredA": "Featured ",
+    "featuredB": "Projects",
+    "viewWork": "VIEW OUR WORK",
+    "blogEyebrow": "Tips & Guides",
+    "blogA": "From the ",
+    "blogB": "Blog",
+    "allArticles": "ALL ARTICLES",
+    "readArticle": "READ ARTICLE",
+    "servicesA": "Explore Our ",
+    "servicesB": "Services",
+    "servicesText": "From groundbreaking commercial projects to beautifully designed residential communities, our portfolio showcases the transformation power of our expertise.",
+    "learnMore": "Learn More",
+    "viewAllServices": "VIEW ALL SERVICES",
+    "visitA": "Free ",
+    "visitB": "Visit",
+    "visitC": " & Estimate",
+    "visitText": "We come directly to your project site to take precise measurements and discuss materials, requirements, and expectations before providing any estimate. Our evaluations are completely free, with no obligation.",
+    "visitButton": "REQUEST YOUR FREE ESTIMATE",
+    "carAlt": "MAS Contractors fleet vehicle for free estimate site visits in Richmond VA",
+    "workAlt": "MAS Contractors team discussing blueprints and project plans in Richmond VA",
+    "futureBadge": "ILLUMINATING THE FUTURE",
+    "collabA": "Unlocking ",
+    "collabB": "Collaborative Excellence",
+    "collabText1": "Collaboration is at the heart of every successful project. We work closely with our clients, listening to their needs and incorporating their feedback at every stage.",
+    "collabText2": "At MAS Contractors, we believe that the best results come from working together. Our collaborative approach not only enhances creativity and innovation but also builds lasting relationships based on trust.",
+    "finalA": "Elevating",
+    "finalB": " Your",
+    "finalC": "Construction Journey",
+    "finalText": "As contractors, we understand that every project is unique, and we are committed to delivering tailored solutions that meet your specific needs.",
+    "finalButton": "GET A QUOTE NOW"
+  },
+  "localBusiness": {
+    "badge": "Top Rated in Richmond",
+    "titleA": "Trusted ",
+    "titleB": "General Contractor",
+    "titleC": " in Richmond, VA",
+    "text": "MAS Contractors LLC is a licensed and insured general contractor providing high-quality residential and commercial construction services throughout Richmond, VA and surrounding areas. We build with integrity and precision.",
+    "statYears": "Years of Experience",
+    "statProjects": "Projects Completed",
+    "statRating": "Google Rating",
+    "statReviews": "Google Reviews",
+    "areaTitle": "Service Area",
+    "areaText": "Serving Richmond, VA & Chesterfield County",
+    "contactTitle": "Contact Us",
+    "expertiseTitle": "Expertise",
+    "expertiseText": "Residential & Commercial Construction",
+    "peaceTitle": "Peace of Mind",
+    "peaceText": "Licensed & Insured in Virginia",
+    "whyA": "Why Choose ",
+    "whyB": "MAS Contractors?",
+    "whyList": [
+      "Free, no-obligation estimates",
+      "High-quality craftsmanship",
+      "Local Richmond contractor you can trust",
+      "On-time and on-budget delivery"
+    ],
+    "button": "GET A FREE ESTIMATE",
+    "ready": "Ready to start your project? Let's talk."
+  },
+  "certifications": {
+    "dporAlt": "DPOR License - Virginia Contractor",
+    "dpor": "Licensed & Insured",
+    "oshaAlt": "OSHA Safety Certified Contractor",
+    "osha": "Safety Certified",
+    "bbbTitle": "BBB Accredited Business - MAS Contractors LLC",
+    "bbb": "BBB Accredited"
+  },
+  "faq": {
+    "eyebrow": "Got Questions?",
+    "titleA": "Frequently Asked ",
+    "titleB": "Questions",
+    "subtitle": "Everything Richmond homeowners ask before hiring a general contractor.",
+    "items": [
+      {
+        "question": "How much does remodeling cost in Richmond, VA?",
+        "answer": "Remodeling costs in Richmond vary by project scope and materials. Kitchen remodels typically range from $15,000–$60,000+, bathroom remodels from $8,000–$35,000, and whole-home renovations from $50,000–$200,000+. Decks start around $8,000, and room additions from $30,000. We provide free, itemized written estimates so you know exactly what you're paying for before any work begins."
+      },
+      {
+        "question": "Are you licensed and insured in Virginia?",
+        "answer": "Yes. MAS Contractors LLC holds a Virginia Class A Contractor License and carries full general liability insurance plus workers' compensation coverage. We pull all required permits through Chesterfield County, Henrico County, and the City of Richmond — so your project is legal, inspected, and fully protected."
+      },
+      {
+        "question": "Do you offer free estimates?",
+        "answer": "Yes — always. We offer free, no-obligation in-home estimates for every project. We visit your property, listen to your vision, take measurements, and provide a detailed written quote. No pressure, no hidden fees, no surprises."
+      },
+      {
+        "question": "What areas do you serve in the Richmond metro?",
+        "answer": "We serve all of the greater Richmond, VA area including North Chesterfield, Midlothian, Glen Allen, Henrico County, Chester, Colonial Heights, Mechanicsville, and Short Pump. If you're within 45 minutes of Richmond, give us a call — we'll come to you."
+      },
+      {
+        "question": "How long does a typical remodeling project take?",
+        "answer": "Timeline depends on project scope. A bathroom remodel typically takes 2–4 weeks, a kitchen 4–8 weeks, a deck 1–3 weeks, and a full home addition 2–4 months. We give you a firm schedule upfront and communicate any changes immediately. Permit approval from Chesterfield or Henrico can add 2–4 weeks to larger structural projects."
+      },
+      {
+        "question": "Do I need a permit for my project in Virginia?",
+        "answer": "Most structural, electrical, plumbing, and mechanical work in Virginia requires a permit — including kitchen remodels, home additions, new decks over 200 sq ft, roof replacements, and window replacements in some jurisdictions. MAS Contractors handles the entire permit process for you: application, inspections, and final sign-off. We never skip permits — they protect your investment and are required for insurance claims and resale."
+      },
+      {
+        "question": "Will I need to move out during a renovation?",
+        "answer": "In most cases, no. For kitchen and bathroom remodels, we work in phases to keep the rest of your home functional. For major home additions or full renovations affecting multiple systems, we'll discuss your best options during the estimate visit. Our crews work Monday–Friday (and Saturdays when needed) to minimize disruption and complete projects on schedule."
+      },
+      {
+        "question": "How do you handle unexpected problems during a project?",
+        "answer": "Old homes in Richmond sometimes hide surprises — water damage, outdated wiring, or rotted framing behind walls. When we find something unexpected, we stop work, document it with photos, explain the issue clearly, and give you a written change-order with cost and timeline impact before proceeding. You are always in control of what gets approved."
+      },
+      {
+        "question": "What is your payment process?",
+        "answer": "We require a deposit to reserve your project start date (typically 10–30% depending on project size), with progress payments tied to completion milestones, and a final payment only after you've done a walkthrough and are satisfied. We never ask for full payment upfront — that's a red flag with any contractor."
+      }
+    ]
+  },
+  "reviews": {
+    "starsLabel": "{count} out of 5 stars",
+    "readMore": "Read more",
+    "showLess": "Show less",
+    "live": "Live from Google",
+    "eyebrow": "Google Reviews",
+    "titleA": "What Richmond Homeowners ",
+    "titleB": "Are Saying",
+    "outOf5": "out of 5",
+    "countOne": "{count} review on Google",
+    "countMany": "{count} reviews on Google",
+    "emptyText": "Every review comes from a real Richmond-area homeowner.",
+    "emptyLink": "Read them on Google",
+    "ctaText": "Did we work on your home? We'd love to hear from you.",
+    "ctaButton": "LEAVE US A GOOGLE REVIEW",
+    "liveNote": "Reviews shown as published on Google. Updated automatically."
+  },
+  "beforeAfter": {
+    "before": "BEFORE",
+    "after": "AFTER"
+  },
+  "aboutPage": {
+    "heroAlt": "About MAS Contractors - Licensed and Insured General Contractor Team in Richmond VA",
+    "uniformAlt": "MAS Contractors team member in uniform in Richmond VA",
+    "missionTitle": "MISSION",
+    "missionText": "Build high quality projects, providing innovative and comfortable solutions that improve people's lives. We are committed to safety, compliance with deadlines, and total satisfaction of our clients.",
+    "visionTitle": "VISION",
+    "visionText": "Be recognized for the quality of construction nationwide, delivering excellence, efficiency, and personal development in every project. We aspire to be the preferred choice for clients, subcontractors, and employees.",
+    "valuesTitle": "VALUES",
+    "values": [
+      "Safety & Compliance",
+      "Quality & Innovation",
+      "Integrity & Transparency",
+      "Teamwork & Respect",
+      "Customer Satisfaction"
+    ],
+    "processTitle": "Our Process",
+    "processSubtitle": "How we bring your vision to life",
+    "steps": [
+      {
+        "title": "Contact",
+        "text": "Reach us by phone or email. We respond quickly and schedule your free on-site visit."
+      },
+      {
+        "title": "Free Site Visit",
+        "text": "We visit your location to assess the project and provide a detailed, no-obligation estimate.",
+        "iconAlt": "Free Construction Site Visit in Richmond VA"
+      },
+      {
+        "title": "Materials & Quality",
+        "text": "We discuss materials, quality standards, and project details to ensure your satisfaction.",
+        "iconAlt": "Quality Construction Materials Sample in Richmond VA"
+      },
+      {
+        "title": "Agreement",
+        "text": "Once agreed, we send a detailed contract with pricing for materials and labor.",
+        "iconAlt": "Construction Contract Agreement Icon in Richmond VA"
+      },
+      {
+        "title": "Completion",
+        "text": "50% upfront, 50% upon completion. We deliver quality and transparency."
+      }
+    ]
+  },
+  "servicesPage": {
+    "titleA": "Construction & Remodeling Services in ",
+    "titleB": "Richmond, VA",
+    "intro": "MAS Contractors LLC is a trusted general contractor in Richmond, VA, providing high-end residential remodeling and commercial construction services with proven craftsmanship.",
+    "cardAlt": "{name} services in Richmond VA by MAS Contractors",
+    "cardLink": "Learn more about {name}",
+    "cardEstimate": "Get a free estimate for {name} in Richmond VA",
+    "viewGallery": "VIEW OUR PROJECT GALLERY",
+    "specialtiesA": "Specialized Construction Services in ",
+    "specialtiesB": "Richmond, VA",
+    "specialtyAlt": "{name} in Richmond VA",
+    "specialtyEyebrow": "Specialty focus",
+    "freeEstimate": "FREE ESTIMATE",
+    "fullServicePage": "FULL SERVICE PAGE",
+    "ctaA": "Need a Licensed ",
+    "ctaB": "Contractor",
+    "ctaC": " in Richmond?",
+    "ctaText": "Whether it's a small repair or a large-scale commercial project, our team is ready to deliver excellence.",
+    "ctaButton": "CONTACT US TODAY",
+    "aboutLink": "Learn more about MAS Contractors"
+  },
+  "contactForm": {
+    "success": "Message sent! We'll respond within 24–48 hours with your free estimate.",
+    "error": "Failed to send. Please call us directly at (804) 833-4600.",
+    "captchaMissing": "Please complete the CAPTCHA verification.",
+    "firstName": "First Name",
+    "firstNamePh": "John",
+    "lastName": "Last Name",
+    "lastNamePh": "Smith",
+    "email": "Email Address",
+    "emailPh": "john@email.com",
+    "phone": "Phone Number",
+    "service": "Service Needed",
+    "servicePh": "Select a service...",
+    "optGeneral": "General Inquiry",
+    "optSupport": "Support",
+    "optFeedback": "Feedback",
+    "message": "Tell Us About Your Project",
+    "messagePh": "Describe your project, budget range, timeline, and any specific requirements...",
+    "submitDisabled": "Complete Captcha to Submit",
+    "submit": "Send Free Estimate Request →"
+  },
+  "contactPage": {
+    "callLabel": "Call Us",
+    "callCta": "Call now",
+    "officeLabel": "Our Office",
+    "hoursLabel": "Office Hours",
+    "hoursDays": "Monday – Friday",
+    "emailLabel": "Email",
+    "emailCta": "Send email",
+    "heroAlt": "Contact MAS Contractors — General Contractor Richmond VA",
+    "eyebrow": "Free Estimates · 48-hr Response · Richmond, VA",
+    "titleA": "Let's Build",
+    "titleB": "Together",
+    "intro": "Richmond's trusted Class A general contractor for residential and commercial projects. Tell us your vision — we'll handle the rest.",
+    "responds": "Typically responds within one business day",
+    "formTitleA": "Tell Us About ",
+    "formTitleB": "Your Project",
+    "formIntro": "From kitchens and bathrooms to full commercial build-outs — we do it all. Fill out the form and we'll get back to you with a free, no-obligation estimate.",
+    "visitTitle": "Visit Our Office",
+    "address": "Address",
+    "hours": "Hours",
+    "hoursShort": "Mon – Fri",
+    "phone": "Phone",
+    "license": "License",
+    "licenseA": "Virginia Class A",
+    "licenseB": "Fully Insured",
+    "badgeRating": "{rating}★ Google Rating",
+    "badgeReviews": "{count} Google Reviews",
+    "badges": [
+      "Class A Licensed",
+      "Free Estimates",
+      "Founded 2014"
+    ]
+  },
+  "galleryPage": {
+    "title": "GALLERY",
+    "subtitle": "Explore our finest craftsmanship across Richmond, VA and surrounding areas",
+    "photoOne": "{count} photo",
+    "photoMany": "{count} photos",
+    "categories": {
+      "All": "All",
+      "Kitchen": "Kitchen",
+      "Bathroom": "Bathroom",
+      "Home Addition": "Home Addition",
+      "Trim & Carpentry": "Trim & Carpentry",
+      "Tile Work": "Tile Work",
+      "Full Renovation": "Full Renovation",
+      "Deck": "Deck",
+      "Roofing": "Roofing",
+      "Siding": "Siding",
+      "Windows & Doors": "Windows & Doors",
+      "Commercial": "Commercial"
+    }
+  },
+  "common": {
+    "mapTitle": "MAS Contractors LLC — 411 Branchway Rd, North Chesterfield VA",
+    "logoAlt": "MAS Contractors LLC Logo - General Contractor Richmond VA"
+  },
+  "blogPage": {
+    "eyebrow": "Richmond VA Home Improvement",
+    "titleA": "Contractor ",
+    "titleB": "Resources",
+    "titleC": " & Tips",
+    "intro": "Real answers to real questions from Richmond homeowners — costs, permits, materials, and what to expect when working with a general contractor.",
+    "latest": "Latest Article",
+    "readArticle": "READ ARTICLE",
+    "ctaA": "Ready for a ",
+    "ctaB": "Free Estimate",
+    "ctaC": "?",
+    "ctaText": "MAS Contractors is a licensed Class A general contractor serving Richmond, Chesterfield, Henrico, and Midlothian. Let's talk about your project.",
+    "ctaButton": "CONTACT US TODAY"
+  },
+  "blogPost": {
+    "allArticles": "ALL ARTICLES",
+    "authorBio": "Licensed Class A General Contractor · Richmond, VA · Serving Chesterfield, Henrico, Midlothian & surrounding areas since 2013.",
+    "moreA": "More ",
+    "moreB": "Articles",
+    "read": "READ",
+    "viewAll": "View all articles",
+    "ctaA": "Ready for Your ",
+    "ctaB": "Free Estimate",
+    "ctaC": "?",
+    "ctaText": "Serving Richmond, North Chesterfield, Midlothian, Glen Allen, and Henrico. Licensed, insured, and ready to start.",
+    "ctaButton": "CONTACT US TODAY"
+  },
+  "serviceDetail": {
+    "allServices": "ALL SERVICES",
+    "heroButton": "GET FREE ESTIMATE",
+    "whyEyebrow": "Richmond, VA · Licensed & Insured",
+    "whyTitle": "Why Choose MAS Contractors?",
+    "processEyebrow": "Simple & Transparent",
+    "processA": "Our ",
+    "processB": "Process",
+    "statYears": "Years of Experience",
+    "statProjects": "Projects Completed",
+    "statSatisfaction": "Satisfaction Rate",
+    "statEstimate": "Free Estimate",
+    "statEstimateValue": "Always",
+    "costEyebrow": "Richmond, VA Market",
+    "costA": "Cost & ",
+    "costB": "Timeline",
+    "costC": " Guide",
+    "investmentRange": "Investment Range",
+    "mostProjects": "Most projects:",
+    "typicalTimeline": "Typical Timeline",
+    "permitNote": "Permit approval times may add 2–4 weeks for certain projects",
+    "factorsTitle": "What Affects Your Cost",
+    "rangesNote": "These are typical ranges for the Richmond, VA market. Every project is unique — we provide free on-site written estimates with no surprises and no pressure.",
+    "costButton": "GET YOUR FREE ESTIMATE",
+    "insightsEyebrow": "11 Years of Field Experience",
+    "insightsA": "What Every Homeowner ",
+    "insightsB": "Should Know",
+    "challenges": "Common Challenges",
+    "proTips": "Pro Tips from Our Team",
+    "safety": "Safety Equipment on Every Job",
+    "baEyebrow": "Real Transformations",
+    "baA": "Before ",
+    "baB": "& After",
+    "baText": "Drag the slider to see the full transformation.",
+    "faqEyebrow": "Common Questions",
+    "faqA": "Frequently Asked ",
+    "faqB": "Questions",
+    "otherA": "Other Services in ",
+    "otherB": "Richmond, VA",
+    "learnMore": "LEARN MORE",
+    "viewAll": "View all services",
+    "ctaA": "Ready for Your ",
+    "ctaB": "Free Estimate",
+    "ctaC": "?",
+    "ctaText": "Serving Richmond, North Chesterfield, Midlothian, Glen Allen, and Henrico. Licensed, insured, and ready to start.",
+    "ctaButton": "CONTACT US TODAY"
+  },
+  "footer": {
+    "quickLinks": "Quick Links",
+    "links": [
+      {
+        "url": "/",
+        "title": "Home"
+      },
+      {
+        "url": "/services",
+        "title": "Services"
+      },
+      {
+        "url": "/gallery",
+        "title": "Gallery"
+      },
+      {
+        "url": "/blog",
+        "title": "Blog & Resources"
+      },
+      {
+        "url": "/about",
+        "title": "About Us"
+      },
+      {
+        "url": "/contact",
+        "title": "Contact"
+      }
+    ],
+    "commercial": "Commercial Services",
+    "residential": "Residential Services",
+    "connect": "Connect",
+    "visitUs": "Visit Us",
+    "rights": "All Rights Reserved"
+  },
+  "nav": {
+    "classA": "Class A General Contractor",
+    "classASub": "Licensed - Insured - Bonded",
+    "trusted": "Trusted Professionals",
+    "trustedSub": "Trained and Experienced",
+    "office": "Office Number",
+    "email": "Email Us",
+    "toggleMenu": "Toggle menu",
+    "languageLabel": "Language"
+  },
+  "meta": {
+    "site": {
+      "title": "MAS Contractors | General Contractor in Richmond, VA | Free Estimates",
+      "template": "%s | MAS Contractors LLC",
+      "description": "Looking for expert remodeling in Richmond, VA? MAS Contractors specializes in kitchens, bathrooms, and commercial construction. 100% satisfaction guaranteed. Get your free quote today!",
+      "keywords": [
+        "General Contractor Richmond VA",
+        "Kitchen Remodeling",
+        "Bathroom Remodeling",
+        "Commercial Construction Richmond",
+        "Home Renovation Virginia"
+      ],
+      "ogTitle": "MAS Contractors | Expert Remodeling in Richmond, VA",
+      "ogDescription": "Quality construction and remodeling services. From kitchens to commercial spaces.",
+      "orgDescription": "MAS Contractors LLC is a licensed Class A General Contractor based in North Chesterfield, Virginia. We specialize in kitchen remodeling, bathroom remodeling, home additions, roofing, siding, trim carpentry, tile work, and commercial construction throughout Richmond, Chesterfield County, Midlothian, Glen Allen, and Henrico, VA. Certified James Hardie installer. Free estimates.",
+      "catalogName": "Construction & Remodeling Services",
+      "catalog": [
+        "Kitchen Remodeling",
+        "Bathroom Remodeling",
+        "Home Additions",
+        "Roofing",
+        "Siding Installation",
+        "Trim Carpentry",
+        "Tile Work",
+        "Commercial Construction"
+      ]
+    },
+    "home": {
+      "title": "General Contractor Richmond, Chesterfield & Midlothian VA | MAS Contractors",
+      "description": "Top-rated Class A general contractor serving Richmond, Chesterfield County, Midlothian, Henrico & Glen Allen VA. Kitchens from $15K, bathrooms from $8K, decks from $8K. Licensed, insured. Free estimates.",
+      "keywords": [
+        "General Contractor Richmond VA",
+        "General Contractor Chesterfield County VA",
+        "General Contractor Midlothian VA",
+        "Construction Company Richmond",
+        "Commercial Construction Richmond",
+        "Residential Contractor Richmond VA",
+        "Kitchen Remodeling Richmond VA",
+        "Bathroom Remodeling Chesterfield VA",
+        "Home Addition Midlothian VA",
+        "Home Improvement Virginia",
+        "MAS Contractors"
+      ],
+      "ogTitle": "General Contractor Richmond, Chesterfield & Midlothian VA | MAS Contractors",
+      "ogDescription": "Class A licensed general contractor serving Richmond, Chesterfield, Midlothian & Henrico. Kitchens, bathrooms, additions, decks, roofing & more. Free estimates.",
+      "ogImageAlt": "MAS Contractors – General Contractor in Richmond VA"
+    },
+    "about": {
+      "title": "About MAS Contractors | Licensed General Contractor in Richmond VA",
+      "description": "Learn about MAS Contractors LLC, a family-owned, licensed and insured Class A General Contractor serving Richmond, VA and surrounding areas. Built on trust, quality craftsmanship, and integrity.",
+      "keywords": [
+        "About MAS Contractors",
+        "General Contractor Richmond VA",
+        "Licensed Contractor Virginia",
+        "Family Owned Construction Company Richmond",
+        "Residential and Commercial Contractor Richmond",
+        "MAS Contractors LLC"
+      ],
+      "ogTitle": "About MAS Contractors | Richmond VA General Contractor",
+      "ogDescription": "Discover the story behind MAS Contractors LLC, a trusted family-owned general contractor serving Richmond, VA with residential and commercial construction services."
+    },
+    "contact": {
+      "title": "Contact MAS Contractors | General Contractor in Richmond VA",
+      "description": "Contact MAS Contractors LLC, a licensed and insured general contractor serving Richmond, VA and surrounding areas. Call (804) 833-4600 for a free estimate today.",
+      "keywords": [
+        "Contact General Contractor Richmond VA",
+        "MAS Contractors Contact",
+        "Construction Company Richmond VA",
+        "Remodeling Contractor Richmond",
+        "Commercial Construction Richmond VA",
+        "Residential Contractor Richmond",
+        "Free Construction Estimate Richmond VA",
+        "MAS Contractors LLC Phone Number"
+      ],
+      "ogTitle": "Contact MAS Contractors | Richmond VA General Contractor",
+      "ogDescription": "Get in touch with MAS Contractors LLC for residential or commercial construction in Richmond, VA. Call now for a free estimate."
+    },
+    "gallery": {
+      "title": "Construction Project Gallery | MAS Contractors Richmond VA",
+      "description": "View our portfolio of commercial and residential construction projects in Richmond, VA. Kitchens, bathrooms, roofing, patios, and more.",
+      "keywords": [
+        "Construction Gallery Richmond",
+        "Remodeling Portfolio VA",
+        "Kitchen Remodeling Photos",
+        "Bathroom Renovation Gallery",
+        "Commercial Construction Projects",
+        "MAS Contractors Work"
+      ],
+      "ogDescription": "Browse our gallery of completed construction and remodeling projects in Richmond, VA. Quality craftsmanship you can see.",
+      "ogImageAlt": "MAS Contractors Project Gallery"
+    },
+    "services": {
+      "title": "General Contractor & Construction Services in Richmond, VA | MAS Contractors",
+      "description": "Explore our wide range of commercial and residential construction services in Richmond, VA. Specialized in Kitchens, Bathrooms, Flooring, Tile, Roofing, and Home Additions. Licensed & Insured.",
+      "keywords": [
+        "Construction Services Richmond VA",
+        "Kitchen Remodeling Richmond",
+        "Bathroom Remodeling VA",
+        "Commercial Construction Richmond",
+        "Residential Contractors Richmond",
+        "Tile Installation VA",
+        "Roofing Services",
+        "Home Additions Richmond"
+      ],
+      "ogTitle": "General Contractor & Construction Services in Richmond VA | MAS Contractors",
+      "ogDescription": "Trusted general contractor in Richmond, VA offering kitchen remodeling, bathroom renovations, roofing, tile, flooring, and home additions. Licensed & insured. Free estimates.",
+      "ogImageAlt": "MAS Contractors Services"
+    },
+    "blog": {
+      "title": "Contractor Resources & Home Improvement Tips | MAS Contractors Richmond VA",
+      "description": "Real answers to real questions from Richmond VA homeowners — remodeling costs, permit requirements, material comparisons, and what to expect working with a licensed general contractor.",
+      "ogTitle": "Home Improvement Resources | MAS Contractors LLC Richmond VA",
+      "ogDescription": "Expert contractor advice for Richmond, Chesterfield, Henrico, and Midlothian homeowners."
+    },
+    "notFound": {
+      "title": "Page Not Found"
+    }
+  },
+  "breadcrumbs": {
+    "home": "Home",
+    "services": "Services",
+    "blog": "Blog"
+  },
+  "serviceSchema": {
+    "freeEstimate": "Free Estimate"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "text": "Sorry, the page you are looking for does not exist or has been moved. Browse our site using the links below to find what you need.",
+    "links": [
+      {
+        "url": "/",
+        "title": "Home",
+        "sub": "Main page"
+      },
+      {
+        "url": "/services",
+        "title": "Services",
+        "sub": "What we do"
+      },
+      {
+        "url": "/gallery",
+        "title": "Gallery",
+        "sub": "Our work"
+      },
+      {
+        "url": "/contact",
+        "title": "Contact",
+        "sub": "Get in touch"
+      }
+    ],
+    "button": "GO TO HOME PAGE"
+  }
+}
