@@ -55,6 +55,37 @@ a {
     color: inherit
 }
 
+/* Scrollbar in the site's colours: dark track, brand-green thumb.
+   scrollbar-color covers Firefox and recent Chrome/Edge; the ::-webkit-*
+   rules cover Safari and older Chromium. */
+html {
+    scrollbar-color: #9fe300 #151515;
+    scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #151515;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #9fe300;
+    border-radius: 999px;
+    border: 2px solid #151515;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #b8ff1a;
+}
+
+::-webkit-scrollbar-corner {
+    background: #151515;
+}
+
 
 .font-contrax {
     font-family: Contrax Heavy !important;
