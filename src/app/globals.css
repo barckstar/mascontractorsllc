@@ -543,17 +543,19 @@ html[lang="es"] :is(h1, h2, h3) {
 }
 
 /* ===== CTA glow: a thin white light that travels around the button's own
-   border, in a small channel that hugs its outline — not a pulse around it.
-   ::before sits BEHIND the button (z-index: -1), a few pixels larger on
-   every side (inset: -3px) and the same shape (border-radius: inherit picks
-   up the button's own rounded-full). It's filled with a conic-gradient
-   "comet": transparent almost all the way around, with one bright white arc.
-   The button itself is opaque, so it covers the whole disc except that
-   -3px rim — which is exactly the channel the lit arc travels through as
-   the gradient spins. Rotating the element (not the gradient's angle) is
-   what makes this animate smoothly in every browser without needing
-   @property. Off entirely for anyone who asked for less motion. ===== */
+   border, in a small channel that hugs its outline — not a pulse around it,
+   and not a soft cloud floating over the button either.
+   First pass just relied on the button's own opaque fill to hide everything
+   but a -3px rim, which left the bright arc reading as a blob because a
+   conic-gradient's wedge is only clipped by whatever sits on top of it —
+   any blur, corner anti-aliasing, or compositing quirk shows straight
+   through. This version masks the ring explicitly instead of trusting that:
+   the pseudo-element draws its conic-gradient on its own full box, then a
+   two-layer mask (content-box minus border-box, XORed/excluded) erases
+   everything except an exact `--glow-w` ring — so the light is confined to
+   that channel by construction, not by what happens to be drawn over it. */
 .cta-glow {
+  --glow-w: 3px;
   position: relative;
   isolation: isolate;
 }
@@ -561,19 +563,24 @@ html[lang="es"] :is(h1, h2, h3) {
 .cta-glow::before {
   content: "";
   position: absolute;
-  inset: -3px;
+  inset: calc(var(--glow-w) * -1);
   z-index: -1;
+  box-sizing: border-box;
+  padding: var(--glow-w);
   border-radius: inherit;
   background: conic-gradient(
     from 0deg,
     transparent 0deg,
-    transparent 265deg,
-    rgba(255, 255, 255, 0.85) 300deg,
-    #fff 320deg,
-    rgba(255, 255, 255, 0.85) 340deg,
+    transparent 270deg,
+    rgba(255, 255, 255, 0.9) 300deg,
+    #fff 315deg,
+    rgba(255, 255, 255, 0.9) 330deg,
     transparent 360deg
   );
-  filter: blur(1.5px);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
   animation: cta-glow-spin 3.2s linear infinite;
   pointer-events: none;
 }
