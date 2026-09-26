@@ -542,29 +542,51 @@ html[lang="es"] :is(h1, h2, h3) {
   hyphens: auto;
 }
 
-/* ===== CTA glow: a slow, white, always-on pulse for the "get a quote" /
-   "free estimate" buttons, so the eye finds them without extra color noise
-   competing with the brand green. An expanding ring (box-shadow spread) plus
-   a soft ambient blur, both white, looping forever. Off entirely for anyone
-   who asked for less motion. ===== */
+/* ===== CTA glow: a thin white light that travels around the button's own
+   border, in a small channel that hugs its outline — not a pulse around it.
+   ::before sits BEHIND the button (z-index: -1), a few pixels larger on
+   every side (inset: -3px) and the same shape (border-radius: inherit picks
+   up the button's own rounded-full). It's filled with a conic-gradient
+   "comet": transparent almost all the way around, with one bright white arc.
+   The button itself is opaque, so it covers the whole disc except that
+   -3px rim — which is exactly the channel the lit arc travels through as
+   the gradient spins. Rotating the element (not the gradient's angle) is
+   what makes this animate smoothly in every browser without needing
+   @property. Off entirely for anyone who asked for less motion. ===== */
 .cta-glow {
-  animation: cta-glow-pulse 3s ease-in-out infinite;
+  position: relative;
+  isolation: isolate;
 }
 
-@keyframes cta-glow-pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.45), 0 0 14px 2px rgba(255, 255, 255, 0.25);
-  }
-  60% {
-    box-shadow: 0 0 0 9px rgba(255, 255, 255, 0), 0 0 30px 8px rgba(255, 255, 255, 0.4);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0), 0 0 14px 2px rgba(255, 255, 255, 0.25);
+.cta-glow::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  z-index: -1;
+  border-radius: inherit;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    transparent 265deg,
+    rgba(255, 255, 255, 0.85) 300deg,
+    #fff 320deg,
+    rgba(255, 255, 255, 0.85) 340deg,
+    transparent 360deg
+  );
+  filter: blur(1.5px);
+  animation: cta-glow-spin 3.2s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes cta-glow-spin {
+  to {
+    transform: rotate(360deg);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .cta-glow {
+  .cta-glow::before {
     animation: none;
+    opacity: 0;
   }
 }
