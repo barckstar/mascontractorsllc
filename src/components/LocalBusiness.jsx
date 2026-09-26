@@ -4,6 +4,7 @@ import Link from "next/link";
 import { m } from "framer-motion";
 import { REVIEWS_SNAPSHOT } from "@/lib/reviewsSnapshot";
 import { useI18n } from "@/i18n/I18nProvider";
+import CountUp from "./CountUp";
 import { FaMapMarkerAlt, FaPhoneAlt, FaHammer, FaShieldAlt, FaCheckCircle, FaStar } from "react-icons/fa";
 
 export default function LocalBusiness({ reviews = REVIEWS_SNAPSHOT }) {
@@ -36,15 +37,15 @@ export default function LocalBusiness({ reviews = REVIEWS_SNAPSHOT }) {
                         {lb.text}
                     </p>
 
-                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10 max-w-xl">
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-10 max-w-2xl">
                         {[
                             { label: lb.statYears, value: "11+" },
                             { label: lb.statProjects, value: "500+" },
                             { label: lb.statRating, value: `${reviews.rating.toFixed(1)}★` },
                             { label: lb.statReviews, value: String(reviews.count) },
                         ].map((stat) => (
-                            <div key={stat.label} className="text-center">
-                                <p className="text-2xl md:text-3xl font-contrax text-[#9fe300] mb-1">{stat.value}</p>
+                            <div key={stat.label} className="rounded-2xl border border-white/10 bg-[#1e1e1e]/60 px-3 py-5 text-center transition-colors duration-300 hover:border-[#9fe300]/40">
+                                <p className="text-2xl md:text-3xl font-contrax text-[#9fe300] mb-2 tabular-nums"><CountUp value={stat.value} /></p>
                                 <p className="text-gray-500 font-body text-[11px] uppercase tracking-wider leading-tight">{stat.label}</p>
                             </div>
                         ))}

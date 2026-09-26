@@ -1,5 +1,5 @@
 "use client";
-import { LazyMotion, domAnimation } from "framer-motion";
+import { LazyMotion, MotionConfig, domAnimation } from "framer-motion";
 
 // Carga diferida de las features de animación (domAnimation ≈ 6 KB) en vez del
 // bundle completo de `motion` (~34 KB). Todos los componentes usan el componente
@@ -8,7 +8,7 @@ import { LazyMotion, domAnimation } from "framer-motion";
 export default function MotionProvider({ children }) {
   return (
     <LazyMotion features={domAnimation} strict>
-      {children}
+      <MotionConfig reducedMotion="user">{children}</MotionConfig>
     </LazyMotion>
   );
 }
