@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import CtaGlow from "@/components/CtaGlow";
 import { m, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -50,8 +51,9 @@ export default function ServicePageContent({ service, services }) {
                                 <m.button
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
-                                    className="bg-secondary text-primary font-contrax py-4 px-10 rounded-full hover:bg-white transition-all duration-300 shadow-[0_0_20px_rgba(159,227,0,0.3)]"
+                                    className="cta-glow bg-secondary text-primary font-contrax py-4 px-10 rounded-full hover:bg-white transition-all duration-300 shadow-[0_0_20px_rgba(159,227,0,0.3)]"
                                 >
+                                    <CtaGlow />
                                     {s.heroButton}
                                 </m.button>
                             </Link>
@@ -287,8 +289,9 @@ export default function ServicePageContent({ service, services }) {
                                         <m.button
                                             whileHover={{ scale: 1.03 }}
                                             whileTap={{ scale: 0.97 }}
-                                            className="bg-secondary text-primary font-contrax py-3 px-8 rounded-full hover:bg-white transition-all duration-300 text-sm"
+                                            className="cta-glow bg-secondary text-primary font-contrax py-3 px-8 rounded-full hover:bg-white transition-all duration-300 text-sm"
                                         >
+                                            <CtaGlow />
                                             {s.costButton}
                                         </m.button>
                                     </Link>
@@ -580,10 +583,11 @@ export default function ServicePageContent({ service, services }) {
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link href={href("/contact")}>
                                 <m.button
-                                    whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(159,227,0,0.4)" }}
+                                    whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
-                                    className="bg-secondary text-primary font-contrax text-lg py-5 px-14 rounded-full hover:bg-white transition-all duration-300"
+                                    className="cta-glow bg-secondary text-primary font-contrax text-lg py-5 px-14 rounded-full hover:bg-white transition-all duration-300"
                                 >
+                                    <CtaGlow />
                                     {s.ctaButton}
                                 </m.button>
                             </Link>
