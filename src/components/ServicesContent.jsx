@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import CtaGlow from "@/components/CtaGlow";
 import { m } from "framer-motion";
 import { useI18n, fill } from "@/i18n/I18nProvider";
 import Image from "next/image";
@@ -155,8 +156,9 @@ export default function ServicesContent() {
                                             <m.button
                                                 whileHover={{ scale: 1.05 }}
                                                 whileTap={{ scale: 0.95 }}
-                                                className="bg-secondary text-primary font-contrax py-4 px-10 rounded-full hover:bg-white transition-all duration-300 shadow-[0_0_20px_rgba(159,227,0,0.3)]"
+                                                className="cta-glow bg-secondary text-primary font-contrax py-4 px-10 rounded-full hover:bg-white transition-all duration-300 shadow-[0_0_20px_rgba(159,227,0,0.3)]"
                                             >
+                                                <CtaGlow />
                                                 {s.freeEstimate}
                                             </m.button>
                                         </Link>
@@ -200,10 +202,11 @@ export default function ServicesContent() {
                     </p>
                     <Link href={href("/contact")}>
                         <m.button
-                            whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(159,227,0,0.4)" }}
+                            whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="bg-secondary text-primary font-contrax text-xl py-5 px-14 rounded-full hover:bg-white transition-all duration-300"
+                            className="cta-glow bg-secondary text-primary font-contrax text-xl py-5 px-14 rounded-full hover:bg-white transition-all duration-300"
                         >
+                            <CtaGlow />
                             {s.ctaButton}
                         </m.button>
                     </Link>

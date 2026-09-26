@@ -31,19 +31,22 @@
         "title": "Techos que protegen",
         "text": "Nos especializamos en techos de alta calidad que resisten el paso del tiempo. Nuestro equipo protege su hogar con materiales duraderos y mano de obra experta.",
         "img": "/img-5.png",
-        "alt": "Instalación y reparación de techos residenciales por MAS Contractors en Richmond VA"
+        "alt": "Instalación y reparación de techos residenciales por MAS Contractors en Richmond VA",
+        "slug": "roofing"
       },
       {
         "title": "Su oasis personal",
         "text": "Convierta su baño en un refugio de lujo con nuestros servicios de remodelación. Desde grifería elegante hasta distribuciones modernas, creamos espacios que unen funcionalidad y estilo.",
         "img": "/img-7.png",
-        "alt": "Remodelación moderna de baño con acabados de lujo en Richmond VA"
+        "alt": "Remodelación moderna de baño con acabados de lujo en Richmond VA",
+        "slug": "bathroom-remodeling"
       },
       {
         "title": "Porches con elegancia",
         "text": "Creamos espacios exteriores que realzan la fachada de su casa y le dan el lugar perfecto para descansar y recibir visitas. Diseñamos cada porche a la medida de su estilo y sus necesidades.",
         "img": "/img-8.png",
-        "alt": "Construcción de patio y porche a medida para vivir al aire libre en Richmond VA"
+        "alt": "Construcción de patio y porche a medida para vivir al aire libre en Richmond VA",
+        "slug": "decks-porches"
       }
     ],
     "homeGreenCards": [
@@ -539,7 +542,7 @@
     "specialtyAlt": "{name} en Richmond VA",
     "specialtyEyebrow": "Especialidad",
     "freeEstimate": "PRESUPUESTO GRATIS",
-    "fullServicePage": "VER EL SERVICIO COMPLETO",
+    "fullServicePage": "VER MÁS",
     "ctaA": "¿Necesita un ",
     "ctaB": "contratista",
     "ctaC": " con licencia en Richmond?",

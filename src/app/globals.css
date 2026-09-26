@@ -541,3 +541,75 @@ html[lang="es"] :is(h1, h2, h3) {
   overflow-wrap: break-word;
   hyphens: auto;
 }
+
+/* ===== CTA glow: a thin white light that travels around the button's own
+   border, in a small channel that hugs its outline.
+   The step both earlier attempts were missing: the light has to be drawn on
+   a layer much BIGGER than the button, not one sized to it. A conic-gradient
+   sized to the button's own small box has visible curvature — within the
+   thin ring the mask exposes, that curvature reads as a blob, not a beam.
+   Rendered 500x500 and centered on a button a few dozen pixels tall, the
+   same gradient's arc is close enough to flat that it reads as a clean
+   streak sweeping past. So this is two layers (see CtaGlow.jsx, rendered as
+   the first child inside each glowing button):
+     .cta-glow-mask  the button-sized ring: a content-box/border-box CSS
+                     mask (exclude, with the -webkit-/xor pair for older
+                     Chromium and Safari) punches out everything but a
+                     `--glow-w`-wide band at the very edge.
+     .cta-glow-beam  the oversized, rotating conic-gradient light itself,
+                     clipped down to that ring by its ancestor's mask.
+   The button's own text/icon content, coming after these spans in the
+   markup, paints over them without any z-index needed. */
+.cta-glow {
+  --glow-w: 3px;
+  position: relative;
+}
+
+.cta-glow-mask {
+  position: absolute;
+  inset: 0;
+  padding: var(--glow-w);
+  border-radius: inherit;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0) border-box;
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0) border-box;
+  mask-composite: exclude;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.cta-glow-beam {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 500px;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0%,
+    transparent 88%,
+    rgba(255, 255, 255, 0.9) 93%,
+    #fff 95%,
+    rgba(255, 255, 255, 0.9) 97%,
+    transparent 100%
+  );
+  transform: translate(-50%, -50%);
+  transform-origin: 0 0;
+  animation: cta-glow-spin 3.2s linear infinite;
+}
+
+@keyframes cta-glow-spin {
+  0% {
+    transform: rotate(0deg) translate(-50%, -50%);
+  }
+  100% {
+    transform: rotate(360deg) translate(-50%, -50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta-glow-beam {
+    animation: none;
+    opacity: 0;
+  }
+}

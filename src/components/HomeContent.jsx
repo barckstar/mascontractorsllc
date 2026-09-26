@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import CtaGlow from "@/components/CtaGlow";
 import Image from "next/image";
 import Link from "next/link";
 import { m } from "framer-motion";
@@ -85,8 +86,9 @@ export default function HomeContent({ reviews, posts }) {
                                 <m.button
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
-                                    className="bg-[#9fe300] text-[#1e1e1e] font-contrax text-base max-[400px]:text-sm py-4 px-10 rounded-full hover:bg-white transition-all duration-300 shadow-[0_0_20px_rgba(159,227,0,0.3)]"
+                                    className="cta-glow bg-[#9fe300] text-[#1e1e1e] font-contrax text-base max-[400px]:text-sm py-4 px-10 rounded-full hover:bg-white transition-all duration-300 shadow-[0_0_20px_rgba(159,227,0,0.3)]"
                                 >
+                                    <CtaGlow />
                                     {h.getQuote}
                                 </m.button>
                             </Link>
@@ -193,33 +195,37 @@ export default function HomeContent({ reviews, posts }) {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {data.homeCards.map((project, index) => (
-                            <m.div
-                                key={index}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: index * 0.1 }}
-                                className="group relative overflow-hidden rounded-2xl bg-[#1e1e1e] border border-white/5 hover:border-[#9fe300]/50 transition-all duration-500"
-                            >
-                                <div className="aspect-[4/3] overflow-hidden relative">
-                                    <Image
-                                        src={project.img}
-                                        alt={project.alt || project.title}
-                                        fill
-                                        className="object-cover transform group-hover:scale-110 transition-transform duration-700"
-                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-[#1e1e1e] to-transparent opacity-80" />
-                                </div>
-                                <div className="absolute bottom-0 left-0 w-full p-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                                    <h3 className="text-xl font-contrax text-white mb-2 uppercase tracking-wide group-hover:text-[#9fe300] transition-colors">
-                                        {project.title}
-                                    </h3>
-                                    <p className="text-gray-400 font-body text-sm line-clamp-2 group-hover:text-white transition-colors">
-                                        {project.text}
-                                    </p>
-                                </div>
-                            </m.div>
+                            <Link key={project.slug} href={href(`/services/${project.slug}`)} className="group block">
+                                <m.div
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: index * 0.1 }}
+                                    className="relative overflow-hidden rounded-2xl bg-[#1e1e1e] border border-white/5 group-hover:border-[#9fe300]/50 transition-all duration-500"
+                                >
+                                    <div className="aspect-[4/3] overflow-hidden relative">
+                                        <Image
+                                            src={project.img}
+                                            alt={project.alt || project.title}
+                                            fill
+                                            className="object-cover transform group-hover:scale-110 transition-transform duration-700"
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-[#1e1e1e] to-transparent opacity-80" />
+                                    </div>
+                                    <div className="absolute bottom-0 left-0 w-full p-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                                        <h3 className="text-xl font-contrax text-white mb-2 uppercase tracking-wide group-hover:text-[#9fe300] transition-colors">
+                                            {project.title}
+                                        </h3>
+                                        <p className="text-gray-400 font-body text-sm line-clamp-2 group-hover:text-white transition-colors">
+                                            {project.text}
+                                        </p>
+                                        <span className="inline-flex items-center gap-2 text-[#9fe300] font-contrax text-xs tracking-widest mt-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                                            {h.learnMore} <BiRightArrowAlt size={16} />
+                                        </span>
+                                    </div>
+                                </m.div>
+                            </Link>
                         ))}
                     </div>
 
@@ -389,7 +395,8 @@ export default function HomeContent({ reviews, posts }) {
                                 {h.visitText}
                             </p>
                             <Link href={href("/contact#email")}>
-                                <button className="bg-[#9fe300] text-[#1e1e1e] font-contrax py-4 px-8 rounded-full hover:bg-white transition-colors shadow-lg">
+                                <button className="cta-glow bg-[#9fe300] text-[#1e1e1e] font-contrax py-4 px-8 rounded-full hover:bg-white transition-colors shadow-lg">
+                                    <CtaGlow />
                                     {h.visitButton}
                                 </button>
                             </Link>
@@ -471,7 +478,8 @@ export default function HomeContent({ reviews, posts }) {
                         {h.finalText}
                     </p>
                     <Link href={href("/contact#email")}>
-                        <button className="bg-[#9fe300] text-[#1e1e1e] font-contrax text-xl py-5 px-12 rounded-full hover:bg-white transition-all duration-300 shadow-[0_0_30px_rgba(159,227,0,0.4)] hover:shadow-[0_0_50px_rgba(255,255,255,0.4)]">
+                        <button className="cta-glow bg-[#9fe300] text-[#1e1e1e] font-contrax text-xl py-5 px-12 rounded-full hover:bg-white transition-all duration-300 shadow-[0_0_30px_rgba(159,227,0,0.4)] hover:shadow-[0_0_50px_rgba(255,255,255,0.4)]">
+                            <CtaGlow />
                             {h.finalButton}
                         </button>
                     </Link>

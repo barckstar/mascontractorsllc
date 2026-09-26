@@ -31,19 +31,22 @@
         "title": "Robust Roofs, Guaranteed Protection",
         "text": "We specialize in high-quality roofing solutions that stand the test of time. Our expert team ensures your home is protected with durable materials and expert craftsmanship.",
         "img": "/img-5.png",
-        "alt": "Residential roofing installation and repair by MAS Contractors Richmond VA"
+        "alt": "Residential roofing installation and repair by MAS Contractors Richmond VA",
+        "slug": "roofing"
       },
       {
         "title": "Your Personal Oasis, Exquisite Designs",
         "text": "Transform your bathroom into a luxurious retreat with our expert remodeling services. From elegant fixtures to modern layouts, we create spaces that blend functionality with style.",
         "img": "/img-7.png",
-        "alt": "Modern bathroom remodeling and renovation showing luxury fixtures in Richmond VA"
+        "alt": "Modern bathroom remodeling and renovation showing luxury fixtures in Richmond VA",
+        "slug": "bathroom-remodeling"
       },
       {
         "title": "Inspiring Porches, Outdoor Elegance",
         "text": "We create stunning outdoor spaces that enhance your home's curb appeal and provide a perfect retreat for relaxation and entertainment. Our custom porch designs are tailored to your style and needs.",
         "img": "/img-8.png",
-        "alt": "Custom patio and porch design construction for outdoor living spaces in Richmond VA"
+        "alt": "Custom patio and porch design construction for outdoor living spaces in Richmond VA",
+        "slug": "decks-porches"
       }
     ],
     "homeGreenCards": [
@@ -539,7 +542,7 @@
     "specialtyAlt": "{name} in Richmond VA",
     "specialtyEyebrow": "Specialty focus",
     "freeEstimate": "FREE ESTIMATE",
-    "fullServicePage": "FULL SERVICE PAGE",
+    "fullServicePage": "LEARN MORE",
     "ctaA": "Need a Licensed ",
     "ctaB": "Contractor",
     "ctaC": " in Richmond?",
