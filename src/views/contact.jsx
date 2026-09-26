@@ -1,6 +1,9 @@
 import dynamic from "next/dynamic";
 import { getGoogleReviews } from "@/lib/googleReviews";
+import { getGallery } from "@/content";
 import { pageMetadata } from "@/i18n/metadata";
+
+const CONTACT_HERO_PHOTO = "/gallery/FR8.jpg";
 
 const ContactPageContent = dynamic(() => import("@/components/ContactPageContent"), {
   loading: () => (
@@ -18,5 +21,6 @@ export async function generateMetadata({ params }) {
 export default async function ContactPage({ params }) {
   const { lang } = await params;
   const reviews = await getGoogleReviews(lang);
-  return <ContactPageContent reviews={reviews} />;
+  const heroPhoto = getGallery(lang).images.find((img) => img.src === CONTACT_HERO_PHOTO);
+  return <ContactPageContent reviews={reviews} heroPhoto={heroPhoto} />;
 }

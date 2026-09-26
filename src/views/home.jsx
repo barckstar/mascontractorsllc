@@ -1,6 +1,7 @@
 import dynamic from "next/dynamic";
 import { getGoogleReviews } from "@/lib/googleReviews";
-import { getPosts } from "@/content";
+import { getGallery, getPosts } from "@/content";
+import { homePhotoPaths } from "@/content/homePhotos";
 import { pageMetadata } from "@/i18n/metadata";
 
 const HomeContent = dynamic(() => import("@/components/HomeContent"), {
@@ -19,5 +20,11 @@ export async function generateMetadata({ params }) {
 export default async function Home({ params }) {
   const { lang } = await params;
   const reviews = await getGoogleReviews(lang);
-  return <HomeContent reviews={reviews} posts={getPosts(lang)} />;
+  const paths = homePhotoPaths();
+  const photos = Object.fromEntries(
+    getGallery(lang).images
+      .filter((img) => paths.has(img.src))
+      .map(({ src, width, height, alt }) => [src, { src, width, height, alt }])
+  );
+  return <HomeContent reviews={reviews} posts={getPosts(lang)} photos={photos} />;
 }

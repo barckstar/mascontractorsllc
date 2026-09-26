@@ -1,5 +1,9 @@
 import dynamic from "next/dynamic";
+import { getGallery } from "@/content";
 import { pageMetadata } from "@/i18n/metadata";
+
+const HERO_PHOTO = "/gallery/RC2.JPG";
+const CTA_PHOTO = "/gallery/RC1.JPG";
 
 const ServicesContent = dynamic(() => import("@/components/ServicesContent"), {
     loading: () => (
@@ -17,6 +21,10 @@ export async function generateMetadata({ params }) {
     };
 }
 
-export default function ServicesPage() {
-    return <ServicesContent />;
+export default async function ServicesPage({ params }) {
+    const { lang } = await params;
+    const images = getGallery(lang).images;
+    const heroPhoto = images.find((img) => img.src === HERO_PHOTO);
+    const ctaPhoto = images.find((img) => img.src === CTA_PHOTO);
+    return <ServicesContent heroPhoto={heroPhoto} ctaPhoto={ctaPhoto} />;
 }
