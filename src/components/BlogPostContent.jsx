@@ -7,6 +7,7 @@ import { BiRightArrowAlt } from "react-icons/bi";
 import { FaClock, FaCheckCircle, FaLightbulb } from "react-icons/fa";
 import { useI18n } from "@/i18n/I18nProvider";
 import { CATEGORY_COLORS, formatDate } from "./BlogContent";
+import { EASE, PrimaryCta, GlowCard } from "./ui";
 
 function ContentBlock({ block }) {
     const { href } = useI18n();
@@ -261,39 +262,35 @@ export default function BlogPostContent({ post, posts }) {
             </section>
 
             {/* Final CTA */}
-            <section className="py-24">
-                <div className="container mx-auto px-6 lg:px-16 text-center max-w-3xl">
+            <section className="px-6 py-24 lg:px-16">
+                <div className="container mx-auto max-w-4xl">
                     <m.div
-                        initial={{ opacity: 0, scale: 0.95 }}
+                        initial={{ opacity: 0, scale: 0.96 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
+                        transition={{ duration: 0.7, ease: EASE }}
                     >
-                        <h2 className="text-3xl md:text-5xl font-contrax text-white mb-6 uppercase leading-tight">
-                            {b.ctaA}<span className="text-secondary">{b.ctaB}</span>{b.ctaC}
-                        </h2>
-                        <p className="text-gray-400 font-body text-lg mb-10">
-                            {b.ctaText}
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Link href={href("/contact")}>
-                                <m.button
-                                    whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(159,227,0,0.4)" }}
-                                    whileTap={{ scale: 0.95 }}
-                                    className="bg-secondary text-primary font-contrax text-lg py-5 px-14 rounded-full hover:bg-white transition-all duration-300"
-                                >
-                                    {b.ctaButton}
-                                </m.button>
-                            </Link>
-                            <a href="tel:+18048334600">
-                                <m.button
-                                    whileHover={{ scale: 1.05 }}
-                                    whileTap={{ scale: 0.95 }}
-                                    className="flex items-center justify-center gap-3 border border-white/20 text-white font-contrax text-lg py-5 px-14 rounded-full hover:border-secondary hover:text-secondary transition-all duration-300"
-                                >
-                                    (804) 833-4600
-                                </m.button>
-                            </a>
-                        </div>
+                        <GlowCard>
+                            <div className="px-8 py-16 text-center md:px-16 md:py-20">
+                                <h2 className="mb-6 font-contrax text-3xl uppercase leading-tight text-white md:text-5xl">
+                                    {b.ctaA}<span className="text-secondary">{b.ctaB}</span>{b.ctaC}
+                                </h2>
+                                <p className="mb-10 font-body text-lg text-gray-300">
+                                    {b.ctaText}
+                                </p>
+                                <div className="flex flex-col justify-center gap-4 sm:flex-row">
+                                    <PrimaryCta href={href("/contact")} className="md:px-10 md:py-5 md:text-lg">
+                                        {b.ctaButton}
+                                    </PrimaryCta>
+                                    <a
+                                        href="tel:+18048334600"
+                                        className="inline-flex items-center justify-center gap-3 rounded-full border border-white/20 px-8 py-4 font-contrax text-white transition-all duration-300 hover:border-secondary hover:text-secondary md:px-10 md:py-5 md:text-lg"
+                                    >
+                                        (804) 833-4600
+                                    </a>
+                                </div>
+                            </div>
+                        </GlowCard>
                     </m.div>
                 </div>
             </section>

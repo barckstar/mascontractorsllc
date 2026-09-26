@@ -9,6 +9,7 @@ import Certifications from "./Certifications";
 import LocalBusiness from "./LocalBusiness";
 import Reviews from "./Reviews";
 import FAQ from "./FAQ";
+import { EASE, fadeInUp, Eyebrow, PrimaryCta, Photo, Tape } from "./ui";
 import { BiRightArrowAlt } from "react-icons/bi";
 import { MdAddHome, MdDeck, MdRoofing } from "react-icons/md";
 import { TbToolsKitchen2 } from "react-icons/tb";
@@ -24,72 +25,6 @@ const SERVICE_ICONS = {
     "roofing": MdRoofing,
     "siding": GiBrickWall,
 };
-
-const EASE = [0.22, 1, 0.36, 1];
-
-const fadeInUp = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: EASE } },
-};
-
-function Eyebrow({ index, children }) {
-    return (
-        <span className="flex items-center gap-3 text-[#9fe300] font-contrax text-[11px] md:text-xs tracking-[0.3em] uppercase mb-5">
-            <span className="text-white/35">{index}</span>
-            <span className="h-px w-10 bg-[#9fe300]/70" />
-            {children}
-        </span>
-    );
-}
-
-function PrimaryCta({ href, children, className = "" }) {
-    return (
-        <Link
-            href={href}
-            className={`group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full bg-[#9fe300] px-8 py-4 font-contrax text-sm md:text-base text-[#1e1e1e] shadow-[0_0_30px_rgba(159,227,0,0.35)] transition-all duration-300 hover:bg-white hover:shadow-[0_0_45px_rgba(255,255,255,0.3)] ${className}`}
-        >
-            <span aria-hidden="true" className="absolute inset-y-0 -left-1/3 w-1/4 -skew-x-12 bg-white/60 blur-sm transition-transform duration-700 ease-out group-hover:translate-x-[600%]" />
-            <span className="relative">{children}</span>
-            <BiRightArrowAlt size={22} className="relative transition-transform duration-300 group-hover:translate-x-1" />
-        </Link>
-    );
-}
-
-function Photo({ photo, sizes, priority = false, className = "", alt }) {
-    return (
-        <Image
-            src={photo.src}
-            alt={alt ?? photo.alt}
-            fill
-            sizes={sizes}
-            priority={priority}
-            quality={60}
-            className={`object-cover ${className}`}
-        />
-    );
-}
-
-// One band of the moving "construction tape". The row is rendered twice and
-// slid by -50%, so the loop has no visible seam.
-function Tape({ items, reverse = false, className = "" }) {
-    const row = [...items, ...items];
-    const copy = (key) => (
-        <div key={key} className="flex shrink-0 items-center">
-            {row.map((item, i) => (
-                <span key={i} className="flex items-center gap-8 pr-8 whitespace-nowrap">
-                    {item}
-                    <span className="text-[0.7em] opacity-60">✦</span>
-                </span>
-            ))}
-        </div>
-    );
-    return (
-        <div className={`flex w-max ${reverse ? "motion-safe:animate-marquee-reverse" : "motion-safe:animate-marquee"} ${className}`}>
-            {copy(0)}
-            {copy(1)}
-        </div>
-    );
-}
 
 function Hero({ photos }) {
     const { t, href } = useI18n();

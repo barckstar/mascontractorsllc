@@ -7,6 +7,7 @@ import { BiRightArrowAlt } from "react-icons/bi";
 import { FaClock, FaTag } from "react-icons/fa";
 import { useI18n } from "@/i18n/I18nProvider";
 import { DATE_LOCALE } from "@/i18n/config";
+import { EASE, PrimaryCta, GlowCard } from "./ui";
 
 // Keyed by `categoryId` (English, never translated), not the displayed category.
 export const CATEGORY_COLORS = {
@@ -169,28 +170,27 @@ export default function BlogContent({ posts }) {
             </section>
 
             {/* CTA */}
-            <section className="bg-[#191919] py-24">
-                <div className="container mx-auto px-6 lg:px-16 text-center max-w-3xl">
+            <section className="px-6 py-24 lg:px-16">
+                <div className="container mx-auto max-w-4xl">
                     <m.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
+                        initial={{ opacity: 0, scale: 0.96 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
+                        transition={{ duration: 0.7, ease: EASE }}
                     >
-                        <h2 className="text-3xl md:text-5xl font-contrax text-white mb-6 uppercase leading-tight">
-                            {b.ctaA}<span className="text-secondary">{b.ctaB}</span>{b.ctaC}
-                        </h2>
-                        <p className="text-gray-400 font-body text-lg mb-10">
-                            {b.ctaText}
-                        </p>
-                        <Link href={href("/contact")}>
-                            <m.button
-                                whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(159,227,0,0.4)" }}
-                                whileTap={{ scale: 0.95 }}
-                                className="bg-secondary text-primary font-contrax text-lg py-5 px-14 rounded-full hover:bg-white transition-all duration-300"
-                            >
-                                {b.ctaButton}
-                            </m.button>
-                        </Link>
+                        <GlowCard>
+                            <div className="px-8 py-16 text-center md:px-16 md:py-20">
+                                <h2 className="mb-6 font-contrax text-3xl uppercase leading-tight text-white md:text-5xl">
+                                    {b.ctaA}<span className="text-secondary">{b.ctaB}</span>{b.ctaC}
+                                </h2>
+                                <p className="mb-10 font-body text-lg text-gray-300">
+                                    {b.ctaText}
+                                </p>
+                                <PrimaryCta href={href("/contact")} className="md:px-10 md:py-5 md:text-lg">
+                                    {b.ctaButton}
+                                </PrimaryCta>
+                            </div>
+                        </GlowCard>
                     </m.div>
                 </div>
             </section>

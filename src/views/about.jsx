@@ -1,4 +1,6 @@
 import dynamic from "next/dynamic";
+import { getGallery } from "@/content";
+import { aboutPhotoPaths } from "@/content/aboutPhotos";
 import { pageMetadata } from "@/i18n/metadata";
 
 const AboutPageContent = dynamic(() => import("@/components/AboutPageContent"), {
@@ -14,6 +16,13 @@ export async function generateMetadata({ params }) {
   return pageMetadata(lang, "about", "/about");
 }
 
-export default function AboutPage() {
-  return <AboutPageContent />;
+export default async function AboutPage({ params }) {
+  const { lang } = await params;
+  const paths = aboutPhotoPaths();
+  const photos = Object.fromEntries(
+    getGallery(lang).images
+      .filter((img) => paths.has(img.src))
+      .map(({ src, width, height, alt }) => [src, { src, width, height, alt }])
+  );
+  return <AboutPageContent photos={photos} />;
 }
