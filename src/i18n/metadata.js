@@ -3,8 +3,9 @@ import { OG_LOCALE, SITE_URL, alternatesFor, localePath } from "./config";
 
 // Metadata for a static page whose texts live in dictionaries/<lang>.json
 // under meta.<key>. Next replaces (doesn't merge) openGraph between layout and
-// page, so every page sets its own full openGraph here.
-export function pageMetadata(lang, key, path, { image } = {}) {
+// page, so every page sets its own full openGraph here. The picture is not set
+// here: each route has an opengraph-image.jsx (see src/views/og.jsx).
+export function pageMetadata(lang, key, path) {
     const m = getDictionary(lang).meta[key];
     return {
         title: m.title,
@@ -18,7 +19,6 @@ export function pageMetadata(lang, key, path, { image } = {}) {
             siteName: "MAS Contractors",
             locale: OG_LOCALE[lang],
             type: "website",
-            ...(image && { images: [{ url: image.url, width: 1200, height: 630, alt: m.ogImageAlt ?? m.title }] }),
         },
     };
 }

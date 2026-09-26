@@ -12,7 +12,7 @@ const ServicesContent = dynamic(() => import("@/components/ServicesContent"), {
 export async function generateMetadata({ params }) {
     const { lang } = await params;
     return {
-        ...pageMetadata(lang, "services", "/services", { image: { url: "/img-3.jpg" } }),
+        ...pageMetadata(lang, "services", "/services"),
         robots: { index: true, follow: true },
     };
 }

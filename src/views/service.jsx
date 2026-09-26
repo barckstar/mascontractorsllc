@@ -34,7 +34,6 @@ export async function generateMetadata({ params }) {
             description: service.metaDescription,
             url: SITE_URL + localePath(lang, path),
             siteName: "MAS Contractors LLC",
-            images: [{ url: service.img, width: 1200, height: 630, alt: service.imgAlt }],
             locale: OG_LOCALE[lang],
             type: "website",
         },

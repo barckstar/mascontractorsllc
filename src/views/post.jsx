@@ -25,14 +25,6 @@ export async function generateMetadata({ params }) {
             type: "article",
             locale: OG_LOCALE[lang],
             publishedTime: post.publishDate,
-            images: [
-                {
-                    url: `https://mascontractors.com${post.image}`,
-                    width: 1200,
-                    height: 630,
-                    alt: post.imgAlt,
-                },
-            ],
         },
     };
 }

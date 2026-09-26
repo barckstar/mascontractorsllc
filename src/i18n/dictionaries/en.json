@@ -859,6 +859,19 @@
     },
     "notFound": {
       "title": "Page Not Found"
+    },
+    "og": {
+      "tagline": "General Contractor · Richmond, VA",
+      "homeTitle": "Transforming spaces, building legacies",
+      "services": "Everything under one roof",
+      "licensed": "Class A licensed & insured",
+      "estimates": "Free estimates",
+      "about": "Licensed builders, family values",
+      "contact": "Get your free estimate",
+      "gallery": "Our work, project by project",
+      "blog": "Guides for Richmond homeowners",
+      "blogEyebrow": "Blog · Richmond, VA",
+      "servicesEyebrow": "Services · Richmond, VA"
     }
   },
   "breadcrumbs": {
