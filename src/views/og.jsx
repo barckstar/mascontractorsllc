@@ -111,7 +111,7 @@ async function card({ lang, eyebrow, title, photo }) {
                         inset: 0,
                         display: "flex",
                         background:
-                            "linear-gradient(180deg, rgba(10,10,10,0.5) 0%, rgba(10,10,10,0.35) 26%, rgba(10,10,10,0.72) 60%, rgba(10,10,10,0.94) 100%)",
+                            "linear-gradient(180deg, rgba(10,10,10,0.6) 0%, rgba(10,10,10,0.46) 26%, rgba(10,10,10,0.8) 60%, rgba(10,10,10,0.96) 100%)",
                     }}
                 />
 
@@ -212,7 +212,7 @@ async function card({ lang, eyebrow, title, photo }) {
 // is about, not just "a house": the client specifically liked the bathroom
 // shot used here for the home page.
 const PHOTO = {
-    home: "/gallery/BathroomRemodel-FreestandingTub.jpeg",
+    home: "/gallery/RoofDetail-StandingSeam.jpg",
     about: "/gallery/the_haven.jpg",
     contact: "/gallery/Deck.jpeg",
     gallery: "/gallery/FR1.jpg",

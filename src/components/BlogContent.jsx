@@ -184,9 +184,9 @@ export default function BlogContent({ posts }) {
                         </p>
                         <Link href={href("/contact")}>
                             <m.button
-                                whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(159,227,0,0.4)" }}
+                                whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                className="bg-secondary text-primary font-contrax text-lg py-5 px-14 rounded-full hover:bg-white transition-all duration-300"
+                                className="cta-glow bg-secondary text-primary font-contrax text-lg py-5 px-14 rounded-full hover:bg-white transition-all duration-300"
                             >
                                 {b.ctaButton}
                             </m.button>
