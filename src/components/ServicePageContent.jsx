@@ -7,6 +7,8 @@ import { FaCheckCircle, FaPlus, FaMinus, FaPhoneAlt, FaClock, FaDollarSign, FaEx
 import BeforeAfter from "@/components/BeforeAfter";
 import { BiRightArrowAlt } from "react-icons/bi";
 import { useI18n } from "@/i18n/I18nProvider";
+import { EASE, PrimaryCta, GlowCard } from "./ui";
+import CountUp from "./CountUp";
 
 export default function ServicePageContent({ service, services }) {
     const [activeIndex, setActiveIndex] = useState(null);
@@ -20,9 +22,13 @@ export default function ServicePageContent({ service, services }) {
     return (
         <div className="bg-primary min-h-screen overflow-hidden">
 
-            {/* ── Hero ───────────────────────────────────────────── */}
-            <section className="pt-44 pb-24 relative z-10">
-                <div className="container mx-auto px-6 lg:px-16">
+            {/* ── Hero — the service's own real photo, faint behind the copy ── */}
+            <section className="relative pt-44 pb-24 z-10 overflow-hidden">
+                <div className="absolute inset-0 z-0">
+                    <Image src={service.img} alt="" fill sizes="100vw" quality={50} className="object-cover opacity-[0.12]" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-primary via-primary/95 to-primary" />
+                </div>
+                <div className="container relative mx-auto px-6 lg:px-16">
                     <m.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -190,7 +196,7 @@ export default function ServicePageContent({ service, services }) {
                                 viewport={{ once: true }}
                                 transition={{ delay: i * 0.08 }}
                             >
-                                <p className="text-4xl md:text-5xl font-contrax text-secondary mb-2">{stat.value}</p>
+                                <p className="text-4xl md:text-5xl font-contrax text-secondary mb-2 tabular-nums"><CountUp value={stat.value} /></p>
                                 <p className="text-gray-400 font-body text-sm uppercase tracking-wider">{stat.label}</p>
                             </m.div>
                         ))}
@@ -563,41 +569,42 @@ export default function ServicePageContent({ service, services }) {
             </section>
 
             {/* ── Final CTA ──────────────────────────────────────── */}
-            <section className="py-28">
-                <div className="container mx-auto px-6 lg:px-16">
+            <section className="px-6 py-24 lg:px-16">
+                <div className="container mx-auto">
                     <m.div
-                        initial={{ opacity: 0, scale: 0.95 }}
+                        initial={{ opacity: 0, scale: 0.96 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
-                        className="max-w-3xl mx-auto text-center"
+                        transition={{ duration: 0.7, ease: EASE }}
                     >
-                        <h2 className="text-3xl md:text-5xl font-contrax text-white mb-6 uppercase leading-tight">
-                            {s.ctaA}<span className="text-secondary">{s.ctaB}</span>{s.ctaC}
-                        </h2>
-                        <p className="text-gray-400 font-body text-lg mb-10 max-w-xl mx-auto">
-                            {s.ctaText}
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Link href={href("/contact")}>
-                                <m.button
-                                    whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(159,227,0,0.4)" }}
-                                    whileTap={{ scale: 0.95 }}
-                                    className="bg-secondary text-primary font-contrax text-lg py-5 px-14 rounded-full hover:bg-white transition-all duration-300"
-                                >
-                                    {s.ctaButton}
-                                </m.button>
-                            </Link>
-                            <a href="tel:+18048334600">
-                                <m.button
-                                    whileHover={{ scale: 1.05 }}
-                                    whileTap={{ scale: 0.95 }}
-                                    className="flex items-center justify-center gap-3 border border-white/20 text-white font-contrax text-lg py-5 px-14 rounded-full hover:border-secondary hover:text-secondary transition-all duration-300"
-                                >
-                                    <FaPhoneAlt size={16} />
-                                    (804) 833-4600
-                                </m.button>
-                            </a>
-                        </div>
+                        <GlowCard>
+                            <div className="relative overflow-hidden">
+                                <div className="absolute inset-0">
+                                    <Image src={service.img} alt="" fill sizes="100vw" quality={50} className="object-cover opacity-20" />
+                                    <div className="absolute inset-0 bg-gradient-to-br from-[#252525]/95 to-[#1a1a1a]/95" />
+                                </div>
+                                <div className="relative z-10 mx-auto max-w-3xl px-8 py-16 text-center md:px-16 md:py-20">
+                                    <h2 className="mb-6 font-contrax text-3xl uppercase leading-tight text-white md:text-5xl">
+                                        {s.ctaA}<span className="text-secondary">{s.ctaB}</span>{s.ctaC}
+                                    </h2>
+                                    <p className="mx-auto mb-10 max-w-xl font-body text-lg text-gray-300">
+                                        {s.ctaText}
+                                    </p>
+                                    <div className="flex flex-col justify-center gap-4 sm:flex-row">
+                                        <PrimaryCta href={href("/contact")} className="md:px-10 md:py-5 md:text-lg">
+                                            {s.ctaButton}
+                                        </PrimaryCta>
+                                        <a
+                                            href="tel:+18048334600"
+                                            className="inline-flex items-center justify-center gap-3 rounded-full border border-white/20 px-8 py-4 font-contrax text-white transition-all duration-300 hover:border-secondary hover:text-secondary md:px-10 md:py-5 md:text-lg"
+                                        >
+                                            <FaPhoneAlt size={16} />
+                                            (804) 833-4600
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </GlowCard>
                     </m.div>
                 </div>
             </section>

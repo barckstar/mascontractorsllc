@@ -21,7 +21,7 @@ const stagger = {
     visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
 };
 
-export default function ContactPageContent({ reviews = REVIEWS_SNAPSHOT }) {
+export default function ContactPageContent({ reviews = REVIEWS_SNAPSHOT, heroPhoto }) {
     const c = useI18n().t.contactPage;
     const contactCards = [
         {
@@ -56,15 +56,18 @@ export default function ContactPageContent({ reviews = REVIEWS_SNAPSHOT }) {
             {/* ── Hero ─────────────────────────────────────────────────── */}
             <section className="relative w-full min-h-[60vh] flex items-center justify-center overflow-hidden mt-[50px]">
                 <div className="absolute inset-0 z-0">
-                    <Image
-                        src="/img-9.jpg"
-                        alt={c.heroAlt}
-                        fill
-                        className="object-cover opacity-20"
-                        priority
-                        sizes="100vw"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-b from-[#111111]/80 via-[#111111]/30 to-[#111111]" />
+                    {heroPhoto && (
+                        <Image
+                            src={heroPhoto.src}
+                            alt={heroPhoto.alt || c.heroAlt}
+                            fill
+                            className="object-cover opacity-25"
+                            priority
+                            quality={60}
+                            sizes="100vw"
+                        />
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-b from-[#111111]/80 via-[#111111]/40 to-[#111111]" />
                 </div>
 
                 <div className="relative z-10 text-center px-6 max-w-5xl mx-auto pt-20 pb-32">
