@@ -19,6 +19,7 @@
     "framer-motion": "^12.23.24",
     "lightgallery": "^2.9.0",
     "next": "^16.3.4",
+    "qrcode": "^1.5.4",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "react-google-recaptcha": "^3.1.0",

@@ -4,7 +4,7 @@
 // and folder (app/es/ → /es/about, /es/services/…).
 //
 // Adding a language: add it here, add dictionaries/<lang>.json and
-// content/<lang>/*.json, and copy app/es/ to app/<lang>/ changing the "es" in
+// content/<lang>/*.json, and copy app/es/ (its (site) group and card/) to app/<lang>/ changing the "es" in
 // each bind() call. `npm run build` runs scripts/check-i18n.mjs first and
 // fails listing every key the new language is missing.
 

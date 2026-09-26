@@ -113,7 +113,7 @@ async function card({ lang, eyebrow, title }) {
 // Static pages: eyebrow and headline come from meta.og in the dictionary.
 export function pageImage(lang, key) {
     const og = getDictionary(lang).meta.og;
-    const EYEBROW = { home: og.tagline, services: og.servicesEyebrow, blog: og.blogEyebrow };
+    const EYEBROW = { home: og.tagline, services: og.servicesEyebrow, blog: og.blogEyebrow, card: og.cardEyebrow };
     const TITLE = { home: og.homeTitle };
     return {
         alt: `MAS Contractors — ${TITLE[key] ?? og[key]}`,

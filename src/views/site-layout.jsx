@@ -34,15 +34,15 @@ export async function generateMetadata({ params }) {
 }
 
 // Everything around a page in one language: dictionary, navbar, footer and the
-// organization JSON-LD. Used by app/(en)/layout.js and app/es/layout.js; the
+// organization JSON-LD. Used by app/(en)/layout.js and app/es/(site)/layout.js; the
 // <html> itself comes from the single root layout (app/layout.js), which is
 // what lets Next switch languages without a full page load.
 export default async function SiteLayout({ children, params }) {
   const { lang } = await params;
   const dict = getDictionary(lang);
   const m = dict.meta.site;
-  // `meta` is only read on the server; keep it out of the client payload.
-  const { meta, ...clientDict } = dict;
+  // `meta` and `card` are only read on the server; keep them out of the client payload.
+  const { meta, card, ...clientDict } = dict;
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": ["GeneralContractor", "LocalBusiness"],

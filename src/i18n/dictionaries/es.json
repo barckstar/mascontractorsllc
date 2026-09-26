@@ -871,7 +871,9 @@
       "gallery": "Nuestro trabajo, proyecto a proyecto",
       "blog": "Guías para propietarios en Richmond",
       "blogEyebrow": "Blog · Richmond, VA",
-      "servicesEyebrow": "Servicios · Richmond, VA"
+      "servicesEyebrow": "Servicios · Richmond, VA",
+      "card": "Llame, escriba o guarde nuestro contacto con un toque",
+      "cardEyebrow": "Tarjeta digital"
     }
   },
   "breadcrumbs": {
@@ -908,5 +910,36 @@
       }
     ],
     "button": "IR A LA PÁGINA DE INICIO"
+  },
+  "card": {
+    "metaTitle": "Tarjeta de presentación digital",
+    "metaDescription": "MAS Contractors LLC, contratista general Clase A en Richmond, VA. Llame, escriba, envíe un correo, pida indicaciones o guarde nuestro contacto con un toque.",
+    "role": "Contratista general Clase A",
+    "area": "Richmond · Chesterfield · Henrico, VA",
+    "badges": [
+      "Licencia Clase A",
+      "Asegurados",
+      "Desde 2014",
+      "Presupuestos gratis"
+    ],
+    "reviews": "{count} reseñas en Google",
+    "saveContact": "Guardar contacto",
+    "call": "Llamar",
+    "text": "Mensaje",
+    "email": "Correo",
+    "directions": "Cómo llegar",
+    "website": "Sitio web",
+    "review": "Reseñar",
+    "servicesTitle": "Lo que construimos",
+    "hoursTitle": "Horario",
+    "hours": "Lun – Vie · 8:00 a. m. – 5:00 p. m.",
+    "officeTitle": "Oficina",
+    "followTitle": "Siga nuestro trabajo",
+    "qrTitle": "Escanee para abrir esta tarjeta",
+    "qrText": "Apunte la cámara de un teléfono al código: la tarjeta se abre en su pantalla, lista para guardar.",
+    "share": "Compartir tarjeta",
+    "copied": "Enlace copiado",
+    "switchLang": "View in English",
+    "smsBody": "Hola MAS Contractors, quisiera un presupuesto gratis para "
   }
 }

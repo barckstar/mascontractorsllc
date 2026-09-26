@@ -871,7 +871,9 @@
       "gallery": "Our work, project by project",
       "blog": "Guides for Richmond homeowners",
       "blogEyebrow": "Blog · Richmond, VA",
-      "servicesEyebrow": "Services · Richmond, VA"
+      "servicesEyebrow": "Services · Richmond, VA",
+      "card": "Call, text or save our contact in one tap",
+      "cardEyebrow": "Digital business card"
     }
   },
   "breadcrumbs": {
@@ -908,5 +910,36 @@
       }
     ],
     "button": "GO TO HOME PAGE"
+  },
+  "card": {
+    "metaTitle": "Digital Business Card",
+    "metaDescription": "MAS Contractors LLC, Class A general contractor in Richmond, VA. Call, text, email, get directions or save our contact to your phone in one tap.",
+    "role": "Class A General Contractor",
+    "area": "Richmond · Chesterfield · Henrico, VA",
+    "badges": [
+      "Class A licensed",
+      "Insured",
+      "Since 2014",
+      "Free estimates"
+    ],
+    "reviews": "{count} Google reviews",
+    "saveContact": "Save contact",
+    "call": "Call",
+    "text": "Text",
+    "email": "Email",
+    "directions": "Directions",
+    "website": "Website",
+    "review": "Review us",
+    "servicesTitle": "What we build",
+    "hoursTitle": "Hours",
+    "hours": "Mon – Fri · 8:00 AM – 5:00 PM",
+    "officeTitle": "Office",
+    "followTitle": "Follow our work",
+    "qrTitle": "Scan to open this card",
+    "qrText": "Point a phone camera at the code: this card opens on their screen, ready to save.",
+    "share": "Share this card",
+    "copied": "Link copied",
+    "switchLang": "Ver en español",
+    "smsBody": "Hi MAS Contractors, I'd like a free estimate for "
   }
 }
