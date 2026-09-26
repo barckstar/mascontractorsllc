@@ -25,10 +25,11 @@ export async function generateMetadata({ params }) {
       description: m.ogDescription,
       url: SITE_URL + localePath(lang, "/"),
       siteName: "MAS Contractors LLC",
-      images: [{ url: "/logo-3D.png", width: 800, height: 600 }],
       locale: OG_LOCALE[lang],
       type: "website",
     },
+    // The image itself comes from each route's opengraph-image.jsx.
+    twitter: { card: "summary_large_image" },
   };
 }
 

@@ -13,7 +13,7 @@ const HomeContent = dynamic(() => import("@/components/HomeContent"), {
 
 export async function generateMetadata({ params }) {
   const { lang } = await params;
-  return pageMetadata(lang, "home", "/", { image: { url: "/img-1.jpg" } });
+  return pageMetadata(lang, "home", "/");
 }
 
 export default async function Home({ params }) {

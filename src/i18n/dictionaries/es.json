@@ -859,6 +859,19 @@
     },
     "notFound": {
       "title": "Página no encontrada"
+    },
+    "og": {
+      "tagline": "Contratista general · Richmond, VA",
+      "homeTitle": "Renovamos espacios, construimos legados",
+      "services": "Todo bajo un mismo techo",
+      "licensed": "Licencia Clase A y seguro",
+      "estimates": "Presupuestos gratis",
+      "about": "Constructores con licencia, valores de familia",
+      "contact": "Pida su presupuesto gratis",
+      "gallery": "Nuestro trabajo, proyecto a proyecto",
+      "blog": "Guías para propietarios en Richmond",
+      "blogEyebrow": "Blog · Richmond, VA",
+      "servicesEyebrow": "Servicios · Richmond, VA"
     }
   },
   "breadcrumbs": {

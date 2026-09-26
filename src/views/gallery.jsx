@@ -12,7 +12,7 @@ const GalleryContent = dynamic(() => import("@/components/GalleryContent"), {
 
 export async function generateMetadata({ params }) {
   const { lang } = await params;
-  return pageMetadata(lang, "gallery", "/gallery", { image: { url: "/img-1.jpg" } });
+  return pageMetadata(lang, "gallery", "/gallery");
 }
 
 export default async function GalleryPage({ params }) {
