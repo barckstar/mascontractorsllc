@@ -157,10 +157,10 @@ export default function HomeContent({ reviews, posts, photos }) {
 
             {/* Construction tape: every service, always moving */}
             <section aria-hidden="true" className="relative py-12 md:py-16">
-                <div className="relative -mx-[5%] w-[110%] rotate-[1.5deg] border-y border-white/10 bg-[#151515] py-3 font-contrax text-sm uppercase tracking-[0.2em] text-white/50 md:py-4 md:text-base">
+                <div className="relative -mx-[5%] w-[110%] rotate-3 border-y border-white/15 bg-[#151515] py-3 font-contrax text-sm uppercase tracking-[0.2em] text-white/80 md:py-4 md:text-base">
                     <Tape items={data.commercial.map((c) => c.text)} reverse />
                 </div>
-                <div className="relative -mx-[5%] -mt-10 w-[110%] -rotate-2 bg-[#9fe300] py-3 font-contrax text-base uppercase tracking-[0.15em] text-[#1e1e1e] shadow-[0_10px_40px_rgba(159,227,0,0.25)] md:-mt-14 md:py-4 md:text-xl">
+                <div className="relative -mx-[5%] -mt-3 w-[110%] -rotate-3 bg-[#9fe300] py-3 font-contrax text-base uppercase tracking-[0.15em] text-[#1e1e1e] shadow-[0_10px_40px_rgba(159,227,0,0.25)] md:-mt-4 md:py-4 md:text-xl">
                     <Tape items={data.contact_services.map((s) => s.title2)} />
                 </div>
                 <div className="mx-auto mt-10 flex max-w-5xl items-center justify-center gap-3 px-6 text-center font-body text-sm text-gray-400">

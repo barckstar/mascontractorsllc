@@ -24,24 +24,33 @@ export default function GalleryContent({ gallery }) {
     const filtered = activeCategory === "All"
         ? galleryData
         : galleryData.filter(img => img.category === activeCategory);
+    const headerPhoto = galleryData.find((img) => img.featured) ?? galleryData[0];
 
     return (
         <section className="bg-[#1e1e1e] text-white py-20 min-h-screen">
-            {/* Header */}
-            <m.div
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                className="text-center mb-12"
-            >
-                <h1 className="font-contrax text-5xl md:text-7xl font-medium text-[#9fe300] mb-4 tracking-wider mt-40 md:mt-20">
-                    {g.title}
-                </h1>
-                <div className="w-24 h-1 bg-[#9fe300] mx-auto rounded-full shadow-[0_0_10px_#9fe300]" />
-                <p className="mt-6 text-gray-400 text-lg font-body tracking-wide">
-                    {g.subtitle}
-                </p>
-            </m.div>
+            {/* Header — real project photo faint behind the title */}
+            <div className="relative mb-12 overflow-hidden">
+                <div className="absolute inset-0 z-0">
+                    {headerPhoto && (
+                        <Image src={headerPhoto.src} alt="" fill sizes="100vw" quality={50} className="object-cover opacity-[0.14]" />
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-b from-[#1e1e1e] via-[#1e1e1e]/90 to-[#1e1e1e]" />
+                </div>
+                <m.div
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="relative text-center"
+                >
+                    <h1 className="font-contrax text-5xl md:text-7xl font-medium text-[#9fe300] mb-4 tracking-wider mt-40 md:mt-20">
+                        {g.title}
+                    </h1>
+                    <div className="w-24 h-1 bg-[#9fe300] mx-auto rounded-full shadow-[0_0_10px_#9fe300]" />
+                    <p className="mt-6 text-gray-400 text-lg font-body tracking-wide">
+                        {g.subtitle}
+                    </p>
+                </m.div>
+            </div>
 
             {/* Category Filter */}
             <m.div

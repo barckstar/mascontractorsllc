@@ -17,7 +17,7 @@ export default function ServicesContent({ heroPhoto, ctaPhoto }) {
     return (
         <div className="bg-primary min-h-screen overflow-hidden">
             {/* Hero Section — real jobsite photo instead of a plain gradient */}
-            <section className="relative mb-16 flex min-h-[52vh] w-full items-center justify-center overflow-hidden pt-24 md:min-h-[56vh]">
+            <section className="relative mb-16 flex min-h-[64vh] w-full items-center justify-center overflow-hidden pt-32 md:min-h-[56vh] md:pt-24">
                 <div className="absolute inset-0 z-0">
                     {heroPhoto && <Photo photo={heroPhoto} sizes="100vw" priority className="scale-105" />}
                     <div className="absolute inset-0 bg-gradient-to-b from-primary/90 via-primary/70 to-primary" />
@@ -28,7 +28,7 @@ export default function ServicesContent({ heroPhoto, ctaPhoto }) {
                     transition={{ duration: 0.8 }}
                     className="container relative z-10 mx-auto px-6 text-center md:px-16"
                 >
-                    <h1 className="mb-6 font-contrax text-4xl uppercase tracking-wider text-white md:text-7xl">
+                    <h1 className="mb-6 font-contrax uppercase leading-[1.05] tracking-wider text-white text-[clamp(1.6rem,5.2vw,3.2rem)] lg:text-[clamp(2rem,3.4vw,3.75rem)]">
                         {s.titleA}<span className="text-secondary">{s.titleB}</span>
                     </h1>
                     <p className="mx-auto max-w-2xl font-body text-lg leading-relaxed text-gray-300 md:text-xl">

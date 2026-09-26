@@ -42,9 +42,13 @@ export default function BlogContent({ posts }) {
     return (
         <div className="bg-primary min-h-screen overflow-hidden">
 
-            {/* Hero */}
-            <section className="pt-44 pb-20 relative z-10">
-                <div className="container mx-auto px-6 lg:px-16 text-center">
+            {/* Hero — the latest post's own photo, faint behind the copy */}
+            <section className="relative pt-44 pb-20 overflow-hidden z-10">
+                <div className="absolute inset-0 z-0">
+                    <Image src={featured.image} alt="" fill sizes="100vw" quality={50} className="object-cover opacity-[0.12]" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-primary via-primary/95 to-primary" />
+                </div>
+                <div className="container relative mx-auto px-6 lg:px-16 text-center">
                     <m.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -60,7 +64,6 @@ export default function BlogContent({ posts }) {
                             {b.intro}
                         </p>
                     </m.div>
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-64 bg-secondary/5 blur-[120px] rounded-full -z-10" />
                 </div>
             </section>
 
