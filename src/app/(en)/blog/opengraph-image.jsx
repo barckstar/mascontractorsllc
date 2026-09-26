@@ -1,7 +1,9 @@
-import { pageImage } from "@/views/og";
+import { blogImage } from "@/views/og";
 
-const og = pageImage("en", "blog");
-export const alt = og.alt;
+export const alt = "MAS Contractors — Blog";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
-export default og.Image;
+
+export default function Image() {
+    return blogImage("en");
+}
