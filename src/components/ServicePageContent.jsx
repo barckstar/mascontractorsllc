@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import CtaGlow from "@/components/CtaGlow";
 import { m, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -52,6 +53,7 @@ export default function ServicePageContent({ service, services }) {
                                     whileTap={{ scale: 0.95 }}
                                     className="cta-glow bg-secondary text-primary font-contrax py-4 px-10 rounded-full hover:bg-white transition-all duration-300 shadow-[0_0_20px_rgba(159,227,0,0.3)]"
                                 >
+                                    <CtaGlow />
                                     {s.heroButton}
                                 </m.button>
                             </Link>
@@ -289,6 +291,7 @@ export default function ServicePageContent({ service, services }) {
                                             whileTap={{ scale: 0.97 }}
                                             className="cta-glow bg-secondary text-primary font-contrax py-3 px-8 rounded-full hover:bg-white transition-all duration-300 text-sm"
                                         >
+                                            <CtaGlow />
                                             {s.costButton}
                                         </m.button>
                                     </Link>
@@ -584,6 +587,7 @@ export default function ServicePageContent({ service, services }) {
                                     whileTap={{ scale: 0.95 }}
                                     className="cta-glow bg-secondary text-primary font-contrax text-lg py-5 px-14 rounded-full hover:bg-white transition-all duration-300"
                                 >
+                                    <CtaGlow />
                                     {s.ctaButton}
                                 </m.button>
                             </Link>

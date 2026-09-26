@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import CtaGlow from "@/components/CtaGlow";
 import Image from "next/image";
 import Link from "next/link";
 import { m } from "framer-motion";
@@ -87,6 +88,7 @@ export default function HomeContent({ reviews, posts }) {
                                     whileTap={{ scale: 0.95 }}
                                     className="cta-glow bg-[#9fe300] text-[#1e1e1e] font-contrax text-base max-[400px]:text-sm py-4 px-10 rounded-full hover:bg-white transition-all duration-300 shadow-[0_0_20px_rgba(159,227,0,0.3)]"
                                 >
+                                    <CtaGlow />
                                     {h.getQuote}
                                 </m.button>
                             </Link>
@@ -394,6 +396,7 @@ export default function HomeContent({ reviews, posts }) {
                             </p>
                             <Link href={href("/contact#email")}>
                                 <button className="cta-glow bg-[#9fe300] text-[#1e1e1e] font-contrax py-4 px-8 rounded-full hover:bg-white transition-colors shadow-lg">
+                                    <CtaGlow />
                                     {h.visitButton}
                                 </button>
                             </Link>
@@ -476,6 +479,7 @@ export default function HomeContent({ reviews, posts }) {
                     </p>
                     <Link href={href("/contact#email")}>
                         <button className="cta-glow bg-[#9fe300] text-[#1e1e1e] font-contrax text-xl py-5 px-12 rounded-full hover:bg-white transition-all duration-300 shadow-[0_0_30px_rgba(159,227,0,0.4)] hover:shadow-[0_0_50px_rgba(255,255,255,0.4)]">
+                            <CtaGlow />
                             {h.finalButton}
                         </button>
                     </Link>

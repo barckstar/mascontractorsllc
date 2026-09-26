@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import CtaGlow from "@/components/CtaGlow";
 import { m } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -188,6 +189,7 @@ export default function BlogContent({ posts }) {
                                 whileTap={{ scale: 0.95 }}
                                 className="cta-glow bg-secondary text-primary font-contrax text-lg py-5 px-14 rounded-full hover:bg-white transition-all duration-300"
                             >
+                                <CtaGlow />
                                 {b.ctaButton}
                             </m.button>
                         </Link>
