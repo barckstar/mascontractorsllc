@@ -165,7 +165,7 @@ export default function ServicesContent({ heroPhoto, ctaPhoto }) {
                                                 href={href(`/services/${servicePage}`)}
                                                 className="inline-flex items-center gap-2 border border-secondary/50 text-secondary font-contrax py-4 px-8 rounded-full hover:border-secondary hover:bg-secondary/5 transition-all duration-300 text-sm tracking-widest"
                                             >
-                                                {s.fullServicePage} <BiRightArrowAlt size={16} />
+                                                {s.fullServicePage} <span className="sr-only">{spec.title}</span> <BiRightArrowAlt size={16} />
                                             </Link>
                                         )}
                                     </div>
