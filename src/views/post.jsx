@@ -1,8 +1,9 @@
 import { notFound } from "next/navigation";
-import { getPosts, getPostBySlug } from "@/content";
+import { getPosts, getPostSummaries, getPostBySlug } from "@/content";
 import { getDictionary } from "@/i18n/dictionaries";
 import { OG_LOCALE, SITE_URL, alternatesFor, localePath } from "@/i18n/config";
 import BlogPostContent from "@/components/BlogPostContent";
+import PageSections from "@/i18n/PageSections";
 
 export async function generateStaticParams() {
     return getPosts("en").map((post) => ({ slug: post.slug }));
@@ -86,7 +87,9 @@ export default async function BlogPostPage({ params }) {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
             />
-            <BlogPostContent post={post} posts={getPosts(lang)} />
+            <PageSections lang={lang} names={["blogPost","blogPage"]}>
+      <BlogPostContent post={post} posts={getPostSummaries(lang)} />
+    </PageSections>
         </>
     );
 }

@@ -1,8 +1,9 @@
 import { notFound } from "next/navigation";
-import { getServices, getServiceBySlug } from "@/content";
+import { getServices, getServiceSummaries, getServiceBySlug } from "@/content";
 import { getDictionary } from "@/i18n/dictionaries";
 import { OG_LOCALE, SITE_URL, alternatesFor, localePath } from "@/i18n/config";
 import dynamic from "next/dynamic";
+import PageSections from "@/i18n/PageSections";
 
 const ServicePageContent = dynamic(() => import("@/components/ServicePageContent"), {
     loading: () => (
@@ -121,7 +122,9 @@ export default async function ServicePage({ params }) {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
             />
-            <ServicePageContent service={service} services={getServices(lang)} />
+            <PageSections lang={lang} names={["serviceDetail","beforeAfter"]}>
+      <ServicePageContent service={service} services={getServiceSummaries(lang)} />
+    </PageSections>
         </>
     );
 }

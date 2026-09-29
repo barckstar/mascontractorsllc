@@ -23,6 +23,17 @@ export function getPosts(lang) {
     return POSTS[lang] ?? POSTS[DEFAULT_LOCALE];
 }
 
+// Client components only need the card fields of the *other* posts and
+// services (title, image, excerpt…), never the full body. Passing the whole
+// list as a prop serializes every article into the page's RSC payload.
+export function getPostSummaries(lang) {
+    return getPosts(lang).map(({ content, ...card }) => card);
+}
+
+export function getServiceSummaries(lang) {
+    return getServices(lang).map(({ slug, shortTitle, title, img, imgAlt }) => ({ slug, shortTitle, title, img, imgAlt }));
+}
+
 export function getPostBySlug(lang, slug) {
     return getPosts(lang).find((p) => p.slug === slug) ?? null;
 }

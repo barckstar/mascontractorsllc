@@ -1,8 +1,9 @@
 import dynamic from "next/dynamic";
 import { getGoogleReviews } from "@/lib/googleReviews";
-import { getGallery, getPosts } from "@/content";
+import { getGallery, getPostSummaries } from "@/content";
 import { homePhotoPaths } from "@/content/homePhotos";
 import { pageMetadata } from "@/i18n/metadata";
+import PageSections from "@/i18n/PageSections";
 
 const HomeContent = dynamic(() => import("@/components/HomeContent"), {
   loading: () => (
@@ -26,5 +27,7 @@ export default async function Home({ params }) {
       .filter((img) => paths.has(img.src))
       .map(({ src, width, height, alt }) => [src, { src, width, height, alt }])
   );
-  return <HomeContent reviews={reviews} posts={getPosts(lang)} photos={photos} />;
+  return <PageSections lang={lang} names={["home","localBusiness","certifications","faq","reviews","servicesPage"]}>
+      <HomeContent reviews={reviews} posts={getPostSummaries(lang).slice(0, 3)} photos={photos} />
+    </PageSections>;
 }

@@ -2,6 +2,7 @@ import dynamic from "next/dynamic";
 import { getGoogleReviews } from "@/lib/googleReviews";
 import { getGallery } from "@/content";
 import { pageMetadata } from "@/i18n/metadata";
+import PageSections from "@/i18n/PageSections";
 
 const CONTACT_HERO_PHOTO = "/gallery/FR8.jpg";
 
@@ -22,5 +23,7 @@ export default async function ContactPage({ params }) {
   const { lang } = await params;
   const reviews = await getGoogleReviews(lang);
   const heroPhoto = getGallery(lang).images.find((img) => img.src === CONTACT_HERO_PHOTO);
-  return <ContactPageContent reviews={reviews} heroPhoto={heroPhoto} />;
+  return <PageSections lang={lang} names={["contactPage","contactForm"]}>
+      <ContactPageContent reviews={reviews} heroPhoto={heroPhoto} />
+    </PageSections>;
 }
