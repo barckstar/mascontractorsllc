@@ -11,6 +11,13 @@ export default function LangHtml({ children }) {
     const lang = isLocale(segment) ? segment : DEFAULT_LOCALE;
     return (
         <html lang={lang}>
+            <head>
+                {/* Fuentes del hero: sin esto el navegador las descubre solo tras leer el CSS y
+                    Lighthouse móvil retrasa el LCP esperándolas. */}
+                <link rel="preload" href="/fonts/Sora-400.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+                <link rel="preload" href="/fonts/Sora-700.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+                <link rel="preload" href="/fonts/Conthrax-SemiBold.otf" as="font" type="font/otf" crossOrigin="anonymous" />
+            </head>
             <body>{children}</body>
         </html>
     );
