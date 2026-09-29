@@ -1,17 +1,9 @@
-import dynamic from "next/dynamic";
+import HomeContent from "@/components/HomeContent";
 import { getGoogleReviews } from "@/lib/googleReviews";
 import { getGallery, getPostSummaries } from "@/content";
 import { homePhotoPaths } from "@/content/homePhotos";
 import { pageMetadata } from "@/i18n/metadata";
 import PageSections from "@/i18n/PageSections";
-
-const HomeContent = dynamic(() => import("@/components/HomeContent"), {
-  loading: () => (
-    <div className="bg-[#1e1e1e] min-h-screen flex items-center justify-center">
-      <div className="w-12 h-12 border-4 border-[#9fe300] border-t-transparent rounded-full animate-spin" />
-    </div>
-  ),
-});
 
 export async function generateMetadata({ params }) {
   const { lang } = await params;

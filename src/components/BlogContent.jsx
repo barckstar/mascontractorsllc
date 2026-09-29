@@ -45,7 +45,7 @@ export default function BlogContent({ posts }) {
             {/* Hero — the latest post's own photo, faint behind the copy */}
             <section className="relative pt-44 pb-20 overflow-hidden z-10">
                 <div className="absolute inset-0 z-0">
-                    <Image src={featured.image} alt="" fill sizes="100vw" quality={50} className="object-cover opacity-[0.12]" />
+                    <Image src={featured.image} alt="" fill sizes="100vw" quality={50} priority className="object-cover opacity-[0.12]" />
                     <div className="absolute inset-0 bg-gradient-to-b from-primary via-primary/95 to-primary" />
                 </div>
                 <div className="container relative mx-auto px-6 lg:px-16 text-center">
@@ -84,7 +84,6 @@ export default function BlogContent({ posts }) {
                                 fill
                                 sizes="(max-width: 1024px) 100vw, 50vw"
                                 className="object-cover transition-all duration-700 group-hover:brightness-110"
-                                priority
                             />
                             <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#1a1a1a] hidden lg:block" />
                             <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-[#1a1a1a]/30 to-transparent lg:hidden" />
