@@ -88,10 +88,10 @@ export const Footer = () => {
               <Image
                 src="/IMG_0271.png"
                 alt={t.common.logoAlt}
-                width={200}
-                height={200}
-                className="object-contain mx-auto"
-                style={{ width: "auto", height: "auto" }}
+                width={1148}
+                height={204}
+                sizes="200px"
+                className="object-contain mx-auto w-[200px] h-auto"
               />
             </Link>
           </div>

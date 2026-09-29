@@ -26,7 +26,7 @@ export default function ServicePageContent({ service, services }) {
             {/* ── Hero — the service's own real photo, faint behind the copy ── */}
             <section className="relative pt-44 pb-24 z-10 overflow-hidden">
                 <div className="absolute inset-0 z-0">
-                    <Image src={service.img} alt="" fill sizes="100vw" quality={50} className="object-cover opacity-[0.12]" />
+                    <Image src={service.img} alt="" fill sizes="100vw" quality={50} priority className="object-cover opacity-[0.12]" />
                     <div className="absolute inset-0 bg-gradient-to-b from-primary via-primary/95 to-primary" />
                 </div>
                 <div className="container relative mx-auto px-6 lg:px-16">
@@ -97,8 +97,7 @@ export default function ServicePageContent({ service, services }) {
                                     fill
                                     sizes="(max-width: 768px) 100vw, 50vw"
                                     className="object-cover"
-                                    priority
-                                />
+                                    />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                             </div>
                         </m.div>

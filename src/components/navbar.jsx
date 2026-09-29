@@ -135,22 +135,22 @@ export const Navbar = () => {
       {/* Main Navbar */}
       <div className="max-w-full mx-auto px-6 flex items-center justify-between h-20">
         <Link href={href("/")} className="flex-shrink-0">
-          {/* Small logo for mobile, full logo for desktop — CSS controlled */}
+          {/* Small logo for mobile, full logo from md up. Sizes are fixed in CSS
+              (the file is 1148px wide; letting it auto-size inflates it). */}
           <Image
             src="/IMG_0271_SM.png"
-            width={55}
-            height={25}
+            width={96}
+            height={83}
             alt={t.common.logoAlt}
-            className="object-contain md:hidden"
-            style={{ width: "auto", height: "auto" }}
+            className="md:hidden h-10 w-auto object-contain"
           />
           <Image
             src="/IMG_0271.png"
-            width={250}
-            height={120}
+            width={1148}
+            height={204}
+            sizes="(min-width: 1024px) 250px, 190px"
             alt={t.common.logoAlt}
-            className="object-contain hidden md:block"
-            style={{ width: "auto", height: "auto" }}
+            className="hidden md:block w-[190px] lg:w-[250px] h-auto object-contain"
           />
         </Link>
 

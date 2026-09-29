@@ -2,6 +2,7 @@ import dynamic from "next/dynamic";
 import { getGallery } from "@/content";
 import { aboutPhotoPaths } from "@/content/aboutPhotos";
 import { pageMetadata } from "@/i18n/metadata";
+import PageSections from "@/i18n/PageSections";
 
 const AboutPageContent = dynamic(() => import("@/components/AboutPageContent"), {
   loading: () => (
@@ -24,5 +25,7 @@ export default async function AboutPage({ params }) {
       .filter((img) => paths.has(img.src))
       .map(({ src, width, height, alt }) => [src, { src, width, height, alt }])
   );
-  return <AboutPageContent photos={photos} />;
+  return <PageSections lang={lang} names={["aboutPage","certifications"]}>
+      <AboutPageContent photos={photos} />
+    </PageSections>;
 }

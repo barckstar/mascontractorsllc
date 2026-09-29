@@ -11,6 +11,14 @@ export function I18nProvider({ lang, dict, children }) {
     return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>;
 }
 
+// Adds page-specific dictionary sections on top of the shared ones the layout
+// provides, so each page only ships the texts it actually renders.
+export function I18nSections({ sections, children }) {
+    const parent = useContext(I18nContext);
+    const value = useMemo(() => ({ ...parent, t: { ...parent.t, ...sections } }), [parent, sections]);
+    return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>;
+}
+
 export function useI18n() {
     const ctx = useContext(I18nContext);
     if (!ctx) throw new Error("useI18n() used outside <I18nProvider>");

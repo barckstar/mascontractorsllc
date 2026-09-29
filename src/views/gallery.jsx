@@ -1,6 +1,7 @@
 import dynamic from "next/dynamic";
 import { getGallery } from "@/content";
 import { pageMetadata } from "@/i18n/metadata";
+import PageSections from "@/i18n/PageSections";
 
 const GalleryContent = dynamic(() => import("@/components/GalleryContent"), {
   loading: () => (
@@ -17,5 +18,7 @@ export async function generateMetadata({ params }) {
 
 export default async function GalleryPage({ params }) {
   const { lang } = await params;
-  return <GalleryContent gallery={getGallery(lang)} />;
+  return <PageSections lang={lang} names={["galleryPage"]}>
+      <GalleryContent gallery={getGallery(lang)} />
+    </PageSections>;
 }

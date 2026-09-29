@@ -93,6 +93,9 @@ export default function GalleryContent({ gallery }) {
                     <LightGallery
                         speed={500}
                         plugins={[lgThumbnail, lgZoom]}
+                        // Sin esto, las miniaturas toman el src del <img> de Next (la variante de 3840px)
+                        // y se bajan las ~40 fotos enormes nada más cargar la página.
+                        exThumbImage="data-thumb"
                         elementClassNames="columns-1 md:columns-2 lg:columns-4 gap-4 space-y-4"
                     >
                         {filtered.map((image, index) => (
@@ -100,6 +103,7 @@ export default function GalleryContent({ gallery }) {
                                 key={image.src}
                                 href={image.src}
                                 data-src={image.src}
+                                data-thumb={`/_next/image?url=${encodeURIComponent(image.src)}&w=256&q=60`}
                                 data-sub-html={`<p>${image.alt}</p>`}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}

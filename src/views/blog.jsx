@@ -1,6 +1,7 @@
 import BlogContent from "@/components/BlogContent";
-import { getPosts } from "@/content";
+import { getPostSummaries } from "@/content";
 import { pageMetadata } from "@/i18n/metadata";
+import PageSections from "@/i18n/PageSections";
 
 export async function generateMetadata({ params }) {
     const { lang } = await params;
@@ -9,5 +10,7 @@ export async function generateMetadata({ params }) {
 
 export default async function BlogPage({ params }) {
     const { lang } = await params;
-    return <BlogContent posts={getPosts(lang)} />;
+    return <PageSections lang={lang} names={["blogPage"]}>
+      <BlogContent posts={getPostSummaries(lang)} />
+    </PageSections>;
 }

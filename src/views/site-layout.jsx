@@ -41,8 +41,10 @@ export default async function SiteLayout({ children, params }) {
   const { lang } = await params;
   const dict = getDictionary(lang);
   const m = dict.meta.site;
-  // `meta` is only read on the server; keep it out of the client payload.
-  const { meta, ...clientDict } = dict;
+  // Only what the navbar/footer/404 read goes into the layout; each page adds
+  // its own sections with <PageSections> (see i18n/PageSections.jsx).
+  const { common, nav, footer, site, notFound } = dict;
+  const clientDict = { common, nav, footer, site, notFound };
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": ["GeneralContractor", "LocalBusiness"],

@@ -97,6 +97,15 @@ public/llms.txt
   `dictionaries/<lang>.json` y `content/<lang>/*.json`, los `alt` de la galería, y
   copiar `app/es/` a `app/<lang>/` cambiando el idioma de cada `bind()`.
   `npm run build` lista todo lo que falta.
+- **El layout solo manda al cliente `common`, `nav`, `footer`, `site` y `notFound`.**
+  Cada vista envuelve su componente en `<PageSections lang names={[...]}>`
+  (`i18n/PageSections.jsx`) con las secciones del diccionario que ese componente
+  —y los que importa— leen con `useI18n()`. **Si un componente lee una sección que
+  no está en `names`, la página revienta al prerenderizar** (`npm run build` lo
+  detecta). Al usar un texto nuevo en otra página, añade su sección a esa vista.
+- **No pasar posts/servicios completos a componentes cliente**: usar
+  `getPostSummaries()` / `getServiceSummaries()` (sin `content`, `faq`, etc.);
+  si no, todo el artículo viaja en el payload RSC de la página.
 - **`scripts/check-i18n.mjs`** exige las mismas claves y longitudes de arrays que
   el inglés, y que los campos que son identificadores (`slug`, `url`, `id`, `img`,
   `image`, `link`, `categoryId`, `publishDate`…) sean **idénticos** al inglés.
@@ -109,6 +118,20 @@ public/llms.txt
   agregar `{{user_language}}` a la plantilla de EmailJS para verlo.
 - Los títulos en español usan `hyphens: auto` (globals.css): las palabras largas en
   la tipografía ancha se salían de la pantalla en móvil.
+
+## Rendimiento (Lighthouse móvil)
+
+Medir **en local** (`npm run build && npm run start`, Lighthouse con `CHROME_PATH`
+al Chromium), con calentamiento y mediana de 3: entre corridas varía ±5–10 puntos.
+No hacer pushes solo para medir: cada push a una rama despliega un preview en Vercel.
+
+- No envolver el contenido de una página con `next/dynamic` + spinner: el hero
+  llega por streaming y solo se muestra cuando corre el script de React (retrasa FCP y LCP).
+- Las imágenes decorativas del hero que acaban siendo el LCP llevan `priority`.
+- `GalleryContent`: lightgallery saca las miniaturas del `src` del `<img>` de Next
+  (variante de 3840px). Por eso cada enlace lleva `data-thumb` a 256px y el
+  componente `exThumbImage="data-thumb"`.
+- Las fuentes del hero se precargan en `LangHtml.jsx`.
 
 ## Notas importantes / discrepancias conocidas
 
