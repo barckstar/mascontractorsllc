@@ -1,5 +1,3 @@
-import { NextResponse } from "next/server";
-
 // Valida el token de Cloudflare Turnstile y envía el correo por la API REST de
 // EmailJS. Las claves son solo de servidor (sin NEXT_PUBLIC_).
 const FIELDS = [
@@ -17,7 +15,7 @@ export async function POST(request) {
   try {
     body = await request.json();
   } catch {
-    return NextResponse.json({ error: "bad_request" }, { status: 400 });
+    return Response.json({ error: "bad_request" }, { status: 400 });
   }
 
   // El chequeo diario (GitHub Actions) no puede resolver un captcha: se identifica
@@ -28,7 +26,7 @@ export async function POST(request) {
 
   const { token } = body;
   if (!isMonitor && (!token || typeof token !== "string")) {
-    return NextResponse.json({ error: "captcha_missing" }, { status: 400 });
+    return Response.json({ error: "captcha_missing" }, { status: 400 });
   }
 
   const verify = isMonitor ? { success: true } : await fetch(
@@ -47,7 +45,7 @@ export async function POST(request) {
     .catch(() => null);
 
   if (!verify?.success) {
-    return NextResponse.json({ error: "captcha_failed" }, { status: 400 });
+    return Response.json({ error: "captcha_failed" }, { status: 400 });
   }
 
   const params = {};
@@ -67,7 +65,7 @@ export async function POST(request) {
 
   if (!res.ok) {
     console.error("EmailJS error:", res.status, await res.text());
-    return NextResponse.json({ error: "send_failed" }, { status: 502 });
+    return Response.json({ error: "send_failed" }, { status: 502 });
   }
-  return NextResponse.json({ ok: true });
+  return Response.json({ ok: true });
 }

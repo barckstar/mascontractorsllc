@@ -22,7 +22,7 @@ node scripts/optimize-images.js   # opcional, re-comprime imágenes en public/ga
 
 ⚠️ **`npm run lint` está roto.** El script sigue siendo `next lint`, pero Next 16 eliminó ese subcomando: ahora interpreta `lint` como un directorio y falla con *"Invalid project directory provided, no such directory: .../lint"*. Para arreglarlo hay que migrar a la CLI de ESLint directamente (`eslint .`) con un `eslint.config.mjs` (flat config).
 
-No hay test runner configurado. La verificación real es `npm run build` (debe generar 70 páginas estáticas —32 por idioma más robots, sitemap y 404— sin error; antes corre `scripts/check-i18n.mjs`) más revisión visual en el navegador.
+`npm test` corre `tests/*.test.mjs` con el runner nativo de Node (hoy cubren `/api/contact`; `.github/workflows/ci.yml` los corre en cada PR junto con el build). Además `npm run build` (debe generar 70 páginas estáticas —32 por idioma más robots, sitemap y 404— sin error; antes corre `scripts/check-i18n.mjs`) más revisión visual en el navegador.
 
 ## Variables de entorno
 
@@ -194,7 +194,7 @@ Google. Es el enlace para el QR y el mensaje de entrega de obra.
 
 ## Stack
 
-Next.js 16, React 19, Tailwind 3, Framer Motion 12 (vía `LazyMotion` + componente `m`, ver `MotionProvider.jsx`), EmailJS (formulario de contacto), Google ReCAPTCHA v2, react-icons, lightgallery, sharp.
+Next.js 16, React 19, Tailwind 3, Framer Motion 12 (vía `LazyMotion` + componente `m`, ver `MotionProvider.jsx`), EmailJS vía `/api/contact` (formulario de contacto), Cloudflare Turnstile, react-icons, lightgallery, sharp.
 
 Sobre **sharp**: `scripts/optimize-images.js` es el único que lo importa directo, pero Next también lo usa para optimizar imágenes en el build — por eso además está fijado dentro del bloque `overrides` bajo `next`.
 
