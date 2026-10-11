@@ -20,12 +20,18 @@ export async function POST(request) {
     return NextResponse.json({ error: "bad_request" }, { status: 400 });
   }
 
+  // El chequeo diario (GitHub Actions) no puede resolver un captcha: se identifica
+  // con un secreto compartido y recorre el mismo camino de envío.
+  const monitor = request.headers.get("x-monitor-token");
+  const isMonitor =
+    !!process.env.MONITOR_SECRET && monitor === process.env.MONITOR_SECRET;
+
   const { token } = body;
-  if (!token || typeof token !== "string") {
+  if (!isMonitor && (!token || typeof token !== "string")) {
     return NextResponse.json({ error: "captcha_missing" }, { status: 400 });
   }
 
-  const verify = await fetch(
+  const verify = isMonitor ? { success: true } : await fetch(
     "https://challenges.cloudflare.com/turnstile/v0/siteverify",
     {
       method: "POST",

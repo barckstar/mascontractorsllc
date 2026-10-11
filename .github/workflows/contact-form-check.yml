@@ -1,9 +1,9 @@
 name: Contact form health check
 
-# Cada día envía un correo de prueba por EmailJS (mismo servicio y plantilla que
-# el formulario). Si EmailJS rechaza la llamada (key revocada, servicio
-# desconectado, cuota agotada, token OAuth de Gmail vencido) el job falla y
-# GitHub te avisa por correo. Además comprueba que /contact cargue.
+# Cada día llama a /api/contact en producción con el secreto del monitor (se salta
+# el captcha, pero recorre el mismo camino: variables de Vercel -> EmailJS ->
+# correo a la oficina). Si algo falla (EmailJS rechaza, key vencida, variable
+# faltante, sitio caído) el job falla y GitHub avisa por correo.
 on:
   schedule:
     - cron: "17 13 * * *" # 09:17 hora de Richmond (EDT) / 07:17 Costa Rica
@@ -17,25 +17,18 @@ jobs:
       - name: La página de contacto responde
         run: curl -fsS -o /dev/null --retry 3 --retry-delay 5 https://mascontractors.com/contact
 
-      - name: Enviar correo de prueba por EmailJS
+      - name: Enviar correo de prueba por /api/contact
         env:
-          SERVICE_ID: ${{ secrets.EMAILJS_SERVICE_ID }}
-          TEMPLATE_ID: ${{ secrets.EMAILJS_TEMPLATE_ID }}
-          PUBLIC_KEY: ${{ secrets.EMAILJS_PUBLIC_KEY }}
-          PRIVATE_KEY: ${{ secrets.EMAILJS_PRIVATE_KEY }}
+          MONITOR_SECRET: ${{ secrets.MONITOR_SECRET }}
         run: |
-          body=$(jq -n \
-            --arg s "$SERVICE_ID" --arg t "$TEMPLATE_ID" \
-            --arg u "$PUBLIC_KEY" --arg a "$PRIVATE_KEY" \
-            --arg d "$(date -u +%FT%TZ)" \
-            '{service_id:$s, template_id:$t, user_id:$u, accessToken:$a,
-              template_params:{
-                user_first_name:"[MONITOR]", user_last_name:"Chequeo diario",
-                user_email:"monitor@mascontractors.com", user_phone:"000-000-0000",
-                user_subject:"Test", message:("Prueba automática \($d). Puedes ignorar este correo."),
-                user_language:"en"}}')
-          code=$(curl -sS -o resp.txt -w '%{http_code}' \
+          body=$(jq -n --arg d "$(date -u +%FT%TZ)" '{
+            user_first_name:"[MONITOR]", user_last_name:"Chequeo diario",
+            user_email:"monitor@mascontractors.com", user_phone:"000-000-0000",
+            user_subject:"Test", user_language:"en",
+            message:("Prueba automática \($d). Puedes ignorar este correo.")}')
+          code=$(curl -sS -o resp.txt -w '%{http_code}' --retry 2 --retry-delay 10 \
             -H 'Content-Type: application/json' \
-            -d "$body" https://api.emailjs.com/api/v1.0/email/send)
-          echo "EmailJS HTTP $code: $(cat resp.txt)"
+            -H "x-monitor-token: $MONITOR_SECRET" \
+            -d "$body" https://mascontractors.com/api/contact)
+          echo "HTTP $code: $(cat resp.txt)"
           [ "$code" = "200" ]

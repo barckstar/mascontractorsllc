@@ -34,9 +34,10 @@ por la API REST de EmailJS con claves **solo de servidor** (`EMAILJS_SERVICE_ID`
 que activar *Allow EmailJS API for non-browser applications* (Account → Security).
 En producción están en las Environment Variables de Vercel.
 
-`.github/workflows/contact-form-check.yml` envía cada día un correo de prueba por
-EmailJS y falla (GitHub avisa por correo) si EmailJS rechaza. Usa los mismos
-valores como *secrets* del repo (`EMAILJS_*`).
+`.github/workflows/contact-form-check.yml` llama cada día a `/api/contact` en
+producción con el header `x-monitor-token` (= `MONITOR_SECRET`, definido igual en
+Vercel y en los Secrets del repo). Salta el captcha pero recorre el mismo camino
+de envío, y falla (GitHub avisa por correo) si algo se rompe.
 
 ## Estructura
 
