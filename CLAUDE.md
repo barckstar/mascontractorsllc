@@ -26,16 +26,17 @@ No hay test runner configurado. La verificación real es `npm run build` (debe g
 
 ## Variables de entorno
 
-Copiar `.env.example` → `.env.local`. Son `NEXT_PUBLIC_*` porque las usa el Client Component `contact.jsx`:
+Copiar `.env.example` → `.env.local`. El formulario de contacto usa **Cloudflare
+Turnstile** en el cliente (`NEXT_PUBLIC_TURNSTILE_SITE_KEY`) y manda el POST a
+`app/api/contact/route.js`, que valida el token (`TURNSTILE_SECRET_KEY`) y envía
+por la API REST de EmailJS con claves **solo de servidor** (`EMAILJS_SERVICE_ID`,
+`EMAILJS_TEMPLATE_ID`, `EMAILJS_PUBLIC_KEY`, `EMAILJS_PRIVATE_KEY`). En EmailJS hay
+que activar *Allow EmailJS API for non-browser applications* (Account → Security).
+En producción están en las Environment Variables de Vercel.
 
-```
-NEXT_PUBLIC_RECAPTCHA_SITE_KEY=
-NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=
-NEXT_PUBLIC_EMAILJS_SERVICE_ID=
-NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=
-```
-
-En producción estas keys están en las Environment Variables de Vercel.
+`.github/workflows/contact-form-check.yml` envía cada día un correo de prueba por
+EmailJS y falla (GitHub avisa por correo) si EmailJS rechaza. Usa los mismos
+valores como *secrets* del repo (`EMAILJS_*`).
 
 ## Estructura
 

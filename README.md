@@ -21,7 +21,7 @@ d:\Proyectos\mascontractorsllc\
 │   │   └── globals.css     # Global Styles & Tailwind Directives
 │   │
 │   ├── components/         # Reusable UI Components
-│   │   ├── contact.jsx     # Contact Form with EmailJS & ReCAPTCHA
+│   │   ├── contact.jsx     # Contact Form (Turnstile + /api/contact)
 │   │   ├── navbar.jsx      # Responsive Navigation Bar
 │   │   ├── footer.jsx      # Site Footer
 │   │   ├── FAQ.jsx         # Accordion FAQ Component
@@ -86,10 +86,8 @@ Every page (`page.jsx`) exports a `metadata` object containing:
 Security is managed via `.env.local` (local development) and Vercel Environment Variables (production).
 
 **Required Keys:**
-*   `NEXT_PUBLIC_RECAPTCHA_SITE_KEY`: For Google ReCAPTCHA v2.
-*   `NEXT_PUBLIC_EMAILJS_PUBLIC_KEY`: For sending emails via EmailJS.
-*   `NEXT_PUBLIC_EMAILJS_SERVICE_ID`: EmailJS Service Identifier.
-*   `NEXT_PUBLIC_EMAILJS_TEMPLATE_ID`: EmailJS Template Identifier.
+*   `NEXT_PUBLIC_TURNSTILE_SITE_KEY`: Cloudflare Turnstile site key.
+*   `TURNSTILE_SECRET_KEY`, `EMAILJS_SERVICE_ID`, `EMAILJS_TEMPLATE_ID`, `EMAILJS_PUBLIC_KEY`, `EMAILJS_PRIVATE_KEY`: server-only, used by `/api/contact`.
 
 > **Note:** These keys are prefixed with `NEXT_PUBLIC_` because they are required by Client Components (`contact.jsx`) to function in the browser.
 
@@ -100,7 +98,7 @@ Security is managed via `.env.local` (local development) and Vercel Environment 
 *   **Animations**: Framer Motion
 *   **Forms**: React Hook Form / Standard State
 *   **Email**: EmailJS
-*   **Security**: Google ReCAPTCHA v2
+*   **Security**: Cloudflare Turnstile
 
 ## 📜 Available Scripts
 
