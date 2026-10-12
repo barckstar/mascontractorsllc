@@ -29,8 +29,9 @@ node scripts/optimize-images.js   # opcional, re-comprime imágenes en public/ga
 Copiar `.env.example` → `.env.local`. El formulario de contacto usa **Cloudflare
 Turnstile** en el cliente (`NEXT_PUBLIC_TURNSTILE_SITE_KEY`) y manda el POST a
 `app/api/contact/route.js`, que valida el token (`TURNSTILE_SECRET_KEY`) y envía
-por la API REST de EmailJS con claves **solo de servidor** (`EMAILJS_SERVICE_ID`,
-`EMAILJS_TEMPLATE_ID`, `EMAILJS_PUBLIC_KEY`, `EMAILJS_PRIVATE_KEY`). En EmailJS hay
+por la API REST de EmailJS. Reutiliza `NEXT_PUBLIC_EMAILJS_SERVICE_ID/TEMPLATE_ID/PUBLIC_KEY`
+(ya definidas en Vercel; `EMAILJS_*` con el mismo nombre las sobrescriben) y añade una
+clave **solo de servidor**: `EMAILJS_PRIVATE_KEY`. En EmailJS hay
 que activar *Allow EmailJS API for non-browser applications* (Account → Security).
 En producción están en las Environment Variables de Vercel.
 

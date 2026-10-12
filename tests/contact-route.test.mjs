@@ -131,3 +131,21 @@ test("missing fields are sent as empty strings", async () => {
   const params = sent()[0].body.template_params;
   assert.equal(params.user_email, "");
 });
+
+test("falls back to the legacy NEXT_PUBLIC_EMAILJS_* ids already set in Vercel", async () => {
+  for (const k of ["SERVICE_ID", "TEMPLATE_ID", "PUBLIC_KEY"]) {
+    delete process.env[`EMAILJS_${k}`];
+    process.env[`NEXT_PUBLIC_EMAILJS_${k}`] = `legacy-${k}`;
+  }
+  try {
+    await POST(req({ ...form, token: "good" }));
+    const payload = sent()[0].body;
+    assert.equal(payload.service_id, "legacy-SERVICE_ID");
+    assert.equal(payload.template_id, "legacy-TEMPLATE_ID");
+    assert.equal(payload.user_id, "legacy-PUBLIC_KEY");
+    assert.equal(payload.accessToken, "priv");
+  } finally {
+    for (const k of ["SERVICE_ID", "TEMPLATE_ID", "PUBLIC_KEY"])
+      delete process.env[`NEXT_PUBLIC_EMAILJS_${k}`];
+  }
+});
