@@ -22,7 +22,7 @@ node scripts/optimize-images.js   # opcional, re-comprime imágenes en public/ga
 
 ⚠️ **`npm run lint` está roto.** El script sigue siendo `next lint`, pero Next 16 eliminó ese subcomando: ahora interpreta `lint` como un directorio y falla con *"Invalid project directory provided, no such directory: .../lint"*. Para arreglarlo hay que migrar a la CLI de ESLint directamente (`eslint .`) con un `eslint.config.mjs` (flat config).
 
-`npm test` corre `tests/*.test.mjs` con el runner nativo de Node (hoy cubren `/api/contact`; `.github/workflows/ci.yml` los corre en cada PR junto con el build). Además `npm run build` (debe generar 70 páginas estáticas —32 por idioma más robots, sitemap y 404— sin error; antes corre `scripts/check-i18n.mjs`) más revisión visual en el navegador.
+`npm test` corre `tests/*.test.mjs` con el runner nativo de Node (hoy cubren `/api/contact`). Se corren en local antes de cada push; no hay CI en GitHub. Además `npm run build` (debe generar 70 páginas estáticas —32 por idioma más robots, sitemap y 404— sin error; antes corre `scripts/check-i18n.mjs`) más revisión visual en el navegador.
 
 ## Variables de entorno
 
