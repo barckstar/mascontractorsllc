@@ -13,11 +13,14 @@ function Contact() {
   const [status, setStatus] = useState(null); // null | { type: 'success'|'error', text: string }
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   const form = useRef();
+  const [captchaFailed, setCaptchaFailed] = useState(false);
   const captchaRef = useRef();
   const key = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
+  const noKey = !key;
 
   const onChangeCaptcha = (value) => {
     if (!value) return;
+    setCaptchaFailed(false);
     setCaptchaValue(value);
     setIsButtonDisabled(false);
   };
@@ -27,6 +30,14 @@ function Contact() {
   const onExpiredCaptcha = () => {
     setCaptchaValue(null);
     setIsButtonDisabled(true);
+  };
+
+  // The widget could not load or run (bad/missing site key, hostname not allowed in
+  // Cloudflare, blocked script...). Say so instead of leaving a silent locked button.
+  const onErrorCaptcha = (code) => {
+    console.error("Turnstile error:", code);
+    setCaptchaFailed(true);
+    onExpiredCaptcha();
   };
 
   const resetCaptcha = () => {
@@ -178,9 +189,14 @@ function Contact() {
                   siteKey={key}
                   onSuccess={onChangeCaptcha}
                   onExpire={onExpiredCaptcha}
-                  onError={onExpiredCaptcha}
+                  onError={onErrorCaptcha}
                   options={{ theme: "dark", language: lang }}
                 />
+              )}
+              {(captchaFailed || noKey) && (
+                <p role="alert" className="max-w-md text-center font-body text-sm text-red-400">
+                  {f.captchaUnavailable}
+                </p>
               )}
             </div>
 
