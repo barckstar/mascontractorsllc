@@ -18,7 +18,7 @@ export default function ServicesContent({ heroPhoto, ctaPhoto }) {
     return (
         <div className="bg-primary min-h-screen overflow-hidden">
             {/* Hero Section — real jobsite photo instead of a plain gradient */}
-            <section className="relative mb-16 flex min-h-[64vh] w-full items-center justify-center overflow-hidden pt-32 md:min-h-[56vh] md:pt-24">
+            <section className="relative mb-16 flex min-h-[64vh] w-full items-center justify-center overflow-hidden pt-44 md:min-h-[56vh] md:pt-48 lg:pt-52">
                 <div className="absolute inset-0 z-0">
                     {heroPhoto && <Photo photo={heroPhoto} sizes="100vw" priority className="scale-105" />}
                     <div className="absolute inset-0 bg-gradient-to-b from-primary/90 via-primary/70 to-primary" />

@@ -54,7 +54,7 @@ export default function ContactPageContent({ reviews = REVIEWS_SNAPSHOT, heroPho
         <div className="bg-[#111111] min-h-screen overflow-hidden">
 
             {/* ── Hero ─────────────────────────────────────────────────── */}
-            <section className="relative w-full min-h-[60vh] flex items-center justify-center overflow-hidden mt-[50px]">
+            <section className="relative w-full min-h-[60vh] flex items-center justify-center overflow-hidden pt-44 md:pt-48 lg:pt-52">
                 <div className="absolute inset-0 z-0">
                     {heroPhoto && (
                         <Image
@@ -70,7 +70,7 @@ export default function ContactPageContent({ reviews = REVIEWS_SNAPSHOT, heroPho
                     <div className="absolute inset-0 bg-gradient-to-b from-[#111111]/80 via-[#111111]/40 to-[#111111]" />
                 </div>
 
-                <div className="relative z-10 text-center px-6 max-w-5xl mx-auto pt-20 pb-32">
+                <div className="relative z-10 text-center px-6 max-w-5xl mx-auto pt-4 pb-32">
                     <m.p
                         initial={{ opacity: 0, y: 16 }}
                         animate={{ opacity: 1, y: 0 }}
