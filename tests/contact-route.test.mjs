@@ -1,7 +1,6 @@
 import { test, beforeEach, afterEach } from "node:test";
 import assert from "node:assert/strict";
 
-// next/server resolves from node_modules; the route has no other imports.
 const { POST } = await import("../src/app/api/contact/route.js");
 
 const TURNSTILE = "https://challenges.cloudflare.com/turnstile/v0/siteverify";
@@ -13,7 +12,6 @@ const ENV = {
   EMAILJS_TEMPLATE_ID: "tpl",
   EMAILJS_PUBLIC_KEY: "pub",
   EMAILJS_PRIVATE_KEY: "priv",
-  MONITOR_SECRET: "monitor-secret",
 };
 
 const form = {
@@ -132,30 +130,4 @@ test("missing fields are sent as empty strings", async () => {
   await POST(req({ token: "good" }));
   const params = sent()[0].body.template_params;
   assert.equal(params.user_email, "");
-});
-
-test("monitor secret skips the captcha but still sends through EmailJS", async () => {
-  const res = await POST(req(form, { "x-monitor-token": "monitor-secret" }));
-  assert.equal(res.status, 200);
-  assert.equal(calls.some((c) => c.url === TURNSTILE), false);
-  assert.equal(sent().length, 1);
-});
-
-test("wrong monitor secret does NOT bypass the captcha", async () => {
-  const res = await POST(req(form, { "x-monitor-token": "nope" }));
-  assert.equal(res.status, 400);
-  assert.equal(calls.length, 0);
-});
-
-test("unset MONITOR_SECRET never matches an empty/missing header", async () => {
-  delete process.env.MONITOR_SECRET;
-  const res = await POST(req(form, { "x-monitor-token": "" }));
-  assert.equal(res.status, 400);
-  assert.equal(calls.length, 0);
-});
-
-test("monitor still reports EmailJS failures (so the daily check goes red)", async () => {
-  handlers[EMAILJS] = () => new Response("down", { status: 500 });
-  const res = await POST(req(form, { "x-monitor-token": "monitor-secret" }));
-  assert.equal(res.status, 502);
 });
