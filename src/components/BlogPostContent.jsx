@@ -209,6 +209,31 @@ export default function BlogPostContent({ post, posts }) {
                         ))}
                     </m.div>
 
+                    {/* References */}
+                    {(post.references?.length > 0 || post.usesCompanyData || post.regulatory) && (
+                        <aside className="mt-16 pt-10 border-t border-white/10" aria-labelledby="post-references">
+                            <h2 id="post-references" className="text-xl font-contrax text-white uppercase tracking-wide mb-5">
+                                {b.references}
+                            </h2>
+                            {post.references?.length > 0 && (
+                                <ol className="list-decimal pl-6 space-y-2 text-sm text-gray-400 font-body leading-relaxed">
+                                    {post.references.map((ref) => (
+                                        <li key={ref.url}>
+                                            <a href={ref.url} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-secondary break-words">
+                                                {ref.name}
+                                            </a>
+                                        </li>
+                                    ))}
+                                </ol>
+                            )}
+                            <div className="mt-5 space-y-2 text-sm text-gray-500 font-body leading-relaxed">
+                                {post.reviewed && <p>{b.verifiedOn} {formatDate(post.reviewed, lang)}</p>}
+                                {post.usesCompanyData && <p>{b.companyData}</p>}
+                                {post.regulatory && <p>{b.legalNote}</p>}
+                            </div>
+                        </aside>
+                    )}
+
                     {/* Author Footer */}
                     <div className="mt-16 pt-10 border-t border-white/10 flex items-start gap-5">
                         <div className="w-14 h-14 rounded-full bg-secondary/10 border border-secondary/20 flex items-center justify-center flex-shrink-0">

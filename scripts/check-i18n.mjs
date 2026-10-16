@@ -18,7 +18,7 @@ const DEFAULT = "en";
 
 const LOCKED = new Set([
     "url", "slug", "id", "img", "image", "src", "link", "servicePage", "categoryId",
-    "publishDate", "creditUrl", "relatedService", "step", "width", "height", "featured", "type",
+    "publishDate", "creditUrl", "reviewed", "usesCompanyData", "regulatory", "relatedService", "step", "width", "height", "featured", "type",
 ]);
 
 const errors = [];
