@@ -103,6 +103,29 @@ function ContentBlock({ block }) {
                     </Link>
                 </div>
             );
+        case "image":
+            return (
+                <figure className="my-10">
+                    <Image
+                        src={block.src}
+                        alt={block.alt}
+                        width={block.width}
+                        height={block.height}
+                        sizes="(min-width: 1024px) 896px, 100vw"
+                        className="w-full h-auto rounded-2xl"
+                    />
+                    <figcaption className="mt-3 text-sm text-gray-400 font-body leading-relaxed">
+                        {block.caption}
+                        <span className="block text-gray-500">
+                            {block.creditUrl ? (
+                                <a href={block.creditUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-secondary">
+                                    {block.credit}
+                                </a>
+                            ) : block.credit}
+                        </span>
+                    </figcaption>
+                </figure>
+            );
         case "tip":
             return (
                 <div className="my-8 flex items-start gap-4 bg-secondary/5 border border-secondary/20 rounded-2xl p-6">
