@@ -72,12 +72,26 @@ export const Navbar = () => {
     topBarItems[3],
   ];
 
+  const slider = (
+    <div className="topbar-slider">
+      {mobileTopBarItems.map((item, index) => (
+        <div key={index} className="topbar-slide flex items-center gap-3">
+          {item.icon}
+          <div className="text-left">
+            <span className="block text-xs text-[#9fe300] font-bold">{item.title}</span>
+            <span className="block text-xs text-white">{item.subtitle}</span>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+
   return (
     <nav className={`w-full bg-[#1e1e1e]/70 backdrop-blur-md shadow-md fixed top-0 left-0 z-50 font-body transition-transform duration-300 ${hidden && !open ? "-translate-y-full" : "translate-y-0"}`}>
       {/* Top Bar */}
       <div className="bg-[#1e1e1e]/90 shadow border-b border-white/5 h-16 flex items-center overflow-hidden relative">
-        {/* Desktop View (All items) */}
-        <div className="hidden md:flex w-full items-center justify-end px-6 gap-6">
+        {/* Wide screens (xl+): all items */}
+        <div className="hidden xl:flex w-full items-center justify-end px-6 gap-6">
           <LanguageSwitcher className="mr-auto" />
           {topBarItems.map((item, index) => (
             <div key={index} className="flex items-center gap-2">
@@ -116,20 +130,15 @@ export const Navbar = () => {
           ))}
         </div>
 
-        {/* Mobile View (CSS-only Slider) */}
-        <div className="md:hidden w-full h-full relative">
-          <div className="topbar-slider">
-            {mobileTopBarItems.map((item, index) => (
-              <div key={index} className="topbar-slide flex items-center gap-3">
-                {item.icon}
-                <div className="text-left">
-                  <span className="block text-xs text-[#9fe300] font-bold">{item.title}</span>
-                  <span className="block text-xs text-white">{item.subtitle}</span>
-                </div>
-              </div>
-            ))}
-          </div>
+        {/* Medium screens (md → <xl): language switcher + the slider. The four
+            boxes only fit on one line from xl up (Spanish copy is longer). */}
+        <div className="hidden md:flex xl:hidden w-full h-full items-center">
+          <LanguageSwitcher className="ml-6 flex-shrink-0" />
+          <div className="flex-1 h-full relative overflow-hidden">{slider}</div>
         </div>
+
+        {/* Mobile View (CSS-only Slider) */}
+        <div className="md:hidden w-full h-full relative">{slider}</div>
       </div>
 
       {/* Main Navbar */}
