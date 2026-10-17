@@ -30,21 +30,21 @@
       {
         "title": "Robust Roofs, Guaranteed Protection",
         "text": "We specialize in high-quality roofing solutions that stand the test of time. Our expert team ensures your home is protected with durable materials and expert craftsmanship.",
-"img": "/gallery/Roofing.jpeg",
+        "img": "/gallery/Roofing.jpeg",
         "alt": "Residential roofing installation and repair by MAS Contractors Richmond VA",
         "slug": "roofing"
       },
       {
         "title": "Your Personal Oasis, Exquisite Designs",
         "text": "Transform your bathroom into a luxurious retreat with our expert remodeling services. From elegant fixtures to modern layouts, we create spaces that blend functionality with style.",
-"img": "/gallery/multiple_bathrooms.jpg",
+        "img": "/gallery/multiple_bathrooms.jpg",
         "alt": "Modern bathroom remodeling and renovation showing luxury fixtures in Richmond VA",
         "slug": "bathroom-remodeling"
       },
       {
         "title": "Inspiring Porches, Outdoor Elegance",
         "text": "We create stunning outdoor spaces that enhance your home's curb appeal and provide a perfect retreat for relaxation and entertainment. Our custom porch designs are tailored to your style and needs.",
-"img": "/gallery/RC4.JPG",
+        "img": "/gallery/RC4.JPG",
         "alt": "Custom patio and porch design construction for outdoor living spaces in Richmond VA",
         "slug": "decks-porches"
       }
@@ -452,11 +452,11 @@
       },
       {
         "question": "How long does a typical remodeling project take?",
-        "answer": "Timeline depends on project scope. A bathroom remodel typically takes 2–4 weeks, a kitchen 4–8 weeks, a deck 1–3 weeks, and a full home addition 2–4 months. We give you a firm schedule upfront and communicate any changes immediately. Permit approval from Chesterfield or Henrico can add 2–4 weeks to larger structural projects."
+        "answer": "Timeline depends on project scope. A bathroom remodel typically takes 2–4 weeks, a kitchen 4–8 weeks, a deck 1–3 weeks, and a full home addition 2–4 months. We give you a firm schedule upfront and communicate any changes immediately. Permit review from Chesterfield or Henrico can add time to larger structural projects."
       },
       {
         "question": "Do I need a permit for my project in Virginia?",
-        "answer": "Most structural, electrical, plumbing, and mechanical work in Virginia requires a permit — including kitchen remodels, home additions, new decks over 200 sq ft, roof replacements, and window replacements in some jurisdictions. MAS Contractors handles the entire permit process for you: application, inspections, and final sign-off. We never skip permits — they protect your investment and are required for insurance claims and resale."
+        "answer": "It depends on the project. In Chesterfield County, building or adding on to a house, building or structurally repairing a deck, moving or removing a wall, and most electrical, plumbing, and mechanical work require a permit. Like-for-like roof replacement, siding repair and replacement, painting, and replacing plumbing fixtures generally do not, though other localities may differ, and historic districts and flood zones can change the answer. MAS Contractors handles the entire permit process for you: application, inspections, and final sign-off. We never skip a required permit — they protect your investment and matter for insurance claims and resale."
       },
       {
         "question": "Will I need to move out during a renovation?",
@@ -660,7 +660,12 @@
     "ctaB": "Free Estimate",
     "ctaC": "?",
     "ctaText": "Serving Richmond, North Chesterfield, Midlothian, Glen Allen, and Henrico. Licensed, insured, and ready to start.",
-    "ctaButton": "CONTACT US TODAY"
+    "ctaButton": "CONTACT US TODAY",
+    "references": "References & sources",
+    "verifiedOn": "Facts last verified:",
+    "companyData": "Cost, timeline, and labor figures reflect MAS Contractors' own project experience in the Richmond area. They are estimates, not quotes.",
+    "legalNote": "Codes, fees, and county practice change. Confirm your specific project with your local building department before you start. This article is general information, not legal advice.",
+    "accessed": "Accessed"
   },
   "serviceDetail": {
     "allServices": "ALL SERVICES",
@@ -682,7 +687,7 @@
     "investmentRange": "Investment Range",
     "mostProjects": "Most projects:",
     "typicalTimeline": "Typical Timeline",
-    "permitNote": "Permit approval times may add 2–4 weeks for certain projects",
+    "permitNote": "Permit review may add time to some projects",
     "factorsTitle": "What Affects Your Cost",
     "rangesNote": "These are typical ranges for the Richmond, VA market. Every project is unique — we provide free on-site written estimates with no surprises and no pressure.",
     "costButton": "GET YOUR FREE ESTIMATE",

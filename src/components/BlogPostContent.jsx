@@ -103,6 +103,29 @@ function ContentBlock({ block }) {
                     </Link>
                 </div>
             );
+        case "image":
+            return (
+                <figure className="my-10">
+                    <Image
+                        src={block.src}
+                        alt={block.alt}
+                        width={block.width}
+                        height={block.height}
+                        sizes="(min-width: 1024px) 896px, 100vw"
+                        className="w-full h-auto rounded-2xl"
+                    />
+                    <figcaption className="mt-3 text-sm text-gray-400 font-body leading-relaxed">
+                        {block.caption}
+                        <span className="block text-gray-500">
+                            {block.creditUrl ? (
+                                <a href={block.creditUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-secondary">
+                                    {block.credit}
+                                </a>
+                            ) : block.credit}
+                        </span>
+                    </figcaption>
+                </figure>
+            );
         case "tip":
             return (
                 <div className="my-8 flex items-start gap-4 bg-secondary/5 border border-secondary/20 rounded-2xl p-6">
@@ -185,6 +208,31 @@ export default function BlogPostContent({ post, posts }) {
                             <ContentBlock key={i} block={block} />
                         ))}
                     </m.div>
+
+                    {/* References */}
+                    {(post.references?.length > 0 || post.usesCompanyData || post.regulatory) && (
+                        <aside className="mt-16 pt-10 border-t border-white/10" aria-labelledby="post-references">
+                            <h2 id="post-references" className="text-xl font-contrax text-white uppercase tracking-wide mb-5">
+                                {b.references}
+                            </h2>
+                            {post.references?.length > 0 && (
+                                <ol className="list-decimal pl-6 space-y-2 text-sm text-gray-400 font-body leading-relaxed">
+                                    {post.references.map((ref) => (
+                                        <li key={ref.url}>
+                                            <a href={ref.url} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-secondary break-words">
+                                                {ref.name}
+                                            </a>
+                                        </li>
+                                    ))}
+                                </ol>
+                            )}
+                            <div className="mt-5 space-y-2 text-sm text-gray-500 font-body leading-relaxed">
+                                {post.reviewed && <p>{b.verifiedOn} {formatDate(post.reviewed, lang)}</p>}
+                                {post.usesCompanyData && <p>{b.companyData}</p>}
+                                {post.regulatory && <p>{b.legalNote}</p>}
+                            </div>
+                        </aside>
+                    )}
 
                     {/* Author Footer */}
                     <div className="mt-16 pt-10 border-t border-white/10 flex items-start gap-5">

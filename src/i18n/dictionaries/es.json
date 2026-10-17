@@ -30,21 +30,21 @@
       {
         "title": "Techos que protegen",
         "text": "Nos especializamos en techos de alta calidad que resisten el paso del tiempo. Nuestro equipo protege su hogar con materiales duraderos y mano de obra experta.",
-"img": "/gallery/Roofing.jpeg",
+        "img": "/gallery/Roofing.jpeg",
         "alt": "Instalación y reparación de techos residenciales por MAS Contractors en Richmond VA",
         "slug": "roofing"
       },
       {
         "title": "Su oasis personal",
         "text": "Convierta su baño en un refugio de lujo con nuestros servicios de remodelación. Desde grifería elegante hasta distribuciones modernas, creamos espacios que unen funcionalidad y estilo.",
-"img": "/gallery/multiple_bathrooms.jpg",
+        "img": "/gallery/multiple_bathrooms.jpg",
         "alt": "Remodelación moderna de baño con acabados de lujo en Richmond VA",
         "slug": "bathroom-remodeling"
       },
       {
         "title": "Porches con elegancia",
         "text": "Creamos espacios exteriores que realzan la fachada de su casa y le dan el lugar perfecto para descansar y recibir visitas. Diseñamos cada porche a la medida de su estilo y sus necesidades.",
-"img": "/gallery/RC4.JPG",
+        "img": "/gallery/RC4.JPG",
         "alt": "Construcción de patio y porche a medida para vivir al aire libre en Richmond VA",
         "slug": "decks-porches"
       }
@@ -452,11 +452,11 @@
       },
       {
         "question": "¿Cuánto tarda una remodelación típica?",
-        "answer": "Depende del alcance. Un baño suele tardar de 2 a 4 semanas, una cocina de 4 a 8, un deck de 1 a 3 y una ampliación completa de 2 a 4 meses. Le damos un calendario firme desde el principio y le avisamos de inmediato si algo cambia. En proyectos estructurales grandes, la aprobación del permiso en Chesterfield o Henrico puede sumar de 2 a 4 semanas."
+        "answer": "El plazo depende del alcance del proyecto. Una remodelación de baño suele tardar de 2 a 4 semanas, una cocina de 4 a 8, un deck de 1 a 3 y una ampliación completa de 2 a 4 meses. Le damos un cronograma firme desde el principio y le comunicamos cualquier cambio de inmediato. La revisión de permisos de Chesterfield o Henrico puede sumar tiempo a los proyectos estructurales más grandes."
       },
       {
         "question": "¿Necesito permiso para mi proyecto en Virginia?",
-        "answer": "La mayoría de los trabajos estructurales, eléctricos, de plomería y mecánicos en Virginia requieren permiso, incluidas las remodelaciones de cocina, las ampliaciones, los decks nuevos de más de 200 pies cuadrados, el reemplazo de techos y, en algunas jurisdicciones, el cambio de ventanas. MAS Contractors se encarga de todo el trámite: solicitud, inspecciones y aprobación final. Nunca nos saltamos un permiso: protege su inversión y lo exigen los seguros y la venta de la casa."
+        "answer": "Depende del proyecto. En el condado de Chesterfield se requiere permiso para construir o ampliar una casa, construir o reparar estructuralmente un deck, mover o quitar una pared y para la mayoría de los trabajos eléctricos, de plomería y mecánicos. El cambio de techo por uno equivalente, la reparación y el reemplazo de revestimiento, la pintura y el cambio de accesorios de plomería generalmente no lo requieren, aunque otras localidades pueden ser distintas, y los distritos históricos y las zonas de inundación pueden cambiar la respuesta. MAS Contractors se encarga de todo el trámite: solicitud, inspecciones y aprobación final. Nunca nos saltamos un permiso requerido: protege su inversión y es importante para los reclamos de seguro y la reventa."
       },
       {
         "question": "¿Tengo que mudarme durante la renovación?",
@@ -660,7 +660,12 @@
     "ctaB": "presupuesto gratis",
     "ctaC": "?",
     "ctaText": "Atendemos Richmond, North Chesterfield, Midlothian, Glen Allen y Henrico. Con licencia, con seguro y listos para empezar.",
-    "ctaButton": "CONTÁCTENOS HOY"
+    "ctaButton": "CONTÁCTENOS HOY",
+    "references": "Referencias y fuentes",
+    "verifiedOn": "Datos verificados por última vez:",
+    "companyData": "Las cifras de costos, plazos y mano de obra reflejan la experiencia propia de MAS Contractors en proyectos del área de Richmond. Son estimaciones, no cotizaciones.",
+    "legalNote": "Los códigos, las tarifas y las prácticas del condado cambian. Confirme su proyecto con el departamento de edificación local antes de empezar. Este artículo es información general, no asesoría legal.",
+    "accessed": "Consultado"
   },
   "serviceDetail": {
     "allServices": "TODOS LOS SERVICIOS",
@@ -682,7 +687,7 @@
     "investmentRange": "Rango de inversión",
     "mostProjects": "La mayoría de los proyectos:",
     "typicalTimeline": "Plazo típico",
-    "permitNote": "La aprobación del permiso puede sumar de 2 a 4 semanas en algunos proyectos",
+    "permitNote": "La revisión de permisos puede sumar tiempo en algunos proyectos",
     "factorsTitle": "Qué afecta el costo",
     "rangesNote": "Estos son rangos típicos del mercado de Richmond, VA. Cada proyecto es único: le damos un presupuesto escrito gratis en el lugar, sin sorpresas y sin presión.",
     "costButton": "PIDA SU PRESUPUESTO GRATIS",

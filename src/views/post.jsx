@@ -44,7 +44,8 @@ export default async function BlogPostPage({ params }) {
         description: post.metaDescription,
         image: `https://mascontractors.com${post.image}`,
         datePublished: post.publishDate,
-        dateModified: post.publishDate,
+        dateModified: post.reviewed || post.publishDate,
+        ...(post.references?.length ? { citation: post.references.map((r) => r.url) } : {}),
         inLanguage: lang,
         author: {
             "@type": "Organization",
