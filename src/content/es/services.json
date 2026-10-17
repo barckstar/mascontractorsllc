@@ -65,7 +65,7 @@
       },
       {
         "question": "¿Necesito permisos para remodelar mi cocina en Virginia?",
-        "answer": "Los cambios eléctricos, estructurales y de plomería suelen requerir permiso en el condado de Chesterfield y en la ciudad de Richmond. MAS Contractors tramita todos los permisos como parte del proyecto: usted no tendrá que ir a ninguna oficina municipal."
+        "answer": "En el condado de Chesterfield se requiere permiso para mover, agregar o quitar una pared y para trabajos eléctricos o de plomería que vayan más allá de cambiar accesorios. Reemplazar gabinetes, accesorios de plomería como fregaderos y grifos, y pisos generalmente no lo necesita. MAS Contractors gestiona todos los permisos requeridos como parte del proyecto; usted no tendrá que visitar ninguna oficina del condado."
       },
       {
         "question": "¿Trabajan en North Chesterfield y Midlothian?",
@@ -73,7 +73,7 @@
       },
       {
         "question": "¿Qué aumenta más el valor al remodelar una cocina en Richmond?",
-        "answer": "Las mejoras con mejor retorno en el mercado de Richmond son cambiar o renovar los gabinetes, poner encimeras nuevas (el cuarzo es lo que más valor aparenta), actualizar la iluminación (bajo gabinetes y empotrada) y cambiar los electrodomésticos. Una remodelación menor recupera cerca del 96 % de su costo al vender la casa; una grande, entre el 67 y el 80 %. Priorice la función: mejor distribución, más almacenamiento y un flujo de trabajo cómodo. Eso es lo que vende casas."
+        "answer": "Las mejoras de cocina con mayor retorno en el mercado de Richmond suelen ser el cambio o renovación de gabinetes, nuevas encimeras (el cuarzo aporta el mayor valor percibido), iluminación actualizada (bajo gabinetes y empotrada) y electrodomésticos nuevos. En el informe Cost vs. Value 2025 de Zonda Media, una remodelación menor de cocina de gama media recuperó cerca del 113 % de su costo en la reventa a nivel nacional; los resultados en su mercado variarán. Priorice la función: mejor distribución, más almacenamiento y flujo de trabajo; esas mejoras son las que venden casas."
       },
       {
         "question": "¿Cómo elijo entre encimeras de cuarzo y de granito?",
@@ -129,7 +129,7 @@
     "heroText": "Convierta su baño en un refugio privado con mano de obra experta y materiales de primera.",
     "img": "/img-7.png",
     "imgAlt": "Remodelación de baño de lujo con ducha de azulejo a medida y grifería moderna en Richmond VA por MAS Contractors",
-    "description": "Remodelar el baño es una de las inversiones con mejor retorno que puede hacer en su casa de Richmond. MAS Contractors LLC se especializa en transformaciones completas de baños —desde duchas de azulejo a medida y tinas de remojo hasta tocadores, pisos e iluminación nuevos— con la precisión que nuestros clientes esperan.",
+    "description": "Remodelar el baño es una de las inversiones más valiosas que puede hacer en su casa de Richmond. MAS Contractors LLC se especializa en transformaciones completas de baños —desde duchas de azulejo a medida y tinas de remojo hasta tocadores, pisos e iluminación nuevos— con la precisión que nuestros clientes esperan.",
     "description2": "Ya sea una renovación del baño principal, una actualización del baño de visitas o una adaptación con accesibilidad ADA, nuestro equipo se encarga del diseño, la demolición, la impermeabilización, el azulejo, la coordinación de plomería y el acabado final, todo bajo un mismo techo.",
     "benefits": [
       "Diseño e instalación de duchas de azulejo a medida",
@@ -194,11 +194,11 @@
       },
       {
         "question": "¿Qué retorno tiene remodelar un baño en Richmond?",
-        "answer": "Remodelar el baño está siempre entre las mejoras con mejor retorno. Una remodelación de gama media en Richmond recupera cerca del 65–72 % de su costo al vender; una de gama alta, el 50–60 %. Pero un baño anticuado le resta valor a su casa y hace que tarde más en venderse, así que la mejor calidad de vida mientras vive en ella suele pesar más que la cuenta de reventa."
+        "answer": "Las remodelaciones de baño pueden recuperar una buena parte de su costo en la reventa, pero el retorno exacto varía según el alcance, los materiales y el barrio, por eso no prometemos un porcentaje. Un baño anticuado reduce activamente el valor de su casa y la rapidez de venta, así que el retorno en calidad de vida mientras es dueño suele pesar más que la cuenta de reventa."
       },
       {
         "question": "¿Necesito permiso para remodelar un baño en Virginia?",
-        "answer": "En el condado de Chesterfield y la ciudad de Richmond se necesita permiso para cambios de plomería (mover desagües, líneas de suministro nuevas), trabajo eléctrico (circuitos nuevos, actualización de GFCI) y cambios estructurales. El trabajo estético —cambiar azulejo, tocador o grifería— normalmente no lo requiere. MAS Contractors identifica todos los permisos necesarios antes de empezar su proyecto, para que no haya sorpresas."
+        "answer": "El condado de Chesterfield exige permisos para cambios de plomería (instalar tuberías o accesorios nuevos, reubicar accesorios), trabajo eléctrico más allá de cambiar un accesorio y modificaciones estructurales como quitar una pared o agrandar una ventana. El trabajo cosmético (cambiar accesorios en el mismo lugar, azulejo nuevo, un mueble de lavabo) normalmente no requiere permiso. Otras localidades, como Henrico y la ciudad de Richmond, tienen sus propias oficinas y reglas. MAS Contractors identifica todos los requisitos de permisos antes de empezar su proyecto para que no haya sorpresas."
       }
     ],
     "keywords": [
@@ -211,7 +211,7 @@
     "challenges": [
       {
         "title": "Fallas de impermeabilización",
-        "desc": "La causa número uno de rehacer un baño en menos de 5 años es una mala impermeabilización. La placa de cemento sola no es impermeable. Toda ducha necesita un sistema de membrana —Schluter Kerdi, RedGard o equivalente— aplicado antes de colocar el azulejo. Sin excepciones."
+        "desc": "La impermeabilización incorrecta es una de las causas más comunes de repetir el trabajo en un baño. La placa de cemento resiste el agua, pero no es impermeable. Toda ducha requiere un sistema de membrana (Schluter Kerdi, RedGard o equivalente) aplicado antes de colocar cualquier azulejo. Sin excepciones."
       },
       {
         "title": "Subpiso podrido oculto",
@@ -219,7 +219,7 @@
       },
       {
         "title": "Ventilación insuficiente",
-        "desc": "La mayoría de los extractores de baño en las casas de Virginia son demasiado pequeños o descargan al ático en vez de al exterior. Eso causa moho detrás del azulejo y en la estructura de las paredes en 2 o 3 años. Cambiar el extractor para cumplir el código debería ser parte de toda remodelación de baño."
+        "desc": "Muchos ventiladores de baño en casas antiguas son pequeños o descargan en el ático en lugar de hacerlo al exterior. La guía de Building America indica descargar los extractores de baño directamente al exterior, no en un ático ni en un espacio de acceso, y la humedad atrapada puede causar moho detrás del azulejo y en la estructura de las paredes. Reemplazar el extractor según el código debe ser parte de toda remodelación de baño."
       },
       {
         "title": "Tuberías de plomo en casas anteriores a 1986",
@@ -316,11 +316,11 @@
       },
       {
         "question": "¿Cuánto dura un techo en Virginia?",
-        "answer": "Con el clima de Virginia —veranos calurosos y húmedos, lluvias fuertes y ciclos de congelación y deshielo en invierno— las tejas asfálticas arquitectónicas suelen durar de 20 a 25 años (están clasificadas para 30, pero las condiciones de Virginia reducen su vida entre un 15 y un 20 %). Los techos metálicos duran de 40 a más de 70 años. Las tejas de 3 lengüetas suelen llegar a los 12–18 años. Si su techo tiene más de 15 años, le recomendamos una inspección anual para detectar el desgaste antes de que se convierta en gotera."
+        "answer": "Con el clima de Virginia (veranos calurosos y húmedos, lluvias intensas y ciclos de congelación y deshielo en invierno), las tejas asfálticas arquitectónicas suelen durar de 20 a 30 años, según la ventilación, la calidad de la instalación y la sombra. Los techos de metal suelen durar de 40 a 70 años o más. Las tejas de tres lengüetas suelen llegar a 15–20 años. Si su techo tiene más de 15 años, recomendamos una inspección anual para detectar el desgaste antes de que se convierta en una gotera activa."
       },
       {
         "question": "¿Cuál es la mejor época del año para cambiar el techo en Richmond?",
-        "answer": "De finales de primavera a principios de otoño (abril a octubre) es lo ideal en Richmond. Con temperaturas de más de 40 °F, las tejas asfálticas sellan y se adhieren bien. Las reparaciones de emergencia se hacen todo el año. En los reemplazos planificados seguimos el pronóstico de 5 días y programamos en periodos secos: nunca empezamos una instalación sin tener confirmados días despejados para proteger su casa."
+        "answer": "De finales de la primavera a principios del otoño (abril a octubre) es el período ideal para cambiar un techo en Richmond. Las tiras selladoras de las tejas asfálticas se activan con el calor, y los fabricantes publican procedimientos especiales para instalaciones a 40 °F (4 °C) o menos. Las reparaciones de emergencia pueden hacerse todo el año. En los reemplazos planificados, seguimos el pronóstico a 5 días y programamos alrededor de las ventanas secas; nunca empezamos una instalación sin un período despejado confirmado para proteger su casa."
       }
     ],
     "keywords": [
@@ -337,7 +337,7 @@
       },
       {
         "title": "Una mala ventilación acaba antes con las tejas",
-        "desc": "Un techo con ventilación insuficiente en el ático falla entre un 15 y un 30 % antes de su vida útil. El calor y la humedad atrapados en el ático degradan las tejas desde dentro. Revisamos y corregimos la ventilación antes de cada instalación."
+        "desc": "Un techo con ventilación insuficiente en el ático puede fallar antes de su vida útil nominal. El calor y la humedad atrapados en el ático degradan las tejas desde adentro. Inspeccionamos y corregimos los desequilibrios de ventilación antes de cada instalación."
       },
       {
         "title": "Daños ocultos en la cubierta",
@@ -345,12 +345,12 @@
       },
       {
         "title": "El calor del verano en Virginia y el sellado de las tejas",
-        "desc": "Las tejas instaladas cuando la superficie supera los 130 °F —algo común en los techos de Richmond orientados al sur en julio y agosto— pueden dañarse para siempre durante la instalación. Empezamos al amanecer y evitamos las horas de más calor en las fases críticas de sellado."
+        "desc": "Las tejas manipuladas o instaladas con calor extremo en la superficie, algo común en los techos orientados al sur de Richmond en julio y agosto, pueden rayarse o deformarse durante la instalación. Empezamos los proyectos de techo al amanecer y evitamos las horas de mayor calor en las fases críticas de sellado."
       }
     ],
     "proTips": [
-      "Una teja resistente al impacto Clase 4, como la GAF Timberline HDZ, puede darle un descuento del 15 al 30 % en el seguro de su casa en Virginia: pregunte a su aseguradora antes de elegir la teja.",
-      "Nunca instale tejas por debajo de 40 °F: las tiras autoadhesivas no se activan, las tejas no se adhieren y el viento las levanta en 2 o 3 años.",
+      "Pregunte a su aseguradora si una teja resistente al impacto Clase 4 da derecho a un descuento en el seguro de vivienda antes de elegir la teja.",
+      "A 40 °F (4 °C) o menos, siga el procedimiento de instalación en clima frío del fabricante: las tiras autosellantes pueden no activarse de inmediato y las tejas pueden necesitar sellado manual para resistir el levantamiento por viento.",
       "Limpie las canaletas cada primavera y cada otoño en Richmond: las canaletas tapadas causan represas de hielo en enero y pudrición de la fascia todo el año.",
       "Cambie todos los sellos de tubería al poner techo nuevo: son de caucho, fallan a los 10–15 años (muchas veces antes que las tejas) y cambiarlos durante una instalación completa cuesta poco.",
       "Después de cualquier tormenta fuerte en Virginia, revise el ático en busca de daños por granizo: se ven como manchas claras en la cubierta y muchas veces no se notan desde el suelo."
@@ -427,7 +427,7 @@
       },
       {
         "question": "¿Cuánto tarda una ampliación?",
-        "answer": "Varía mucho según el alcance. Una habitación suele tardar de 8 a 12 semanas; una ampliación de dos pisos, de 4 a 6 meses. También cuentan los plazos de aprobación de permisos en el condado de Chesterfield y la ciudad de Richmond. Le damos un calendario realista antes de empezar la obra."
+        "answer": "El plazo varía mucho según el alcance. Una ampliación de un solo cuarto suele tardar de 8 a 12 semanas. Una ampliación de dos pisos puede tardar de 4 a 6 meses. La revisión de planos y las inspecciones del condado de Chesterfield también influyen. Le damos un cronograma realista antes de empezar a excavar."
       },
       {
         "question": "¿Ustedes tramitan los permisos de construcción de la ampliación?",
@@ -439,11 +439,11 @@
       },
       {
         "question": "¿Una ampliación necesita arquitecto en Virginia?",
-        "answer": "Virginia exige planos sellados por un arquitecto o ingeniero para la mayoría de las ampliaciones estructurales, sobre todo las de dos pisos, las que superan ciertos pies cuadrados o las que tocan elementos de carga. Coordinamos con arquitectos e ingenieros estructurales con licencia como parte de nuestro proceso. No tiene que buscarlos usted: está incluido en nuestra gestión de permisos."
+        "answer": "No siempre. La ley de Virginia no exige licencia de arquitecto o ingeniero a quien prepare los planos de viviendas unifamiliares y bifamiliares de hasta tres pisos, y el condado de Chesterfield indica que para la mayoría de las viviendas unifamiliares no se requiere un arquitecto o ingeniero registrado. Aun así, algunas cosas sí requieren profesionales: por ejemplo un estudio de suelo sellado para ampliaciones con espacio habitable en la cuenca Triásica, zapatas diseñadas por ingeniero en suelos expansivos y muros de dos pisos de altura completa de más de 12 pies diseñados por ingeniero. Coordinamos con arquitectos e ingenieros con licencia siempre que su proyecto los necesite."
       },
       {
         "question": "¿Una ampliación sube los impuestos de mi propiedad en Chesterfield?",
-        "answer": "Sí. Agregar pies cuadrados terminados aumenta el valor tasado de su casa, y los impuestos suben en proporción. En el condado de Chesterfield, la nueva tasación suele aplicarse en la siguiente revisión anual después de cerrar el permiso de construcción. El aumento suele ser moderado frente al valor que se gana. Recomendamos consultar a la oficina del tasador del condado de Chesterfield para un cálculo concreto antes de empezar."
+        "answer": "Por lo general sí: agregar pies cuadrados terminados normalmente aumenta el valor tasado de su casa, lo que sube los impuestos a la propiedad. El aumento suele ser modesto en relación con el valor agregado. Animamos a nuestros clientes a pedir un cálculo específico a la Oficina de Tasación de Bienes Raíces del condado de Chesterfield antes de empezar."
       }
     ],
     "keywords": [
@@ -464,7 +464,7 @@
       },
       {
         "title": "Plazos de permisos en Virginia",
-        "desc": "Las ampliaciones en Chesterfield y Richmond requieren revisión completa de planos: de 4 a 8 semanas. Si el proyecto necesita sello de ingeniería estructural, se suman otras 2 a 4 semanas. Presentamos todos los documentos en la primera semana para evitar retrasos."
+        "desc": "La meta del condado de Chesterfield es revisar los planos residenciales en 10 días hábiles, pero las ampliaciones involucran más departamentos y planos más complejos que un deck, y puede requerirse un estudio de suelo. Presentamos todos los documentos en la Semana 1 para evitar retrasos en el cronograma."
       },
       {
         "title": "Capacidad del panel eléctrico",
@@ -474,7 +474,7 @@
     "proTips": [
       "Pida ventanas, puertas y materiales de techo el mismo día que presenta los permisos: llegarán cuando la estructura esté lista, y los materiales atrasados son la causa número uno de retrasos en las ampliaciones.",
       "Reserve un 20 % de imprevistos en el presupuesto: abrir paredes y excavar junto a cimentaciones existentes casi siempre revela sorpresas.",
-      "Consiga el sello de un ingeniero estructural en sus planos antes de pedir el permiso: casi siempre acelera la revisión en Chesterfield y Henrico.",
+      "Pregunte pronto a la Inspección de Edificios de Chesterfield si su proyecto necesita un estudio de suelo o elementos con diseño de ingeniero; tenerlos listos al solicitar el permiso evita retrasos en la revisión.",
       "Aísle con especial cuidado la unión entre la construcción vieja y la nueva: es la fuente más común de pérdida de energía y de problemas de humedad en las ampliaciones.",
       "Si la ampliación incluye un baño, ubíquelo cerca de las bajantes de plomería existentes para acortar los desagües y simplificar la ventilación."
     ],
@@ -550,11 +550,11 @@
       },
       {
         "question": "¿Necesito permiso para construir un deck en el condado de Chesterfield?",
-        "answer": "Sí: los decks de más de 200 pies cuadrados o a más de 30 pulgadas del suelo necesitan permiso de construcción en el condado de Chesterfield y en la ciudad de Richmond. MAS Contractors tramita todas las solicitudes e inspecciones como parte de su proyecto."
+        "answer": "Sí. El condado de Chesterfield exige permiso de construcción para construir, reemplazar, ampliar o reparar estructuralmente un deck, esté o no unido a la casa. Reparar o reemplazar las tablas del piso y los pasamanos no lo requiere. MAS Contractors gestiona todas las solicitudes de permisos y las inspecciones como parte de su proyecto."
       },
       {
         "question": "¿Cuánto tarda la construcción de un deck?",
-        "answer": "La mayoría de los decks tardan de 1 a 3 semanas una vez que llegan los materiales y tenemos el permiso. La aprobación del permiso en Chesterfield suele tardar de 2 a 4 semanas, así que lo incluimos en el calendario desde el primer día."
+        "answer": "La mayoría de los proyectos de deck toman de 1 a 3 semanas una vez entregados los materiales y con los permisos en mano. La meta publicada del condado de Chesterfield es revisar los planos residenciales en 10 días hábiles, así que incluimos el tiempo de revisión en su cronograma desde el primer día."
       },
       {
         "question": "¿Pueden reemplazar o renovar un deck existente?",
@@ -562,11 +562,11 @@
       },
       {
         "question": "¿Cuánto dura un deck compuesto en Virginia?",
-        "answer": "El deck compuesto de calidad (Trex, TimberTech, Fiberon) tiene garantías de 25 a 30 años y está hecho para resistir la humedad, el sol y los cambios de temperatura de Virginia. A diferencia de la madera, no se pudre, no se astilla y no necesita sellado ni tinte cada año. El costo inicial más alto suele pagarse solo en 8 a 10 años, si se cuenta que no tiene gastos de mantenimiento."
+        "answer": "El deck de composite de calidad (Trex, TimberTech, Fiberon) tiene garantías de 25 a 30 años y está diseñado para resistir la humedad, los rayos UV y los cambios de temperatura de Virginia. A diferencia de la madera, el composite no se pudre, no astilla y no requiere sellado ni teñido anual. El mayor costo inicial se compensa con el tiempo porque no hay gastos continuos de sellado y teñido."
       },
       {
         "question": "¿Un deck aumenta el valor de mi casa en Richmond?",
-        "answer": "Sí: en el mercado de Richmond, un deck bien construido recupera en promedio entre el 65 y el 75 % de su costo en valor de la casa. Los decks compuestos se tasan mejor que los de madera por su duración y bajo mantenimiento. Un porche con malla o un espacio exterior techado puede recuperar entre el 80 y el 90 %. Los compradores de la zona valoran mucho el espacio exterior útil, sobre todo con las primaveras y otoños templados de Richmond."
+        "answer": "El retorno en la reventa varía según el diseño, los materiales y el barrio, por eso no prometemos un porcentaje. Los decks de composite ofrecen durabilidad y poco mantenimiento, y los compradores del área de Richmond valoran el espacio exterior funcional, sobre todo con la primavera y el otoño suaves de la zona."
       }
     ],
     "keywords": [
@@ -578,8 +578,8 @@
     ],
     "challenges": [
       {
-        "title": "Profundidad de las zapatas y línea de congelación",
-        "desc": "El condado de Chesterfield exige zapatas de al menos 24\" bajo el nivel del suelo para quedar por debajo de la línea de congelación. Las zapatas poco profundas se levantan en invierno y, con el tiempo, causan movimiento de la estructura, separación entre tablas y fallas en los barandales."
+        "title": "Profundidad de las zapatas",
+        "desc": "La guía de diseño de decks del condado de Chesterfield pide zapatas apoyadas en suelo no removido a 18–20 pulgadas bajo el nivel terminado, y al menos tan profundas como la zapata de la casa cuando una zapata del deck queda a menos de 4 pies de la casa. Las zapatas poco profundas pueden levantarse en invierno y causar movimiento estructural, separación entre tablas y fallas en los barandales con el tiempo."
       },
       {
         "title": "La unión de la viga de carga (ledger)",
@@ -587,7 +587,7 @@
       },
       {
         "title": "Dilatación de las tablas compuestas en verano",
-        "desc": "Con el calor del verano de Virginia, el deck compuesto se dilata 1/8\" cada 12 pies. Si las tablas se instalan demasiado juntas, se levantan. La separación correcta al instalarlas lo evita; es un error común cuyo arreglo sale caro."
+        "desc": "El deck de composite se dilata y se contrae con la temperatura, y las tablas instaladas demasiado juntas pueden levantarse con el calor del verano de Virginia. Respetar la separación que indica el fabricante al instalar evita este problema; es un error común que exige un costoso retrabajo para corregirse."
       },
       {
         "title": "Pudrición donde el poste toca la zapata",
@@ -596,10 +596,10 @@
     ],
     "proTips": [
       "Use tornillería de acero inoxidable o galvanizada en caliente en todo el deck: los tornillos de zinc comunes se oxidan y dejan manchas rojas en las tablas en 2 o 3 inviernos de Virginia.",
-      "Instale bases de poste ancladas a zapatas de concreto en vez de enterrar los postes: cumple el código y le suma más de 20 años a la vida de los postes.",
+      "Instale bases de poste ancladas a zapatas de concreto en lugar de enterrar los postes en el suelo; así los extremos de los postes quedan fuera del contacto con la tierra y la humedad.",
       "Ponga bloqueos entre las vigas cada 8 pies para evitar que se muevan de lado: la mayoría de los fabricantes lo exigen para la garantía del deck compuesto.",
       "Decida la dirección de las tablas en el diseño: paralelas a la casa, el deck se ve más ancho; a 45°, el efecto es espectacular pero se desperdicia un 15 % más de material.",
-      "Incluya en el presupuesto el costo del permiso ($150–$400 en Chesterfield) y cuente de 2 a 4 semanas para su aprobación antes de programar la entrega de materiales."
+      "Prevea la tarifa del permiso (actualmente $114 por un deck en el condado de Chesterfield, más un 2 % de recargo estatal) y deje tiempo para la revisión de planos antes de programar la entrega de materiales."
     ],
     "safetyGear": [
       "Gafas de seguridad",
@@ -688,7 +688,7 @@
       },
       {
         "question": "¿Vale la pena pagar más por fibrocemento (Hardie) que por vinilo?",
-        "answer": "Si piensa quedarse en la casa 10 años o más, el Hardie casi siempre vale la pena. Dura de 30 a 50 años frente a 20–30 del vinilo, mantiene la pintura más tiempo (repintar cada 12–15 años frente a 8–10) y supera claramente al vinilo en resistencia al fuego, al granizo y en durabilidad general con el clima de Virginia. Además, James Hardie da 30 años de garantía del producto cuando lo instala un contratista certificado como MAS Contractors."
+        "answer": "Para propietarios que planean quedarse 10 años o más, el Hardie casi siempre vale la pena. En nuestra experiencia dura de 30 a 50 años frente a 20–30 del vinilo, y supera ampliamente al vinilo en resistencia al fuego, al impacto del granizo y en durabilidad general con el clima de Virginia. James Hardie respalda su revestimiento de fibrocemento con una garantía del sustrato de 30 años sin prorrateo, y una garantía de 15 años en los acabados ColorPlus."
       }
     ],
     "keywords": [
@@ -701,7 +701,7 @@
     "challenges": [
       {
         "title": "El daño por humedad llega más lejos de lo que se ve",
-        "desc": "El agua suele extenderse entre 12 y 18 pulgadas más allá del daño visible. Retiramos el revestimiento por secciones y revisamos si hay pudrición antes de instalar el material nuevo: en las casas antiguas de Virginia, entre el 40 y el 60 % de los reemplazos tienen daños ocultos."
+        "desc": "La entrada de agua suele extenderse más allá del daño visible. Retiramos el revestimiento existente por secciones y sondeamos en busca de pudrición antes de instalar material nuevo; el daño oculto es común en las casas antiguas de Virginia, por eso lo evaluamos antes de fijar el precio final."
       },
       {
         "title": "Cortar fibrocemento produce polvo de sílice",
@@ -719,8 +719,8 @@
     "proTips": [
       "Selle con imprimante los extremos cortados del fibrocemento justo después de cortarlos: los bordes de Hardie sin pintar absorben humedad y se hinchan en una sola temporada de lluvias.",
       "Agregue paneles rígidos de espuma aislante bajo el revestimiento cuando cambie todo el exterior: mejoran el valor R de 3 a 5 puntos y se pagan solos con el ahorro de energía en 5 a 7 años.",
-      "Revise y corrija todos los tapajuntas de puertas y ventanas antes de poner el revestimiento. Arreglarlos después cuesta de 3 a 5 veces más que hacerlo durante el proyecto.",
-      "El Hardie ColorPlus (pintado de fábrica) tiene 15 años de garantía del acabado: el costo inicial extra le ahorra una pintura completa en los primeros 5 años.",
+      "Inspeccione y corrija todo el sellado de ventanas y puertas antes de colocar el revestimiento nuevo. Corregir el sellado después de instalar el revestimiento cuesta mucho más que hacerlo durante el proyecto.",
+      "El Hardie con ColorPlus (pintado de fábrica) tiene una garantía de acabado de 15 años; el acabado de fábrica puede ahorrarle una pintura completa durante años.",
       "Busque pudrición activa en esquinas, ventanas y la hilera inferior antes de instalar: cada pieza de OSB o de estructura podrida debe cambiarse antes de poner el revestimiento nuevo."
     ],
     "safetyGear": [
@@ -741,7 +741,7 @@
     "heroText": "Pague menos de energía y gane comodidad en su casa con ventanas nuevas de eficiencia energética.",
     "img": "/gallery/Windows.jpeg",
     "imgAlt": "Instalación de ventanas de eficiencia energética en Richmond VA por MAS Contractors",
-    "description": "Las ventanas viejas o con corrientes de aire son una de las mayores fuentes de pérdida de energía en las casas de Richmond. MAS Contractors LLC reemplaza ventanas en Richmond, North Chesterfield y Henrico con unidades de alto rendimiento y eficiencia energética de varios fabricantes líderes, lo que le da más opciones y mejores precios que un distribuidor de una sola marca.",
+    "description": "Las ventanas con corrientes de aire o anticuadas pueden ser una fuente importante de pérdida de energía en las casas de Richmond. MAS Contractors LLC cambia ventanas en Richmond, North Chesterfield y Henrico con unidades de alto rendimiento y eficiencia energética de varios fabricantes líderes, para darle más opciones y mejores precios que los distribuidores de una sola marca.",
     "description2": "Hacemos reemplazos con marco completo, reemplazos de inserción e instalaciones especiales como ventanas panorámicas, ventanas de bahía, puertas corredizas de vidrio y tragaluces. Todas las instalaciones incluyen tapajuntas, molduras y sellado correctos para evitar filtraciones de humedad en el futuro.",
     "benefits": [
       "Vidrio aislante de doble y triple panel",
@@ -802,7 +802,7 @@
       },
       {
         "question": "¿Las ventanas nuevas bajan mi factura de energía?",
-        "answer": "Sí, y bastante. Una ventana de un solo panel pierde 10 veces más calor que una pared aislada. Cambiar a ventanas Energy Star de doble panel con recubrimiento Low-E puede reducir entre un 15 y un 25 % el costo de calefacción y aire acondicionado con el clima de Richmond, y muchas veces se pagan solas en 8 a 12 años."
+        "answer": "Sí. ENERGY STAR indica que reemplazar ventanas de un solo vidrio por ventanas con certificación ENERGY STAR reduce las facturas de energía del hogar en promedio hasta un 13 % a nivel nacional. Su ahorro depende de su clima, de sus ventanas actuales y de cómo use la energía, por eso no prometemos un plazo de recuperación. También obtiene más confort, menos ruido y mejor aspecto exterior."
       },
       {
         "question": "¿Hay reembolsos o créditos fiscales por cambiar las ventanas en Virginia?",
@@ -810,7 +810,7 @@
       },
       {
         "question": "¿Qué señales indican que necesito ventanas nuevas?",
-        "answer": "Las principales: corrientes de aire frío cerca de ventanas cerradas, condensación entre los vidrios (sello roto), ventanas que cuesta abrir o cerrar con seguro, pudrición o deformación visible en el marco, facturas de energía notablemente más altas o demasiado ruido de la calle. Las ventanas de un solo panel y las de más de 20 años son buenas candidatas al reemplazo aunque no se vean dañadas: rinden muy por debajo de los estándares actuales de eficiencia."
+        "answer": "Las señales principales son: corrientes de aire frío cerca de ventanas cerradas, condensación entre los vidrios (sello fallado), dificultad para abrir o asegurar las ventanas, pudrición o deformación visibles en el marco, facturas de energía notablemente más altas o ruido excesivo del exterior. Las ventanas de un solo vidrio y las de más de 20 años son buenas candidatas para reemplazo aun sin daño visible: pueden rendir menos que los estándares modernos de eficiencia."
       }
     ],
     "keywords": [
@@ -831,7 +831,7 @@
       },
       {
         "title": "Ventanas de escape en los dormitorios",
-        "desc": "El código de construcción de Virginia exige que cada ventana de dormitorio tenga una apertura mínima de 5.7 pies cuadrados como salida de emergencia. Muchas ventanas antiguas no cumplen. El cambio de ventanas es el momento ideal para ponerse al día."
+        "desc": "Los dormitorios tienen requisitos de tamaño para sus aberturas de escape de emergencia según el código de construcción residencial, y una ventana de reemplazo no debe reducir la abertura. El cambio de ventanas es un buen momento para revisar sus dormitorios con la Inspección de Edificios del condado de Chesterfield."
       },
       {
         "title": "Falla del sello térmico entre los vidrios",
@@ -841,9 +841,9 @@
     "proTips": [
       "Mida cada abertura por separado: incluso ventanas que parecen idénticas en el mismo cuarto suelen variar 1/4\" o más, y el tamaño a medida es clave para una instalación hermética.",
       "Use espuma en aerosol de baja expansión alrededor de los marcos: la espuma de alta expansión común puede arquear el marco y hacer que la ventana se atasque o no cierre con seguro.",
-      "Pida vidrio Low-E 366 para las ventanas que dan al sur y al oeste: bloquea el 66 % del calor solar sin perder buena entrada de luz y reduce bastante el costo del aire acondicionado en verano en Virginia.",
+      "En ventanas orientadas al sur y al oeste, pregunte por vidrio con un bajo coeficiente de ganancia de calor solar (SHGC): reduce la ganancia de calor en verano y mantiene buena transmisión de luz, lo que puede reducir de forma notable el costo de enfriamiento en Virginia.",
       "Cambie las ventanas antes de pintar las molduras exteriores: se ahorra raspar y repintar ventanas recién instaladas, y las líneas de sellado quedan más limpias.",
-      "Si su casa se construyó antes de 1978, haga una prueba de plomo antes de retirar las ventanas: un kit de $30 puede ahorrarle grandes costos de remediación y problemas legales."
+      "Si su casa se construyó antes de 1978, haga una prueba de pintura con plomo antes de retirar nada: un kit de prueba reconocido por la EPA cuesta poco en comparación con los costos de remediación y la exposición legal."
     ],
     "safetyGear": [
       "Gafas de seguridad",
@@ -858,7 +858,7 @@
     "shortTitle": "Puertas",
     "title": "Instalación de puertas en Richmond, VA",
     "metaTitle": "Instalación de puertas en Richmond VA | MAS Contractors LLC",
-    "metaDescription": "Instalación de puertas en Richmond, Chesterfield y Midlothian VA desde $1,500. Puertas de entrada, francesas, corredizas de vidrio e interiores. ~100 % de retorno al vender. Licencia Clase A. Presupuesto gratis: (804) 833-4600.",
+    "metaDescription": "Instalación de puertas en Richmond, Chesterfield y Midlothian VA desde $1,500. Puertas de entrada, francesas, corredizas de vidrio e interiores. Buen retorno al vender. Licencia Clase A. Presupuesto gratis: (804) 833-4600.",
     "heroText": "Cause una gran primera impresión, y una segura, con una puerta instalada por profesionales.",
     "img": "/gallery/Doors.jpeg",
     "imgAlt": "Instalación de puerta de entrada y puertas francesas en Richmond VA por MAS Contractors",
@@ -927,7 +927,7 @@
       },
       {
         "question": "¿Cambiar la puerta de entrada aumenta el valor de mi casa?",
-        "answer": "Sí: cambiar la puerta de entrada está siempre entre las mejoras exteriores con mejor retorno. En el mercado del Atlántico Medio, una puerta de entrada de acero recupera cerca del 100 % de su costo al vender, así que es de las pocas mejoras que prácticamente se pagan solas. Además de la reventa, una puerta nueva mejora la fachada, la seguridad, la eficiencia energética y su experiencia cada vez que llega a casa."
+        "answer": "Sí: el reemplazo de la puerta de entrada se ubica de manera constante entre las mejoras exteriores de mayor retorno. En el informe Cost vs. Value 2025 de Zonda Media, el reemplazo de una puerta de entrada de acero recuperó cerca del 216 % de su costo en la reventa en promedio en todo EE. UU.; los resultados varían según el mercado. Más allá de la reventa, una puerta nueva mejora el aspecto exterior, la seguridad, la eficiencia energética y su experiencia diaria cada vez que llega a casa."
       },
       {
         "question": "¿Cómo sé si también tengo que cambiar el marco de la puerta?",
@@ -1153,7 +1153,7 @@
     "faq": [
       {
         "question": "¿Puedo convertir mi garaje en espacio habitable en el condado de Chesterfield?",
-        "answer": "Sí, pero requiere permiso de construcción y debe cumplir los códigos residenciales, incluidos los niveles de aislamiento, el aire acondicionado, la electricidad y los requisitos de escape. En algunas zonas, el condado de Chesterfield también exige mantener un mínimo de espacios de estacionamiento en la propiedad. MAS Contractors se encarga de toda la coordinación de permisos y del cumplimiento del código como parte del proyecto."
+        "answer": "Sí, pero requiere permiso de construcción y debe cumplir los códigos de construcción residencial, incluidos los niveles de aislamiento, la climatización, la parte eléctrica y los requisitos de salida de emergencia. La lista de trabajos con permiso del condado de Chesterfield incluye convertir un garaje en espacio habitable. MAS Contractors gestiona toda la coordinación de permisos y el cumplimiento del código como parte del proyecto."
       },
       {
         "question": "¿Qué diferencia hay entre un solarium de tres estaciones y uno de cuatro?",
@@ -1161,7 +1161,7 @@
       },
       {
         "question": "¿Puedo terminar mi sótano como dormitorio en Richmond, VA?",
-        "answer": "Sí, pero un dormitorio en el sótano necesita una ventana de escape del tamaño que exige el código IRC: al menos 5.7 pies cuadrados de apertura, 24\" de alto, 20\" de ancho y el alféizar a no más de 44\" del piso. Si sus ventanas son demasiado pequeñas, instalamos pozos de ventana y abrimos los huecos según el código. Es un cambio que requiere permiso tanto en Chesterfield como en Richmond."
+        "answer": "Sí, pero un dormitorio en el sótano requiere una ventana de salida de emergencia que cumpla los requisitos de tamaño del código residencial. Si sus ventanas actuales son demasiado pequeñas, instalamos pozos de ventana y abrimos los vanos según el código. En el condado de Chesterfield, agrandar o agregar una abertura de ventana es un trabajo que requiere permiso."
       },
       {
         "question": "¿Cuánto cuesta terminar un sótano en Richmond?",
@@ -1169,11 +1169,11 @@
       },
       {
         "question": "¿Convertir un garaje o hacer un cuarto extra requiere permiso en Virginia?",
-        "answer": "Sí. En Virginia, cualquier trabajo que cambie el uso de un espacio o agregue pies cuadrados climatizados requiere permiso de construcción, incluidas las conversiones de garaje, de ático y los cuartos extra. MAS Contractors tramita todas las solicitudes e inspecciones para que usted no tenga que hacerlo."
+        "answer": "Sí. En el condado de Chesterfield, convertir un garaje en espacio habitable y terminar un ático, sótano o cuarto sobre el garaje requieren permiso de construcción. MAS Contractors gestiona todas las solicitudes de permisos y las inspecciones para que usted no tenga que hacer el trámite por su cuenta."
       },
       {
         "question": "¿Una habitación nueva aumenta el valor de mi casa en Richmond?",
-        "answer": "Los pies cuadrados terminados siempre aumentan el valor tasado en Richmond. Terminar un sótano o convertir un garaje suele recuperar entre el 60 y el 75 % del costo al vender. Los solariums y cuartos extra suman espacio que los compradores de Richmond buscan activamente, sobre todo oficinas en casa desde 2020. El verdadero retorno son años de uso diario por una fracción de lo que costaría mudarse a una casa más grande."
+        "answer": "Los pies cuadrados terminados generalmente aumentan el valor de tasación en Richmond. Los sunrooms y los cuartos de usos múltiples agregan espacio habitable que los compradores de Richmond buscan activamente, en particular las oficinas en casa desde 2020. El verdadero retorno son años de uso diario a una fracción del costo de mudarse a una casa más grande."
       }
     ],
     "keywords": [
@@ -1276,7 +1276,7 @@
     "faq": [
       {
         "question": "¿Cuál es el mejor azulejo para una ducha en Richmond, VA?",
-        "answer": "El azulejo de porcelana apto para zonas húmedas (PEI 4 o 5) es la opción más duradera para las duchas de Richmond. No es poroso, no necesita sellado y aguanta sin problema la humedad de Virginia. La piedra natural y el mármol son preciosos, pero necesitan sellado periódico y una instalación más precisa para evitar manchas y filtraciones."
+        "answer": "El porcelanato es la opción más durable para las duchas de Richmond. Una pieza con absorción de agua de 0.5 % o menos (ASTM C373) puede certificarse como porcelanato; por lo general no requiere sellado y soporta la humedad de Virginia sin problemas. Revise las clasificaciones de desgaste y antideslizamiento del fabricante para pisos mojados. La piedra natural y el mármol son hermosos, pero requieren sellado periódico y una instalación más precisa para evitar manchas y la penetración de humedad."
       },
       {
         "question": "¿Cuánto tarda la instalación de azulejo?",
@@ -1288,11 +1288,11 @@
       },
       {
         "question": "¿Qué diferencia hay entre azulejo de cerámica y de porcelana?",
-        "answer": "La porcelana es más densa, más dura y menos porosa que la cerámica: absorbe menos del 0.5 % de humedad, frente al 3–7 % de la cerámica. Para zonas húmedas, exteriores y pisos de mucho tránsito con el clima húmedo de Richmond, la porcelana siempre es mejor. La cerámica funciona bien en salpicaderos y paredes de poco uso."
+        "answer": "El porcelanato es más denso, duro y menos poroso que la cerámica: absorbe 0.5 % de humedad o menos, mientras que la cerámica en general absorbe más. Para áreas mojadas, usos exteriores y pisos de mucho tráfico en el clima húmedo de Richmond, el porcelanato suele ser la mejor opción. La cerámica funciona bien en salpicaderos y muros de poco tráfico."
       },
       {
         "question": "¿Pueden instalar azulejo de gran formato (24×24\" o más)?",
-        "answer": "Sí, y es una de nuestras especialidades. El azulejo de 24\" o más requiere una base más plana (máximo 1/8\" de variación en 10 pies), untar también el reverso de la pieza, adhesivo para gran formato y un sistema de nivelación durante la instalación. Cuidar estos detalles es lo que distingue un gran formato espectacular de uno que se despostilla, queda desnivelado o se agrieta en un año."
+        "answer": "Sí, y es una de nuestras especialidades. Las piezas con un lado de más de 15\" requieren un sustrato más plano (ANSI A108.02 permite una variación máxima de 1/8\" en 10 pies), la técnica de untar mortero también en el reverso, mortero para gran formato y un sistema de control de desniveles durante la instalación. Cuidar estos detalles es lo que distingue al azulejo de gran formato que se ve espectacular del que se descascara, se desnivela o se agrieta en un año."
       },
       {
         "question": "¿Se puede instalar azulejo sobre azulejo existente?",
@@ -1309,7 +1309,7 @@
     "challenges": [
       {
         "title": "Base plana para el gran formato",
-        "desc": "El azulejo de gran formato (24\" o más) necesita una base plana con 1/8\" de tolerancia en 10 pies, mucho más exigente que el azulejo estándar. Los subpisos viejos casi nunca lo cumplen sin una capa autonivelante. Saltarse esta preparación hace que las piezas se muevan, se agrieten y queden desniveles visibles desde el otro lado del cuarto."
+        "desc": "Los azulejos de gran formato (más de 15\" en un lado) requieren sustratos planos a 1/8\" en 10 pies, mucho más estricto que el trabajo con azulejo estándar. Los subpisos viejos casi nunca lo cumplen sin una capa autonivelante. Omitir esta preparación hace que las piezas se muevan, se agrieten y muestren desniveles visibles desde lejos."
       },
       {
         "title": "Compatibilidad del sistema de impermeabilización",
@@ -1328,7 +1328,7 @@
       "Presente siempre en seco todo el patrón en el piso o la ducha antes de mezclar el adhesivo: se ve dónde caen los cortes, se confirma que la distribución se ve bien y se puede ajustar el punto de partida para evitar tiras incómodas en los bordes visibles.",
       "Selle la piedra natural y la porcelana sin esmaltar antes de la lechada: la lechada mancha para siempre la piedra sin sellar en 30 minutos de contacto. Aplique el sellador, deje que cure por completo y después aplique la lechada.",
       "Use juntas de movimiento (silicón, no lechada) en cada cambio de plano: donde el piso se encuentra con la pared, donde el azulejo toca el bordillo de la tina y en las esquinas interiores de las duchas. Las estructuras se mueven; la lechada no.",
-      "En el gran formato, unte también el reverso de cada pieza además de extender el adhesivo en la base: bajo piezas de 16\" o más se necesita más del 95 % de cobertura. Los huecos crean zonas huecas que se agrietan al pisarlas.",
+      "Unte mortero también en el reverso de los azulejos de gran formato además de extenderlo en el sustrato: importa una buena cobertura bajo la pieza. Los vacíos crean zonas huecas que se agrietan con el tránsito.",
       "En el piso de la ducha, deje una pendiente de 1/4\" por pie hacia el desagüe en la cama de mortero antes de colocar el azulejo: un piso de ducha que no drena por completo se queda mojado y le sale moho con la humedad de Virginia."
     ],
     "safetyGear": [
