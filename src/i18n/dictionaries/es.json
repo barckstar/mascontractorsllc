@@ -561,6 +561,7 @@
     "success": "¡Mensaje enviado! Le responderemos en 24 a 48 horas con su presupuesto gratis.",
     "error": "No se pudo enviar. Llámenos directamente al (804) 833-4600.",
     "captchaMissing": "Complete la verificación CAPTCHA.",
+    "captchaUnavailable": "No se pudo cargar la verificación. Recargue la página o llámenos al (804) 833-4600.",
     "firstName": "Nombre",
     "firstNamePh": "Juan",
     "lastName": "Apellido",

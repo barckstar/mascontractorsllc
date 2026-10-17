@@ -42,7 +42,7 @@ export default function GalleryContent({ gallery }) {
                     transition={{ duration: 0.8 }}
                     className="relative text-center"
                 >
-                    <h1 className="font-contrax text-5xl md:text-7xl font-medium text-[#9fe300] mb-4 tracking-wider mt-40 md:mt-20">
+                    <h1 className="font-contrax text-5xl md:text-7xl font-medium text-[#9fe300] mb-4 tracking-wider mt-44 md:mt-32 lg:mt-36">
                         {g.title}
                     </h1>
                     <div className="w-24 h-1 bg-[#9fe300] mx-auto rounded-full shadow-[0_0_10px_#9fe300]" />

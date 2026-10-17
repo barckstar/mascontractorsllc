@@ -43,7 +43,7 @@ function Hero({ photos }) {
     ];
 
     return (
-        <section ref={ref} className="relative overflow-hidden pt-40 pb-16 md:pt-48 lg:pt-52 lg:pb-24">
+        <section ref={ref} className="relative overflow-hidden pt-44 pb-16 md:pt-48 lg:pt-52 lg:pb-24">
             {/* Blueprint grid + glow */}
             <div
                 aria-hidden="true"

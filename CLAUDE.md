@@ -8,7 +8,7 @@ Sitio web de **MAS Contractors LLC**, contratista general en Richmond, VA. Next.
 
 - Repo: `git@github.com:barckstar/mascontractorsllc.git`
 - Dominio: `mascontractors.com` (redirect de `www` → no-www configurado en `next.config.js`)
-- Deploy: Vercel (usa `@vercel/speed-insights`, no hay carpeta `.vercel` ni `vercel.json` versionados — el proyecto está linkeado en el dashboard de Vercel, no localmente)
+- Deploy: Vercel (usa `@vercel/speed-insights`, no hay carpeta `.vercel` versionada — el proyecto está linkeado en el dashboard de Vercel; `vercel.json` solo define el cron del chequeo diario)
 
 ## Comandos
 
@@ -22,20 +22,26 @@ node scripts/optimize-images.js   # opcional, re-comprime imágenes en public/ga
 
 ⚠️ **`npm run lint` está roto.** El script sigue siendo `next lint`, pero Next 16 eliminó ese subcomando: ahora interpreta `lint` como un directorio y falla con *"Invalid project directory provided, no such directory: .../lint"*. Para arreglarlo hay que migrar a la CLI de ESLint directamente (`eslint .`) con un `eslint.config.mjs` (flat config).
 
-No hay test runner configurado. La verificación real es `npm run build` (debe generar todas las páginas estáticas sin error —143 hoy, y crece con cada post—; antes corre `scripts/check-i18n.mjs`) más revisión visual en el navegador.
+`npm test` corre `tests/*.test.mjs` con el runner nativo de Node (hoy cubren `/api/contact` y `/api/cron/contact-check`). Se corren en local antes de cada push; no hay CI en GitHub. Además `npm run build` (debe generar todas las páginas estáticas sin error —143 hoy, y crece con cada post—; antes corre `scripts/check-i18n.mjs`) más revisión visual en el navegador.
 
 ## Variables de entorno
 
-Copiar `.env.example` → `.env.local`. Son `NEXT_PUBLIC_*` porque las usa el Client Component `contact.jsx`:
+Copiar `.env.example` → `.env.local`. El formulario de contacto usa **Cloudflare
+Turnstile** en el cliente (`NEXT_PUBLIC_TURNSTILE_SITE_KEY`) y manda el POST a
+`app/api/contact/route.js`, que valida el token (`TURNSTILE_SECRET_KEY`) y envía
+por la API REST de EmailJS. Reutiliza `NEXT_PUBLIC_EMAILJS_SERVICE_ID/TEMPLATE_ID/PUBLIC_KEY`
+(ya definidas en Vercel; `EMAILJS_*` con el mismo nombre las sobrescriben) y añade una
+clave **solo de servidor**: `EMAILJS_PRIVATE_KEY`. En EmailJS hay
+que activar *Allow EmailJS API for non-browser applications* (Account → Security).
+En producción están en las Environment Variables de Vercel.
 
-```
-NEXT_PUBLIC_RECAPTCHA_SITE_KEY=
-NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=
-NEXT_PUBLIC_EMAILJS_SERVICE_ID=
-NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=
-```
-
-En producción estas keys están en las Environment Variables de Vercel.
+**Chequeo diario:** `vercel.json` programa un Vercel Cron (13:17 UTC) que llama a
+`app/api/cron/contact-check/route.js`. Vercel manda `Authorization: Bearer $CRON_SECRET`
+(define `CRON_SECRET` en Vercel). La ruta valida que la clave de Turnstile sea buena y
+envía un correo "[MONITOR]" por EmailJS con las variables reales; si algo falla responde
+500 y avisa a `ALERT_WEBHOOK_URL` (opcional). Señal extra: si un día no llega el correo
+"[MONITOR]" a la oficina, algo se rompió. Solo corre en el deploy de producción.
+La lógica compartida con `/api/contact` está en `lib/contactMail.js`.
 
 ## Estructura
 
@@ -205,7 +211,7 @@ Google. Es el enlace para el QR y el mensaje de entrega de obra.
 
 ## Stack
 
-Next.js 16, React 19, Tailwind 3, Framer Motion 12 (vía `LazyMotion` + componente `m`, ver `MotionProvider.jsx`), EmailJS (formulario de contacto), Google ReCAPTCHA v2, react-icons, lightgallery, sharp.
+Next.js 16, React 19, Tailwind 3, Framer Motion 12 (vía `LazyMotion` + componente `m`, ver `MotionProvider.jsx`), EmailJS vía `/api/contact` (formulario de contacto), Cloudflare Turnstile, react-icons, lightgallery, sharp.
 
 Sobre **sharp**: `scripts/optimize-images.js` es el único que lo importa directo, pero Next también lo usa para optimizar imágenes en el build — por eso además está fijado dentro del bloque `overrides` bajo `next`.
 

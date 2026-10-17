@@ -7,7 +7,7 @@ export default function NotFoundContent() {
     const { t, href } = useI18n();
     const n = t.notFound;
     return (
-        <div className="bg-[#1e1e1e] min-h-screen flex items-center justify-center px-6">
+        <div className="bg-[#1e1e1e] min-h-screen flex items-center justify-center px-6 pt-48 pb-16">
             <div className="text-center max-w-2xl mx-auto">
                 {/* 404 Number */}
                 <h1 className="text-[8rem] md:text-[12rem] font-contrax text-[#9fe300] leading-none mb-0 drop-shadow-[0_0_40px_rgba(159,227,0,0.3)] animate-pulse-slow">
