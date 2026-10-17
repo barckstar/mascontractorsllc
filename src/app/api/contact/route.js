@@ -36,8 +36,14 @@ export async function POST(request) {
 
   const res = await sendContactEmail(params);
   if (!res.ok) {
-    console.error("EmailJS error:", res.status, await res.text());
-    return Response.json({ error: "send_failed" }, { status: 502 });
+    const detail = (await res.text()).slice(0, 300);
+    console.error("EmailJS error:", res.status, detail);
+    // `upstream` lets us see the cause from the browser's Network tab (EmailJS
+    // errors are config messages, e.g. "no Private Key was provided").
+    return Response.json(
+      { error: "send_failed", upstream: { status: res.status, detail } },
+      { status: 502 }
+    );
   }
   return Response.json({ ok: true });
 }
