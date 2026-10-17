@@ -561,6 +561,7 @@
     "success": "Message sent! We'll respond within 24–48 hours with your free estimate.",
     "error": "Failed to send. Please call us directly at (804) 833-4600.",
     "captchaMissing": "Please complete the CAPTCHA verification.",
+    "captchaUnavailable": "The verification could not load. Please reload the page or call us directly at (804) 833-4600.",
     "firstName": "First Name",
     "firstNamePh": "John",
     "lastName": "Last Name",

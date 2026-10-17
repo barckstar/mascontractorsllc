@@ -1,8 +1,7 @@
 "use client";
 
 import React, { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
-import ReCAPTCHA from "react-google-recaptcha";
+import { Turnstile } from "@marsidev/react-turnstile";
 import { m } from "framer-motion";
 import { useI18n } from "@/i18n/I18nProvider";
 
@@ -14,36 +13,63 @@ function Contact() {
   const [status, setStatus] = useState(null); // null | { type: 'success'|'error', text: string }
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   const form = useRef();
-  const key = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+  const [captchaFailed, setCaptchaFailed] = useState(false);
+  const captchaRef = useRef();
+  const key = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
+  const noKey = !key;
 
   const onChangeCaptcha = (value) => {
     if (!value) return;
+    setCaptchaFailed(false);
     setCaptchaValue(value);
     setIsButtonDisabled(false);
   };
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+  // Turnstile tokens are single-use and expire after 5 min; the widget refreshes
+  // them on its own, but if it can't we lock the button instead of sending a dead token.
+  const onExpiredCaptcha = () => {
+    setCaptchaValue(null);
     setIsButtonDisabled(true);
+  };
+
+  // The widget could not load or run (bad/missing site key, hostname not allowed in
+  // Cloudflare, blocked script...). Say so instead of leaving a silent locked button.
+  const onErrorCaptcha = (code) => {
+    console.error("Turnstile error:", code);
+    setCaptchaFailed(true);
+    onExpiredCaptcha();
+  };
+
+  const resetCaptcha = () => {
+    captchaRef.current?.reset();
+    setCaptchaValue(null);
+  };
+
+  const sendEmail = async (e) => {
+    e.preventDefault();
     setStatus(null);
-    if (captchaValue) {
-      emailjs
-        .sendForm(
-          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-          form.current,
-          { publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY }
-        )
-        .then(
-          () => setStatus({ type: "success", text: f.success }),
-          (error) => {
-            setStatus({ type: "error", text: f.error });
-            console.error("EmailJS error:", error.text);
-          }
-        );
-    } else {
+    if (!captchaValue) {
       setStatus({ type: "error", text: f.captchaMissing });
-      setIsButtonDisabled(false);
+      return;
+    }
+    setIsButtonDisabled(true);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...Object.fromEntries(new FormData(form.current)),
+          token: captchaValue,
+        }),
+      });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      setStatus({ type: "success", text: f.success });
+      form.current.reset();
+    } catch (error) {
+      setStatus({ type: "error", text: f.error });
+      console.error("Contact form error:", error.message);
+    } finally {
+      resetCaptcha();
     }
   };
 
@@ -158,12 +184,19 @@ function Contact() {
 
             <div className="flex justify-center py-1">
               {key && (
-                <ReCAPTCHA
-                  sitekey={key}
-                  onChange={onChangeCaptcha}
-                  theme="dark"
-                  hl={lang}
+                <Turnstile
+                  ref={captchaRef}
+                  siteKey={key}
+                  onSuccess={onChangeCaptcha}
+                  onExpire={onExpiredCaptcha}
+                  onError={onErrorCaptcha}
+                  options={{ theme: "dark", language: lang }}
                 />
+              )}
+              {(captchaFailed || noKey) && (
+                <p role="alert" className="max-w-md text-center font-body text-sm text-red-400">
+                  {f.captchaUnavailable}
+                </p>
               )}
             </div>
 
