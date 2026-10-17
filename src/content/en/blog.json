@@ -103,7 +103,7 @@
       },
       {
         "type": "p",
-        "text": "In the 2025 Remodeling Cost vs. Value Report from Zonda Media, a midrange minor kitchen remodel (average job cost $28,458 nationally) recouped about 113% of its cost at resale on average across the U.S. Virginia falls in the report's South Atlantic region, so results in the Richmond market will differ. Resale value is only part of the picture: the real return is a kitchen you use every day."
+        "text": "In the 2025 Remodeling Cost vs. Value Report from Zonda Media, a midrange minor kitchen remodel (average job cost $28,458 nationally) recouped about 113% of its cost at resale on average across the U.S. Results in the Richmond market will differ. Resale value is only part of the picture: the real return is a kitchen you use every day."
       },
       {
         "type": "tip",
@@ -379,7 +379,7 @@
           [
             "Resale value (Cost vs. Value 2025, national)",
             "Fiber-cement siding replacement recouped about 114% of cost",
-            "Tracked separately in the report"
+            "Not compared here"
           ]
         ]
       },
@@ -715,7 +715,7 @@
       },
       {
         "type": "tip",
-        "text": "Pro tip: If you have architectural shingles with an algae-resistance rating, look for the 'AR' designation. Algae-resistant shingles include algae-inhibiting granules, and manufacturers back them with an AR warranty of a set length. Check that length for the product you choose — it's worth the small premium for north-facing or heavily shaded roofs in the Richmond area."
+        "text": "Pro tip: If you have architectural shingles with an algae-resistance rating, look for the 'AR' designation. Check the manufacturer's warranty terms for the AR rating on the product you choose — it can be worth the small premium for north-facing or heavily shaded roofs in the Richmond area."
       }
     ],
     "references": [
@@ -747,41 +747,21 @@
     "publishDate": "2026-06-03",
     "image": "/gallery/Bathroom.jpeg",
     "imgAlt": "Bathroom remodel completed by MAS Contractors in Richmond VA showing modern tile and fixtures",
-    "excerpt": "A bathroom remodel is one of the most impactful home improvements you can make — but only if you spend your money in the right places. Here's what the published data shows, and where contractors see the biggest bang for the buck.",
+    "excerpt": "A bathroom remodel is one of the most impactful home improvements you can make — but only if you spend your money in the right places. Here's where contractors see the biggest bang for the buck.",
     "relatedService": "bathroom-remodeling",
     "relatedServiceLabel": "Bathroom Remodeling",
     "content": [
       {
         "type": "lead",
-        "text": "Not all bathroom remodels are created equal. In the Richmond market, how much you get back at resale depends on scope, materials, and buyer expectations in your specific neighborhood. Here's what the published numbers — and our on-the-ground experience — actually show."
+        "text": "Not all bathroom remodels are created equal. In the Richmond market, how much you get back at resale depends on scope, materials, and buyer expectations in your specific neighborhood. Here's what our on-the-ground experience shows."
       },
       {
         "type": "h2",
-        "text": "How Much of a Bathroom Remodel Do You Get Back at Resale?"
-      },
-      {
-        "type": "table",
-        "headers": [
-          "Measure (Cost vs. Value 2025)",
-          "Job cost / resale value",
-          "Cost recouped"
-        ],
-        "rows": [
-          [
-            "Midrange bath remodel, national average",
-            "$26,138 / about $20,900",
-            "80%"
-          ],
-          [
-            "Midrange bath remodel, South Atlantic region (includes Virginia)",
-            "—",
-            "75.3%"
-          ]
-        ]
+        "text": "What Determines Your Return at Resale?"
       },
       {
         "type": "p",
-        "text": "Source: Zonda Media, Remodeling Cost vs. Value Report 2025, which evaluates 28 projects across nine U.S. regions. Virginia is part of the South Atlantic region. These are averages for a defined scope, not a forecast for your home: results vary by neighborhood — a $50,000 master bath renovation in Bon Air adds more absolute value than the same renovation in a neighborhood where homes sell at $250,000."
+        "text": "Resale return varies by scope and by neighborhood, so we don't promise a percentage. A $50,000 master bath renovation in Bon Air adds more absolute value than the same renovation in a neighborhood where homes sell at $250,000. Ask a local real estate agent what buyers in your price range expect before you set a budget."
       },
       {
         "type": "h2",
@@ -848,14 +828,6 @@
       }
     ],
     "references": [
-      {
-        "name": "Zonda Media — Cost vs. Value 2025, national averages",
-        "url": "https://www.jlconline.com/cost-vs-value/2025/national/"
-      },
-      {
-        "name": "Zonda Media — Cost vs. Value 2025, South Atlantic region (includes Virginia)",
-        "url": "https://www.jlconline.com/cost-vs-value/2025/south-atlantic/"
-      },
       {
         "name": "U.S. EPA — WaterSense",
         "url": "https://www.epa.gov/watersense"
@@ -1566,7 +1538,7 @@
       },
       {
         "type": "p",
-        "text": "Entry door replacement consistently ranks among the highest-return exterior improvements a homeowner can make. In the 2025 Remodeling Cost vs. Value Report from Zonda Media, a steel entry door replacement recouped about 216% of its cost at resale nationally and about 219% in the South Atlantic region, which includes Virginia; the Virginia Beach market showed about 175%. The report's project is a 20-gauge steel door with a half-glass panel and new trim, and results vary by market and by home. Beyond resale, a new door immediately improves curb appeal, security, and energy efficiency."
+        "text": "Entry door replacement consistently ranks among the highest-return exterior improvements a homeowner can make. In the 2025 Remodeling Cost vs. Value Report from Zonda Media, a steel entry door replacement (average job cost $2,435) recouped about 216% of its cost at resale on average across the U.S., second only to garage door replacement. The report's project is a 20-gauge steel door with a half-glass panel and new trim, and results in your market will vary. Beyond resale, a new door immediately improves curb appeal, security, and energy efficiency."
       },
       {
         "type": "cta",
@@ -1611,14 +1583,6 @@
       {
         "name": "Zonda Media — Remodeling Cost vs. Value Report 2025, as summarized in Door + Access Systems (Winter 2025)",
         "url": "https://www.dasma.com/wp-content/uploads/2025/12/CostvsValueReport2025_Winter2025.pdf"
-      },
-      {
-        "name": "Zonda Media — Cost vs. Value 2025, South Atlantic region (includes Virginia)",
-        "url": "https://www.jlconline.com/cost-vs-value/2025/south-atlantic/"
-      },
-      {
-        "name": "Zonda Media — Cost vs. Value 2025, Virginia Beach, VA market",
-        "url": "https://www.jlconline.com/cost-vs-value/2025/south-atlantic/virginia-beach-va/"
       }
     ],
     "reviewed": "2026-10-16",
@@ -1680,7 +1644,7 @@
       {
         "type": "ul",
         "items": [
-          "Bathroom shower & floor: Porcelain — it is classed as impervious under ANSI A137.1 (0.5% water absorption or less) and generally doesn't need sealing. Check the manufacturer's wear and slip-resistance ratings for wet floors.",
+          "Bathroom shower & floor: Porcelain — tile tested at 0.5% water absorption or less (ASTM C373) can be certified as porcelain, and it generally doesn't need sealing. Check the manufacturer's wear and slip-resistance ratings for wet floors.",
           "Kitchen backsplash: Ceramic or glass tile work well here since the surface isn't constantly wet — a great place to use bolder color or pattern.",
           "Kitchen floor: Large-format porcelain (16\" and up) for a clean, seamless look that resists staining from daily kitchen spills.",
           "Feature wall or fireplace surround: Natural stone or marble, sealed before grouting, for a higher-end look in a lower-moisture area."
@@ -1707,7 +1671,7 @@
       },
       {
         "type": "p",
-        "text": "Large-format tile (we use the term for tile with at least one edge of 15\" or more) creates a clean, modern look with fewer grout lines, but ANSI A108.02 requires a much flatter substrate for it than for standard tile: no more than 1/8\" variation over 10 feet. Older subfloors almost never meet this without self-leveling underlayment first. Skipping this step is the most common reason large-format tile ends up rocking, cracking, or showing visible lippage."
+        "text": "Large-format tile (we use the term for tile with at least one edge over 15\") creates a clean, modern look with fewer grout lines, but ANSI A108.02 requires a much flatter substrate for it than for standard tile: no more than 1/8\" variation over 10 feet. Older subfloors almost never meet this without self-leveling underlayment first. Skipping this step is the most common reason large-format tile ends up rocking, cracking, or showing visible lippage."
       },
       {
         "type": "h2",
@@ -1745,7 +1709,7 @@
     ],
     "references": [
       {
-        "name": "Tile Council of North America — Standards and the Ceramic Tile Industry (ANSI A137.1, water absorption)",
+        "name": "Tile Council of North America — Standards and the Ceramic Tile Industry (ASTM C373 water absorption, porcelain certification)",
         "url": "https://www.astm.org/news/standards-and-ceramic-tile-industry-jf24"
       },
       {
@@ -2095,7 +2059,7 @@
         "type": "ul",
         "items": [
           "Hidden subfloor rot: A bathroom that has had a slow leak around the toilet flange or shower pan for years will have compromised subfloor underneath. You don't find it until demo day. Budget a contingency — this is the most common bathroom surprise we encounter.",
-          "Lead or galvanized supply lines in older homes: lead pipes, solder, and flux were banned for drinking-water plumbing by the 1986 Safe Drinking Water Act amendments, so homes built before then may have lead or galvanized supply piping. The EPA advises having a licensed plumber check, and replacing old supply lines during a remodel is often the sensible time to do it.",
+          "Lead or galvanized supply lines in older homes: lead pipes, solder, and flux were banned for drinking-water plumbing by the 1986 Safe Drinking Water Act amendments, so homes built before then may have lead or galvanized supply piping. Have a licensed plumber check them; replacing old supply lines during a remodel is often the sensible time to do it.",
           "Undersized ventilation: The International Residential Code, which the Virginia Residential Code is based on, sets a minimum bathroom exhaust of 50 cfm for a fan run intermittently (20 cfm if run continuously). Many older fans fall short or are poorly ducted, so we often recommend a quiet, ENERGY STAR fan sized to the room and ducted outdoors. Upgrading is inexpensive, but it's a line item most budget estimates leave out entirely."
         ]
       },
@@ -2222,7 +2186,7 @@
       },
       {
         "type": "p",
-        "text": "Our typical Richmond-area project lands between $12,000 and $22,000. For a national benchmark, the 2025 Remodeling Cost vs. Value Report from Zonda Media put a composite deck addition at an average job cost of about $25,096 and recouped about 89% of that at resale, with wood deck additions recouping about 95%."
+        "text": "Our typical Richmond-area project lands between $12,000 and $22,000."
       },
       {
         "type": "h2",
@@ -2342,10 +2306,6 @@
       {
         "name": "Chesterfield County — Requirements for Building a House or Addition (pamphlet, PDF; dated January 1, 2008)",
         "url": "https://www.chesterfield.gov/DocumentCenter/View/1422/Requirements-for-Building-a-House-or-Addition-PDF"
-      },
-      {
-        "name": "Zonda Media — Cost vs. Value 2025, national averages",
-        "url": "https://www.jlconline.com/cost-vs-value/2025/national/"
       }
     ],
     "reviewed": "2026-10-16",

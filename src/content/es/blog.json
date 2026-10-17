@@ -103,7 +103,7 @@
       },
       {
         "type": "p",
-        "text": "En el informe Remodeling Cost vs. Value 2025 de Zonda Media, una remodelación menor de cocina de gama media (costo promedio de $28,458 a nivel nacional) recuperó en promedio cerca del 113 % de su costo en la reventa en todo EE. UU. Virginia pertenece a la región South Atlantic del informe, así que los resultados en el mercado de Richmond serán distintos. El valor de reventa es solo una parte: el verdadero retorno es una cocina que usted disfruta todos los días."
+        "text": "En el informe Remodeling Cost vs. Value 2025 de Zonda Media, una remodelación menor de cocina de gama media (costo promedio de $28,458 a nivel nacional) recuperó en promedio cerca del 113 % de su costo en la reventa en todo EE. UU. Los resultados en el mercado de Richmond serán distintos. El valor de reventa es solo una parte: el verdadero retorno es una cocina que usted disfruta todos los días."
       },
       {
         "type": "tip",
@@ -379,7 +379,7 @@
           [
             "Valor de reventa (Cost vs. Value 2025, nacional)",
             "El reemplazo con revestimiento de fibrocemento recuperó cerca del 114 % de su costo",
-            "Se mide por separado en el informe"
+            "No se compara aquí"
           ]
         ]
       },
@@ -715,7 +715,7 @@
       },
       {
         "type": "tip",
-        "text": "Consejo profesional: si va a usar tejas arquitectónicas con resistencia a las algas, busque la designación 'AR'. Las tejas resistentes a las algas incluyen gránulos que inhiben su crecimiento, y los fabricantes las respaldan con una garantía AR de duración definida. Revise esa duración en el producto que elija; vale la pena la pequeña diferencia de precio en techos orientados al norte o muy sombreados en el área de Richmond."
+        "text": "Consejo profesional: si va a usar tejas arquitectónicas con resistencia a las algas, busque la designación 'AR'. Revise los términos de garantía del fabricante para la designación AR del producto que elija; puede valer la pena la pequeña diferencia de precio en techos orientados al norte o muy sombreados en el área de Richmond."
       }
     ],
     "references": [
@@ -747,41 +747,21 @@
     "publishDate": "2026-06-03",
     "image": "/gallery/Bathroom.jpeg",
     "imgAlt": "Remodelación de baño terminada por MAS Contractors en Richmond VA con azulejo y grifería modernos",
-    "excerpt": "Remodelar el baño es una de las mejoras con más impacto que puede hacer en su casa, pero solo si gasta el dinero en los lugares correctos. Esto es lo que muestran los datos publicados y dónde los contratistas vemos el mayor rendimiento por dólar.",
+    "excerpt": "Remodelar el baño es una de las mejoras con más impacto que puede hacer en su casa, pero solo si gasta el dinero en los lugares correctos. Esto es dónde los contratistas vemos el mayor rendimiento por dólar.",
     "relatedService": "bathroom-remodeling",
     "relatedServiceLabel": "Remodelación de baños",
     "content": [
       {
         "type": "lead",
-        "text": "No todas las remodelaciones de baño son iguales. En el mercado de Richmond, cuánto recupera al vender depende del alcance, de los materiales y de lo que esperan los compradores en su barrio. Esto es lo que muestran las cifras publicadas y nuestra experiencia en campo."
+        "text": "No todas las remodelaciones de baño son iguales. En el mercado de Richmond, cuánto recupera al vender depende del alcance, de los materiales y de lo que esperan los compradores en su barrio. Esto es lo que muestra nuestra experiencia en campo."
       },
       {
         "type": "h2",
-        "text": "¿Cuánto de una remodelación de baño se recupera al vender?"
-      },
-      {
-        "type": "table",
-        "headers": [
-          "Medida (Cost vs. Value 2025)",
-          "Costo del trabajo / valor de reventa",
-          "Costo recuperado"
-        ],
-        "rows": [
-          [
-            "Remodelación de baño de gama media, promedio nacional",
-            "$26,138 / cerca de $20,900",
-            "80 %"
-          ],
-          [
-            "Remodelación de baño de gama media, región South Atlantic (incluye Virginia)",
-            "—",
-            "75.3 %"
-          ]
-        ]
+        "text": "¿De qué depende lo que recupera al vender?"
       },
       {
         "type": "p",
-        "text": "Fuente: Zonda Media, informe Remodeling Cost vs. Value 2025, que evalúa 28 proyectos en nueve regiones de EE. UU. Virginia pertenece a la región South Atlantic. Son promedios para un alcance definido, no un pronóstico para su casa: los resultados varían según el barrio; una renovación de baño principal de $50,000 en Bon Air agrega más valor absoluto que la misma renovación en un barrio donde las casas se venden en $250,000."
+        "text": "El retorno en la reventa varía según el alcance y el barrio, por eso no prometemos un porcentaje. Una renovación de baño principal de $50,000 en Bon Air agrega más valor absoluto que la misma renovación en un barrio donde las casas se venden en $250,000. Pregunte a un agente inmobiliario local qué esperan los compradores de su rango de precio antes de fijar un presupuesto."
       },
       {
         "type": "h2",
@@ -848,14 +828,6 @@
       }
     ],
     "references": [
-      {
-        "name": "Zonda Media — Cost vs. Value 2025, promedios nacionales",
-        "url": "https://www.jlconline.com/cost-vs-value/2025/national/"
-      },
-      {
-        "name": "Zonda Media — Cost vs. Value 2025, región South Atlantic (incluye Virginia)",
-        "url": "https://www.jlconline.com/cost-vs-value/2025/south-atlantic/"
-      },
       {
         "name": "EPA de EE. UU. — WaterSense",
         "url": "https://www.epa.gov/watersense"
@@ -1566,7 +1538,7 @@
       },
       {
         "type": "p",
-        "text": "El reemplazo de la puerta de entrada se ubica de manera constante entre las mejoras exteriores de mayor retorno que puede hacer un propietario. En el informe Remodeling Cost vs. Value 2025 de Zonda Media, el reemplazo de una puerta de entrada de acero recuperó cerca del 216 % de su costo en la reventa a nivel nacional y cerca del 219 % en la región South Atlantic, que incluye Virginia; el mercado de Virginia Beach mostró cerca del 175 %. El proyecto del informe es una puerta de acero calibre 20 con panel de medio vidrio y moldura nueva, y los resultados varían según el mercado y la casa. Más allá de la reventa, una puerta nueva mejora de inmediato el aspecto exterior, la seguridad y la eficiencia energética."
+        "text": "El reemplazo de la puerta de entrada se ubica de manera constante entre las mejoras exteriores de mayor retorno que puede hacer un propietario. En el informe Remodeling Cost vs. Value 2025 de Zonda Media, el reemplazo de una puerta de entrada de acero (costo promedio de $2,435) recuperó cerca del 216 % de su costo en la reventa en promedio en todo EE. UU., solo detrás del reemplazo de puerta de garaje. El proyecto del informe es una puerta de acero calibre 20 con panel de medio vidrio y moldura nueva, y los resultados en su mercado variarán. Más allá de la reventa, una puerta nueva mejora de inmediato el aspecto exterior, la seguridad y la eficiencia energética."
       },
       {
         "type": "cta",
@@ -1611,14 +1583,6 @@
       {
         "name": "Zonda Media — Informe Remodeling Cost vs. Value 2025, según el resumen de Door + Access Systems (invierno de 2025)",
         "url": "https://www.dasma.com/wp-content/uploads/2025/12/CostvsValueReport2025_Winter2025.pdf"
-      },
-      {
-        "name": "Zonda Media — Cost vs. Value 2025, región South Atlantic (incluye Virginia)",
-        "url": "https://www.jlconline.com/cost-vs-value/2025/south-atlantic/"
-      },
-      {
-        "name": "Zonda Media — Cost vs. Value 2025, mercado de Virginia Beach, VA",
-        "url": "https://www.jlconline.com/cost-vs-value/2025/south-atlantic/virginia-beach-va/"
       }
     ],
     "reviewed": "2026-10-16",
@@ -1680,7 +1644,7 @@
       {
         "type": "ul",
         "items": [
-          "Ducha y piso de baño: porcelanato, que se clasifica como impermeable según ANSI A137.1 (absorción de agua de 0.5 % o menos) y por lo general no necesita sellado. Revise las clasificaciones de desgaste y antideslizamiento del fabricante para pisos mojados.",
+          "Ducha y piso de baño: porcelanato: una pieza con absorción de agua de 0.5 % o menos (ASTM C373) puede certificarse como porcelanato, y por lo general no necesita sellado. Revise las clasificaciones de desgaste y antideslizamiento del fabricante para pisos mojados.",
           "Salpicadero de cocina: la cerámica o el vidrio funcionan bien porque la superficie no está mojada todo el tiempo; es un gran lugar para usar color o diseño más audaz.",
           "Piso de cocina: porcelanato de gran formato (16\" o más) para un aspecto limpio y continuo que resiste las manchas de los derrames diarios.",
           "Muro de acento o chimenea: piedra natural o mármol, sellados antes de enlechar, para un acabado más elegante en un área de menor humedad."
@@ -1707,7 +1671,7 @@
       },
       {
         "type": "p",
-        "text": "El azulejo de gran formato (usamos el término para piezas con al menos un lado de 15\" o más) crea un aspecto limpio y moderno con menos juntas, pero la norma ANSI A108.02 exige un sustrato mucho más plano que para el azulejo estándar: no más de 1/8\" de variación en 10 pies. Los subpisos antiguos casi nunca lo cumplen sin una capa autonivelante previa. Omitir este paso es la razón más común por la que el azulejo de gran formato se mueve, se agrieta o muestra desniveles visibles entre piezas."
+        "text": "El azulejo de gran formato (usamos el término para piezas con al menos un lado de más de 15\") crea un aspecto limpio y moderno con menos juntas, pero la norma ANSI A108.02 exige un sustrato mucho más plano que para el azulejo estándar: no más de 1/8\" de variación en 10 pies. Los subpisos antiguos casi nunca lo cumplen sin una capa autonivelante previa. Omitir este paso es la razón más común por la que el azulejo de gran formato se mueve, se agrieta o muestra desniveles visibles entre piezas."
       },
       {
         "type": "h2",
@@ -1745,7 +1709,7 @@
     ],
     "references": [
       {
-        "name": "Tile Council of North America — Normas y la industria de la cerámica (ANSI A137.1, absorción de agua)",
+        "name": "Tile Council of North America — Normas y la industria de la cerámica (ASTM C373, absorción de agua y certificación de porcelanato)",
         "url": "https://www.astm.org/news/standards-and-ceramic-tile-industry-jf24"
       },
       {
@@ -2095,7 +2059,7 @@
         "type": "ul",
         "items": [
           "Pudrición oculta del subpiso: un baño con una fuga lenta alrededor de la brida del inodoro o de la base de la ducha durante años tendrá el subpiso comprometido. No se descubre hasta el día de la demolición. Reserve un margen para imprevistos: es la sorpresa más común que encontramos en un baño.",
-          "Tuberías de suministro de plomo o galvanizadas en casas antiguas: las tuberías, la soldadura y el fundente de plomo quedaron prohibidos para el agua potable con las enmiendas de 1986 a la Ley de Agua Potable Segura, así que las casas construidas antes pueden tener tuberías de plomo o galvanizadas. La EPA recomienda que un plomero con licencia las revise, y cambiar las líneas de suministro viejas durante una remodelación suele ser el momento adecuado.",
+          "Tuberías de suministro de plomo o galvanizadas en casas antiguas: las tuberías, la soldadura y el fundente de plomo quedaron prohibidos para el agua potable con las enmiendas de 1986 a la Ley de Agua Potable Segura, así que las casas construidas antes pueden tener tuberías de plomo o galvanizadas. Pida a un plomero con licencia que las revise; cambiar las líneas de suministro viejas durante una remodelación suele ser el momento adecuado.",
           "Ventilación insuficiente: el Código Residencial Internacional, en el que se basa el Código Residencial de Virginia, fija un mínimo de extracción de 50 cfm para un ventilador de baño que funciona de forma intermitente (20 cfm si funciona de forma continua). Muchos ventiladores antiguos se quedan cortos o tienen mal el ducto, por eso solemos recomendar un ventilador silencioso ENERGY STAR dimensionado para el cuarto y con ducto al exterior. Mejorarlo es barato, pero es una partida que la mayoría de los presupuestos omite por completo."
         ]
       },
@@ -2222,7 +2186,7 @@
       },
       {
         "type": "p",
-        "text": "Nuestro proyecto típico en el área de Richmond queda entre $12,000 y $22,000. Como referencia nacional, el informe Remodeling Cost vs. Value 2025 de Zonda Media situó una ampliación con deck de composite en un costo promedio de unos $25,096 y recuperó cerca del 89 % en la reventa, mientras que los decks de madera recuperaron cerca del 95 %."
+        "text": "Nuestro proyecto típico en el área de Richmond queda entre $12,000 y $22,000."
       },
       {
         "type": "h2",
@@ -2342,10 +2306,6 @@
       {
         "name": "Condado de Chesterfield — Requisitos para construir una casa o ampliación (folleto, PDF; fechado el 1 de enero de 2008)",
         "url": "https://www.chesterfield.gov/DocumentCenter/View/1422/Requirements-for-Building-a-House-or-Addition-PDF"
-      },
-      {
-        "name": "Zonda Media — Cost vs. Value 2025, promedios nacionales",
-        "url": "https://www.jlconline.com/cost-vs-value/2025/national/"
       }
     ],
     "reviewed": "2026-10-16",

@@ -194,7 +194,7 @@
       },
       {
         "question": "¿Qué retorno tiene remodelar un baño en Richmond?",
-        "answer": "Las remodelaciones de baño pueden recuperar una parte importante de su costo en la reventa. En el informe Cost vs. Value 2025 de Zonda Media, una remodelación de baño de gama media recuperó cerca del 80 % de su costo a nivel nacional y cerca del 75 % en la región South Atlantic, que incluye Virginia. Sin embargo, un baño anticuado reduce activamente el valor de su casa y la rapidez de venta, así que el retorno en calidad de vida mientras es dueño suele pesar más que la cuenta de reventa."
+        "answer": "Las remodelaciones de baño pueden recuperar una buena parte de su costo en la reventa, pero el retorno exacto varía según el alcance, los materiales y el barrio, por eso no prometemos un porcentaje. Un baño anticuado reduce activamente el valor de su casa y la rapidez de venta, así que el retorno en calidad de vida mientras es dueño suele pesar más que la cuenta de reventa."
       },
       {
         "question": "¿Necesito permiso para remodelar un baño en Virginia?",
@@ -219,7 +219,7 @@
       },
       {
         "title": "Ventilación insuficiente",
-        "desc": "Muchos ventiladores de baño en casas antiguas son pequeños o descargan en el ático en lugar de hacerlo al exterior. El código residencial modelo no permite que el extractor de un baño descargue en un ático, y la humedad atrapada puede causar moho detrás del azulejo y en la estructura de las paredes. Reemplazar el extractor según el código debe ser parte de toda remodelación de baño."
+        "desc": "Muchos ventiladores de baño en casas antiguas son pequeños o descargan en el ático en lugar de hacerlo al exterior. La guía de Building America indica descargar los extractores de baño directamente al exterior, no en un ático ni en un espacio de acceso, y la humedad atrapada puede causar moho detrás del azulejo y en la estructura de las paredes. Reemplazar el extractor según el código debe ser parte de toda remodelación de baño."
       },
       {
         "title": "Tuberías de plomo en casas anteriores a 1986",
@@ -349,7 +349,7 @@
       }
     ],
     "proTips": [
-      "Una teja resistente al impacto Clase 4 puede darle derecho a un descuento en el seguro de vivienda con algunas aseguradoras; pregunte a la suya antes de elegir la teja.",
+      "Pregunte a su aseguradora si una teja resistente al impacto Clase 4 da derecho a un descuento en el seguro de vivienda antes de elegir la teja.",
       "A 40 °F (4 °C) o menos, siga el procedimiento de instalación en clima frío del fabricante: las tiras autosellantes pueden no activarse de inmediato y las tejas pueden necesitar sellado manual para resistir el levantamiento por viento.",
       "Limpie las canaletas cada primavera y cada otoño en Richmond: las canaletas tapadas causan represas de hielo en enero y pudrición de la fascia todo el año.",
       "Cambie todos los sellos de tubería al poner techo nuevo: son de caucho, fallan a los 10–15 años (muchas veces antes que las tejas) y cambiarlos durante una instalación completa cuesta poco.",
@@ -566,7 +566,7 @@
       },
       {
         "question": "¿Un deck aumenta el valor de mi casa en Richmond?",
-        "answer": "En el informe Cost vs. Value 2025 de Zonda Media, una ampliación con deck de composite recuperó cerca del 89 % de su costo en la reventa a nivel nacional y una de madera cerca del 95 %. Los resultados en el mercado de Richmond varían. Los decks de composite ofrecen durabilidad y poco mantenimiento, y los compradores del área de Richmond valoran el espacio exterior funcional, sobre todo con la primavera y el otoño suaves de la zona."
+        "answer": "El retorno en la reventa varía según el diseño, los materiales y el barrio, por eso no prometemos un porcentaje. Los decks de composite ofrecen durabilidad y poco mantenimiento, y los compradores del área de Richmond valoran el espacio exterior funcional, sobre todo con la primavera y el otoño suaves de la zona."
       }
     ],
     "keywords": [
@@ -831,7 +831,7 @@
       },
       {
         "title": "Ventanas de escape en los dormitorios",
-        "desc": "El código de construcción residencial exige que los dormitorios tengan una abertura de escape y rescate de emergencia, por lo general con al menos 5.7 pies² de abertura libre neta (5.0 pies² en un piso a nivel del suelo). Muchas ventanas antiguas no cumplen este estándar. El cambio de ventanas es un buen momento para revisar sus dormitorios."
+        "desc": "Los dormitorios tienen requisitos de tamaño para sus aberturas de escape de emergencia según el código de construcción residencial, y una ventana de reemplazo no debe reducir la abertura. El cambio de ventanas es un buen momento para revisar sus dormitorios con la Inspección de Edificios del condado de Chesterfield."
       },
       {
         "title": "Falla del sello térmico entre los vidrios",
@@ -927,7 +927,7 @@
       },
       {
         "question": "¿Cambiar la puerta de entrada aumenta el valor de mi casa?",
-        "answer": "Sí: el reemplazo de la puerta de entrada se ubica de manera constante entre las mejoras exteriores de mayor retorno. En el informe Cost vs. Value 2025 de Zonda Media, el reemplazo de una puerta de entrada de acero recuperó cerca del 216 % de su costo a nivel nacional y cerca del 219 % en la región South Atlantic, que incluye Virginia; los resultados varían según el mercado. Más allá de la reventa, una puerta nueva mejora el aspecto exterior, la seguridad, la eficiencia energética y su experiencia diaria cada vez que llega a casa."
+        "answer": "Sí: el reemplazo de la puerta de entrada se ubica de manera constante entre las mejoras exteriores de mayor retorno. En el informe Cost vs. Value 2025 de Zonda Media, el reemplazo de una puerta de entrada de acero recuperó cerca del 216 % de su costo en la reventa en promedio en todo EE. UU.; los resultados varían según el mercado. Más allá de la reventa, una puerta nueva mejora el aspecto exterior, la seguridad, la eficiencia energética y su experiencia diaria cada vez que llega a casa."
       },
       {
         "question": "¿Cómo sé si también tengo que cambiar el marco de la puerta?",
@@ -1161,7 +1161,7 @@
       },
       {
         "question": "¿Puedo terminar mi sótano como dormitorio en Richmond, VA?",
-        "answer": "Sí, pero un dormitorio en el sótano requiere una ventana de salida de emergencia del tamaño adecuado según los códigos IRC: abertura mínima de 5.7 pies², 24\" de alto, 20\" de ancho y una altura máxima del antepecho de 44\". Si sus ventanas actuales son demasiado pequeñas, instalamos pozos de ventana y abrimos los vanos según el código. En el condado de Chesterfield, agrandar o agregar una abertura de ventana es un trabajo que requiere permiso."
+        "answer": "Sí, pero un dormitorio en el sótano requiere una ventana de salida de emergencia que cumpla los requisitos de tamaño del código residencial. Si sus ventanas actuales son demasiado pequeñas, instalamos pozos de ventana y abrimos los vanos según el código. En el condado de Chesterfield, agrandar o agregar una abertura de ventana es un trabajo que requiere permiso."
       },
       {
         "question": "¿Cuánto cuesta terminar un sótano en Richmond?",
@@ -1276,7 +1276,7 @@
     "faq": [
       {
         "question": "¿Cuál es el mejor azulejo para una ducha en Richmond, VA?",
-        "answer": "El porcelanato es la opción más durable para las duchas de Richmond. Se clasifica como impermeable según ANSI A137.1 (absorción de agua de 0.5 % o menos), por lo general no requiere sellado y soporta la humedad de Virginia sin problemas. Revise las clasificaciones de desgaste y antideslizamiento del fabricante para pisos mojados. La piedra natural y el mármol son hermosos, pero requieren sellado periódico y una instalación más precisa para evitar manchas y la penetración de humedad."
+        "answer": "El porcelanato es la opción más durable para las duchas de Richmond. Una pieza con absorción de agua de 0.5 % o menos (ASTM C373) puede certificarse como porcelanato; por lo general no requiere sellado y soporta la humedad de Virginia sin problemas. Revise las clasificaciones de desgaste y antideslizamiento del fabricante para pisos mojados. La piedra natural y el mármol son hermosos, pero requieren sellado periódico y una instalación más precisa para evitar manchas y la penetración de humedad."
       },
       {
         "question": "¿Cuánto tarda la instalación de azulejo?",
@@ -1292,7 +1292,7 @@
       },
       {
         "question": "¿Pueden instalar azulejo de gran formato (24×24\" o más)?",
-        "answer": "Sí, y es una de nuestras especialidades. Las piezas con un lado de 15\" o más requieren un sustrato más plano (ANSI A108.02 permite una variación máxima de 1/8\" en 10 pies), la técnica de untar mortero también en el reverso, mortero para gran formato y un sistema de control de desniveles durante la instalación. Cuidar estos detalles es lo que distingue al azulejo de gran formato que se ve espectacular del que se descascara, se desnivela o se agrieta en un año."
+        "answer": "Sí, y es una de nuestras especialidades. Las piezas con un lado de más de 15\" requieren un sustrato más plano (ANSI A108.02 permite una variación máxima de 1/8\" en 10 pies), la técnica de untar mortero también en el reverso, mortero para gran formato y un sistema de control de desniveles durante la instalación. Cuidar estos detalles es lo que distingue al azulejo de gran formato que se ve espectacular del que se descascara, se desnivela o se agrieta en un año."
       },
       {
         "question": "¿Se puede instalar azulejo sobre azulejo existente?",
@@ -1309,7 +1309,7 @@
     "challenges": [
       {
         "title": "Base plana para el gran formato",
-        "desc": "Los azulejos de gran formato (15\" o más en un lado) requieren sustratos planos a 1/8\" en 10 pies, mucho más estricto que el trabajo con azulejo estándar. Los subpisos viejos casi nunca lo cumplen sin una capa autonivelante. Omitir esta preparación hace que las piezas se muevan, se agrieten y muestren desniveles visibles desde lejos."
+        "desc": "Los azulejos de gran formato (más de 15\" en un lado) requieren sustratos planos a 1/8\" en 10 pies, mucho más estricto que el trabajo con azulejo estándar. Los subpisos viejos casi nunca lo cumplen sin una capa autonivelante. Omitir esta preparación hace que las piezas se muevan, se agrieten y muestren desniveles visibles desde lejos."
       },
       {
         "title": "Compatibilidad del sistema de impermeabilización",
@@ -1328,7 +1328,7 @@
       "Presente siempre en seco todo el patrón en el piso o la ducha antes de mezclar el adhesivo: se ve dónde caen los cortes, se confirma que la distribución se ve bien y se puede ajustar el punto de partida para evitar tiras incómodas en los bordes visibles.",
       "Selle la piedra natural y la porcelana sin esmaltar antes de la lechada: la lechada mancha para siempre la piedra sin sellar en 30 minutos de contacto. Aplique el sellador, deje que cure por completo y después aplique la lechada.",
       "Use juntas de movimiento (silicón, no lechada) en cada cambio de plano: donde el piso se encuentra con la pared, donde el azulejo toca el bordillo de la tina y en las esquinas interiores de las duchas. Las estructuras se mueven; la lechada no.",
-      "Unte mortero también en el reverso de los azulejos de gran formato además de extenderlo en el sustrato: se necesita una cobertura de 95 % o más bajo piezas de 15\" o más. Los vacíos crean zonas huecas que se agrietan con el tránsito.",
+      "Unte mortero también en el reverso de los azulejos de gran formato además de extenderlo en el sustrato: importa una buena cobertura bajo la pieza. Los vacíos crean zonas huecas que se agrietan con el tránsito.",
       "En el piso de la ducha, deje una pendiente de 1/4\" por pie hacia el desagüe en la cama de mortero antes de colocar el azulejo: un piso de ducha que no drena por completo se queda mojado y le sale moho con la humedad de Virginia."
     ],
     "safetyGear": [
