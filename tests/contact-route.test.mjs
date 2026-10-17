@@ -114,7 +114,9 @@ test("EmailJS failure -> 502 so the user sees an error", async () => {
   handlers[EMAILJS] = () => new Response("bad key", { status: 403 });
   const res = await POST(req({ ...form, token: "good" }));
   assert.equal(res.status, 502);
-  assert.equal((await res.json()).error, "send_failed");
+  const body = await res.json();
+  assert.equal(body.error, "send_failed");
+  assert.deepEqual(body.upstream, { status: 403, detail: "bad key" });
 });
 
 test("only whitelisted fields are forwarded and long values are truncated", async () => {
