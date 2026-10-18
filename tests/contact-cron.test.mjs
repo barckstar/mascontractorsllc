@@ -42,7 +42,13 @@ beforeEach(() => {
     [HOOK]: () => new Response("ok"),
   };
   globalThis.fetch = async (url, init) => {
-    calls.push({ url, body: JSON.parse(init.body) });
+    let body;
+    try {
+      body = JSON.parse(init.body);
+    } catch {
+      body = init.body; // ntfy: texto plano
+    }
+    calls.push({ url, body, headers: init.headers });
     return handlers[url]();
   };
 });
@@ -148,4 +154,30 @@ test("alert webhook itself failing does not mask the 500", async () => {
   };
   const res = await GET(auth());
   assert.equal(res.status, 500);
+});
+
+test("ALERT_NOTIFY_SUCCESS=1: healthy run also notifies the owner", async () => {
+  process.env.ALERT_NOTIFY_SUCCESS = "1";
+  try {
+    const res = await GET(auth());
+    assert.equal(res.status, 200);
+    assert.equal(at(HOOK).length, 1);
+    assert.match(at(HOOK)[0].body.text, /salió bien/);
+  } finally {
+    delete process.env.ALERT_NOTIFY_SUCCESS;
+  }
+});
+
+test("ntfy.sh webhook gets plain text with a title instead of JSON", async () => {
+  const NTFY = "https://ntfy.sh/mi-tema-privado";
+  process.env.ALERT_WEBHOOK_URL = NTFY;
+  handlers[NTFY] = () => new Response("ok");
+  handlers[EMAILJS] = () => new Response("nope", { status: 403 });
+  const res = await GET(auth());
+  assert.equal(res.status, 500);
+  const sent = at(NTFY)[0];
+  assert.equal(typeof sent.body, "string");
+  assert.match(sent.body, /403/);
+  assert.equal(sent.headers.Title, "Formulario de contacto: FALLO");
+  assert.equal(sent.headers.Priority, "high");
 });

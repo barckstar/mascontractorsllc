@@ -4,23 +4,45 @@ import { probeEmailJS, verifyTurnstile } from "../../../../lib/contactMail.js";
 // `Authorization: Bearer $CRON_SECRET`. Comprueba que la clave de Turnstile sea
 // válida y que EmailJS acepte las credenciales de producción SIN enviar ningún
 // correo (la oficina/cliente no recibe nada). Si algo falla responde 500 y avisa
-// a ALERT_WEBHOOK_URL (Slack/Discord/ntfy…); si todo está bien, silencio.
+// a ALERT_WEBHOOK_URL (ntfy/Slack/Discord); si todo está bien, silencio
+// (salvo ALERT_NOTIFY_SUCCESS=1).
 export const dynamic = "force-dynamic";
 
-async function alert(text) {
-  console.error("contact-check FAILED:", text);
+// Aviso al DUEÑO (nunca a la oficina). ntfy.sh recibe texto plano con cabeceras
+// (se ve bien en la app del celular); Slack/Discord reciben JSON.
+async function notify(text, ok) {
   const url = process.env.ALERT_WEBHOOK_URL;
   if (!url) return;
+  let ntfy = false;
   try {
-    // `text` lo leen Slack/ntfy; `content`, Discord.
-    await fetch(url, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ text, content: text }),
-    });
+    ntfy = new URL(url).hostname.endsWith("ntfy.sh");
+  } catch {}
+  try {
+    await fetch(url, ntfy
+      ? {
+          method: "POST",
+          headers: {
+            "Content-Type": "text/plain; charset=utf-8",
+            Title: ok ? "Formulario de contacto: OK" : "Formulario de contacto: FALLO",
+            Priority: ok ? "default" : "high",
+            Tags: ok ? "white_check_mark" : "warning",
+          },
+          body: text,
+        }
+      : {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          // `text` lo leen Slack; `content`, Discord.
+          body: JSON.stringify({ text, content: text }),
+        });
   } catch (e) {
     console.error("alert webhook failed:", e?.message);
   }
+}
+
+async function alert(text) {
+  console.error("contact-check FAILED:", text);
+  await notify(text, false);
 }
 
 export async function GET(request) {
@@ -47,6 +69,14 @@ export async function GET(request) {
     const msg = `EmailJS ${res.status}: ${text.slice(0, 300)}`;
     await alert(`mascontractors.com contact form: ${msg}`);
     return Response.json({ error: "send_failed" }, { status: 500 });
+  }
+  // Silencio por defecto. Con ALERT_NOTIFY_SUCCESS=1 también avisa cuando sale bien
+  // (útil los primeros días para confirmar que el chequeo corre).
+  if (process.env.ALERT_NOTIFY_SUCCESS === "1") {
+    await notify(
+      "mascontractors.com: el chequeo diario del formulario salió bien (Turnstile y EmailJS responden).",
+      true
+    );
   }
   return Response.json({ ok: true });
 }
