@@ -1,9 +1,10 @@
-import { sendContactEmail, verifyTurnstile } from "../../../../lib/contactMail.js";
+import { probeEmailJS, verifyTurnstile } from "../../../../lib/contactMail.js";
 
 // Chequeo diario del formulario (Vercel Cron, ver vercel.json). Vercel manda
 // `Authorization: Bearer $CRON_SECRET`. Comprueba que la clave de Turnstile sea
-// válida y que EmailJS acepte un envío con las variables reales de producción.
-// Si algo falla responde 500 y avisa a ALERT_WEBHOOK_URL (Slack/Discord/ntfy…).
+// válida y que EmailJS acepte las credenciales de producción SIN enviar ningún
+// correo (la oficina/cliente no recibe nada). Si algo falla responde 500 y avisa
+// a ALERT_WEBHOOK_URL (Slack/Discord/ntfy…); si todo está bien, silencio.
 export const dynamic = "force-dynamic";
 
 async function alert(text) {
@@ -38,17 +39,12 @@ export async function GET(request) {
     return Response.json({ error: "turnstile_secret" }, { status: 500 });
   }
 
-  const res = await sendContactEmail({
-    user_first_name: "[MONITOR]",
-    user_last_name: "Chequeo diario",
-    user_email: "monitor@mascontractors.com",
-    user_phone: "000-000-0000",
-    user_subject: "Test",
-    user_language: "en",
-    message: `Prueba automática ${new Date().toISOString()}. Puedes ignorar este correo.`,
-  });
-  if (!res.ok) {
-    const msg = `EmailJS ${res.status}: ${await res.text()}`;
+  const res = await probeEmailJS();
+  const text = await res.text();
+  // Healthy = credentials accepted and only the made-up template is missing.
+  const healthy = res.status === 400 && /template/i.test(text);
+  if (!healthy) {
+    const msg = `EmailJS ${res.status}: ${text.slice(0, 300)}`;
     await alert(`mascontractors.com contact form: ${msg}`);
     return Response.json({ error: "send_failed" }, { status: 500 });
   }

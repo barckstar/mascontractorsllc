@@ -36,7 +36,9 @@ beforeEach(() => {
     // A valid secret + made-up token: Cloudflare answers invalid-input-response.
     [TURNSTILE]: () =>
       Response.json({ success: false, "error-codes": ["invalid-input-response"] }),
-    [EMAILJS]: () => new Response("OK", { status: 200 }),
+    // Valid credentials + made-up template id: EmailJS only complains about the template.
+    [EMAILJS]: () =>
+      new Response("The template ID not found. To find this ID, visit https://dashboard.emailjs.com/admin/templates", { status: 400 }),
     [HOOK]: () => new Response("ok"),
   };
   globalThis.fetch = async (url, init) => {
@@ -51,7 +53,7 @@ afterEach(() => {
   for (const k of Object.keys(ENV)) delete process.env[k];
 });
 
-test("healthy: checks the Turnstile secret, sends the test email, no alert", async () => {
+test("healthy: checks Turnstile and probes EmailJS without emailing anyone, no alert", async () => {
   const res = await GET(auth());
   assert.equal(res.status, 200);
   assert.equal(at(TURNSTILE)[0].body.secret, "ts-secret");
@@ -59,8 +61,32 @@ test("healthy: checks the Turnstile secret, sends the test email, no alert", asy
   const p = at(EMAILJS)[0].body;
   assert.equal(p.service_id, "svc");
   assert.equal(p.accessToken, "priv");
-  assert.equal(p.template_params.user_first_name, "[MONITOR]");
+  assert.equal(p.template_id, "monitor-probe-no-such-template");
+  assert.notEqual(p.template_id, "tpl");
+  assert.deepEqual(p.template_params, {});
   assert.equal(at(HOOK).length, 0);
+});
+
+test("EmailJS credential error (403) -> 500 and alert", async () => {
+  handlers[EMAILJS] = () =>
+    new Response("API access from non-browser environments is currently disabled.", { status: 403 });
+  const res = await GET(auth());
+  assert.equal(res.status, 500);
+  assert.match(at(HOOK)[0].body.text, /403/);
+});
+
+test("EmailJS 400 that is not about the template (bad service) -> 500 and alert", async () => {
+  handlers[EMAILJS] = () => new Response("The service ID not found.", { status: 400 });
+  const res = await GET(auth());
+  assert.equal(res.status, 500);
+  assert.equal(at(HOOK).length, 1);
+});
+
+test("EmailJS unexpectedly accepts the probe (200) -> 500 and alert", async () => {
+  handlers[EMAILJS] = () => new Response("OK", { status: 200 });
+  const res = await GET(auth());
+  assert.equal(res.status, 500);
+  assert.equal(at(HOOK).length, 1);
 });
 
 test("no Authorization header -> 401, nothing called", async () => {
