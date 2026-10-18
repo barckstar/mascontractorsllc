@@ -38,9 +38,13 @@ En producción están en las Environment Variables de Vercel.
 **Chequeo diario:** `vercel.json` programa un Vercel Cron (13:17 UTC) que llama a
 `app/api/cron/contact-check/route.js`. Vercel manda `Authorization: Bearer $CRON_SECRET`
 (define `CRON_SECRET` en Vercel). La ruta valida que la clave de Turnstile sea buena y
-envía un correo "[MONITOR]" por EmailJS con las variables reales; si algo falla responde
-500 y avisa a `ALERT_WEBHOOK_URL` (opcional). Señal extra: si un día no llega el correo
-"[MONITOR]" a la oficina, algo se rompió. Solo corre en el deploy de producción.
+que EmailJS acepte las credenciales (cuenta con acceso desde servidor, Public/Private Key,
+Service ID) **sin enviar ningún correo**: pide enviar con un template inexistente y espera
+"template ID not found"; cualquier otra respuesta es fallo. Así la oficina/cliente nunca
+recibe correos de prueba. Si algo falla responde 500 y avisa a `ALERT_WEBHOOK_URL` (opcional,
+solo para el dueño del sitio: p. ej. un tema privado de ntfy.sh, Slack o Discord); si todo
+está bien, silencio. Límite: no detecta que el servicio de correo de EmailJS (Gmail) esté
+desconectado, porque eso solo se ve al enviar de verdad. Solo corre en el deploy de producción.
 La lógica compartida con `/api/contact` está en `lib/contactMail.js`.
 
 ## Estructura
