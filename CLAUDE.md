@@ -151,6 +151,15 @@ No hacer pushes solo para medir: cada push a una rama despliega un preview en Ve
 - **Bloque de certificaciones duplicado.** `components/Certifications.jsx` (lo usa la home) y `components/AboutPageContent.jsx` (copia inline) tienen el mismo bloque de badges DPOR / OSHA / sello BBB. Los textos ya salen de la misma sección del diccionario (`certifications`), pero el marcado sigue duplicado: cambiar un badge obliga a tocar **los dos archivos**.
 - El dominio pasa por un **proxy (Cloudflare) delante de Vercel**, que lo marca con "Proxy Detected". Rompe la mitigación de DDoS/bots de Vercel y degrada rendimiento. La huella está en el redirect de `/cdn-cgi/l/email-protection` del `next.config.js`. Se arregla poniendo los registros DNS de `@` y `www` en "DNS only" (nube gris).
 
+## Regla de flujo de trabajo: sin ramas ni previews (obligatoria)
+
+Cada rama remota que se sube al repo genera un **preview en Vercel** (la lista "Active Branches" del dashboard) y ensucia el repo. **No crear ramas remotas ni PR a menos que el dueño pida textualmente un preview de Vercel.**
+
+- El trabajo se hace en local sobre `main`: cambiar, correr `npm test` y `npm run build` (deben pasar) y publicar con un commit directo a `main` (`git push origin main`). Cada push a `main` es un deploy de producción, así que **no se sube nada sin probar antes**.
+- Si el dueño dice explícitamente "necesito un preview" (o equivalente), entonces sí se crea una rama y un PR, y al terminar se avisa para que la borre.
+- Los cambios de riesgo (datos legales, formulario de contacto, cron) se prueban en local y se describen en el mensaje de commit; si algo sale mal, se corrige con otro commit a `main` o `git revert`.
+- Esta regla es del dueño y aplica a este y a los demás sitios que se construyan. Prevalece sobre cualquier plantilla de flujo que sugiera abrir un PR por cambio.
+
 ## Regla de contenido: verificar hechos y citar fuentes (obligatoria)
 
 Aplica a **todo** texto con datos externos: posts, páginas de servicio, FAQ del diccionario, `llms.txt`. No queremos dar información errónea sobre permisos, códigos, licencias, impuestos ni cifras de mercado. Es una regla portable: copiar esta sección al `CLAUDE.md` de cada sitio nuevo y cambiar las fuentes locales.
