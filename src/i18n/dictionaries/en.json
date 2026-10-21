@@ -558,7 +558,10 @@
     "aboutLink": "Learn more about MAS Contractors"
   },
   "contactForm": {
-    "success": "Message sent! We'll respond within 24–48 hours with your free estimate.",
+    "successTitle": "Message sent!",
+    "successText": "We'll respond within 24–48 hours with your free estimate.",
+    "sendAnother": "Send another message",
+    "sending": "Sending…",
     "error": "Failed to send. Please call us directly at (804) 833-4600.",
     "captchaMissing": "Please complete the CAPTCHA verification.",
     "captchaUnavailable": "The verification could not load. Please reload the page or call us directly at (804) 833-4600.",
@@ -631,6 +634,20 @@
       "Windows & Doors": "Windows & Doors",
       "Commercial": "Commercial"
     }
+  },
+  "reviewAsk": {
+    "cardTitle": "Have we already worked on your home?",
+    "cardText": "A short Google review helps other Richmond homeowners choose a contractor. It takes one minute.",
+    "cardButton": "Leave my review",
+    "stripTitle": "DID WE WORK ON YOUR HOME?",
+    "stripText": "Your Google review helps other Richmond homeowners choose a contractor.",
+    "stripButton": "Write a review",
+    "chipOpen": "Open review reminder",
+    "chipClose": "Close",
+    "chipTitle": "Are you a MAS client?",
+    "chipText": "Tell Richmond how it went.",
+    "chipButton": "Review us on Google",
+    "newTab": "(opens in a new tab)"
   },
   "common": {
     "mapTitle": "MAS Contractors LLC — 411 Branchway Rd, North Chesterfield VA",

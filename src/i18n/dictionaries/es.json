@@ -558,7 +558,10 @@
     "aboutLink": "Conozca más sobre MAS Contractors"
   },
   "contactForm": {
-    "success": "¡Mensaje enviado! Le responderemos en 24 a 48 horas con su presupuesto gratis.",
+    "successTitle": "¡Mensaje enviado!",
+    "successText": "Le responderemos en 24 a 48 horas con su presupuesto gratis.",
+    "sendAnother": "Enviar otro mensaje",
+    "sending": "Enviando…",
     "error": "No se pudo enviar. Llámenos directamente al (804) 833-4600.",
     "captchaMissing": "Complete la verificación CAPTCHA.",
     "captchaUnavailable": "No se pudo cargar la verificación. Recargue la página o llámenos al (804) 833-4600.",
@@ -631,6 +634,20 @@
       "Windows & Doors": "Ventanas y puertas",
       "Commercial": "Comercial"
     }
+  },
+  "reviewAsk": {
+    "cardTitle": "¿Ya trabajamos en su hogar?",
+    "cardText": "Una reseña corta en Google ayuda a otros vecinos de Richmond a elegir contratista. Toma un minuto.",
+    "cardButton": "Dejar mi reseña",
+    "stripTitle": "¿TRABAJAMOS EN SU HOGAR?",
+    "stripText": "Su reseña en Google ayuda a otros vecinos de Richmond a elegir contratista.",
+    "stripButton": "Escribir reseña",
+    "chipOpen": "Abrir recordatorio de reseña",
+    "chipClose": "Cerrar",
+    "chipTitle": "¿Es cliente de MAS?",
+    "chipText": "Cuéntele a Richmond cómo le fue.",
+    "chipButton": "Reseñarnos en Google",
+    "newTab": "(se abre en una pestaña nueva)"
   },
   "common": {
     "mapTitle": "MAS Contractors LLC — 411 Branchway Rd, North Chesterfield, VA",

@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { ReviewStrip, ReviewChip } from "@/components/ReviewAsk";
 import { SocialMediaBar } from "@/components/socialMedia";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Script from "next/script";
@@ -43,8 +44,8 @@ export default async function SiteLayout({ children, params }) {
   const m = dict.meta.site;
   // Only what the navbar/footer/404 read goes into the layout; each page adds
   // its own sections with <PageSections> (see i18n/PageSections.jsx).
-  const { common, nav, footer, site, notFound } = dict;
-  const clientDict = { common, nav, footer, site, notFound };
+  const { common, nav, footer, site, notFound, reviewAsk } = dict;
+  const clientDict = { common, nav, footer, site, notFound, reviewAsk };
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": ["GeneralContractor", "LocalBusiness"],
@@ -119,7 +120,9 @@ export default async function SiteLayout({ children, params }) {
           <SocialMediaBar />
           {children}
           <SpeedInsights />
+          <ReviewStrip />
           <Footer />
+          <ReviewChip />
         </MotionProvider>
         </I18nProvider>
         <Script

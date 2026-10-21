@@ -4,6 +4,65 @@ import React, { useRef, useState } from "react";
 import { Turnstile } from "@marsidev/react-turnstile";
 import { m } from "framer-motion";
 import { useI18n } from "@/i18n/I18nProvider";
+import { ReviewCard } from "@/components/ReviewAsk";
+
+// Shown in place of the form once the message is out: a ring that draws itself, the
+// check, then (after a beat) the review ask. role="status" announces it to screen readers.
+function SentPanel({ onReset }) {
+  const f = useI18n().t.contactForm;
+  return (
+    <div role="status" className="p-8 md:p-10 text-center">
+      <div className="relative mx-auto mb-6 h-24 w-24">
+        <m.span
+          aria-hidden="true"
+          className="absolute inset-0 rounded-full bg-[#9fe300]/25"
+          initial={{ scale: 0.6, opacity: 0.8 }}
+          animate={{ scale: 1.7, opacity: 0 }}
+          transition={{ delay: 0.5, duration: 1.2, ease: "easeOut" }}
+        />
+        <svg viewBox="0 0 96 96" fill="none" className="relative h-24 w-24" aria-hidden="true">
+          <g transform="rotate(-90 48 48)">
+            <m.circle
+              cx="48" cy="48" r="44" stroke="#9fe300" strokeWidth="4"
+              initial={{ pathLength: 0 }} animate={{ pathLength: 1 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+            />
+          </g>
+          <m.path
+            d="M28 50 L42 64 L69 34" stroke="#9fe300" strokeWidth="6"
+            strokeLinecap="round" strokeLinejoin="round"
+            initial={{ pathLength: 0 }} animate={{ pathLength: 1 }}
+            transition={{ delay: 0.5, duration: 0.4, ease: "easeOut" }}
+          />
+        </svg>
+      </div>
+      <m.p
+        initial={{ opacity: 0, y: 8 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.7, duration: 0.4 }}
+        className="font-contrax text-2xl text-white"
+      >
+        {f.successTitle}
+      </m.p>
+      <m.p
+        initial={{ opacity: 0, y: 8 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.85, duration: 0.4 }}
+        className="mx-auto mt-2 mb-8 max-w-sm font-body text-sm text-gray-400"
+      >
+        {f.successText}
+      </m.p>
+      <ReviewCard delay={1.3} />
+      <button
+        type="button"
+        onClick={onReset}
+        className="mt-6 font-body text-sm text-gray-500 underline underline-offset-4 transition-colors hover:text-[#9fe300]"
+      >
+        {f.sendAnother}
+      </button>
+    </div>
+  );
+}
 
 function Contact() {
   const { t, lang } = useI18n();
@@ -12,6 +71,8 @@ function Contact() {
   const [captchaValue, setCaptchaValue] = useState(null);
   const [status, setStatus] = useState(null); // null | { type: 'success'|'error', text: string }
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+  const [sending, setSending] = useState(false);
+  const [sent, setSent] = useState(false);
   const form = useRef();
   const [captchaFailed, setCaptchaFailed] = useState(false);
   const captchaRef = useRef();
@@ -53,6 +114,7 @@ function Contact() {
       return;
     }
     setIsButtonDisabled(true);
+    setSending(true);
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
@@ -63,14 +125,24 @@ function Contact() {
         }),
       });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      setStatus({ type: "success", text: f.success });
       form.current.reset();
+      setSent(true);
+      // The card is shorter once the form is gone; keep it in view.
+      const calm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      document.getElementById("email")?.scrollIntoView({ behavior: calm ? "auto" : "smooth", block: "center" });
     } catch (error) {
       setStatus({ type: "error", text: f.error });
       console.error("Contact form error:", error.message);
     } finally {
+      setSending(false);
       resetCaptcha();
     }
+  };
+
+  // Back to an empty form: the Turnstile widget remounts and unlocks the button itself.
+  const sendAnother = () => {
+    setSent(false);
+    setStatus(null);
   };
 
   const inputClass =
@@ -90,6 +162,9 @@ function Contact() {
         {/* Top accent line */}
         <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#9fe300] to-transparent" />
 
+        {sent ? (
+          <SentPanel onReset={sendAnother} />
+        ) : (
         <div className="p-8 md:p-10">
           <form id="contactForm" onSubmit={sendEmail} ref={form} className="space-y-5">
             {/* Tells the office which language to answer in. Add {{user_language}} to the EmailJS template to see it. */}
@@ -209,7 +284,12 @@ function Contact() {
                   : "bg-[#9fe300] text-[#111111] hover:bg-white hover:shadow-[0_0_40px_rgba(159,227,0,0.35)] cursor-pointer"
               }`}
             >
-              {isButtonDisabled ? f.submitDisabled : f.submit}
+              {sending ? (
+                <span className="inline-flex items-center justify-center gap-3">
+                  <span aria-hidden="true" className="h-4 w-4 animate-spin rounded-full border-2 border-white/20 border-t-[#9fe300]" />
+                  {f.sending}
+                </span>
+              ) : isButtonDisabled ? f.submitDisabled : f.submit}
             </button>
           </form>
 
@@ -217,16 +297,14 @@ function Contact() {
             <m.div
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
-              className={`mt-5 p-4 rounded-xl text-center font-body text-sm ${
-                status.type === "success"
-                  ? "bg-[#9fe300]/10 text-[#9fe300] border border-[#9fe300]/20"
-                  : "bg-red-500/10 text-red-400 border border-red-500/20"
-              }`}
+              role="alert"
+              className="mt-5 p-4 rounded-xl text-center font-body text-sm bg-red-500/10 text-red-400 border border-red-500/20"
             >
               {status.text}
             </m.div>
           )}
         </div>
+        )}
       </m.div>
     </div>
   );
