@@ -131,7 +131,7 @@ export function ReviewChip() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
-            className="fixed bottom-4 left-4 z-40 print:hidden"
+            className="fixed bottom-4 right-4 z-40 print:hidden"
             onKeyDown={(e) => e.key === "Escape" && setOpen(false)}
         >
             {open ? (
