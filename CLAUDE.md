@@ -17,7 +17,6 @@ npm install
 npm run dev      # localhost:3000
 npm run build
 npm run start
-node scripts/gbp-post-draft.mjs   # borrador de publicación de Google Business a partir del último post (ver abajo)
 node scripts/optimize-images.js   # opcional, re-comprime imágenes en public/gallery (in-place, sin backup automático)
 ```
 
@@ -196,15 +195,6 @@ y no les da estrellas; y el 4.9/47 que había no cuadraba con Google (7 reseñas
 el 25/09/2026). Las estrellas del buscador salen del Perfil de Negocio.
 
 Al tocar schema, ojo con duplicar: `FAQ.jsx` y `services/[slug]` ambos emiten `FAQPage`.
-
-## Publicaciones de Google Business Profile
-
-No se publica automático: la API de Business Profile pide aprobación de Google y un
-texto pegado tal cual no rinde. `scripts/gbp-post-draft.mjs [slug] [--lang es] [--list] [--no-image]`
-arma el borrador del post (título + extracto, nada de datos nuevos ni teléfonos),
-el enlace con UTM `google / gbp` y la foto en 1200×900 dentro de `gbp-drafts/`
-(ignorada por git). Se pega a mano en GBP; frecuencia razonable: una por semana o cada dos.
-Avisa si el post es regulatorio y su `reviewed` tiene más de 180 días (re-verificar antes de promoverlo).
 
 ## Reseñas de Google (en vivo)
 

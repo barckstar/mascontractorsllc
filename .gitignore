@@ -49,6 +49,3 @@ videos/*
 !videos/*.js
 !videos/*.ts
 public/_next-video
-
-# GBP post drafts (scripts/gbp-post-draft.mjs)
-/gbp-drafts/
