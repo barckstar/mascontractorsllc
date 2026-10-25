@@ -5,8 +5,8 @@
 // Update `asOf` together with the numbers.
 export const REVIEWS_SNAPSHOT = {
     rating: 4.9,
-    count: 7,
-    asOf: "2026-09-25",
+    count: 9,
+    asOf: "2026-10-25",
     reviews: [],
     mapsUrl: "https://maps.app.goo.gl/bvfykYDomsbJJxzk7",
     live: false,
