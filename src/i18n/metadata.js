@@ -1,6 +1,12 @@
 import { getDictionary } from "./dictionaries";
 import { OG_LOCALE, SITE_URL, alternatesFor, localePath } from "./config";
 
+// The layout template appends " | MAS Contractors LLC"; titles that already
+// carry the brand are marked absolute so it isn't repeated.
+export function pageTitle(title) {
+    return title.includes("MAS Contractors") ? { absolute: title } : title;
+}
+
 // Metadata for a static page whose texts live in dictionaries/<lang>.json
 // under meta.<key>. Next replaces (doesn't merge) openGraph between layout and
 // page, so every page sets its own full openGraph here. The picture is not set
@@ -8,7 +14,7 @@ import { OG_LOCALE, SITE_URL, alternatesFor, localePath } from "./config";
 export function pageMetadata(lang, key, path) {
     const m = getDictionary(lang).meta[key];
     return {
-        title: m.title,
+        title: pageTitle(m.title),
         description: m.description,
         ...(m.keywords && { keywords: m.keywords }),
         alternates: alternatesFor(lang, path),

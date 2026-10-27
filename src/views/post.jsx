@@ -4,6 +4,7 @@ import { getDictionary } from "@/i18n/dictionaries";
 import { OG_LOCALE, SITE_URL, alternatesFor, localePath } from "@/i18n/config";
 import BlogPostContent from "@/components/BlogPostContent";
 import PageSections from "@/i18n/PageSections";
+import { pageTitle } from "@/i18n/metadata";
 
 export async function generateStaticParams() {
     return getPosts("en").map((post) => ({ slug: post.slug }));
@@ -16,7 +17,7 @@ export async function generateMetadata({ params }) {
     const path = `/blog/${post.slug}`;
 
     return {
-        title: post.metaTitle,
+        title: pageTitle(post.metaTitle),
         description: post.metaDescription,
         alternates: alternatesFor(lang, path),
         openGraph: {

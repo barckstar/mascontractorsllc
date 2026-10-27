@@ -4,6 +4,7 @@ import { getDictionary } from "@/i18n/dictionaries";
 import { OG_LOCALE, SITE_URL, alternatesFor, localePath } from "@/i18n/config";
 import dynamic from "next/dynamic";
 import PageSections from "@/i18n/PageSections";
+import { pageTitle } from "@/i18n/metadata";
 
 const ServicePageContent = dynamic(() => import("@/components/ServicePageContent"), {
     loading: () => (
@@ -26,7 +27,7 @@ export async function generateMetadata({ params }) {
     const path = `/services/${service.slug}`;
 
     return {
-        title: service.metaTitle,
+        title: pageTitle(service.metaTitle),
         description: service.metaDescription,
         keywords: service.keywords,
         alternates: alternatesFor(lang, path),
