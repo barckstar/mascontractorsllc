@@ -204,7 +204,7 @@ export default function HomeContent({ reviews, posts, photos }) {
                                 </text>
                             </svg>
                             <div className="absolute inset-[21%] rounded-full border border-[#9fe300]/40 bg-[#1e1e1e] shadow-[0_0_30px_rgba(159,227,0,0.25)]">
-                                <Image src="/logo-3D.png" alt={h.logo3dAlt} fill sizes="100px" className="object-contain p-3" />
+                                <Image src="/logo-mark.png" alt={h.logoAlt} fill sizes="100px" className="object-contain p-3" />
                             </div>
                         </div>
                     </m.div>

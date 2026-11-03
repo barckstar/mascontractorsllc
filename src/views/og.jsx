@@ -73,9 +73,9 @@ function loadPhoto(publicPath) {
 const SAFE_WIDTH = 560;
 
 function titleSize(title) {
-    if (title.length <= 26) return 54;
-    if (title.length <= 48) return 44;
-    return 36;
+    if (title.length <= 26) return 62;
+    if (title.length <= 48) return 50;
+    return 40;
 }
 
 async function card({ lang, eyebrow, title, photo }) {
@@ -108,10 +108,13 @@ async function card({ lang, eyebrow, title, photo }) {
                 <div
                     style={{
                         position: "absolute",
-                        inset: 0,
+                        top: 0,
+                        left: 0,
+                        width: 1200,
+                        height: 630,
                         display: "flex",
                         background:
-                            "linear-gradient(180deg, rgba(10,10,10,0.6) 0%, rgba(10,10,10,0.46) 26%, rgba(10,10,10,0.8) 60%, rgba(10,10,10,0.96) 100%)",
+                            "linear-gradient(180deg, rgba(10,10,10,0.55) 0%, rgba(10,10,10,0.42) 24%, rgba(10,10,10,0.82) 55%, rgba(10,10,10,0.96) 100%)",
                     }}
                 />
 
@@ -148,7 +151,7 @@ async function card({ lang, eyebrow, title, photo }) {
                                 display: "flex",
                                 width: SAFE_WIDTH,
                                 fontFamily: "Conthrax",
-                                fontSize: 18,
+                                fontSize: 22,
                                 letterSpacing: 3,
                                 textTransform: "uppercase",
                                 textAlign: "center",
@@ -181,12 +184,12 @@ async function card({ lang, eyebrow, title, photo }) {
                                 borderTop: "2px solid rgba(255,255,255,0.25)",
                             }}
                         >
-                            <div style={{ display: "flex", alignItems: "center", gap: 12, fontSize: 19, whiteSpace: "nowrap" }}>
+                            <div style={{ display: "flex", alignItems: "center", gap: 12, fontSize: 24, whiteSpace: "nowrap" }}>
                                 <span style={{ color: "white", fontWeight: 700 }}>mascontractors.com</span>
                                 <span style={{ color: GREEN }}>•</span>
-                                <span style={{ color: "#e4e4e4" }}>(804) 833-4600</span>
+                                <span style={{ color: "white" }}>(804) 833-4600</span>
                             </div>
-                            <div style={{ display: "flex", marginTop: 8, fontSize: 15, color: "#b5b5b5", whiteSpace: "nowrap" }}>
+                            <div style={{ display: "flex", marginTop: 8, fontSize: 18, color: "#d0d0d0", whiteSpace: "nowrap" }}>
                                 {og.licensed}
                             </div>
                         </div>
