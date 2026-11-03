@@ -33,7 +33,7 @@ function loadAssets() {
         readFile(join(ASSETS, "Sora-400.woff")),
         readFile(join(ASSETS, "Sora-700.woff")),
         readFile(join(ASSETS, "Conthrax-SemiBold.otf")),
-        readFile(join(ASSETS, "mark-3d.png")),
+        readFile(join(ASSETS, "mark.png")),
     ]).then(([sora400, sora700, conthrax, mark]) => ({
         fonts: [
             { name: "Sora", data: sora400, weight: 400, style: "normal" },
@@ -127,7 +127,7 @@ async function card({ lang, eyebrow, title, photo }) {
                 >
                     <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
                         {/* eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text */}
-                        <img src={mark} width={92} height={90} style={{ objectFit: "contain" }} />
+                        <img src={mark} width={108} height={90} style={{ objectFit: "contain" }} />
                         <div
                             style={{
                                 display: "flex",
