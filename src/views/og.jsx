@@ -149,10 +149,12 @@ async function card({ lang, eyebrow, title, photo }) {
                         <div
                             style={{
                                 display: "flex",
+                                justifyContent: "center",
+                                whiteSpace: "nowrap",
                                 width: SAFE_WIDTH,
                                 fontFamily: "Conthrax",
-                                fontSize: 22,
-                                letterSpacing: 3,
+                                fontSize: 20,
+                                letterSpacing: 2,
                                 textTransform: "uppercase",
                                 textAlign: "center",
                                 color: GREEN,
@@ -171,7 +173,7 @@ async function card({ lang, eyebrow, title, photo }) {
                                 textAlign: "center",
                             }}
                         >
-                            {title}
+                            {title.replace(/ (\S+)$/, " $1")}
                         </div>
 
                         <div
