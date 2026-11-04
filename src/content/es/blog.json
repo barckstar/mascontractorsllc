@@ -2481,6 +2481,13 @@
         "linkText": "Agende su estimado gratis"
       },
       {
+        "type": "cta",
+        "title": "¿Proyecto de revestimiento?",
+        "text": "¿Va a reemplazar o reparar el revestimiento? Somos instalador certificado de James Hardie y le decimos desde el principio si su trabajo necesita permiso.",
+        "link": "/services/siding",
+        "linkText": "Vea nuestros servicios de revestimiento"
+      },
+      {
         "type": "h2",
         "text": "¿Quién tramita el permiso cuando hace falta?"
       },

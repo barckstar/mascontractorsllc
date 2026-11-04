@@ -2481,6 +2481,13 @@
         "linkText": "Schedule Your Free Estimate"
       },
       {
+        "type": "cta",
+        "title": "Siding Project?",
+        "text": "Replacing or repairing siding? We are a certified James Hardie installer, and we tell you up front whether your job needs a permit.",
+        "link": "/services/siding",
+        "linkText": "See Our Siding Services"
+      },
+      {
         "type": "h2",
         "text": "Who Pulls the Permit When One Is Required?"
       },
