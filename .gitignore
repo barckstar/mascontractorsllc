@@ -49,3 +49,7 @@ videos/*
 !videos/*.js
 !videos/*.ts
 public/_next-video
+
+# business files (design, social, letterhead) - local only, not part of the website
+/negocio/
+/design/
