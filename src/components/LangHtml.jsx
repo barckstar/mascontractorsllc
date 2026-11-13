@@ -1,6 +1,7 @@
 "use client";
 import { useSelectedLayoutSegment } from "next/navigation";
 import { DEFAULT_LOCALE, isLocale } from "@/i18n/config";
+import GoogleTagManager from "@/components/GoogleTagManager";
 
 // <html lang> from the URL's first segment: "es" for /es/…, English for
 // everything else (the "(en)" route group). Runs during SSR too, so the static
@@ -18,7 +19,10 @@ export default function LangHtml({ children }) {
                 <link rel="preload" href="/fonts/Sora-700.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
                 <link rel="preload" href="/fonts/Conthrax-SemiBold.otf" as="font" type="font/otf" crossOrigin="anonymous" />
             </head>
-            <body>{children}</body>
+            <body>
+                <GoogleTagManager />
+                {children}
+            </body>
         </html>
     );
 }

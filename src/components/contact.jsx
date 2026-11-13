@@ -127,6 +127,9 @@ function Contact() {
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       form.current.reset();
       setSent(true);
+      // Lo recoge Google Tag Manager (disparador "generate_lead"); sin datos personales.
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: "generate_lead", form_id: "contact", language: lang });
       // The card is shorter once the form is gone; keep it in view.
       const calm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       document.getElementById("email")?.scrollIntoView({ behavior: calm ? "auto" : "smooth", block: "center" });

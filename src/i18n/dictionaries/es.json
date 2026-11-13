@@ -764,7 +764,8 @@
     "residential": "Servicios residenciales",
     "connect": "Síganos",
     "visitUs": "Visítenos",
-    "rights": "Todos los derechos reservados"
+    "rights": "Todos los derechos reservados",
+    "privacy": "Política de privacidad"
   },
   "nav": {
     "classA": "Contratista general Clase A",
@@ -905,6 +906,10 @@
       "blog": "Guías para propietarios en Richmond",
       "blogEyebrow": "Blog · Richmond, VA",
       "servicesEyebrow": "Servicios · Richmond, VA"
+    },
+    "privacy": {
+      "title": "Política de privacidad | MAS Contractors LLC",
+      "description": "Cómo MAS Contractors LLC recoge, usa y protege la información que comparte en mascontractors.com: el formulario de contacto, la analítica, las cookies y los servicios que usamos."
     }
   },
   "breadcrumbs": {
@@ -941,5 +946,126 @@
       }
     ],
     "button": "IR A LA PÁGINA DE INICIO"
+  },
+  "privacyPage": {
+    "eyebrow": "Su información",
+    "title": "Política de privacidad",
+    "updatedLabel": "Última actualización",
+    "updated": "12 de noviembre de 2026",
+    "intro": "Esta política explica qué información recoge MAS Contractors LLC a través de mascontractors.com, para qué la recogemos, quién más puede verla y qué opciones tiene usted. La mantenemos corta a propósito.",
+    "sections": [
+      {
+        "heading": "Quiénes somos",
+        "paragraphs": [
+          "MAS Contractors LLC es un contratista general con sede en 411 Branchway Rd Suite 107, North Chesterfield, VA 23236. Esta política cubre mascontractors.com y su versión en español. Puede comunicarse con nosotros al (804) 833-4600 o en info@mascontractors.com."
+        ],
+        "items": []
+      },
+      {
+        "heading": "Información que usted nos da",
+        "paragraphs": [
+          "Cuando usa el formulario de contacto le pedimos los datos de abajo. Solo recogemos lo que usted escribe, y el mensaje tiene un límite de longitud."
+        ],
+        "items": [
+          "Nombre y apellido",
+          "Correo electrónico y teléfono",
+          "El servicio que le interesa",
+          "Su mensaje",
+          "El idioma de la página que usó (inglés o español), para responderle en el mismo idioma"
+        ]
+      },
+      {
+        "heading": "Cómo la usamos",
+        "paragraphs": [
+          "Usamos lo que nos envía para responder su solicitud, programar una visita y preparar un presupuesto. El sitio no guarda una base de datos con los envíos del formulario: el mensaje llega a nuestra oficina como un correo electrónico.",
+          "No vendemos su información personal."
+        ],
+        "items": []
+      },
+      {
+        "heading": "Información que se recoge automáticamente",
+        "paragraphs": [
+          "Para entender cómo se usa el sitio y mantenerlo rápido y libre de spam, el sitio funciona con los servicios de abajo. Según el servicio, pueden recibir datos técnicos como su dirección IP, el tipo de navegador y de dispositivo, las páginas que ve y la página desde la que llegó."
+        ],
+        "items": [
+          "Analítica (Google Tag Manager y Google Analytics): qué páginas se visitan, desde dónde, en qué tipo de dispositivo y cuántas personas envían el formulario de contacto o tocan un teléfono. Estos eventos se cuentan sin los datos que usted escribió en el formulario.",
+          "Medición de rendimiento (Vercel Speed Insights): qué tan rápido cargan las páginas.",
+          "Protección contra spam (Cloudflare Turnstile): comprueba que el formulario lo usa una persona. Para esa comprobación recibe su dirección IP."
+        ]
+      },
+      {
+        "heading": "Cookies",
+        "paragraphs": [
+          "Los servicios de analítica pueden usar cookies o tecnologías parecidas para distinguir las visitas. El contenido incrustado, como el mapa y el sello del Better Business Bureau, también puede instalar sus propias cookies según la política de su proveedor.",
+          "Puede bloquear o borrar las cookies en la configuración de su navegador, y Google ofrece un complemento del navegador para excluirse de Google Analytics. El sitio funciona sin cookies."
+        ],
+        "items": []
+      },
+      {
+        "heading": "Quién más ve su información",
+        "paragraphs": [
+          "Compartimos información solo con los proveedores que nos ayudan a operar el sitio, y solo para eso, o cuando la ley lo exige. Cada proveedor maneja la información según su propia política de privacidad:"
+        ],
+        "items": []
+      },
+      {
+        "heading": "Cuánto tiempo la guardamos",
+        "paragraphs": [
+          "Guardamos los mensajes de contacto el tiempo que los necesitemos para responderle y llevar nuestros registros del negocio, y después los borramos."
+        ],
+        "items": []
+      },
+      {
+        "heading": "Sus opciones",
+        "paragraphs": [
+          "Puede escribirnos en cualquier momento para preguntar qué información suya tenemos, corregirla o pedir que la borremos. También puede excluirse de la analítica como se explica en Cookies."
+        ],
+        "items": []
+      },
+      {
+        "heading": "Menores de edad",
+        "paragraphs": [
+          "Este sitio es para adultos que buscan servicios de construcción y remodelación. No está dirigido a menores y no recogemos a sabiendas su información."
+        ],
+        "items": []
+      },
+      {
+        "heading": "Seguridad",
+        "paragraphs": [
+          "El sitio se sirve por HTTPS y limitamos quién puede leer los mensajes que llegan por el formulario de contacto. Ningún método de enviar información por internet es completamente seguro, así que no podemos garantizar una seguridad absoluta."
+        ],
+        "items": []
+      },
+      {
+        "heading": "Cambios en esta política",
+        "paragraphs": [
+          "Si cambiamos la forma de manejar la información, actualizaremos esta página y la fecha de arriba."
+        ],
+        "items": []
+      }
+    ],
+    "optOutLabel": "Complemento del navegador para excluirse de Google Analytics",
+    "optOutUrl": "https://tools.google.com/dlpage/gaoptout",
+    "bbbNote": "El sello del Better Business Bureau en nuestras páginas se carga desde el BBB; consulte la política de privacidad del propio BBB en bbb.org.",
+    "contactCta": "¿Preguntas sobre esta política?",
+    "contactLink": "Contáctenos",
+    "providers": [
+      {
+        "name": "Google (Analytics, Tag Manager, Maps y reseñas)",
+        "url": "https://policies.google.com/privacy"
+      },
+      {
+        "name": "Cloudflare (protección contra spam Turnstile)",
+        "url": "https://www.cloudflare.com/privacypolicy/"
+      },
+      {
+        "name": "Vercel (alojamiento y Speed Insights)",
+        "url": "https://vercel.com/legal/privacy-policy"
+      },
+      {
+        "name": "EmailJS (entrega el correo del formulario de contacto)",
+        "url": "https://www.emailjs.com/legal/privacy-policy/"
+      }
+    ]
   }
 }

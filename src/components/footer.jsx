@@ -82,6 +82,10 @@ export const Footer = () => {
           <div className="flex flex-col text-center items-center justify-between py-6 border-t border-[#515151] px-6 md:px-32 lg:flex-row lg:text-left lg:justify-between gap-4">
             <p className="text-[#9fe300] text-sm font-body">
               © 2024 - 2026 MAS Contractors LLC <br /> {f.rights}
+              {" · "}
+              <Link href={href("/privacy")} className="underline underline-offset-4 hover:text-white transition">
+                {f.privacy}
+              </Link>
             </p>
             {/* Logo */}
             <Link href={href("/")} className="flex title-font font-medium items-center justify-end flex-shrink-0">

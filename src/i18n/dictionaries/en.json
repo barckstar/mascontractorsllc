@@ -764,7 +764,8 @@
     "residential": "Residential Services",
     "connect": "Connect",
     "visitUs": "Visit Us",
-    "rights": "All Rights Reserved"
+    "rights": "All Rights Reserved",
+    "privacy": "Privacy Policy"
   },
   "nav": {
     "classA": "Class A General Contractor",
@@ -905,6 +906,10 @@
       "blog": "Guides for Richmond homeowners",
       "blogEyebrow": "Blog · Richmond, VA",
       "servicesEyebrow": "Services · Richmond, VA"
+    },
+    "privacy": {
+      "title": "Privacy Policy | MAS Contractors LLC",
+      "description": "How MAS Contractors LLC collects, uses and protects the information you share through mascontractors.com: the contact form, analytics, cookies and the services we use."
     }
   },
   "breadcrumbs": {
@@ -941,5 +946,126 @@
       }
     ],
     "button": "GO TO HOME PAGE"
+  },
+  "privacyPage": {
+    "eyebrow": "Your information",
+    "title": "Privacy Policy",
+    "updatedLabel": "Last updated",
+    "updated": "November 12, 2026",
+    "intro": "This policy explains what information MAS Contractors LLC collects through mascontractors.com, why we collect it, who else can see it and what choices you have. We keep it short on purpose.",
+    "sections": [
+      {
+        "heading": "Who we are",
+        "paragraphs": [
+          "MAS Contractors LLC is a general contractor based at 411 Branchway Rd Suite 107, North Chesterfield, VA 23236. This policy covers mascontractors.com and its Spanish version. You can reach us at (804) 833-4600 or info@mascontractors.com."
+        ],
+        "items": []
+      },
+      {
+        "heading": "Information you give us",
+        "paragraphs": [
+          "When you use the contact form we ask for the details below. We only collect what you type, and the message is limited in length."
+        ],
+        "items": [
+          "First and last name",
+          "Email address and phone number",
+          "The service you are interested in",
+          "Your message",
+          "The language of the page you used (English or Spanish), so we can answer in the same language"
+        ]
+      },
+      {
+        "heading": "How we use it",
+        "paragraphs": [
+          "We use what you send us to answer your request, schedule a visit and prepare an estimate. The site does not keep a database of form submissions: the message is delivered to our office as an email.",
+          "We do not sell your personal information."
+        ],
+        "items": []
+      },
+      {
+        "heading": "Information collected automatically",
+        "paragraphs": [
+          "To understand how the site is used and to keep it fast and free of spam, the site works with the services listed below. Depending on the service they may receive technical details such as your IP address, browser and device type, the pages you view and the page that sent you here."
+        ],
+        "items": [
+          "Analytics (Google Tag Manager and Google Analytics): which pages are visited, from where, on what kind of device, and how many people send the contact form or tap a phone number. These events are counted without the details you typed into the form.",
+          "Performance measurement (Vercel Speed Insights): how fast pages load.",
+          "Spam protection (Cloudflare Turnstile): checks that the contact form is used by a person. It receives your IP address for that check."
+        ]
+      },
+      {
+        "heading": "Cookies",
+        "paragraphs": [
+          "Analytics services can use cookies or similar technologies to tell visits apart. Embedded content, such as the map and the Better Business Bureau seal, may also set its own cookies under its provider's policy.",
+          "You can block or delete cookies in your browser settings, and Google offers a browser add-on to opt out of Google Analytics. The site works without cookies."
+        ],
+        "items": []
+      },
+      {
+        "heading": "Who else sees your information",
+        "paragraphs": [
+          "We share information only with the providers that help us run the site, and only for that purpose, or when the law requires it. Each provider handles information under its own privacy policy:"
+        ],
+        "items": []
+      },
+      {
+        "heading": "How long we keep it",
+        "paragraphs": [
+          "We keep contact messages for as long as we need them to answer you and to keep our business records, and then we delete them."
+        ],
+        "items": []
+      },
+      {
+        "heading": "Your choices",
+        "paragraphs": [
+          "You can write to us at any time to ask what information of yours we hold, to correct it or to have it deleted. You can also opt out of analytics as described under Cookies."
+        ],
+        "items": []
+      },
+      {
+        "heading": "Children",
+        "paragraphs": [
+          "This site is for adults who are looking for construction and remodeling services. It is not directed to children and we do not knowingly collect their information."
+        ],
+        "items": []
+      },
+      {
+        "heading": "Security",
+        "paragraphs": [
+          "The site is served over HTTPS and we limit who can read the messages that arrive through the contact form. No method of sending information over the internet is completely secure, so we cannot guarantee absolute security."
+        ],
+        "items": []
+      },
+      {
+        "heading": "Changes to this policy",
+        "paragraphs": [
+          "If we change how we handle information we will update this page and the date at the top."
+        ],
+        "items": []
+      }
+    ],
+    "optOutLabel": "Google Analytics opt-out browser add-on",
+    "optOutUrl": "https://tools.google.com/dlpage/gaoptout",
+    "bbbNote": "The Better Business Bureau seal on our pages is loaded from the BBB; see the BBB's own privacy policy on bbb.org.",
+    "contactCta": "Questions about this policy?",
+    "contactLink": "Contact us",
+    "providers": [
+      {
+        "name": "Google (Analytics, Tag Manager, Maps and reviews)",
+        "url": "https://policies.google.com/privacy"
+      },
+      {
+        "name": "Cloudflare (Turnstile spam protection)",
+        "url": "https://www.cloudflare.com/privacypolicy/"
+      },
+      {
+        "name": "Vercel (hosting and Speed Insights)",
+        "url": "https://vercel.com/legal/privacy-policy"
+      },
+      {
+        "name": "EmailJS (delivers the contact form email)",
+        "url": "https://www.emailjs.com/legal/privacy-policy/"
+      }
+    ]
   }
 }

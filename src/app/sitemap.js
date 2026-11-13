@@ -18,6 +18,7 @@ export default function sitemap() {
         { path: "/gallery", changeFrequency: "monthly", priority: 0.7 },
         { path: "/about", changeFrequency: "yearly", priority: 0.6 },
         { path: "/contact", changeFrequency: "yearly", priority: 0.8 },
+        { path: "/privacy", changeFrequency: "yearly", priority: 0.3 },
     ];
 
     return pages.flatMap(({ path, lastModified = new Date(), ...rest }) =>
