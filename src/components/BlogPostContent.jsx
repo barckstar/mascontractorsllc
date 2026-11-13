@@ -9,6 +9,21 @@ import { useI18n } from "@/i18n/I18nProvider";
 import { CATEGORY_COLORS, formatDate } from "./BlogContent";
 import { EASE, PrimaryCta, GlowCard } from "./ui";
 
+// Renders "[anchor](/internal/path)" as an internal link; everything else stays plain text.
+function RichText({ text }) {
+    const { href } = useI18n();
+    return text.split(/(\[[^\]]+\]\(\/[^)\s]*\))/g).map((part, i) => {
+        const m = part.match(/^\[([^\]]+)\]\((\/[^)\s]*)\)$/);
+        return m ? (
+            <Link key={i} href={href(m[2])} className="text-secondary underline underline-offset-2 hover:text-white transition-colors">
+                {m[1]}
+            </Link>
+        ) : (
+            part
+        );
+    });
+}
+
 function ContentBlock({ block }) {
     const { href } = useI18n();
     switch (block.type) {
@@ -21,7 +36,7 @@ function ContentBlock({ block }) {
         case "p":
             return (
                 <p className="text-gray-400 font-body text-lg leading-relaxed mb-6">
-                    {block.text}
+                    <RichText text={block.text} />
                 </p>
             );
         case "h2":
@@ -141,7 +156,9 @@ function ContentBlock({ block }) {
 export default function BlogPostContent({ post, posts }) {
     const { t, lang, href } = useI18n();
     const b = t.blogPost;
-    const relatedPosts = posts.filter((p) => p.slug !== post.slug).slice(0, 3);
+    const others = posts.filter((p) => p.slug !== post.slug);
+    const picked = (post.relatedPosts ?? []).map((slug) => others.find((p) => p.slug === slug)).filter(Boolean);
+    const relatedPosts = [...picked, ...others.filter((p) => !picked.includes(p))].slice(0, 3);
 
     return (
         <div className="bg-primary min-h-screen overflow-hidden">

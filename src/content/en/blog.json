@@ -78,6 +78,10 @@
         "text": "Permit fees in Chesterfield County are flat fees, not a percentage of what you spend. Under the county's fee schedule for July 1, 2026 through June 30, 2027, a renovation with no change in square footage carries a $114 building permit, and electrical and plumbing permits are $57 to $114 each, plus a 2% state levy. A typical kitchen remodel that touches electrical and plumbing lands around $230 to $350 in county fees. Replacing cabinets, plumbing fixtures like sinks and faucets, and floor coverings does not require a permit by itself. We handle the entire permit process, so you don't have to deal with any of it."
       },
       {
+        "type": "p",
+        "text": "Planning more than one project? Our guides on [kitchen remodel timeline](/blog/kitchen-remodel-timeline-richmond-va) and [bathroom remodel cost](/blog/bathroom-remodel-cost-richmond-va-2026) are a good next read."
+      },
+      {
         "type": "cta",
         "title": "Get a Free Kitchen Estimate",
         "text": "We visit your kitchen, take measurements, and give you a detailed written quote — no pressure, no surprises.",
@@ -126,7 +130,11 @@
     ],
     "reviewed": "2026-10-16",
     "usesCompanyData": true,
-    "regulatory": true
+    "regulatory": true,
+    "relatedPosts": [
+      "kitchen-remodel-timeline-richmond-va",
+      "bathroom-remodel-cost-richmond-va-2026"
+    ]
   },
   {
     "slug": "deck-permit-chesterfield-county-virginia",
@@ -195,6 +203,10 @@
       {
         "type": "p",
         "text": "Chesterfield County's published goal is to review residential plans within 10 working days, according to its residential requirements pamphlet. Actual timing depends on how complete your plans are and on the project, so we submit full drawings and build review time into every schedule. A deck that needs a sealed design, such as one carrying a hot tub, can take longer. Confirm current timing with Building Inspection."
+      },
+      {
+        "type": "p",
+        "text": "Planning more than one project? Our guides on [deck cost in Richmond](/blog/deck-cost-richmond-va-2026) and [permit rules for roof replacement and siding](/blog/roof-replacement-siding-permit-chesterfield-county-virginia) are a good next read."
       },
       {
         "type": "cta",
@@ -282,7 +294,11 @@
     ],
     "reviewed": "2026-10-16",
     "usesCompanyData": false,
-    "regulatory": true
+    "regulatory": true,
+    "relatedPosts": [
+      "deck-cost-richmond-va-2026",
+      "roof-replacement-siding-permit-chesterfield-county-virginia"
+    ]
   },
   {
     "slug": "hardie-board-vs-vinyl-siding-virginia",
@@ -401,6 +417,10 @@
         ]
       },
       {
+        "type": "p",
+        "text": "Planning more than one project? Our guides on [permit rules for roof replacement and siding](/blog/roof-replacement-siding-permit-chesterfield-county-virginia) and [how long a roof lasts in Virginia](/blog/how-long-does-a-roof-last-virginia) are a good next read."
+      },
+      {
         "type": "cta",
         "title": "Get a Free Siding Estimate",
         "text": "MAS Contractors is a certified James Hardie installer serving Richmond, Chesterfield, and Henrico. We'll show you samples and walk you through the options at your home.",
@@ -452,7 +472,11 @@
     ],
     "reviewed": "2026-10-16",
     "usesCompanyData": true,
-    "regulatory": true
+    "regulatory": true,
+    "relatedPosts": [
+      "roof-replacement-siding-permit-chesterfield-county-virginia",
+      "how-long-does-a-roof-last-virginia"
+    ]
   },
   {
     "slug": "how-to-choose-general-contractor-richmond-va",
@@ -530,6 +554,10 @@
         "text": "Never hire a contractor based on a verbal agreement or a one-page proposal. Virginia requires residential contractors to use a legible written contract, signed by both parties before work starts or payments are accepted, and to give you a fully executed copy before work begins. At minimum it must state: when work begins and the estimated completion date; the total cost; the progress-payment schedule and the down payment; the materials and work specified; the cancellation rights of both parties; the contractor's name, address, license number, class, and specialties; that any change to cost, materials, work, or completion date must be in writing and signed by all parties; the contractor's assurance of compliance with local permit, inspection, and zoning requirements; and a notice about the Virginia Contractor Transaction Recovery Fund. If a contractor resists putting things in writing, walk away."
       },
       {
+        "type": "p",
+        "text": "Planning more than one project? Our guides on [kitchen remodel cost in Richmond](/blog/kitchen-remodel-cost-richmond-va-2025) and [home addition cost in Richmond](/blog/home-addition-cost-richmond-va-2026) are a good next read."
+      },
+      {
         "type": "cta",
         "title": "Ready to Talk to a Contractor You Can Trust?",
         "text": "MAS Contractors is a Class A licensed, fully insured general contractor in Richmond VA. Free estimates, written contracts, permits handled — no surprises.",
@@ -584,7 +612,11 @@
     ],
     "reviewed": "2026-10-16",
     "usesCompanyData": false,
-    "regulatory": true
+    "regulatory": true,
+    "relatedPosts": [
+      "kitchen-remodel-cost-richmond-va-2025",
+      "home-addition-cost-richmond-va-2026"
+    ]
   },
   {
     "slug": "how-long-does-a-roof-last-virginia",
@@ -695,6 +727,10 @@
         "text": "Does a roof replacement need a permit? In Chesterfield County, re-roofing and shingle replacement are on the county's list of work that does not require a permit, but structural repairs, such as damaged rafters, do. Virginia's building code also exempts replacing an unlimited amount of roof covering on houses, with a wind-speed condition, and replacing up to 256 square feet of roof decking. We cover the details in our guide to roof and siding permits in Chesterfield County."
       },
       {
+        "type": "p",
+        "text": "Planning more than one project? Our guides on [permit rules for roof replacement and siding](/blog/roof-replacement-siding-permit-chesterfield-county-virginia) and [Hardie board vs. vinyl siding](/blog/hardie-board-vs-vinyl-siding-virginia) are a good next read."
+      },
+      {
         "type": "cta",
         "title": "Free Roof Inspection in Richmond, VA",
         "text": "MAS Contractors provides honest roof assessments — we'll tell you if you need a replacement or just a repair, and we put it in writing.",
@@ -734,7 +770,11 @@
     ],
     "reviewed": "2026-10-16",
     "usesCompanyData": true,
-    "regulatory": true
+    "regulatory": true,
+    "relatedPosts": [
+      "roof-replacement-siding-permit-chesterfield-county-virginia",
+      "hardie-board-vs-vinyl-siding-virginia"
+    ]
   },
   {
     "slug": "bathroom-remodel-roi-richmond-va",
@@ -796,6 +836,10 @@
         ]
       },
       {
+        "type": "p",
+        "text": "Planning more than one project? Our guides on [bathroom remodel cost](/blog/bathroom-remodel-cost-richmond-va-2026) and [best tile choices for Richmond homes](/blog/tile-work-101-best-tile-choices-richmond) are a good next read."
+      },
+      {
         "type": "cta",
         "title": "Free Bathroom Remodel Estimate",
         "text": "We'll walk through your bathroom, discuss what's worth updating for your goals (resale vs. enjoyment), and give you a detailed written quote.",
@@ -839,7 +883,11 @@
     ],
     "reviewed": "2026-10-16",
     "usesCompanyData": true,
-    "regulatory": true
+    "regulatory": true,
+    "relatedPosts": [
+      "bathroom-remodel-cost-richmond-va-2026",
+      "tile-work-101-best-tile-choices-richmond"
+    ]
   },
   {
     "slug": "home-addition-permit-chesterfield-county-virginia",
@@ -996,6 +1044,10 @@
         "text": "Pro tip: permit fees are collected at the time of application, before any work starts — budget for them as a project startup cost, not something you pay at the end. MAS Contractors includes all permit and inspection fees in your written estimate upfront, so there's no separate line item to surprise you mid-project."
       },
       {
+        "type": "p",
+        "text": "Planning more than one project? Our guides on [home addition cost in Richmond](/blog/home-addition-cost-richmond-va-2026) and [room addition vs. home addition](/blog/room-addition-vs-home-addition-richmond-va) are a good next read."
+      },
+      {
         "type": "cta",
         "title": "Get a Free Home Addition Estimate",
         "text": "We handle the permits, coordinate any engineer or soil report your project needs, and schedule every inspection — you get a single point of contact from first sketch to final walkthrough.",
@@ -1077,7 +1129,11 @@
     ],
     "reviewed": "2026-10-16",
     "usesCompanyData": false,
-    "regulatory": true
+    "regulatory": true,
+    "relatedPosts": [
+      "home-addition-cost-richmond-va-2026",
+      "room-addition-vs-home-addition-richmond-va"
+    ]
   },
   {
     "slug": "home-addition-cost-richmond-va-2026",
@@ -1168,6 +1224,10 @@
         "text": "Permit costs are separate from construction cost — for a typical single-story addition in Chesterfield County, expect roughly $1,050–$1,250+ in permit and inspection fees alone, based on the county's 2026–2027 residential fee schedule (see our full breakdown in our home addition permit guide)."
       },
       {
+        "type": "p",
+        "text": "Planning more than one project? Our guides on [home addition permit requirements in Chesterfield County](/blog/home-addition-permit-chesterfield-county-virginia) and [room addition vs. home addition](/blog/room-addition-vs-home-addition-richmond-va) are a good next read."
+      },
+      {
         "type": "cta",
         "title": "Get a Free Home Addition Estimate",
         "text": "We visit your property, assess your layout, and give you a detailed written estimate — no pressure, no surprises.",
@@ -1220,15 +1280,19 @@
     ],
     "reviewed": "2026-10-16",
     "usesCompanyData": true,
-    "regulatory": true
+    "regulatory": true,
+    "relatedPosts": [
+      "home-addition-permit-chesterfield-county-virginia",
+      "room-addition-vs-home-addition-richmond-va"
+    ]
   },
   {
     "slug": "kitchen-remodel-timeline-richmond-va",
     "categoryId": "Kitchen Remodeling",
     "category": "Kitchen Remodeling",
     "title": "Kitchen Remodel Timeline: How Long Does It Really Take in Richmond, VA?",
-    "metaTitle": "Kitchen Remodel Timeline Richmond VA | MAS Contractors",
-    "metaDescription": "How long does a kitchen remodel take in Richmond, VA? A realistic week-by-week timeline breakdown from a licensed Class A contractor — from demo to final walkthrough.",
+    "metaTitle": "Kitchen Remodel Timeline Richmond VA: Week-by-Week Guide",
+    "metaDescription": "How long does a kitchen remodel take in Richmond, VA? See the week-by-week schedule from demo to final walkthrough, what causes delays, and how to stay on track.",
     "readTime": "6 min read",
     "publishDate": "2026-08-06",
     "image": "/gallery/Kitchen.jpeg",
@@ -1297,6 +1361,10 @@
         ]
       },
       {
+        "type": "p",
+        "text": "Planning more than one project? Our guides on [kitchen remodel cost in Richmond](/blog/kitchen-remodel-cost-richmond-va-2025) and [how to choose a general contractor](/blog/how-to-choose-general-contractor-richmond-va) are a good next read."
+      },
+      {
         "type": "cta",
         "title": "Get a Free Kitchen Estimate",
         "text": "We give you a realistic, written schedule before any demo starts — and manage every trade in-house so nothing falls through the cracks.",
@@ -1329,7 +1397,11 @@
     ],
     "reviewed": "2026-10-16",
     "usesCompanyData": true,
-    "regulatory": true
+    "regulatory": true,
+    "relatedPosts": [
+      "kitchen-remodel-cost-richmond-va-2025",
+      "how-to-choose-general-contractor-richmond-va"
+    ]
   },
   {
     "slug": "window-replacement-cost-richmond-va-2026",
@@ -1407,6 +1479,10 @@
         "text": "Homes built before 1990 in neighborhoods across Chesterfield and Henrico frequently have window openings that have shifted out of square as the house has settled — every opening needs to be measured individually rather than assumed identical. If your home was built before 1978, window trim may also have lead paint. Under the EPA's Renovation, Repair and Painting (RRP) rule, anyone paid to disturb painted surfaces in a pre-1978 home must be certified and use lead-safe work practices — we test and follow this protocol on every applicable project."
       },
       {
+        "type": "p",
+        "text": "Planning more than one project? Our guides on [front door installation cost](/blog/front-door-installation-cost-richmond-va) and [Hardie board vs. vinyl siding](/blog/hardie-board-vs-vinyl-siding-virginia) are a good next read."
+      },
+      {
         "type": "cta",
         "title": "Get a Free Window Estimate",
         "text": "We measure every opening individually and give you itemized, per-window pricing — no guessing, no surprises.",
@@ -1469,7 +1545,11 @@
     ],
     "reviewed": "2026-10-16",
     "usesCompanyData": true,
-    "regulatory": true
+    "regulatory": true,
+    "relatedPosts": [
+      "front-door-installation-cost-richmond-va",
+      "hardie-board-vs-vinyl-siding-virginia"
+    ]
   },
   {
     "slug": "front-door-installation-cost-richmond-va",
@@ -1541,6 +1621,10 @@
         "text": "Entry door replacement consistently ranks among the highest-return exterior improvements a homeowner can make. In the 2025 Remodeling Cost vs. Value Report from Zonda Media, a steel entry door replacement (average job cost $2,435) recouped about 216% of its cost at resale on average across the U.S., second only to garage door replacement. The report's project is a 20-gauge steel door with a half-glass panel and new trim, and results in your market will vary. Beyond resale, a new door immediately improves curb appeal, security, and energy efficiency."
       },
       {
+        "type": "p",
+        "text": "Planning more than one project? Our guides on [window replacement cost](/blog/window-replacement-cost-richmond-va-2026) and [trim carpentry ideas](/blog/trim-carpentry-ideas-richmond-home) are a good next read."
+      },
+      {
         "type": "cta",
         "title": "Get a Free Door Estimate",
         "text": "We measure your opening, inspect the frame, and give you clear, itemized pricing before any work begins.",
@@ -1587,7 +1671,11 @@
     ],
     "reviewed": "2026-10-16",
     "usesCompanyData": true,
-    "regulatory": false
+    "regulatory": false,
+    "relatedPosts": [
+      "window-replacement-cost-richmond-va-2026",
+      "trim-carpentry-ideas-richmond-home"
+    ]
   },
   {
     "slug": "tile-work-101-best-tile-choices-richmond",
@@ -1659,6 +1747,10 @@
         "text": "Cement board is water-resistant, not waterproof — moisture can pass through it into the wall framing behind it unless a proper membrane is installed. Every shower we tile gets a Schluter Kerdi or RedGard waterproofing system before a single tile is set. The tile you choose matters for looks and durability, but the waterproofing behind it is what actually determines whether the installation lasts."
       },
       {
+        "type": "p",
+        "text": "Planning more than one project? Our guides on [bathroom remodel cost](/blog/bathroom-remodel-cost-richmond-va-2026) and [kitchen remodel cost in Richmond](/blog/kitchen-remodel-cost-richmond-va-2025) are a good next read."
+      },
+      {
         "type": "cta",
         "title": "Get a Free Tile Estimate",
         "text": "We evaluate your substrate, waterproofing needs, and tile options on-site — with itemized, no-pressure pricing.",
@@ -1719,7 +1811,11 @@
     ],
     "reviewed": "2026-10-16",
     "usesCompanyData": true,
-    "regulatory": false
+    "regulatory": false,
+    "relatedPosts": [
+      "bathroom-remodel-cost-richmond-va-2026",
+      "kitchen-remodel-cost-richmond-va-2025"
+    ]
   },
   {
     "slug": "trim-carpentry-ideas-richmond-home",
@@ -1792,6 +1888,10 @@
         ]
       },
       {
+        "type": "p",
+        "text": "Planning more than one project? Our guides on [front door installation cost](/blog/front-door-installation-cost-richmond-va) and [best tile choices for Richmond homes](/blog/tile-work-101-best-tile-choices-richmond) are a good next read."
+      },
+      {
         "type": "cta",
         "title": "Get a Free Trim Carpentry Estimate",
         "text": "We walk your home, photograph existing profiles, and quote a complete trim package — itemized and pressure-free.",
@@ -1814,7 +1914,11 @@
     "references": [],
     "reviewed": "2026-10-16",
     "usesCompanyData": true,
-    "regulatory": false
+    "regulatory": false,
+    "relatedPosts": [
+      "front-door-installation-cost-richmond-va",
+      "tile-work-101-best-tile-choices-richmond"
+    ]
   },
   {
     "slug": "room-addition-vs-home-addition-richmond-va",
@@ -1889,6 +1993,10 @@
         ]
       },
       {
+        "type": "p",
+        "text": "Planning more than one project? Our guides on [home addition cost in Richmond](/blog/home-addition-cost-richmond-va-2026) and [home addition permit requirements in Chesterfield County](/blog/home-addition-permit-chesterfield-county-virginia) are a good next read."
+      },
+      {
         "type": "cta",
         "title": "Get a Free Addition Estimate",
         "text": "We evaluate your space, walk you through the right approach for your goals, and provide a written estimate — no pressure.",
@@ -1937,7 +2045,11 @@
     ],
     "reviewed": "2026-10-16",
     "usesCompanyData": true,
-    "regulatory": true
+    "regulatory": true,
+    "relatedPosts": [
+      "home-addition-cost-richmond-va-2026",
+      "home-addition-permit-chesterfield-county-virginia"
+    ]
   },
   {
     "slug": "bathroom-remodel-cost-richmond-va-2026",
@@ -2068,6 +2180,10 @@
         "text": "Permits: in Chesterfield County, a permit is required if the remodel installs new piping or fixtures or relocates fixtures, involves electrical wiring beyond swapping a fixture, or changes anything structural. The county's no-permit list includes replacing plumbing fixtures like sinks, toilets, and faucets and installing new floor coverings, so purely cosmetic work in the same locations generally does not need one. In Chesterfield, fees are flat: a renovation with no change in square footage carries a $114 building permit, and plumbing and electrical permits run $57 to $114 each, plus a 2% state levy. Henrico and the City of Richmond have their own offices and fee schedules. We pull all required permits as part of the project scope."
       },
       {
+        "type": "p",
+        "text": "Planning more than one project? Our guides on [bathroom remodel ROI](/blog/bathroom-remodel-roi-richmond-va) and [best tile choices for Richmond homes](/blog/tile-work-101-best-tile-choices-richmond) are a good next read."
+      },
+      {
         "type": "cta",
         "title": "Get a Free Bathroom Estimate",
         "text": "We walk your bathroom, check the subfloor and ventilation, and give you a detailed line-item quote — so you can see exactly where every dollar goes.",
@@ -2129,7 +2245,11 @@
     ],
     "reviewed": "2026-10-16",
     "usesCompanyData": true,
-    "regulatory": true
+    "regulatory": true,
+    "relatedPosts": [
+      "bathroom-remodel-roi-richmond-va",
+      "tile-work-101-best-tile-choices-richmond"
+    ]
   },
   {
     "slug": "deck-cost-richmond-va-2026",
@@ -2257,6 +2377,10 @@
         "text": "Permits: in Chesterfield County, a building permit is required to build a deck whether or not it is attached to the house, which covers every deck we build. The deck permit fee is currently $114 plus a 2% state levy. We cover exactly when a permit applies, and what the process looks like, in our guide to deck permits in Chesterfield County. We pull all required permits as part of the project scope."
       },
       {
+        "type": "p",
+        "text": "Planning more than one project? Our guides on [deck permit rules in Chesterfield County](/blog/deck-permit-chesterfield-county-virginia) and [how to choose a general contractor](/blog/how-to-choose-general-contractor-richmond-va) are a good next read."
+      },
+      {
         "type": "cta",
         "title": "Get a Free Deck Estimate",
         "text": "We walk your yard, check the grade and access, and give you a detailed line-item quote — so you know exactly where every dollar goes before we start.",
@@ -2310,7 +2434,11 @@
     ],
     "reviewed": "2026-10-16",
     "usesCompanyData": true,
-    "regulatory": true
+    "regulatory": true,
+    "relatedPosts": [
+      "deck-permit-chesterfield-county-virginia",
+      "how-to-choose-general-contractor-richmond-va"
+    ]
   },
   {
     "slug": "roof-replacement-siding-permit-chesterfield-county-virginia",
@@ -2481,6 +2609,10 @@
         "linkText": "Schedule Your Free Estimate"
       },
       {
+        "type": "p",
+        "text": "Planning more than one project? Our guides on [how long a roof lasts in Virginia](/blog/how-long-does-a-roof-last-virginia) and [Hardie board vs. vinyl siding](/blog/hardie-board-vs-vinyl-siding-virginia) are a good next read."
+      },
+      {
         "type": "cta",
         "title": "Siding Project?",
         "text": "Replacing or repairing siding? We are a certified James Hardie installer, and we tell you up front whether your job needs a permit.",
@@ -2520,6 +2652,10 @@
     ],
     "reviewed": "2026-10-16",
     "usesCompanyData": false,
-    "regulatory": true
+    "regulatory": true,
+    "relatedPosts": [
+      "how-long-does-a-roof-last-virginia",
+      "hardie-board-vs-vinyl-siding-virginia"
+    ]
   }
 ]
