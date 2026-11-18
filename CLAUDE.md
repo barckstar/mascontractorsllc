@@ -173,6 +173,10 @@ Aplica a **todo** texto con datos externos: posts, páginas de servicio, FAQ del
 7. **Trampas conocidas** (verificadas el 2026-10-16): las clases de licencia DPOR cambiaron en 2025 (C: >$1,000 y <$30,000; B: $30,000–<$150,000; A: ≥$150,000) según `§ 54.1-1100`; en Chesterfield **todo deck** requiere permiso (esté o no unido a la casa); cambiar techo o revestimiento por uno equivalente no requiere permiso, salvo trabajo estructural, asbesto, distritos históricos y zonas de inundación; Virginia no exige arquitecto/ingeniero para planos de viviendas de 1–2 familias de hasta 3 pisos (`§ 54.1-402`).
 8. **Herramientas en sesiones de nube:** el entorno debe permitir `law.lis.virginia.gov`, `chesterfield.gov`, `commons.wikimedia.org` y `upload.wikimedia.org`. `WebFetch` puede no resolver los dominios; `curl` sí pasa por el proxy. Wikimedia limita por tasa (429): reintentar con espera.
 
+## Regla del blog: el dinero de MAS no se publica (obligatoria, del dueño, 2026-11-17)
+
+Los posts **no publican dinero de MAS**: nada de presupuestos, mano de obra, rangos de obra completa ni "desde $X" de un servicio. Lo que **sí** se permite (el dueño lo aclaró el mismo día): **precios estándar de mercado de los materiales**, dónde comprarlos y los inconvenientes que pueden surgir (entregas, color/lote, desperdicio, clima, etc.). Esos precios siguen la regla de verificación de fuentes: salen de una página de producto o documento abierto y leído, con fecha y ámbito, y se rotulan como precio de referencia de venta al público, no como precio de MAS. Cada post termina en: *todo trabajo es diferente y trae distintos retos, por eso ofrecemos presupuestos gratis*, con el bloque `cta` hacia `/contact` ("Schedule Your Free Estimate" / "Programe su presupuesto gratis"). Aplica a posts nuevos, `metaDescription` y títulos (que no lleven precios). Los posts viejos que mencionan costos de obra están pendientes de decidir con el dueño.
+
 ## SEO
 
 - Metadata API por página (`export const metadata` en cada `page.jsx`).
