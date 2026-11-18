@@ -2811,5 +2811,420 @@
         "linkText": "Request Your Free Estimate"
       }
     ]
+  },
+  {
+    "categoryId": "Home Improvement Tips",
+    "category": "Home Improvement Tips",
+    "publishDate": "2026-11-17",
+    "reviewed": "2026-11-17",
+    "usesCompanyData": false,
+    "slug": "virginia-contractor-license-how-to-verify",
+    "image": "/gallery/about.png",
+    "relatedService": null,
+    "relatedServiceLabel": null,
+    "regulatory": true,
+    "relatedPosts": [
+      "how-to-choose-general-contractor-richmond-va",
+      "every-remodel-is-different-free-estimate-richmond-va"
+    ],
+    "references": [
+      {
+        "name": "Code of Virginia § 54.1-1100: Definitions (license classes)",
+        "url": "https://law.lis.virginia.gov/vacode/title54.1/chapter11/section54.1-1100/"
+      },
+      {
+        "name": "Code of Virginia § 54.1-1101: Exemptions from licensing",
+        "url": "https://law.lis.virginia.gov/vacode/title54.1/chapter11/section54.1-1101/"
+      },
+      {
+        "name": "Code of Virginia § 54.1-1103: License required",
+        "url": "https://law.lis.virginia.gov/vacode/title54.1/chapter11/section54.1-1103/"
+      },
+      {
+        "name": "Code of Virginia § 54.1-1115: Prohibited acts",
+        "url": "https://law.lis.virginia.gov/vacode/title54.1/chapter11/section54.1-1115/"
+      },
+      {
+        "name": "Code of Virginia § 54.1-1123: Contractor Transaction Recovery Fund",
+        "url": "https://law.lis.virginia.gov/vacode/title54.1/chapter11/section54.1-1123/"
+      },
+      {
+        "name": "18VAC50-22-260: Board for Contractors, prohibited acts and contract requirements",
+        "url": "https://law.lis.virginia.gov/admincode/title18/agency50/chapter22/section260/"
+      },
+      {
+        "name": "DPOR: License Lookup",
+        "url": "https://www.dpor.virginia.gov/LicenseLookup"
+      },
+      {
+        "name": "DPOR: Consumer guide to hiring a contractor",
+        "url": "https://www.dpor.virginia.gov/Consumers/Guide_Contractor/"
+      },
+      {
+        "name": "DPOR: Contractor Transaction Recovery Fund",
+        "url": "https://www.dpor.virginia.gov/Boards/Contractors_Recovery_Fund/"
+      },
+      {
+        "name": "DPOR: Report a licensee",
+        "url": "https://www.dpor.virginia.gov/Report-Licensee"
+      },
+      {
+        "name": "Virginia LIS: SB823 (2026), residential solar contracts",
+        "url": "https://lis.virginia.gov/bill-details/20261/SB823"
+      }
+    ],
+    "title": "Virginia Contractor License: What It Means and How to Verify One",
+    "metaTitle": "Virginia Contractor License: How to Verify One | MAS Contractors",
+    "metaDescription": "What a Virginia contractor license means, what a written contract must include and how to check a contractor with DPOR before you hire.",
+    "imgAlt": "Homeowner checking a contractor license before a remodel in Richmond VA",
+    "readTime": "7 min read",
+    "excerpt": "A license is the first thing to check before you hire anyone. Here is what the classes mean, how to look one up on the DPOR site and what a written contract has to include.",
+    "content": [
+      {
+        "type": "lead",
+        "text": "Before you sign anything, check that your contractor is licensed. It takes a few minutes on the DPOR website, and it tells you whether the person you are about to hire is allowed to do the work, which class of license they hold and whether they have a disciplinary record."
+      },
+      {
+        "type": "h2",
+        "text": "What the License Classes Mean"
+      },
+      {
+        "type": "p",
+        "text": "Virginia licenses contractors in three classes, based on the value of a single contract and on the total work a firm takes on in any 12 months. Under § 54.1-1100, Class C covers a single contract over $1,000 but under $30,000. Class B covers $30,000 up to under $150,000. Class A covers $150,000 or more. The law also sets yearly totals for each class, so the contract value is not the only limit."
+      },
+      {
+        "type": "p",
+        "text": "Electrical, plumbing and HVAC work also requires the right tradesman license. The classes changed in 2025 (Chapter 127 of the 2025 Acts, effective July 1, 2025), so articles written before then may show different amounts."
+      },
+      {
+        "type": "h2",
+        "text": "How to Verify a License on DPOR"
+      },
+      {
+        "type": "ol",
+        "items": [
+          "Open the License Lookup tool on the DPOR website (dpor.virginia.gov/LicenseLookup)",
+          "Search by the contractor's name, license number, address or license type. There is also an Advanced License Search",
+          "Check that the license is active and that its class fits the size of your project",
+          "Use the Disciplinary Action Search tab to see whether the contractor has been disciplined",
+          "Ask the contractor for their license number if you do not have it. It must appear in your written contract"
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Pro tip: DPOR notes that the data in License Lookup is not the official public record and may not be fully up to date. If something does not match, call the contractor and DPOR before you sign."
+      },
+      {
+        "type": "h2",
+        "text": "What Your Written Contract Must Include"
+      },
+      {
+        "type": "p",
+        "text": "Under the Board for Contractors regulations (18VAC50-22-260), a residential contractor must use a written, legible contract, signed by you and by the contractor before work starts or any payment is accepted. You must receive a signed copy before the work begins. Among other things, it must include:"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Start and estimated completion dates",
+          "The total price and the payment schedule, with a specific statement of the down payment",
+          "A list of the work and the materials",
+          "A plain-language clause explaining events outside the contractor's control",
+          "A statement that the contractor will comply with local permit, inspection and zoning requirements",
+          "Your cancellation rights, and the Recovery Fund notice",
+          "The contractor's name, address, license number, class of license and specialty",
+          "A rule that any change to the price, materials, work or dates must be in writing and signed by everyone"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "DPOR's consumer guide also mentions a three-day right to cancel a contract negotiated in your home. It suggests being careful with contractors who ask for full payment up front or who accept only cash or payment apps, and it suggests keeping any initial deposit small."
+      },
+      {
+        "type": "h2",
+        "text": "What Happens If a Contractor Is Not Licensed"
+      },
+      {
+        "type": "p",
+        "text": "Virginia law says no one may do contracting work without a license (§ 54.1-1103). Unlicensed contracting, or contracting without the right class of license, is a Class 1 misdemeanor (§ 54.1-1115), and an unlicensed contractor generally cannot enforce the contract against you, with limited exceptions. The owner exemption in § 54.1-1101 is for owners working on their own property. It does not make it safe to hire someone unlicensed."
+      },
+      {
+        "type": "h2",
+        "text": "The Recovery Fund and How to File a Complaint"
+      },
+      {
+        "type": "p",
+        "text": "The Contractor Transaction Recovery Fund may help eligible consumers who have losses because of improper or dishonest conduct by a licensed residential contractor. It is paid by contractor assessments, not by tax money, and filing a claim does not guarantee payment. You need a court judgment against the licensee, and the contract must be for your Virginia home. State law caps what the Fund pays per claim."
+      },
+      {
+        "type": "p",
+        "text": "To report a licensee, send DPOR a written report within three years of the violation. Complaints become public once a case is closed. DPOR cannot require a contractor to refund money, so in some cases private legal action is the only way to recover it."
+      },
+      {
+        "type": "h2",
+        "text": "What Is New in 2026"
+      },
+      {
+        "type": "p",
+        "text": "A 2026 law (SB823, approved April 13, 2026) adds required provisions to residential solar contracts. Those rules take effect January 1, 2027 and apply only to solar customers. For other remodeling work, the license classes and contract rules above are the ones that apply."
+      },
+      {
+        "type": "p",
+        "text": "You are welcome to look up any contractor you are thinking of hiring, including us. For more questions to ask, read [How to Choose a General Contractor in Richmond, VA](/blog/how-to-choose-general-contractor-richmond-va)."
+      },
+      {
+        "type": "cta",
+        "title": "Schedule Your Free Estimate",
+        "text": "Every job is different and brings its own challenges, which is why we offer free estimates. We look at your home first, with no pressure.",
+        "link": "/contact",
+        "linkText": "Request Your Free Estimate"
+      }
+    ]
+  },
+  {
+    "categoryId": "Home Improvement Tips",
+    "category": "Home Improvement Tips",
+    "publishDate": "2026-11-17",
+    "reviewed": "2026-11-17",
+    "usesCompanyData": false,
+    "slug": "roof-replacement-materials-permits-richmond-va",
+    "image": "/gallery/Roofing.jpeg",
+    "relatedService": "roofing",
+    "relatedServiceLabel": "Roofing Services in Chesterfield & Richmond, VA",
+    "regulatory": true,
+    "relatedPosts": [
+      "how-long-does-a-roof-last-virginia",
+      "roof-replacement-siding-permit-chesterfield-county-virginia"
+    ],
+    "references": [
+      {
+        "name": "13VAC5-63-80: Uniform Statewide Building Code, Section 108 (exemptions from permit)",
+        "url": "https://law.lis.virginia.gov/admincode/title13/agency5/chapter63/section80/"
+      },
+      {
+        "name": "Chesterfield County: Residential Permits and Inspections Process",
+        "url": "https://www.chesterfield.gov/4030/Residential-Permits-and-Inspections-Proc"
+      },
+      {
+        "name": "Owens Corning: Duration shingles, technical characteristics",
+        "url": "https://www.owenscorning.com/en-us/roofing/shingles/duration"
+      },
+      {
+        "name": "ABC Supply (roofing supplier)",
+        "url": "https://www.abcsupply.com/"
+      }
+    ],
+    "title": "Roof Replacement in Richmond, VA: Materials, Permits and What Can Go Wrong",
+    "metaTitle": "Roof Replacement in Richmond VA: What to Know | MAS Contractors",
+    "metaDescription": "Planning a roof replacement in Richmond VA? Learn about materials, when a permit is needed in Chesterfield and the problems that can come up.",
+    "imgAlt": "Roof replacement with new shingles on a home in Richmond VA",
+    "readTime": "6 min read",
+    "excerpt": "What goes into a roof replacement, when Virginia and Chesterfield County require a permit, and the surprises that can change a roofing job once the old shingles come off.",
+    "content": [
+      {
+        "type": "lead",
+        "text": "A roof replacement looks simple from the street: old shingles off, new shingles on. In practice, every roof is different and brings its own challenges, from the layers underneath to the weather on the day of the job. Here is what goes into one, what the rules say about permits and what can go wrong."
+      },
+      {
+        "type": "h2",
+        "text": "What Goes Into a Roof"
+      },
+      {
+        "type": "p",
+        "text": "Shingles are the part you see, but a roof is a system. A typical replacement includes the roofing material itself, underlayment, waterproofing at the edges and valleys, drip edge, ventilation and flashing around chimneys, vents and walls. Which of these your home needs depends on the roof you have today."
+      },
+      {
+        "type": "p",
+        "text": "One term worth knowing: roofers measure roofs in squares. Owens Corning's technical page for its Duration shingles lists 3 bundles per square, so a quote that says squares is talking about area, not about the number of bundles on the truck."
+      },
+      {
+        "type": "h2",
+        "text": "Do You Need a Permit?"
+      },
+      {
+        "type": "p",
+        "text": "Under Virginia's statewide building code (13VAC5-63-80, Section 108), replacing any amount of roof covering on a one- or two-family home is exempt from a permit, as long as the home is not in an area where the design wind speed is greater than 100 mph. Replacing 100 square feet or less of roof covering is exempt in all wind zones. The code also lets the local building official require a permit in a locally designated historic district and for exempt work in a special flood hazard area."
+      },
+      {
+        "type": "p",
+        "text": "Chesterfield County's residential permit page lists re-roofing and shingles among its examples of work that does not require a permit. Henrico and the City of Richmond may handle things differently, so confirm with the local building department before you start."
+      },
+      {
+        "type": "h2",
+        "text": "What Can Go Wrong"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Surprises under the old shingles: once the roof is open, damaged decking or hidden moisture can appear. Not every problem is visible from the ground or even from the attic.",
+          "Color that looks different in person: Owens Corning notes that monitors vary in color and recommends requesting a physical sample. Look at a sample outdoors, next to your siding and trim.",
+          "Weather: wet or very windy days stop roofing work, so schedules move. An open roof needs to be protected the same day.",
+          "Special locations: historic districts, flood zones and high-wind areas can add requirements, as the code above shows.",
+          "Mixing up materials: shingles, underlayment, vents and flashing need to work together. Mixing parts from different systems can cause problems that show up years later."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Where Materials Come From"
+      },
+      {
+        "type": "p",
+        "text": "Roofing materials are sold at home improvement stores and through roofing supply houses. Some suppliers, such as ABC Supply, describe themselves as serving contractors. If you are comparing offers, ask each company which products they plan to use, so you are comparing the same thing."
+      },
+      {
+        "type": "p",
+        "text": "We have not listed store prices here, because prices change often and differ by store, color and product line. The better way to compare is to ask each contractor for a written list of materials."
+      },
+      {
+        "type": "tip",
+        "text": "Pro tip: Ask for the brand and product line of the shingles, the underlayment, the drip edge and the vents in writing. It is the easiest way to compare two estimates."
+      },
+      {
+        "type": "p",
+        "text": "Want to know how long your roof should last? Read [How Long Does a Roof Last in Virginia?](/blog/how-long-does-a-roof-last-virginia). For our roofing work, see [Roofing Services in Chesterfield & Richmond, VA](/services/roofing)."
+      },
+      {
+        "type": "cta",
+        "title": "Schedule Your Free Estimate",
+        "text": "Every job is different and brings its own challenges, which is why we offer free estimates. We look at your home first, with no pressure.",
+        "link": "/contact",
+        "linkText": "Request Your Free Estimate"
+      }
+    ]
+  },
+  {
+    "categoryId": "Home Improvement Tips",
+    "category": "Home Improvement Tips",
+    "publishDate": "2026-11-17",
+    "reviewed": "2026-11-17",
+    "usesCompanyData": false,
+    "slug": "siding-materials-richmond-va-fiber-cement-vinyl-pitfalls",
+    "image": "/gallery/Siding.jpeg",
+    "relatedService": "siding",
+    "relatedServiceLabel": "Siding Installation & Replacement in Chesterfield & Richmond, VA",
+    "regulatory": true,
+    "relatedPosts": [
+      "hardie-board-vs-vinyl-siding-virginia",
+      "roof-replacement-siding-permit-chesterfield-county-virginia"
+    ],
+    "references": [
+      {
+        "name": "13VAC5-63-80: Uniform Statewide Building Code, Section 108 (exemptions from permit)",
+        "url": "https://law.lis.virginia.gov/admincode/title13/agency5/chapter63/section80/"
+      },
+      {
+        "name": "Chesterfield County: Residential Permits and Inspections Process",
+        "url": "https://www.chesterfield.gov/4030/Residential-Permits-and-Inspections-Proc"
+      },
+      {
+        "name": "Chesterfield County: Residential Project Requirements",
+        "url": "https://www.chesterfield.gov/4403/Residential-Project-Requirements-and-App"
+      },
+      {
+        "name": "James Hardie: Pros Hub and dealer locator",
+        "url": "https://www.jameshardie.com/pros-hub/"
+      },
+      {
+        "name": "James Hardie: HardieTrim installation requirements (effective September 2013)",
+        "url": "https://images.thdstatic.com/catalog/pdfImages/0b/0bce4aa8-3ce7-4b79-81cd-c35984e8441c.pdf"
+      },
+      {
+        "name": "James Hardie: product warranty (2024)",
+        "url": "https://pdf.lowes.com/productdocuments/e16b4dc1-d263-4503-a3ef-d8dfb5c54e04/66510552.pdf"
+      },
+      {
+        "name": "Vinyl Siding Institute: Installation Manual (2020)",
+        "url": "https://polymericexteriors.org/wp-content/uploads/2022/10/2022-Vinyl-Siding-Installation-Manual-ENGLISH_100322_LR.pdf"
+      },
+      {
+        "name": "U.S. EPA: Learn About Asbestos",
+        "url": "https://www.epa.gov/asbestos/learn-about-asbestos"
+      }
+    ],
+    "title": "Siding in Richmond, VA: Fiber Cement vs. Vinyl and the Problems to Plan For",
+    "metaTitle": "Siding in Richmond VA: Materials and Pitfalls | MAS Contractors",
+    "metaDescription": "Fiber cement or vinyl siding in Richmond VA? Learn how each is installed, what can go wrong and when a permit is needed in Chesterfield.",
+    "imgAlt": "New fiber cement siding installed on a home in Richmond VA",
+    "readTime": "7 min read",
+    "excerpt": "Fiber cement and vinyl each have their own rules for cutting, painting and fastening. Here is what manufacturers say to watch for, and what to ask before you choose.",
+    "content": [
+      {
+        "type": "lead",
+        "text": "Siding changes how your home looks and how it handles water, sun and temperature swings. Fiber cement and vinyl are both common in Richmond, and each has its own installation rules. Every house brings its own challenges, so here is what the manufacturers and public sources say to plan for."
+      },
+      {
+        "type": "p",
+        "text": "For a side-by-side comparison of the two materials, read [Hardie Board vs. Vinyl Siding in Virginia](/blog/hardie-board-vs-vinyl-siding-virginia). This article focuses on what can go wrong."
+      },
+      {
+        "type": "h2",
+        "text": "Do You Need a Permit?"
+      },
+      {
+        "type": "p",
+        "text": "Virginia's statewide building code (13VAC5-63-80, Section 108) exempts replacing any amount of siding on a one- or two-family home from a permit, as long as the home is not in an area where the design wind speed is greater than 100 mph. The local building official may require a permit for replacement siding in a locally designated historic district."
+      },
+      {
+        "type": "p",
+        "text": "Chesterfield County's pages list repairing siding and installing vinyl siding among the work that does not require a permit. They do not say anything specific about replacing all of a home's siding with another material, so ask the county before you start. Henrico and the City of Richmond may differ."
+      },
+      {
+        "type": "h2",
+        "text": "Fiber Cement (James Hardie): What to Plan For"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Silica dust: Hardie's installation document says its products contain respirable crystalline silica. It calls for cutting outdoors with good ventilation, using fiber cement shears or a dust-reducing saw connected to a HEPA vacuum, wearing a NIOSH-approved N-95 or better mask and never dry sweeping. It also says never to use a power saw indoors.",
+          "Painting window: the same document says products must be painted within 180 days if primed and 90 days if unprimed, with 100% acrylic paint, and that all cut edges must be caulked, painted or primed.",
+          "Storage: store the product flat, dry and covered. Installing siding wet may cause shrinkage at butt joints.",
+          "Pre-finished color: for ColorPlus products, use only James Hardie touch-up kits. Hardie's warranty excludes third-party paints and defines excess color change by a technical measurement that Hardie decides. If a large area needs touch-up, Hardie says to replace the damaged area with new siding.",
+          "Warranty: Hardie's warranty excludes damage from improper storage, handling or installation. Follow the current installation instructions that come with the product. The document we read is dated 2013."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Vinyl: What to Plan For"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "It moves: the Vinyl Siding Institute manual says vinyl can expand and contract 1/2 inch or more over a 12 ft 6 in length with normal temperature changes.",
+          "Fasteners: do not drive the fastener tight against the nail hem. Leave about 1/32 inch of clearance. Do not face-nail or staple through the siding, since it can cause ripples.",
+          "Clearance: leave at least 1/4 inch at openings and stops, and 3/8 inch when it is below 40°F.",
+          "Water barrier: vinyl is an exterior cladding, not a water-resistive barrier. It must be installed over one."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Older Homes: Asbestos"
+      },
+      {
+        "type": "p",
+        "text": "The U.S. EPA says asbestos may be found in roofing and siding shingles, and that exposure may occur only when the material is disturbed or damaged. Home repair and remodeling can disturb it. If your home is older and your siding is original, tell your contractor before any cutting or removal begins."
+      },
+      {
+        "type": "h2",
+        "text": "Where to Buy"
+      },
+      {
+        "type": "p",
+        "text": "James Hardie products are sold through dealers and suppliers, and the company has a dealer locator on its Pros Hub page. Vinyl is sold by many suppliers. We have not listed store prices here, because they change often and vary by store, color and profile. The best way to compare is to ask each contractor for the brand, product line and trim in writing."
+      },
+      {
+        "type": "tip",
+        "text": "Pro tip: Ask whether the siding will be primed, pre-finished or unpainted, and who is responsible for the paint schedule. Fiber cement has a painting deadline that is easy to miss."
+      },
+      {
+        "type": "p",
+        "text": "For our work, see [Siding Installation & Replacement in Chesterfield & Richmond, VA](/services/siding)."
+      },
+      {
+        "type": "cta",
+        "title": "Schedule Your Free Estimate",
+        "text": "Every job is different and brings its own challenges, which is why we offer free estimates. We look at your home first, with no pressure.",
+        "link": "/contact",
+        "linkText": "Request Your Free Estimate"
+      }
+    ]
   }
 ]

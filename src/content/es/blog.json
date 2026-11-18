@@ -2811,5 +2811,420 @@
         "linkText": "Solicite su presupuesto gratis"
       }
     ]
+  },
+  {
+    "categoryId": "Home Improvement Tips",
+    "category": "Home Improvement Tips",
+    "publishDate": "2026-11-17",
+    "reviewed": "2026-11-17",
+    "usesCompanyData": false,
+    "slug": "virginia-contractor-license-how-to-verify",
+    "image": "/gallery/about.png",
+    "relatedService": null,
+    "relatedServiceLabel": null,
+    "regulatory": true,
+    "relatedPosts": [
+      "how-to-choose-general-contractor-richmond-va",
+      "every-remodel-is-different-free-estimate-richmond-va"
+    ],
+    "references": [
+      {
+        "name": "Código de Virginia § 54.1-1100: Definiciones (clases de licencia)",
+        "url": "https://law.lis.virginia.gov/vacode/title54.1/chapter11/section54.1-1100/"
+      },
+      {
+        "name": "Código de Virginia § 54.1-1101: Exenciones de licencia",
+        "url": "https://law.lis.virginia.gov/vacode/title54.1/chapter11/section54.1-1101/"
+      },
+      {
+        "name": "Código de Virginia § 54.1-1103: Licencia obligatoria",
+        "url": "https://law.lis.virginia.gov/vacode/title54.1/chapter11/section54.1-1103/"
+      },
+      {
+        "name": "Código de Virginia § 54.1-1115: Actos prohibidos",
+        "url": "https://law.lis.virginia.gov/vacode/title54.1/chapter11/section54.1-1115/"
+      },
+      {
+        "name": "Código de Virginia § 54.1-1123: Fondo de Recuperación de Transacciones con Contratistas",
+        "url": "https://law.lis.virginia.gov/vacode/title54.1/chapter11/section54.1-1123/"
+      },
+      {
+        "name": "18VAC50-22-260: Board for Contractors, actos prohibidos y requisitos del contrato",
+        "url": "https://law.lis.virginia.gov/admincode/title18/agency50/chapter22/section260/"
+      },
+      {
+        "name": "DPOR: Buscador de licencias (License Lookup)",
+        "url": "https://www.dpor.virginia.gov/LicenseLookup"
+      },
+      {
+        "name": "DPOR: Guía del consumidor para contratar un contratista",
+        "url": "https://www.dpor.virginia.gov/Consumers/Guide_Contractor/"
+      },
+      {
+        "name": "DPOR: Fondo de Recuperación de Transacciones con Contratistas",
+        "url": "https://www.dpor.virginia.gov/Boards/Contractors_Recovery_Fund/"
+      },
+      {
+        "name": "DPOR: Reportar a un licenciatario",
+        "url": "https://www.dpor.virginia.gov/Report-Licensee"
+      },
+      {
+        "name": "Virginia LIS: SB823 (2026), contratos de energía solar residencial",
+        "url": "https://lis.virginia.gov/bill-details/20261/SB823"
+      }
+    ],
+    "title": "Licencia de contratista en Virginia: qué significa y cómo verificarla",
+    "metaTitle": "Licencia de contratista en Virginia: cómo verificarla | MAS",
+    "metaDescription": "Qué significa una licencia de contratista en Virginia, qué debe incluir el contrato escrito y cómo revisar a un contratista en DPOR antes de contratar.",
+    "imgAlt": "Dueño de casa verificando la licencia de un contratista antes de remodelar en Richmond VA",
+    "readTime": "7 min de lectura",
+    "excerpt": "La licencia es lo primero que debe revisar antes de contratar a alguien. Aquí le explicamos qué significan las clases, cómo buscarla en DPOR y qué debe incluir un contrato escrito.",
+    "content": [
+      {
+        "type": "lead",
+        "text": "Antes de firmar nada, compruebe que su contratista tiene licencia. Le toma unos minutos en el sitio de DPOR y le dice si la persona que va a contratar puede hacer el trabajo, qué clase de licencia tiene y si tiene antecedentes disciplinarios."
+      },
+      {
+        "type": "h2",
+        "text": "Qué significan las clases de licencia"
+      },
+      {
+        "type": "p",
+        "text": "Virginia otorga licencias de contratista en tres clases, según el valor de un solo contrato y el total de trabajo que una empresa toma en cualquier periodo de 12 meses. Según el § 54.1-1100, la Clase C cubre un contrato de más de $1,000 y menos de $30,000. La Clase B cubre de $30,000 hasta menos de $150,000. La Clase A cubre $150,000 o más. La ley también fija totales anuales para cada clase, así que el valor del contrato no es el único límite."
+      },
+      {
+        "type": "p",
+        "text": "El trabajo eléctrico, de plomería y de climatización (HVAC) además requiere la licencia de oficio correspondiente. Las clases cambiaron en 2025 (Capítulo 127 de las leyes de 2025, vigente desde el 1 de julio de 2025), por lo que artículos anteriores pueden mostrar otras cifras."
+      },
+      {
+        "type": "h2",
+        "text": "Cómo verificar una licencia en DPOR"
+      },
+      {
+        "type": "ol",
+        "items": [
+          "Abra el buscador License Lookup en el sitio de DPOR (dpor.virginia.gov/LicenseLookup)",
+          "Busque por nombre del contratista, número de licencia, dirección o tipo de licencia. También hay una búsqueda avanzada (Advanced License Search)",
+          "Compruebe que la licencia esté activa y que su clase corresponda al tamaño de su proyecto",
+          "Use la pestaña Disciplinary Action Search para ver si el contratista ha sido sancionado",
+          "Pida al contratista su número de licencia si no lo tiene. Debe aparecer en su contrato escrito"
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Consejo profesional: DPOR advierte que los datos del buscador no son el registro público oficial y pueden no estar al día. Si algo no coincide, llame al contratista y a DPOR antes de firmar."
+      },
+      {
+        "type": "h2",
+        "text": "Qué debe incluir su contrato escrito"
+      },
+      {
+        "type": "p",
+        "text": "Según el reglamento del Board for Contractors (18VAC50-22-260), un contratista residencial debe usar un contrato escrito y legible, firmado por usted y por el contratista antes de empezar la obra o de aceptar cualquier pago. Usted debe recibir una copia firmada antes de que empiece el trabajo. Entre otras cosas, debe incluir:"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Fechas de inicio y de terminación estimada",
+          "El precio total y el calendario de pagos, con una declaración específica del anticipo",
+          "Una lista del trabajo y de los materiales",
+          "Una cláusula en lenguaje sencillo sobre hechos fuera del control del contratista",
+          "Una declaración de que el contratista cumplirá los requisitos locales de permisos, inspecciones y zonificación",
+          "Sus derechos de cancelación y el aviso del Fondo de Recuperación",
+          "Nombre, dirección, número de licencia, clase de licencia y especialidad del contratista",
+          "Una regla de que cualquier cambio de precio, materiales, trabajo o fechas debe constar por escrito y firmado por todos"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "La guía del consumidor de DPOR también menciona un derecho de cancelar en tres días un contrato negociado en su casa. Sugiere tener cuidado con contratistas que piden el pago completo por adelantado o que solo aceptan efectivo o aplicaciones de pago, y sugiere que el anticipo sea pequeño."
+      },
+      {
+        "type": "h2",
+        "text": "Qué pasa si un contratista no tiene licencia"
+      },
+      {
+        "type": "p",
+        "text": "La ley de Virginia dice que nadie puede hacer trabajo de contratista sin licencia (§ 54.1-1103). Contratar sin licencia, o sin la clase correcta, es un delito menor de Clase 1 (§ 54.1-1115), y un contratista sin licencia en general no puede hacer valer el contrato contra usted, con excepciones limitadas. La exención del § 54.1-1101 es para propietarios que trabajan en su propia propiedad. No hace seguro contratar a alguien sin licencia."
+      },
+      {
+        "type": "h2",
+        "text": "El Fondo de Recuperación y cómo presentar una queja"
+      },
+      {
+        "type": "p",
+        "text": "El Fondo de Recuperación de Transacciones con Contratistas puede ayudar a consumidores elegibles que sufran pérdidas por conducta indebida o deshonesta de un contratista residencial con licencia. Se paga con aportes de los contratistas, no con impuestos, y presentar un reclamo no garantiza el pago. Hace falta una sentencia judicial contra el licenciatario, y el contrato debe ser para su vivienda en Virginia. La ley estatal limita lo que el Fondo paga por reclamo."
+      },
+      {
+        "type": "p",
+        "text": "Para reportar a un licenciatario, envíe a DPOR un reporte por escrito dentro de los tres años siguientes a la infracción. Las quejas se hacen públicas cuando el caso se cierra. DPOR no puede obligar a un contratista a devolver dinero, así que en algunos casos la vía privada es la única forma de recuperarlo."
+      },
+      {
+        "type": "h2",
+        "text": "Qué hay de nuevo en 2026"
+      },
+      {
+        "type": "p",
+        "text": "Una ley de 2026 (SB823, aprobada el 13 de abril de 2026) agrega disposiciones obligatorias a los contratos residenciales de energía solar. Esas reglas entran en vigor el 1 de enero de 2027 y aplican solo a clientes de energía solar. Para el resto de las remodelaciones, aplican las clases de licencia y las reglas de contrato de arriba."
+      },
+      {
+        "type": "p",
+        "text": "Puede buscar a cualquier contratista que esté pensando contratar, incluidos nosotros. Para más preguntas que hacer, lea [Cómo elegir un contratista general en Richmond, VA](/blog/how-to-choose-general-contractor-richmond-va)."
+      },
+      {
+        "type": "cta",
+        "title": "Programe su presupuesto gratis",
+        "text": "Cada trabajo es diferente y trae sus propios retos, por eso ofrecemos presupuestos gratis. Primero vemos su casa, sin presión.",
+        "link": "/contact",
+        "linkText": "Solicite su presupuesto gratis"
+      }
+    ]
+  },
+  {
+    "categoryId": "Home Improvement Tips",
+    "category": "Home Improvement Tips",
+    "publishDate": "2026-11-17",
+    "reviewed": "2026-11-17",
+    "usesCompanyData": false,
+    "slug": "roof-replacement-materials-permits-richmond-va",
+    "image": "/gallery/Roofing.jpeg",
+    "relatedService": "roofing",
+    "relatedServiceLabel": "Servicios de techos en Chesterfield y Richmond, VA",
+    "regulatory": true,
+    "relatedPosts": [
+      "how-long-does-a-roof-last-virginia",
+      "roof-replacement-siding-permit-chesterfield-county-virginia"
+    ],
+    "references": [
+      {
+        "name": "13VAC5-63-80: Código Estatal Uniforme de Construcción, Sección 108 (exenciones de permiso)",
+        "url": "https://law.lis.virginia.gov/admincode/title13/agency5/chapter63/section80/"
+      },
+      {
+        "name": "Condado de Chesterfield: Proceso de permisos e inspecciones residenciales",
+        "url": "https://www.chesterfield.gov/4030/Residential-Permits-and-Inspections-Proc"
+      },
+      {
+        "name": "Owens Corning: tejas Duration, características técnicas",
+        "url": "https://www.owenscorning.com/en-us/roofing/shingles/duration"
+      },
+      {
+        "name": "ABC Supply (proveedor de materiales para techos)",
+        "url": "https://www.abcsupply.com/"
+      }
+    ],
+    "title": "Reemplazo de techo en Richmond, VA: materiales, permisos y qué puede salir mal",
+    "metaTitle": "Reemplazo de techo en Richmond VA: qué saber | MAS Contractors",
+    "metaDescription": "¿Planea reemplazar su techo en Richmond VA? Conozca los materiales, cuándo se necesita permiso en Chesterfield y los problemas que pueden surgir.",
+    "imgAlt": "Reemplazo de techo con tejas nuevas en una casa de Richmond VA",
+    "readTime": "6 min de lectura",
+    "excerpt": "Qué lleva un reemplazo de techo, cuándo Virginia y el condado de Chesterfield exigen permiso, y las sorpresas que pueden cambiar un trabajo cuando se quitan las tejas viejas.",
+    "content": [
+      {
+        "type": "lead",
+        "text": "Un reemplazo de techo parece sencillo visto desde la calle: se quitan las tejas viejas y se ponen las nuevas. En la práctica, cada techo es diferente y trae sus propios retos, desde las capas de abajo hasta el clima del día de la obra. Aquí le explicamos qué lleva, qué dicen las reglas sobre permisos y qué puede salir mal."
+      },
+      {
+        "type": "h2",
+        "text": "Qué lleva un techo"
+      },
+      {
+        "type": "p",
+        "text": "Las tejas son lo que se ve, pero un techo es un sistema. Un reemplazo típico incluye el material del techo, la capa de base (underlayment), la impermeabilización en bordes y valles, el drip edge (borde de goteo), la ventilación y los sellados alrededor de chimeneas, ventilaciones y paredes. Cuáles necesita su casa depende del techo que tiene hoy."
+      },
+      {
+        "type": "p",
+        "text": "Un término útil: los techadores miden los techos en «squares» (cuadros). La página técnica de Owens Corning para sus tejas Duration indica 3 paquetes por square, así que un presupuesto que habla de squares se refiere al área, no al número de paquetes que trae el camión."
+      },
+      {
+        "type": "h2",
+        "text": "¿Necesita permiso?"
+      },
+      {
+        "type": "p",
+        "text": "Según el código estatal de construcción de Virginia (13VAC5-63-80, Sección 108), reemplazar cualquier cantidad de cubierta de techo en una vivienda de una o dos familias está exento de permiso, siempre que la casa no esté en una zona donde la velocidad de viento de diseño sea mayor de 100 mph. Reemplazar 100 pies cuadrados o menos de cubierta está exento en todas las zonas de viento. El código también permite que el funcionario local exija un permiso en un distrito histórico designado por la localidad y para trabajo exento en una zona especial de riesgo de inundación."
+      },
+      {
+        "type": "p",
+        "text": "La página de permisos residenciales del condado de Chesterfield incluye el reemplazo de techo y de tejas entre los ejemplos de trabajo que no requiere permiso. Henrico y la ciudad de Richmond pueden manejarlo de otra manera, así que confirme con el departamento de construcción local antes de empezar."
+      },
+      {
+        "type": "h2",
+        "text": "Qué puede salir mal"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Sorpresas bajo las tejas viejas: al abrir el techo pueden aparecer madera dañada o humedad escondida. No todos los problemas se ven desde el suelo ni desde el ático.",
+          "Un color que se ve distinto en persona: Owens Corning advierte que los monitores varían en color y recomienda pedir una muestra física. Mire la muestra afuera, junto a su revestimiento y sus molduras.",
+          "El clima: los días de lluvia o de mucho viento detienen el trabajo, y el calendario se mueve. Un techo abierto debe protegerse el mismo día.",
+          "Ubicaciones especiales: los distritos históricos, las zonas de inundación y las zonas de mucho viento pueden agregar requisitos, como muestra el código de arriba.",
+          "Mezclar materiales: las tejas, la capa de base, las ventilaciones y los sellados deben funcionar juntos. Mezclar piezas de sistemas distintos puede causar problemas que aparecen años después."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "De dónde vienen los materiales"
+      },
+      {
+        "type": "p",
+        "text": "Los materiales de techo se venden en tiendas de mejoras del hogar y en casas de suministros para techos. Algunos proveedores, como ABC Supply, se describen como proveedores para contratistas. Si está comparando ofertas, pregunte a cada empresa qué productos piensa usar, para comparar lo mismo."
+      },
+      {
+        "type": "p",
+        "text": "No incluimos precios de tiendas aquí, porque los precios cambian con frecuencia y varían según la tienda, el color y la línea de producto. La mejor forma de comparar es pedir a cada contratista una lista de materiales por escrito."
+      },
+      {
+        "type": "tip",
+        "text": "Consejo profesional: pida por escrito la marca y la línea de las tejas, de la capa de base, del drip edge y de las ventilaciones. Es la forma más fácil de comparar dos presupuestos."
+      },
+      {
+        "type": "p",
+        "text": "¿Quiere saber cuánto debería durar su techo? Lea [¿Cuánto dura un techo en Virginia?](/blog/how-long-does-a-roof-last-virginia). Para ver nuestro trabajo de techos, visite [Servicios de techos en Chesterfield y Richmond, VA](/services/roofing)."
+      },
+      {
+        "type": "cta",
+        "title": "Programe su presupuesto gratis",
+        "text": "Cada trabajo es diferente y trae sus propios retos, por eso ofrecemos presupuestos gratis. Primero vemos su casa, sin presión.",
+        "link": "/contact",
+        "linkText": "Solicite su presupuesto gratis"
+      }
+    ]
+  },
+  {
+    "categoryId": "Home Improvement Tips",
+    "category": "Home Improvement Tips",
+    "publishDate": "2026-11-17",
+    "reviewed": "2026-11-17",
+    "usesCompanyData": false,
+    "slug": "siding-materials-richmond-va-fiber-cement-vinyl-pitfalls",
+    "image": "/gallery/Siding.jpeg",
+    "relatedService": "siding",
+    "relatedServiceLabel": "Instalación y reemplazo de revestimiento en Chesterfield y Richmond, VA",
+    "regulatory": true,
+    "relatedPosts": [
+      "hardie-board-vs-vinyl-siding-virginia",
+      "roof-replacement-siding-permit-chesterfield-county-virginia"
+    ],
+    "references": [
+      {
+        "name": "13VAC5-63-80: Código Estatal Uniforme de Construcción, Sección 108 (exenciones de permiso)",
+        "url": "https://law.lis.virginia.gov/admincode/title13/agency5/chapter63/section80/"
+      },
+      {
+        "name": "Condado de Chesterfield: Proceso de permisos e inspecciones residenciales",
+        "url": "https://www.chesterfield.gov/4030/Residential-Permits-and-Inspections-Proc"
+      },
+      {
+        "name": "Condado de Chesterfield: Requisitos de proyectos residenciales",
+        "url": "https://www.chesterfield.gov/4403/Residential-Project-Requirements-and-App"
+      },
+      {
+        "name": "James Hardie: Pros Hub y buscador de distribuidores",
+        "url": "https://www.jameshardie.com/pros-hub/"
+      },
+      {
+        "name": "James Hardie: requisitos de instalación de HardieTrim (vigente septiembre de 2013)",
+        "url": "https://images.thdstatic.com/catalog/pdfImages/0b/0bce4aa8-3ce7-4b79-81cd-c35984e8441c.pdf"
+      },
+      {
+        "name": "James Hardie: garantía del producto (2024)",
+        "url": "https://pdf.lowes.com/productdocuments/e16b4dc1-d263-4503-a3ef-d8dfb5c54e04/66510552.pdf"
+      },
+      {
+        "name": "Vinyl Siding Institute: Manual de instalación (2020)",
+        "url": "https://polymericexteriors.org/wp-content/uploads/2022/10/2022-Vinyl-Siding-Installation-Manual-ENGLISH_100322_LR.pdf"
+      },
+      {
+        "name": "EPA de EE. UU.: Información sobre el asbesto",
+        "url": "https://www.epa.gov/asbestos/learn-about-asbestos"
+      }
+    ],
+    "title": "Revestimiento (siding) en Richmond, VA: fibrocemento vs. vinilo y los problemas a prever",
+    "metaTitle": "Siding en Richmond VA: materiales y problemas | MAS Contractors",
+    "metaDescription": "¿Fibrocemento o vinilo en Richmond VA? Vea cómo se instala cada uno, qué puede salir mal y cuándo se necesita permiso en Chesterfield.",
+    "imgAlt": "Revestimiento de fibrocemento nuevo instalado en una casa de Richmond VA",
+    "readTime": "7 min de lectura",
+    "excerpt": "El fibrocemento y el vinilo tienen sus propias reglas para cortar, pintar y fijar. Esto es lo que dicen los fabricantes que hay que vigilar, y qué preguntar antes de elegir.",
+    "content": [
+      {
+        "type": "lead",
+        "text": "El revestimiento (siding) cambia cómo se ve su casa y cómo maneja el agua, el sol y los cambios de temperatura. El fibrocemento y el vinilo son comunes en Richmond, y cada uno tiene sus propias reglas de instalación. Cada casa trae sus propios retos, así que aquí está lo que dicen los fabricantes y fuentes públicas que hay que prever."
+      },
+      {
+        "type": "p",
+        "text": "Para una comparación directa de los dos materiales, lea [Hardie Board vs. revestimiento de vinilo en Virginia](/blog/hardie-board-vs-vinyl-siding-virginia). Este artículo se centra en lo que puede salir mal."
+      },
+      {
+        "type": "h2",
+        "text": "¿Necesita permiso?"
+      },
+      {
+        "type": "p",
+        "text": "El código estatal de construcción de Virginia (13VAC5-63-80, Sección 108) exime de permiso el reemplazo de cualquier cantidad de revestimiento en una vivienda de una o dos familias, siempre que la casa no esté en una zona donde la velocidad de viento de diseño sea mayor de 100 mph. El funcionario local puede exigir permiso para revestimiento de reemplazo en un distrito histórico designado por la localidad."
+      },
+      {
+        "type": "p",
+        "text": "Las páginas del condado de Chesterfield incluyen reparar revestimiento e instalar revestimiento de vinilo entre los trabajos que no requieren permiso. No dicen nada específico sobre reemplazar todo el revestimiento de una casa por otro material, así que pregunte al condado antes de empezar. Henrico y la ciudad de Richmond pueden ser distintos."
+      },
+      {
+        "type": "h2",
+        "text": "Fibrocemento (James Hardie): qué prever"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Polvo de sílice: el documento de instalación de Hardie dice que sus productos contienen sílice cristalina respirable. Pide cortar al aire libre con buena ventilación, usar cizallas para fibrocemento o una sierra que reduzca el polvo conectada a una aspiradora HEPA, usar mascarilla N-95 aprobada por NIOSH o mejor, y nunca barrer en seco. También dice que nunca se debe usar una sierra eléctrica en interiores.",
+          "Plazo para pintar: el mismo documento dice que los productos deben pintarse dentro de 180 días si traen imprimación y 90 días si no la traen, con pintura 100 % acrílica, y que todos los bordes cortados deben sellarse, pintarse o imprimarse.",
+          "Almacenamiento: guarde el producto plano, seco y cubierto. Instalar el revestimiento mojado puede causar encogimiento en las uniones.",
+          "Color de fábrica: en los productos ColorPlus, use solo los kits de retoque de James Hardie. La garantía de Hardie excluye pinturas de terceros y define el cambio excesivo de color con una medición técnica que decide Hardie. Si una zona grande necesita retoque, Hardie indica reemplazar el área dañada con revestimiento nuevo.",
+          "Garantía: la garantía de Hardie excluye daños por almacenamiento, manejo o instalación incorrectos. Siga las instrucciones de instalación vigentes que vienen con el producto. El documento que leímos es de 2013."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Vinilo: qué prever"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Se mueve: el manual del Vinyl Siding Institute dice que el vinilo puede dilatarse y contraerse 1/2 pulgada o más en un tramo de 12 pies y 6 pulgadas con los cambios normales de temperatura.",
+          "Fijaciones: no clave apretando contra el borde de la ranura. Deje cerca de 1/32 de pulgada de holgura. No clave ni engrape por la cara del revestimiento, porque puede causar ondulaciones.",
+          "Holgura: deje al menos 1/4 de pulgada en aberturas y topes, y 3/8 de pulgada cuando haga menos de 40 °F.",
+          "Barrera contra el agua: el vinilo es un revestimiento exterior, no una barrera resistente al agua. Debe instalarse sobre una."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Casas antiguas: asbesto"
+      },
+      {
+        "type": "p",
+        "text": "La EPA de EE. UU. dice que puede haber asbesto en tejas de techo y de revestimiento, y que la exposición puede ocurrir solo cuando el material se altera o se daña. Las reparaciones y remodelaciones pueden alterarlo. Si su casa es antigua y el revestimiento es el original, avise a su contratista antes de que empiece cualquier corte o retiro."
+      },
+      {
+        "type": "h2",
+        "text": "Dónde comprar"
+      },
+      {
+        "type": "p",
+        "text": "Los productos de James Hardie se venden a través de distribuidores y proveedores, y la empresa tiene un buscador de distribuidores en su página Pros Hub. El vinilo lo venden muchos proveedores. No incluimos precios de tiendas aquí, porque cambian con frecuencia y varían según la tienda, el color y el perfil. La mejor forma de comparar es pedir a cada contratista la marca, la línea de producto y las molduras por escrito."
+      },
+      {
+        "type": "tip",
+        "text": "Consejo profesional: pregunte si el revestimiento vendrá con imprimación, prefinalizado o sin pintar, y quién es responsable del calendario de pintura. El fibrocemento tiene un plazo para pintar que es fácil de pasar por alto."
+      },
+      {
+        "type": "p",
+        "text": "Para ver nuestro trabajo, visite [Instalación y reemplazo de revestimiento en Chesterfield y Richmond, VA](/services/siding)."
+      },
+      {
+        "type": "cta",
+        "title": "Programe su presupuesto gratis",
+        "text": "Cada trabajo es diferente y trae sus propios retos, por eso ofrecemos presupuestos gratis. Primero vemos su casa, sin presión.",
+        "link": "/contact",
+        "linkText": "Solicite su presupuesto gratis"
+      }
+    ]
   }
 ]
