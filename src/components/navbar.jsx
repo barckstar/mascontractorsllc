@@ -31,7 +31,12 @@ export const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const phoneNumbers = ["(804) 833-4600", "(540) 376-4453", "(804) 593-9468"];
+  // First number is the central office; the other two are direct lines of team members.
+  const phoneNumbers = [
+    { number: "(804) 833-4600", label: t.common.phoneOffice },
+    { number: "(540) 376-4453", label: t.common.phoneDirect },
+    { number: "(804) 593-9468", label: t.common.phoneDirect },
+  ];
 
   // Desktop: 4 static boxes; the phone box cycles its 3 numbers internally (CSS-only).
   const topBarItems = [
@@ -47,7 +52,7 @@ export const Navbar = () => {
     },
     {
       icon: <FaPhoneAlt size={24} color="#9fe300" />,
-      title: n.office,
+      title: t.common.phoneTitle,
       isPhone: true
     },
     {
@@ -64,9 +69,9 @@ export const Navbar = () => {
   const mobileTopBarItems = [
     topBarItems[0],
     topBarItems[1],
-    ...phoneNumbers.map((number) => ({
+    ...phoneNumbers.map(({ number, label }) => ({
       icon: <FaPhoneAlt size={24} color="#9fe300" />,
-      title: n.office,
+      title: label,
       subtitle: number
     })),
     topBarItems[3],
@@ -110,8 +115,8 @@ export const Navbar = () => {
                     <span className="block text-xs lg:text-sm text-[#9fe300] leading-tight">{item.title}</span>
                     <span className="phone-cycle block text-xs lg:text-sm text-white font-medium">
                       <span className="phone-cycle-track">
-                        {phoneNumbers.map((number) => (
-                          <span key={number} className="phone-cycle-item">{number}</span>
+                        {phoneNumbers.map(({ number, label }) => (
+                          <span key={number} className="phone-cycle-item">{number}<span className="ml-1.5 text-[10px] lg:text-xs font-normal text-gray-400">· {label}</span></span>
                         ))}
                       </span>
                     </span>

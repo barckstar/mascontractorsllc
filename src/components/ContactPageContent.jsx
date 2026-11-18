@@ -22,12 +22,17 @@ const stagger = {
 };
 
 export default function ContactPageContent({ reviews = REVIEWS_SNAPSHOT, heroPhoto }) {
-    const c = useI18n().t.contactPage;
+    const { t } = useI18n();
+    const c = t.contactPage;
     const contactCards = [
         {
             icon: <BiPhoneCall size={22} />,
             label: c.callLabel,
-            lines: ["+1 (804) 833-4600", "+1 (540) 376-4453", "+1 (804) 593-9468"],
+            lines: [
+                `+1 (804) 833-4600 · ${t.common.phoneOffice}`,
+                `+1 (540) 376-4453 · ${t.common.phoneDirect}`,
+                `+1 (804) 593-9468 · ${t.common.phoneDirect}`,
+            ],
             href: "tel:+18048334600",
             cta: c.callCta,
         },
@@ -219,13 +224,13 @@ export default function ContactPageContent({ reviews = REVIEWS_SNAPSHOT, heroPho
                                 <div>
                                     <p className="text-[10px] text-[#9fe300] font-contrax uppercase tracking-widest mb-1.5">{c.phone}</p>
                                     <a href="tel:+18048334600" className="block text-gray-300 font-body text-sm hover:text-[#9fe300] transition-colors">
-                                        (804) 833-4600
+                                        (804) 833-4600 <span className="text-gray-500">· {t.common.phoneOffice}</span>
                                     </a>
                                     <a href="tel:+15403764453" className="block text-gray-300 font-body text-sm hover:text-[#9fe300] transition-colors">
-                                        (540) 376-4453
+                                        (540) 376-4453 <span className="text-gray-500">· {t.common.phoneDirect}</span>
                                     </a>
                                     <a href="tel:+18045939468" className="block text-gray-300 font-body text-sm hover:text-[#9fe300] transition-colors">
-                                        (804) 593-9468
+                                        (804) 593-9468 <span className="text-gray-500">· {t.common.phoneDirect}</span>
                                     </a>
                                 </div>
                                 <div>

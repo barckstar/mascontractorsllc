@@ -651,7 +651,10 @@
   },
   "common": {
     "mapTitle": "MAS Contractors LLC — 411 Branchway Rd, North Chesterfield, VA",
-    "logoAlt": "Logo de MAS Contractors LLC - Contratista general en Richmond VA"
+    "logoAlt": "Logo de MAS Contractors LLC - Contratista general en Richmond VA",
+    "phoneTitle": "Llámenos",
+    "phoneOffice": "Oficina",
+    "phoneDirect": "Línea directa"
   },
   "blogPage": {
     "eyebrow": "Mejoras para el hogar en Richmond, VA",
