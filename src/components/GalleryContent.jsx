@@ -32,7 +32,7 @@ export default function GalleryContent({ gallery }) {
             <div className="relative mb-12 overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     {headerPhoto && (
-                        <Image src={headerPhoto.src} alt="" fill sizes="100vw" quality={50} className="object-cover opacity-[0.14]" />
+                        <Image src={headerPhoto.src} alt={headerPhoto.alt} fill sizes="100vw" quality={50} className="object-cover opacity-[0.14]" />
                     )}
                     <div className="absolute inset-0 bg-gradient-to-b from-[#1e1e1e] via-[#1e1e1e]/90 to-[#1e1e1e]" />
                 </div>

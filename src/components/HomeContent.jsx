@@ -355,7 +355,7 @@ export default function HomeContent({ reviews, posts, photos }) {
                                         className="relative mr-4 h-44 shrink-0 overflow-hidden rounded-2xl border border-white/10 md:h-60"
                                         style={{ aspectRatio: `${photo.width} / ${photo.height}` }}
                                     >
-                                        <Photo photo={photo} alt={copy === 1 ? "" : photo.alt} sizes="360px" />
+                                        <Photo photo={photo} alt={photo.alt} sizes="360px" />
                                     </div>
                                 ))}
                             </div>
@@ -524,7 +524,7 @@ export default function HomeContent({ reviews, posts, photos }) {
 
             {/* Final CTA over a real finished project */}
             <section className="relative overflow-hidden py-28 md:py-40">
-                <Image src={finalPhoto.src} alt="" fill quality={60} sizes="100vw" className="object-cover" />
+                <Image src={finalPhoto.src} alt={finalPhoto.alt} fill quality={60} sizes="100vw" className="object-cover" />
                 <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-b from-[#1a1a1a] via-[#1e1e1e]/90 to-[#1e1e1e]/95" />
                 <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(159,227,0,0.16),transparent_65%)]" />
                 <m.div

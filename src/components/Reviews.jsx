@@ -27,7 +27,7 @@ function Avatar({ name, photo }) {
     if (photo) {
         // Plain <img>: Google's avatar host isn't worth adding to next/image's allowlist for 40px.
         // eslint-disable-next-line @next/next/no-img-element
-        return <img src={photo} alt="" width={40} height={40} loading="lazy" referrerPolicy="no-referrer" className="w-10 h-10 rounded-full" />;
+        return <img src={photo} alt={name} width={40} height={40} loading="lazy" referrerPolicy="no-referrer" className="w-10 h-10 rounded-full" />;
     }
     return (
         <div className="w-10 h-10 rounded-full bg-secondary/15 text-secondary font-contrax flex items-center justify-center" aria-hidden="true">
