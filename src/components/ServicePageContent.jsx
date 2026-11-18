@@ -26,7 +26,7 @@ export default function ServicePageContent({ service, services }) {
             {/* ── Hero — the service's own real photo, faint behind the copy ── */}
             <section className="relative pt-44 pb-24 z-10 overflow-hidden">
                 <div className="absolute inset-0 z-0">
-                    <Image src={service.img} alt="" fill sizes="100vw" quality={50} priority className="object-cover opacity-[0.12]" />
+                    <Image src={service.img} alt={service.imgAlt} fill sizes="100vw" quality={50} priority className="object-cover opacity-[0.12]" />
                     <div className="absolute inset-0 bg-gradient-to-b from-primary via-primary/95 to-primary" />
                 </div>
                 <div className="container relative mx-auto px-6 lg:px-16">
@@ -582,7 +582,7 @@ export default function ServicePageContent({ service, services }) {
                         <GlowCard>
                             <div className="relative overflow-hidden">
                                 <div className="absolute inset-0">
-                                    <Image src={service.img} alt="" fill sizes="100vw" quality={50} className="object-cover opacity-20" />
+                                    <Image src={service.img} alt={service.imgAlt} fill sizes="100vw" quality={50} className="object-cover opacity-20" />
                                     <div className="absolute inset-0 bg-gradient-to-br from-[#252525]/95 to-[#1a1a1a]/95" />
                                 </div>
                                 <div className="relative z-10 mx-auto max-w-3xl px-8 py-16 text-center md:px-16 md:py-20">
