@@ -102,8 +102,7 @@ export default async function SiteLayout({ children, params }) {
     ],
     "sameAs": [
       "https://www.facebook.com/buildandrenovaterva?_rdr",
-      "https://www.instagram.com/mascontractorsva/",
-      "https://www.thumbtack.com/va/richmond/disability-retrofit/mas-contractors-llc/service/292433618750267588"
+      "https://www.instagram.com/mascontractorsva/"
     ],
     "priceRange": "$$",
     "openingHoursSpecification": {

@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { AiFillFacebook, AiFillInstagram, AiFillGoogleCircle } from "react-icons/ai";
-import { FaT } from "react-icons/fa6";
 import Link from "next/link";
 import social from "@/content/social.json";
 
@@ -9,7 +8,6 @@ const socialIcons = {
   Facebook: AiFillFacebook,
   Instagram: AiFillInstagram,
   Google: AiFillGoogleCircle,
-  Thumbtack: FaT,
 };
 
 export const SocialMediaBar = () => {
