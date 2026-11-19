@@ -1,4 +1,5 @@
 "use client";
+import { BUSINESS } from "@/content/business";
 import React, { useState } from "react";
 import CtaGlow from "@/components/CtaGlow";
 import { m, AnimatePresence } from "framer-motion";
@@ -63,14 +64,14 @@ export default function ServicePageContent({ service, services }) {
                                     {s.heroButton}
                                 </m.button>
                             </Link>
-                            <a href="tel:+18048334600">
+                            <a href={BUSINESS.phoneHref}>
                                 <m.button
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
                                     className="flex items-center gap-3 border border-secondary/50 text-secondary font-contrax py-4 px-10 rounded-full hover:border-secondary transition-all duration-300"
                                 >
                                     <FaPhoneAlt size={14} />
-                                    (804) 833-4600
+                                    {BUSINESS.phone}
                                 </m.button>
                             </a>
                         </div>
@@ -597,11 +598,11 @@ export default function ServicePageContent({ service, services }) {
                                             {s.ctaButton}
                                         </PrimaryCta>
                                         <a
-                                            href="tel:+18048334600"
+                                            href={BUSINESS.phoneHref}
                                             className="inline-flex items-center justify-center gap-3 rounded-full border border-white/20 px-8 py-4 font-contrax text-white transition-all duration-300 hover:border-secondary hover:text-secondary md:px-10 md:py-5 md:text-lg"
                                         >
                                             <FaPhoneAlt size={16} />
-                                            (804) 833-4600
+                                            {BUSINESS.phone}
                                         </a>
                                     </div>
                                 </div>

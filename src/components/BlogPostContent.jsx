@@ -1,5 +1,6 @@
 "use client";
-import React, { useState } from "react";
+import { BUSINESS } from "@/content/business";
+import React from "react";
 import { m } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -348,10 +349,10 @@ export default function BlogPostContent({ post, posts }) {
                                         {b.ctaButton}
                                     </PrimaryCta>
                                     <a
-                                        href="tel:+18048334600"
+                                        href={BUSINESS.phoneHref}
                                         className="inline-flex items-center justify-center gap-3 rounded-full border border-white/20 px-8 py-4 font-contrax text-white transition-all duration-300 hover:border-secondary hover:text-secondary md:px-10 md:py-5 md:text-lg"
                                     >
-                                        (804) 833-4600
+                                        {BUSINESS.phone}
                                     </a>
                                 </div>
                             </div>

@@ -1,7 +1,7 @@
 "use client";
+import { BUSINESS, CITY_LINE } from "@/content/business";
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { m } from "framer-motion";
 import { REVIEWS_SNAPSHOT } from "@/lib/reviewsSnapshot";
 import { useI18n, fill } from "@/i18n/I18nProvider";
@@ -28,18 +28,14 @@ export default function ContactPageContent({ reviews = REVIEWS_SNAPSHOT, heroPho
         {
             icon: <BiPhoneCall size={22} />,
             label: c.callLabel,
-            lines: [
-                `+1 (804) 833-4600 · ${t.common.phoneOffice}`,
-                `+1 (540) 376-4453 · ${t.common.phoneDirect}`,
-                `+1 (804) 593-9468 · ${t.common.phoneDirect}`,
-            ],
-            href: "tel:+18048334600",
+            lines: BUSINESS.phones.map((p) => `+1 ${p.display} · ${p.kind === "office" ? t.common.phoneOffice : t.common.phoneDirect}`),
+            href: BUSINESS.phoneHref,
             cta: c.callCta,
         },
         {
             icon: <BiSolidStore size={22} />,
             label: c.officeLabel,
-            lines: ["411 Branchway Rd Suite 107", "North Chesterfield, VA 23236"],
+            lines: [BUSINESS.address.street, CITY_LINE],
         },
         {
             icon: <BiCalendar size={22} />,
@@ -49,8 +45,8 @@ export default function ContactPageContent({ reviews = REVIEWS_SNAPSHOT, heroPho
         {
             icon: <AiOutlineMail size={22} />,
             label: c.emailLabel,
-            lines: ["info@mascontractors.com"],
-            href: "mailto:info@mascontractors.com",
+            lines: [BUSINESS.email],
+            href: BUSINESS.emailHref,
             cta: c.emailCta,
         },
     ];
@@ -212,7 +208,7 @@ export default function ContactPageContent({ reviews = REVIEWS_SNAPSHOT, heroPho
                                 <div>
                                     <p className="text-[10px] text-[#9fe300] font-contrax uppercase tracking-widest mb-1.5">{c.address}</p>
                                     <p className="text-gray-300 font-body text-sm leading-relaxed">
-                                        411 Branchway Rd Suite 107<br />North Chesterfield, VA 23236
+                                        {BUSINESS.address.street}<br />{CITY_LINE}
                                     </p>
                                 </div>
                                 <div>
@@ -223,15 +219,11 @@ export default function ContactPageContent({ reviews = REVIEWS_SNAPSHOT, heroPho
                                 </div>
                                 <div>
                                     <p className="text-[10px] text-[#9fe300] font-contrax uppercase tracking-widest mb-1.5">{c.phone}</p>
-                                    <a href="tel:+18048334600" className="block text-gray-300 font-body text-sm hover:text-[#9fe300] transition-colors">
-                                        (804) 833-4600 <span className="text-gray-500">· {t.common.phoneOffice}</span>
-                                    </a>
-                                    <a href="tel:+15403764453" className="block text-gray-300 font-body text-sm hover:text-[#9fe300] transition-colors">
-                                        (540) 376-4453 <span className="text-gray-500">· {t.common.phoneDirect}</span>
-                                    </a>
-                                    <a href="tel:+18045939468" className="block text-gray-300 font-body text-sm hover:text-[#9fe300] transition-colors">
-                                        (804) 593-9468 <span className="text-gray-500">· {t.common.phoneDirect}</span>
-                                    </a>
+                                    {BUSINESS.phones.map((p) => (
+                                        <a key={p.href} href={p.href} className="block text-gray-300 font-body text-sm hover:text-[#9fe300] transition-colors">
+                                            {p.display} <span className="text-gray-500">· {p.kind === "office" ? t.common.phoneOffice : t.common.phoneDirect}</span>
+                                        </a>
+                                    ))}
                                 </div>
                                 <div>
                                     <p className="text-[10px] text-[#9fe300] font-contrax uppercase tracking-widest mb-1.5">{c.license}</p>

@@ -4,7 +4,7 @@ import { m } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { BiRightArrowAlt } from "react-icons/bi";
-import { FaClock, FaTag } from "react-icons/fa";
+import { FaClock } from "react-icons/fa";
 import { useI18n } from "@/i18n/I18nProvider";
 import { DATE_LOCALE } from "@/i18n/config";
 import { EASE, PrimaryCta, GlowCard } from "./ui";

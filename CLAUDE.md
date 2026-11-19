@@ -20,9 +20,9 @@ npm run start
 node scripts/optimize-images.js   # opcional, re-comprime imágenes en public/gallery (in-place, sin backup automático)
 ```
 
-⚠️ **`npm run lint` está roto.** El script sigue siendo `next lint`, pero Next 16 eliminó ese subcomando: ahora interpreta `lint` como un directorio y falla con *"Invalid project directory provided, no such directory: .../lint"*. Para arreglarlo hay que migrar a la CLI de ESLint directamente (`eslint .`) con un `eslint.config.mjs` (flat config).
+`npm run lint` corre `eslint .` con `eslint.config.mjs` (flat config de ESLint 10 + `eslint-config-next/core-web-vitals`; avisa de imports/variables sin usar). Antes era `next lint`, que Next 16 eliminó. Hoy deja 1 aviso: el `<head>` de `LangHtml.jsx`, que es válido en el layout raíz del App Router.
 
-`npm test` corre `tests/*.test.mjs` con el runner nativo de Node (hoy cubren `/api/contact` y `/api/cron/contact-check`). Se corren en local antes de cada push; no hay CI en GitHub. Además `npm run build` (debe generar todas las páginas estáticas sin error —143 hoy, y crece con cada post—; antes corre `scripts/check-i18n.mjs`) más revisión visual en el navegador.
+`npm test` corre `tests/*.test.mjs` con el runner nativo de Node (hoy cubren `/api/contact` y `/api/cron/contact-check`). Se corren en local antes de cada push; no hay CI en GitHub. Además `npm run build` (debe generar todas las páginas estáticas sin error —163 hoy, y crece con cada post—; antes corre `scripts/check-i18n.mjs`), `npm run lint` sin errores, más revisión visual en el navegador.
 
 ## Variables de entorno
 
@@ -80,7 +80,7 @@ src/
     index.js              # getServices(lang), getPosts(lang), getGallery(lang)…
 
   components/             # *Content.jsx = vista de cada página; leen textos con useI18n()
-  lib/                    # googleReviews.js, reviewsSnapshot.js
+  lib/                    # googleReviews.js, reviewsSnapshot.js, contactMail.js
 
 scripts/check-i18n.mjs    # corre en prebuild; rompe el build si falta una traducción
 public/llms.txt
@@ -135,6 +135,7 @@ Medir **en local** (`npm run build && npm run start`, Lighthouse con `CHROME_PAT
 al Chromium), con calentamiento y mediana de 3: entre corridas varía ±5–10 puntos.
 No hacer pushes solo para medir: cada push a una rama despliega un preview en Vercel.
 
+- **Medido el 2026-11-18:** quitar `next/dynamic` + spinner de about/contact/gallery/service/services no mejoró Lighthouse móvil de forma medible (misma mediana ±5 puntos, 4 corridas por página); por eso siguen con `dynamic`. La home sale ~86 y esas páginas 77–83.
 - No envolver el contenido de una página con `next/dynamic` + spinner: el hero
   llega por streaming y solo se muestra cuando corre el script de React (retrasa FCP y LCP).
 - Las imágenes decorativas del hero que acaban siendo el LCP llevan `priority`.
@@ -145,10 +146,13 @@ No hacer pushes solo para medir: cada push a una rama despliega un preview en Ve
 
 ## Notas importantes / discrepancias conocidas
 
-- **El README menciona `npm run generate-gallery` y que el build lo corre automáticamente.** Eso no existe: la galería se mantiene a mano en `src/content/gallery.json` (cada entrada: `src, width, height, alt: { en, es }, category, project?, featured?`). Para agregar una foto: dejarla en `public/gallery/` y añadir la entrada con el `alt` en los dos idiomas. `category` es una clave en inglés; su etiqueta visible sale de `galleryPage.categories` en cada diccionario. El README está desactualizado en este punto.
+- **No existe `npm run generate-gallery`** (un README viejo lo mencionaba; ya se reescribió): la galería se mantiene a mano en `src/content/gallery.json` (cada entrada: `src, width, height, alt: { en, es }, category, project?, featured?`). Para agregar una foto: dejarla en `public/gallery/` y añadir la entrada con el `alt` en los dos idiomas. `category` es una clave en inglés; su etiqueta visible sale de `galleryPage.categories` en cada diccionario. 
 - `scripts/optimize-images.js` sí existe y es manual (`node scripts/optimize-images.js`), reemplaza las imágenes in-place — no hay backup automático.
 - `next.config.js` tiene varios redirects 301 heredados de URLs viejas (Search Console / Cloudflare email protection / rutas `/specialties/*` y `/projects/*`) — no borrar sin revisar Search Console primero. Que Google reporte esas URLs como "Página con redirección" es el comportamiento **correcto y permanente**, no un bug que haya que arreglar.
-- **Bloque de certificaciones duplicado.** `components/Certifications.jsx` (lo usa la home) y `components/AboutPageContent.jsx` (copia inline) tienen el mismo bloque de badges DPOR / OSHA / sello BBB. Los textos ya salen de la misma sección del diccionario (`certifications`), pero el marcado sigue duplicado: cambiar un badge obliga a tocar **los dos archivos**.
+- **Certificaciones:** `components/Certifications.jsx` es el único bloque de badges DPOR / OSHA / BBB; lo usan la home y About. Ya no hay marcado duplicado.
+- **Datos del negocio en un solo sitio:** teléfonos, correo y dirección salen de `src/content/business.js` (`BUSINESS`, `ADDRESS_LINE`, `CITY_LINE`). Footer, navbar, páginas, JSON-LD y la imagen OG lo importan: **no volver a escribir el teléfono a mano en un componente**. `public/llms.txt` y los textos de los diccionarios/JSON de contenido son texto plano y se cambian aparte (hacer `grep` del número viejo).
+- **JSON-LD:** siempre con `<JsonLd data={...} />` (`components/JsonLd.jsx`), que escapa `<` para que un texto con `</script>` no pueda cerrar la etiqueta. El layout usa `<Script>` de Next y `safeJson()` del mismo archivo.
+- **Animación de entrada:** `<m.div {...reveal}>` (`components/ui.jsx`) en vez de repetir `initial/whileInView/viewport/variants`. `ContactPageContent` tiene su propio `fadeInUp` (0.6 s, `easeOut`) distinto al de `ui.jsx`; unificarlo cambiaría la animación, así que se dejó.
 - El dominio pasa por un **proxy (Cloudflare) delante de Vercel**, que lo marca con "Proxy Detected". Rompe la mitigación de DDoS/bots de Vercel y degrada rendimiento. La huella está en el redirect de `/cdn-cgi/l/email-protection` del `next.config.js`. Se arregla poniendo los registros DNS de `@` y `www` en "DNS only" (nube gris).
 
 ## Regla de flujo de trabajo: sin ramas ni previews (obligatoria)
@@ -188,17 +192,17 @@ Los posts **no publican dinero de MAS**: nada de presupuestos, mano de obra, ran
 
 | Archivo | Schemas |
 |---|---|
-| `app/[lang]/layout.js` | `["GeneralContractor","LocalBusiness"]` raíz — con `OfferCatalog`/`Service`, `OpeningHoursSpecification`, `PostalAddress`, `GeoCoordinates`, `areaServed` |
-| `app/[lang]/services/[slug]/page.jsx` | `GeneralContractor`, `Service`, `FAQPage`, `BreadcrumbList`, `Offer` |
-| `app/[lang]/blog/[slug]/page.jsx` | `BlogPosting`, `BreadcrumbList`, `WebPage`, `Organization`, `ImageObject` |
-| `components/FAQ.jsx` | `FAQPage` — va **dentro del componente**, así que aplica donde sea que se renderice `<FAQ />` (hoy: home y services) |
+| `views/site-layout.jsx` (usado por `app/(en)/layout.js` y `app/es/layout.js`) | `["GeneralContractor","LocalBusiness"]` raíz — con `OfferCatalog`/`Service`, `OpeningHoursSpecification`, `PostalAddress`, `GeoCoordinates`, `areaServed` |
+| `views/service.jsx` | `GeneralContractor`, `Service`, `FAQPage`, `BreadcrumbList`, `Offer` |
+| `views/post.jsx` | `BlogPosting`, `BreadcrumbList`, `WebPage`, `Organization`, `ImageObject` |
+| `components/FAQ.jsx` | `FAQPage` — va **dentro del componente**, así que aplica donde sea que se renderice `<FAQ />` (hoy: home y la lista `/services`; cada página de servicio emite su propio `FAQPage` desde `views/service.jsx`, y nunca coinciden en la misma página) |
 
 **Sin `AggregateRating` ni `Review` a propósito.** Google considera
 "self-serving" las reseñas que un negocio marca en su propia web sobre sí mismo
 y no les da estrellas; y el 4.9/47 que había no cuadraba con Google (7 reseñas
 el 25/09/2026). Las estrellas del buscador salen del Perfil de Negocio.
 
-Al tocar schema, ojo con duplicar: `FAQ.jsx` y `services/[slug]` ambos emiten `FAQPage`.
+Al tocar schema, ojo con duplicar: `FAQ.jsx` y `views/service.jsx` ambos emiten `FAQPage`; hoy ninguna página renderiza los dos.
 
 ## Reseñas de Google (en vivo)
 

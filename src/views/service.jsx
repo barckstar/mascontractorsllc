@@ -1,3 +1,5 @@
+import JsonLd from "@/components/JsonLd";
+import { BUSINESS } from "@/content/business";
 import { notFound } from "next/navigation";
 import { getServices, getServiceSummaries, getServiceBySlug } from "@/content";
 import { getDictionary } from "@/i18n/dictionaries";
@@ -57,16 +59,16 @@ export default async function ServicePage({ params }) {
         "description": service.description,
         "provider": {
             "@type": "GeneralContractor",
-            "name": "MAS Contractors LLC",
-            "url": "https://mascontractors.com",
-            "telephone": "+18048334600",
+            "name": BUSINESS.name,
+            "url": BUSINESS.url,
+            "telephone": BUSINESS.phoneE164,
             "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "411 Branchway Rd Suite 107",
-                "addressLocality": "North Chesterfield",
-                "addressRegion": "VA",
-                "postalCode": "23236",
-                "addressCountry": "US"
+                "streetAddress": BUSINESS.address.street,
+                "addressLocality": BUSINESS.address.city,
+                "addressRegion": BUSINESS.address.region,
+                "postalCode": BUSINESS.address.postalCode,
+                "addressCountry": BUSINESS.address.country
             }
         },
         "areaServed": [
@@ -111,18 +113,9 @@ export default async function ServicePage({ params }) {
 
     return (
         <>
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-            />
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-            />
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-            />
+            <JsonLd data={jsonLd} />
+            <JsonLd data={faqJsonLd} />
+            <JsonLd data={breadcrumbJsonLd} />
             <PageSections lang={lang} names={["serviceDetail","beforeAfter"]}>
       <ServicePageContent service={service} services={getServiceSummaries(lang)} />
     </PageSections>

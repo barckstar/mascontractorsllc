@@ -1,14 +1,13 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { m } from "framer-motion";
 import { BiPhoneCall } from "react-icons/bi";
 import { TbBrandCashapp } from "react-icons/tb";
 import { FaHardHat, FaClipboardCheck, FaHandshake, FaShieldAlt } from "react-icons/fa";
 import { useI18n } from "@/i18n/I18nProvider";
 import { ABOUT_PHOTOS } from "@/content/aboutPhotos";
-import { EASE, fadeInUp, Eyebrow, PrimaryCta, Photo, GlowCard } from "./ui";
+import { EASE, fadeInUp, Eyebrow, PrimaryCta, Photo, GlowCard, reveal } from "./ui";
 import Certifications from "./Certifications";
 
 const staggerContainer = {
@@ -67,7 +66,7 @@ export default function AboutPageContent({ photos }) {
             {/* Intro — real photo collage, mirrors the home page's About section */}
             <section className="mx-auto max-w-7xl px-6 py-20 md:px-16 md:py-28">
                 <div className="grid items-center gap-16 lg:grid-cols-2 lg:gap-20">
-                    <m.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
+                    <m.div {...reveal}>
                         <Eyebrow index="01" />
                         <h2 className="mb-8 font-contrax text-3xl text-[#9fe300] md:text-4xl">{data.about.title}</h2>
                         <p className="mb-8 font-body text-lg leading-relaxed text-white">{data.heroAbout.text}</p>
@@ -101,7 +100,7 @@ export default function AboutPageContent({ photos }) {
                 </div>
 
                 {/* Certifications — shared component, no more duplicate markup */}
-                <m.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="mt-16">
+                <m.div {...reveal} className="mt-16">
                     <Certifications />
                 </m.div>
             </section>

@@ -1,3 +1,5 @@
+import { BUSINESS } from "@/content/business";
+import { safeJson } from "@/components/JsonLd";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ReviewStrip, ReviewChip } from "@/components/ReviewAsk";
@@ -49,23 +51,23 @@ export default async function SiteLayout({ children, params }) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": ["GeneralContractor", "LocalBusiness"],
-    "@id": "https://mascontractors.com/#organization",
-    "name": "MAS Contractors LLC",
-    "legalName": "MAS Contractors LLC",
+    "@id": `${BUSINESS.url}/#organization`,
+    "name": BUSINESS.name,
+    "legalName": BUSINESS.name,
     "description": m.orgDescription,
-    "image": "https://mascontractors.com/logo-square.png",
-    "logo": "https://mascontractors.com/logo-square.png",
-    "url": "https://mascontractors.com",
-    "telephone": "+18048334600",
-    "email": "info@mascontractors.com",
+    "image": `${BUSINESS.url}/logo-square.png`,
+    "logo": `${BUSINESS.url}/logo-square.png`,
+    "url": BUSINESS.url,
+    "telephone": BUSINESS.phoneE164,
+    "email": BUSINESS.email,
     "foundingYear": "2014",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "411 Branchway Rd Suite 107",
-      "addressLocality": "North Chesterfield",
-      "addressRegion": "VA",
-      "postalCode": "23236",
-      "addressCountry": "US"
+      "streetAddress": BUSINESS.address.street,
+      "addressLocality": BUSINESS.address.city,
+      "addressRegion": BUSINESS.address.region,
+      "postalCode": BUSINESS.address.postalCode,
+      "addressCountry": BUSINESS.address.country
     },
     "geo": {
       "@type": "GeoCoordinates",
@@ -128,7 +130,7 @@ export default async function SiteLayout({ children, params }) {
         <Script
           id="json-ld-schema"
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: safeJson(jsonLd) }}
         />
     </>
   );

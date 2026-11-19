@@ -1,4 +1,5 @@
 "use client";
+import JsonLd from "@/components/JsonLd";
 import React, { useState } from "react";
 import { m, AnimatePresence } from "framer-motion";
 import { FaPlus, FaMinus } from "react-icons/fa";
@@ -20,10 +21,7 @@ export default function FAQ() {
 
     return (
         <section className="py-24 bg-[#151515]">
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-            />
+            <JsonLd data={faqJsonLd} />
             <div className="container mx-auto px-6 md:px-16 max-w-4xl">
                 <m.div
                     initial={{ opacity: 0, y: 20 }}

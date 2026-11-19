@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import social from "@/content/social.json";
 import { useI18n } from "@/i18n/I18nProvider";
+import { BUSINESS, ADDRESS_LINE } from "@/content/business";
 
 export const Footer = () => {
   const { t, href } = useI18n();
@@ -72,10 +73,10 @@ export const Footer = () => {
           {/* Visit Us / NAP */}
           <div className="flex flex-col items-center text-center gap-1 pb-10 px-6 border-t border-[#515151] pt-8 mx-6 md:mx-16">
             <p className="text-[#9fe300] font-contrax text-xl mb-1 footer-title">{f.visitUs}</p>
-            <p className="text-white text-base font-body footer-text">MAS Contractors LLC</p>
-            <p className="text-white text-base font-body footer-text">411 Branchway Rd Suite 107, North Chesterfield, VA 23236</p>
-            <a href="tel:+18048334600" className="text-white text-base font-body hover:text-[#9fe300] transition footer-text">
-              (804) 833-4600
+            <p className="text-white text-base font-body footer-text">{BUSINESS.name}</p>
+            <p className="text-white text-base font-body footer-text">{ADDRESS_LINE}</p>
+            <a href={BUSINESS.phoneHref} className="text-white text-base font-body hover:text-[#9fe300] transition footer-text">
+              {BUSINESS.phone}
             </a>
           </div>
           {/* Copyright */}

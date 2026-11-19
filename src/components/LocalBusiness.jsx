@@ -1,4 +1,5 @@
 "use client";
+import { BUSINESS } from "@/content/business";
 import React from "react";
 import Link from "next/link";
 import { m } from "framer-motion";
@@ -68,9 +69,9 @@ export default function LocalBusiness({ reviews = REVIEWS_SNAPSHOT }) {
                             </div>
                             <div>
                                 <h3 className="text-white font-bold mb-1">{lb.contactTitle}</h3>
-                                <p className="text-sm text-gray-400">(804) 833-4600 · {t.common.phoneOffice}</p>
-                                <p className="text-sm text-gray-400">(540) 376-4453 · {t.common.phoneDirect}</p>
-                                <p className="text-sm text-gray-400">(804) 593-9468 · {t.common.phoneDirect}</p>
+                                {BUSINESS.phones.map((p) => (
+                                    <p key={p.href} className="text-sm text-gray-400">{p.display} · {p.kind === "office" ? t.common.phoneOffice : t.common.phoneDirect}</p>
+                                ))}
                             </div>
                         </div>
 

@@ -1,3 +1,4 @@
+import JsonLd from "@/components/JsonLd";
 import { notFound } from "next/navigation";
 import { getPosts, getPostSummaries, getPostBySlug } from "@/content";
 import { getDictionary } from "@/i18n/dictionaries";
@@ -81,14 +82,8 @@ export default async function BlogPostPage({ params }) {
 
     return (
         <>
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-            />
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-            />
+            <JsonLd data={jsonLd} />
+            <JsonLd data={breadcrumbJsonLd} />
             <PageSections lang={lang} names={["blogPost","blogPage"]}>
       <BlogPostContent post={post} posts={getPostSummaries(lang)} />
     </PageSections>

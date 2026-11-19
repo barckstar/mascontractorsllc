@@ -9,7 +9,8 @@ import Certifications from "./Certifications";
 import LocalBusiness from "./LocalBusiness";
 import Reviews from "./Reviews";
 import FAQ from "./FAQ";
-import { EASE, fadeInUp, Eyebrow, PrimaryCta, Photo, Tape } from "./ui";
+import { BUSINESS } from "@/content/business";
+import { EASE, Eyebrow, PrimaryCta, Photo, Tape, reveal } from "./ui";
 import { BiRightArrowAlt } from "react-icons/bi";
 import { MdAddHome, MdDeck, MdRoofing } from "react-icons/md";
 import { TbToolsKitchen2 } from "react-icons/tb";
@@ -183,7 +184,7 @@ export default function HomeContent({ reviews, posts, photos }) {
             {/* 01 About */}
             <section ref={aboutRef} className="mx-auto max-w-7xl px-6 py-24 md:px-16 md:py-32">
                 <div className="grid items-center gap-16 lg:grid-cols-2 lg:gap-20">
-                    <m.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="relative h-[400px] sm:h-[520px]">
+                    <m.div {...reveal} className="relative h-[400px] sm:h-[520px]">
                         <div className="absolute left-0 top-0 h-[78%] w-[84%] overflow-hidden rounded-3xl border border-white/10">
                             <Photo photo={aboutMain} sizes="(max-width: 1024px) 85vw, 42vw" />
                             <div className="absolute inset-0 bg-gradient-to-tr from-black/40 to-transparent" />
@@ -209,7 +210,7 @@ export default function HomeContent({ reviews, posts, photos }) {
                         </div>
                     </m.div>
 
-                    <m.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
+                    <m.div {...reveal}>
                         <Eyebrow index="01" />
                         <h2 className="mb-6 font-contrax text-3xl text-white md:text-6xl">
                             <span className="text-[#9fe300]">{h.aboutA}</span>{h.aboutB}
@@ -233,7 +234,7 @@ export default function HomeContent({ reviews, posts, photos }) {
             {/* 02 Services */}
             <section className="bg-[#151515] py-24 md:py-32">
                 <div className="mx-auto max-w-7xl px-6 md:px-16">
-                    <m.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="mb-16 grid items-end gap-6 lg:grid-cols-2">
+                    <m.div {...reveal} className="mb-16 grid items-end gap-6 lg:grid-cols-2">
                         <div>
                             <Eyebrow index="02" />
                             <h2 className="font-contrax text-3xl text-white md:text-6xl">
@@ -300,7 +301,7 @@ export default function HomeContent({ reviews, posts, photos }) {
             {/* 03 Featured projects + moving strip of real work */}
             <section className="py-24 md:py-32">
                 <div className="mx-auto max-w-7xl px-6 md:px-16">
-                    <m.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="mb-14 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+                    <m.div {...reveal} className="mb-14 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
                         <div>
                             <Eyebrow index="03" />
                             <h2 className="font-contrax text-3xl text-white md:text-6xl">
@@ -368,7 +369,7 @@ export default function HomeContent({ reviews, posts, photos }) {
             <section ref={buildRef} className="relative overflow-hidden bg-[#151515] py-24 md:py-32">
                 <div aria-hidden="true" className="absolute right-0 top-0 h-96 w-96 rounded-full bg-[#9fe300]/5 blur-[120px]" />
                 <div className="relative mx-auto max-w-7xl px-6 md:px-16">
-                    <m.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="mb-16 grid items-end gap-8 lg:grid-cols-2 lg:gap-20">
+                    <m.div {...reveal} className="mb-16 grid items-end gap-8 lg:grid-cols-2 lg:gap-20">
                         <div>
                             <Eyebrow index="04">{h.buildEyebrow}</Eyebrow>
                             <h2 className="font-contrax text-3xl text-white md:text-5xl">
@@ -463,7 +464,7 @@ export default function HomeContent({ reviews, posts, photos }) {
 
             {/* 05 Blog */}
             <section className="mx-auto max-w-7xl px-6 py-20 md:px-16">
-                <m.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="mb-12 flex items-end justify-between">
+                <m.div {...reveal} className="mb-12 flex items-end justify-between">
                     <div>
                         <Eyebrow index="05">{h.blogEyebrow}</Eyebrow>
                         <h2 className="font-contrax text-3xl uppercase leading-tight text-white md:text-5xl">
@@ -542,10 +543,10 @@ export default function HomeContent({ reviews, posts, photos }) {
                     <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
                         <PrimaryCta href={href("/contact#email")} className="md:px-10 md:py-5 md:text-lg">{h.finalButton}</PrimaryCta>
                         <a
-                            href="tel:+18048334600"
+                            href={BUSINESS.phoneHref}
                             className="inline-flex items-center gap-3 rounded-full border border-white/20 px-8 py-4 font-contrax text-sm text-white transition-colors hover:border-[#9fe300] hover:text-[#9fe300] md:text-base"
                         >
-                            <FaPhoneAlt size={14} /> (804) 833-4600
+                            <FaPhoneAlt size={14} /> {BUSINESS.phone}
                         </a>
                     </div>
                 </m.div>

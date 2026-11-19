@@ -16,6 +16,14 @@ export const fadeInUp = {
     visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: EASE } },
 };
 
+// Props de "aparece al hacer scroll" que se repetían en cada sección: <m.div {...reveal}>.
+export const reveal = {
+    initial: "hidden",
+    whileInView: "visible",
+    viewport: { once: true },
+    variants: fadeInUp,
+};
+
 export function Eyebrow({ index, children }) {
     return (
         <span className="flex items-center gap-3 text-[#9fe300] font-contrax text-[11px] md:text-xs tracking-[0.3em] uppercase mb-5">

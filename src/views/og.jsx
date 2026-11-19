@@ -1,3 +1,4 @@
+import { BUSINESS } from "@/content/business";
 import { ImageResponse } from "next/og";
 import sharp from "sharp";
 import { readFile } from "node:fs/promises";
@@ -187,9 +188,9 @@ async function card({ lang, eyebrow, title, photo }) {
                             }}
                         >
                             <div style={{ display: "flex", alignItems: "center", gap: 12, fontSize: 24, whiteSpace: "nowrap" }}>
-                                <span style={{ color: "white", fontWeight: 700 }}>mascontractors.com</span>
+                                <span style={{ color: "white", fontWeight: 700 }}>{BUSINESS.url.replace("https://", "")}</span>
                                 <span style={{ color: GREEN }}>•</span>
-                                <span style={{ color: "white" }}>(804) 833-4600</span>
+                                <span style={{ color: "white" }}>{BUSINESS.phone}</span>
                             </div>
                             <div style={{ display: "flex", marginTop: 8, fontSize: 18, color: "#d0d0d0", whiteSpace: "nowrap" }}>
                                 {og.licensed}

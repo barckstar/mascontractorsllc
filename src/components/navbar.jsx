@@ -8,6 +8,7 @@ import { IoIosMail } from "react-icons/io";
 import { RiMedalLine } from "react-icons/ri";
 import { useI18n } from "@/i18n/I18nProvider";
 import LanguageSwitcher from "./LanguageSwitcher";
+import { BUSINESS } from "@/content/business";
 
 export const Navbar = () => {
   const { t, href } = useI18n();
@@ -32,11 +33,10 @@ export const Navbar = () => {
   }, []);
 
   // First number is the central office; the other two are direct lines of team members.
-  const phoneNumbers = [
-    { number: "(804) 833-4600", label: t.common.phoneOffice },
-    { number: "(540) 376-4453", label: t.common.phoneDirect },
-    { number: "(804) 593-9468", label: t.common.phoneDirect },
-  ];
+  const phoneNumbers = BUSINESS.phones.map((p) => ({
+    number: p.display,
+    label: p.kind === "office" ? t.common.phoneOffice : t.common.phoneDirect,
+  }));
 
   // Desktop: 4 static boxes; the phone box cycles its 3 numbers internally (CSS-only).
   const topBarItems = [
@@ -58,7 +58,7 @@ export const Navbar = () => {
     {
       icon: <IoIosMail size={26} color="#9fe300" />,
       title: n.email,
-      subtitle: "info@mascontractors.com",
+      subtitle: BUSINESS.email,
       link: href("/contact#email")
     }
   ];

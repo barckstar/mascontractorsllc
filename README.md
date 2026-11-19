@@ -1,125 +1,55 @@
-# 🏗️ MAS Contractors LLC - Official Website
+# MAS Contractors LLC — Website
 
-![MAS Contractors Logo](public/IMG_0271.png)
+Website for **MAS Contractors LLC**, a general contractor in Richmond, VA. Built with **Next.js 16** (App Router), **React 19**, **Tailwind CSS 3** and **Framer Motion**, deployed on Vercel. Strong focus on local SEO. Available in English (`/`) and Spanish (`/es`).
 
-This project is a modern, responsive website for **MAS Contractors LLC**, built with **Next.js 14**, **Tailwind CSS**, and **Framer Motion**. It focuses on performance, local SEO, and a premium user experience.
+> The working guide for this repo (structure, i18n rules, content rules, performance, workflow) is **[CLAUDE.md](CLAUDE.md)**. This README is only the quick start.
 
-## 📂 Project Structure Map
+## Quick start
 
-```
-d:\Proyectos\mascontractorsllc\
-├── public/                 # Static assets (images, logos, robots.txt)
-├── src/
-│   ├── app/                # Next.js App Router (Pages & Routing)
-│   │   ├── about/          # Route: /about
-│   │   ├── contact/        # Route: /contact
-│   │   ├── gallery/        # Route: /gallery
-│   │   ├── services/       # Route: /services
-│   │   ├── layout.js       # Root Layout (Fonts, Metadata, Header/Footer)
-│   │   ├── page.jsx        # Route: / (Home Page)
-│   │   ├── not-found.js    # 404 Error Handler (Redirects to Home)
-│   │   └── globals.css     # Global Styles & Tailwind Directives
-│   │
-│   ├── components/         # Reusable UI Components
-│   │   ├── contact.jsx     # Contact Form (Turnstile + /api/contact)
-│   │   ├── navbar.jsx      # Responsive Navigation Bar
-│   │   ├── footer.jsx      # Site Footer
-│   │   ├── FAQ.jsx         # Accordion FAQ Component
-│   │   └── ...             # Other section-specific components
-│   │
-│   └── lib/                # Utilities & Shared Data
-│       ├── data.json       # Content Text & Configuration
-│       └── gallery.json    # Gallery Image Data (Generated)
-│
-├── scripts/
-│   └── generate-gallery.js # Script to generate gallery.json
-│
-├── .env.local              # Local Environment Variables (Git Ignored)
-
-└── tailwind.config.js      # Design System Configuration (Colors, Fonts)
+```bash
+npm install
+cp .env.example .env.local   # then fill in the keys (see below)
+npm run dev                  # http://localhost:3000
 ```
 
-## 🏗️ Architecture Decisions
+| Command | What it does |
+|---|---|
+| `npm run dev` | Development server |
+| `npm run build` | Production build (runs `scripts/check-i18n.mjs` first; fails if a translation is missing) |
+| `npm run start` | Serve the production build |
+| `npm test` | Node's built-in test runner over `tests/*.test.mjs` (`/api/contact` and the daily cron check) |
+| `npm run check-i18n` | Verify `en`/`es` dictionaries and content have the same keys |
+| `npm run indexnow` | Ping IndexNow/Bing after publishing pages |
 
-The project follows a **Feature-Based** and **Component-Driven** architecture optimized for Next.js App Router:
+`npm run lint` is currently broken (Next 16 removed `next lint`); see CLAUDE.md.
 
-1.  **`src/app/` (Routing)**:
-    *   We use the **App Router** for better performance and Server Components support.
-    *   **Server Components** (`page.jsx`): Used by default for SEO metadata and initial data fetching.
-    *   **Client Components** (`"use client"`): Used only where interactivity is needed (animations, forms, sliders), keeping the JS bundle size small.
+## Project layout
 
-2.  **`src/components/` (UI)**:
-    *   Components are modular and reusable.
-    *   Logic is separated from the page structure (e.g., `ServicesContent.jsx` holds the logic/view for `services/page.jsx`).
+```
+src/
+  app/        routes: (en)/ for English URLs, es/ for Spanish, api/, review/, sitemap, robots
+  views/      each page written once (home, service, post…); app/ files are thin wrappers
+  components/ UI; *Content.jsx is the view of each page
+  content/    long-form content per language (services, blog), gallery, social, business.js
+  i18n/       config, dictionaries (en.json / es.json), provider, metadata helpers
+  lib/        Google reviews (Places API), contact mail helper
+scripts/      check-i18n, indexnow, optimize-images
+tests/        node:test suites
+public/       images, fonts, llms.txt
+```
 
-3.  **`src/data/` vs `src/lib/`**:
-    *   Separation of content from code allows for easier updates to text and images without risking breaking the application logic.
+Business contact data (phones, email, address) lives in **one file**: `src/content/business.js`.
 
-## 🚀 SEO Implementation (Search Engine Optimization)
+## Environment variables
 
-The site is heavily optimized for **Local SEO** to target clients in **Richmond, VA**.
+Copy `.env.example` to `.env.local`. In production they live in Vercel's Environment Variables.
 
-### 1. Metadata API
-Every page (`page.jsx`) exports a `metadata` object containing:
-*   **Title**: Optimized with keywords (e.g., "General Contractor in Richmond, VA").
-*   **Description**: Compelling summaries including core services.
-*   **Keywords**: Specific tags like "Kitchen Remodeling", "Commercial Construction".
-*   **OpenGraph**: optimized for social media sharing.
+- Contact form: `NEXT_PUBLIC_TURNSTILE_SITE_KEY`, `TURNSTILE_SECRET_KEY`, `EMAILJS_PRIVATE_KEY` and the EmailJS service/template/public ids (`NEXT_PUBLIC_EMAILJS_*`).
+- Daily health check of the form: `CRON_SECRET`, optional `ALERT_WEBHOOK_URL`.
+- Google reviews (optional; falls back to a snapshot): `GOOGLE_PLACES_API_KEY`, `GOOGLE_PLACE_ID`.
 
-### 2. Semantic HTML
-*   **Hierarchy**: Strict `H1` -> `H2` -> `H3` structure.
-    *   `H1`: One per page, defining the main topic.
-    *   `H2`: Main sections and service categories.
-*   **Alt Text**: All images follow the **"What + Where"** pattern (e.g., *"Kitchen Remodeling in Richmond VA"*) to help Google associate services with the location.
+Details of each one are in CLAUDE.md.
 
-### 3. Structured Data (Schema.org)
-*   **LocalBusiness**: Implemented to tell Google this is a physical business.
-*   **FAQPage**: The Services page includes JSON-LD for FAQs, increasing the chance of appearing in Google's "People Also Ask" snippets.
+## Gallery
 
-### 4. Technical SEO
-*   **Mobile First**: Fully responsive design.
-*   **Performance**: Uses `next/image` for automatic image optimization (WebP, resizing).
-*   **Redirects**: A custom `not-found.js` redirects all broken links to the Homepage to reduce bounce rates.
-
-## 🔐 Environment Variables
-
-Security is managed via `.env.local` (local development) and Vercel Environment Variables (production).
-
-**Required Keys:**
-*   `NEXT_PUBLIC_TURNSTILE_SITE_KEY`: Cloudflare Turnstile site key.
-*   `TURNSTILE_SECRET_KEY`, `EMAILJS_SERVICE_ID`, `EMAILJS_TEMPLATE_ID`, `EMAILJS_PUBLIC_KEY`, `EMAILJS_PRIVATE_KEY`: server-only, used by `/api/contact`.
-
-> **Note:** These keys are prefixed with `NEXT_PUBLIC_` because they are required by Client Components (`contact.jsx`) to function in the browser.
-
-## 🛠️ Tech Stack
-
-*   **Framework**: Next.js 14 (App Router)
-*   **Styling**: Tailwind CSS
-*   **Animations**: Framer Motion
-*   **Forms**: React Hook Form / Standard State
-*   **Email**: EmailJS
-*   **Security**: Cloudflare Turnstile
-
-## 📜 Available Scripts
-
-In the project directory, you can run:
-
-### `npm run dev`
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-### `npm run build`
-Builds the app for production.\
-It automatically runs `npm run generate-gallery` before building to ensure `src/lib/gallery.json` is up to date.
-
-### `npm run start`
-Starts the production server.
-
-### `npm run lint`
-Runs the linter to check for code quality issues.
-
-### `npm run generate-gallery`
-Scans `public/gallery` and generates/updates `src/lib/gallery.json`.\
-*Useful when you add new images to the gallery.*\
-\
-**Alt Text Format**: Automatically generates readable descriptions based on the filename + "in North Chesterfield, VA". (e.g. `MyImage.jpg` -> `My Image in North Chesterfield, VA`)
+The gallery is maintained by hand in `src/content/gallery.json` (there is no generator script). Put the photo in `public/gallery/` and add an entry with `alt: { en, es }`.
