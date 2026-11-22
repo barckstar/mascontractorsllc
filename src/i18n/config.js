@@ -31,8 +31,10 @@ export function localePath(lang, path = "/") {
 // explicit /en prefix, which only exists as a redirect.
 export function stripLocale(pathname = "/") {
     const [, first, ...rest] = pathname.split("/");
-    if (isLocale(first)) return "/" + rest.join("/");
-    return pathname || "/";
+    const path = isLocale(first) ? "/" + rest.join("/") : pathname || "/";
+    // While prerendering, usePathname() reports the home page as "/index";
+    // left alone, the language switcher linked to /index and a 404 at /es/index.
+    return path === "/index" ? "/" : path;
 }
 
 // Metadata `alternates` for one page: its own canonical plus hreflang links to

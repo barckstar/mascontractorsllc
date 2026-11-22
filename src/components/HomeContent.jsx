@@ -67,6 +67,7 @@ function Hero({ photos }) {
                     </div>
 
                     <h1 className="font-contrax uppercase leading-[1.02] tracking-wide text-white text-[clamp(1.6rem,7.4vw,3.3rem)] lg:text-[clamp(2.1rem,3.55vw,3.7rem)]">
+                        <span className="mb-4 block font-body text-sm font-semibold normal-case tracking-normal text-gray-300 md:text-base">{h.heroKicker}</span>
                         <span className="block">{h.heroTitleA}</span>
                         <span className="block bg-gradient-to-r from-[#9fe300] to-[#7ab300] bg-clip-text text-transparent">{h.heroTitleB}</span>
                     </h1>
@@ -136,10 +137,13 @@ function Hero({ photos }) {
     );
 }
 
-export default function HomeContent({ reviews, posts, photos }) {
+export default function HomeContent({ reviews, posts, photos, services: allServices = [] }) {
     const { t, href } = useI18n();
     const h = t.home;
     const data = t.site;
+    // Services without a card above still get a crawlable link from the home page.
+    const carded = new Set(data.homeGreenCards.map((c) => c.slug));
+    const services = allServices.filter((s) => !carded.has(s.slug));
     const buildRef = useRef(null);
     const { scrollYProgress: buildProgress } = useScroll({ target: buildRef, offset: ["start 75%", "center 45%"] });
     const aboutRef = useRef(null);
@@ -289,6 +293,21 @@ export default function HomeContent({ reviews, posts, photos }) {
                             );
                         })}
                     </div>
+
+                    {services.length > 0 && (
+                        <nav aria-label={h.moreServices} className="mt-10 flex flex-wrap items-center justify-center gap-3 font-body text-sm">
+                            <span className="text-gray-400">{h.moreServices}</span>
+                            {services.map((s) => (
+                                <Link
+                                    key={s.slug}
+                                    href={href(`/services/${s.slug}`)}
+                                    className="rounded-full border border-white/15 px-4 py-2 text-gray-200 transition-colors hover:border-[#9fe300] hover:text-[#9fe300]"
+                                >
+                                    {s.title}
+                                </Link>
+                            ))}
+                        </nav>
+                    )}
 
                     <div className="mt-14 text-center">
                         <Link href={href("/services")} className="group inline-flex items-center gap-2 font-contrax text-[#9fe300] transition-all hover:gap-4">

@@ -1,6 +1,6 @@
 import HomeContent from "@/components/HomeContent";
 import { getGoogleReviews } from "@/lib/googleReviews";
-import { getGallery, getPostSummaries } from "@/content";
+import { getGallery, getPostSummaries, getServiceSummaries } from "@/content";
 import { homePhotoPaths } from "@/content/homePhotos";
 import { pageMetadata } from "@/i18n/metadata";
 import PageSections from "@/i18n/PageSections";
@@ -20,6 +20,11 @@ export default async function Home({ params }) {
       .map(({ src, width, height, alt }) => [src, { src, width, height, alt }])
   );
   return <PageSections lang={lang} names={["home","localBusiness","certifications","faq","reviews","servicesPage"]}>
-      <HomeContent reviews={reviews} posts={getPostSummaries(lang).slice(0, 3)} photos={photos} />
+      <HomeContent
+        reviews={reviews}
+        posts={getPostSummaries(lang).slice(0, 3)}
+        photos={photos}
+        services={getServiceSummaries(lang).map(({ slug, title }) => ({ slug, title: title.replace(/ (in|en) Richmond, VA$/, "") }))}
+      />
     </PageSections>;
 }
