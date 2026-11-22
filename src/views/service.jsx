@@ -1,9 +1,10 @@
 import JsonLd from "@/components/JsonLd";
 import { BUSINESS } from "@/content/business";
 import { notFound } from "next/navigation";
-import { getServices, getServiceSummaries, getServiceBySlug } from "@/content";
+import { getServices, getServiceSummaries, getServiceBySlug, getPostSummaries } from "@/content";
+import { RELATED } from "@/content/related";
 import { getDictionary } from "@/i18n/dictionaries";
-import { OG_LOCALE, SITE_URL, alternatesFor, localePath } from "@/i18n/config";
+import { OG_LOCALE, SITE_URL, alternatesFor, localePath, siteUrl } from "@/i18n/config";
 import dynamic from "next/dynamic";
 import PageSections from "@/i18n/PageSections";
 import { pageTitle } from "@/i18n/metadata";
@@ -51,26 +52,21 @@ export default async function ServicePage({ params }) {
     if (!service) notFound();
     const t = getDictionary(lang);
     const url = SITE_URL + localePath(lang, `/services/${service.slug}`);
+    const related = RELATED[service.slug] ?? { services: [], posts: [] };
+    const summaries = getServiceSummaries(lang);
+    const relatedServices = related.services.map((s) => summaries.find((x) => x.slug === s)).filter(Boolean);
+    const postsBySlug = new Map(getPostSummaries(lang).map((x) => [x.slug, x]));
+    // Only what the cards show: the whole summary would bloat the RSC payload.
+    const relatedPosts = related.posts.map((s) => postsBySlug.get(s)).filter(Boolean)
+        .map(({ slug, title, excerpt }) => ({ slug, title, excerpt }));
 
     const jsonLd = {
         "@context": "https://schema.org",
         "@type": "Service",
         "name": service.title,
         "description": service.description,
-        "provider": {
-            "@type": "GeneralContractor",
-            "name": BUSINESS.name,
-            "url": BUSINESS.url,
-            "telephone": BUSINESS.phoneE164,
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": BUSINESS.address.street,
-                "addressLocality": BUSINESS.address.city,
-                "addressRegion": BUSINESS.address.region,
-                "postalCode": BUSINESS.address.postalCode,
-                "addressCountry": BUSINESS.address.country
-            }
-        },
+        // Points at the sitewide GeneralContractor emitted by the layout.
+        "provider": { "@type": "GeneralContractor", "@id": `${BUSINESS.url}/#organization`, "name": BUSINESS.name },
         "areaServed": [
             { "@type": "City", "name": "Richmond" },
             { "@type": "City", "name": "North Chesterfield" },
@@ -79,13 +75,7 @@ export default async function ServicePage({ params }) {
             { "@type": "City", "name": "Henrico" }
         ],
         "url": url,
-        "inLanguage": lang,
-        "offers": {
-            "@type": "Offer",
-            "description": t.serviceSchema.freeEstimate,
-            "price": "0",
-            "priceCurrency": "USD"
-        }
+        "inLanguage": lang
     };
 
     const faqJsonLd = {
@@ -105,7 +95,7 @@ export default async function ServicePage({ params }) {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": t.breadcrumbs.home, "item": SITE_URL + localePath(lang, "/") },
+            { "@type": "ListItem", "position": 1, "name": t.breadcrumbs.home, "item": siteUrl(lang, "/") },
             { "@type": "ListItem", "position": 2, "name": t.breadcrumbs.services, "item": SITE_URL + localePath(lang, "/services") },
             { "@type": "ListItem", "position": 3, "name": service.title, "item": url }
         ]
@@ -117,7 +107,11 @@ export default async function ServicePage({ params }) {
             <JsonLd data={faqJsonLd} />
             <JsonLd data={breadcrumbJsonLd} />
             <PageSections lang={lang} names={["serviceDetail","beforeAfter"]}>
-      <ServicePageContent service={service} services={getServiceSummaries(lang)} />
+      <ServicePageContent
+        service={service}
+        services={relatedServices}
+        posts={relatedPosts}
+      />
     </PageSections>
         </>
     );

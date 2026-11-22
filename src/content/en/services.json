@@ -43,8 +43,6 @@
       }
     ],
     "costGuide": {
-      "range": "$15,000 – $60,000+",
-      "average": "$30,000 – $45,000",
       "timeline": "3 – 6 weeks",
       "factors": [
         "Cabinet style and finish level (stock vs. semi-custom vs. custom)",
@@ -57,7 +55,7 @@
     "faq": [
       {
         "question": "How much does a kitchen remodel cost in Richmond, VA?",
-        "answer": "Kitchen remodels in Richmond typically range from $15,000 to $60,000+, depending on size, materials, and scope. A partial update (cabinets + countertops) can start around $8,000–$15,000. We provide free, detailed written estimates so you know exactly what you're investing before we start."
+        "answer": "Every kitchen is different: size, layout changes, cabinet line, countertop material and appliance grade all move the final number, and older Richmond homes often hide surprises behind the walls. That's why we don't publish price ranges. We visit your home, measure, talk through materials and give you a free, detailed written estimate before any work starts."
       },
       {
         "question": "How long does a kitchen remodel take?",
@@ -77,7 +75,7 @@
       },
       {
         "question": "How do I choose between quartz and granite countertops?",
-        "answer": "Quartz is engineered, non-porous, and requires no sealing — the most popular choice in Richmond for busy kitchens. Granite is natural stone with unique veining, requires annual sealing, and handles heat slightly better. Both add strong resale value. Quartz typically runs $60–$100/sq ft installed; granite $50–$90/sq ft. We bring samples to your home so you can compare in your actual lighting before deciding."
+        "answer": "Quartz is engineered, non-porous, and requires no sealing — the most popular choice in Richmond for busy kitchens. Granite is natural stone with unique veining, requires annual sealing, and handles heat slightly better. Both add strong resale value. Price depends on the slab, edge profile and cutouts, so we bring samples to your home and include the exact material in your free estimate."
       }
     ],
     "keywords": [
@@ -94,7 +92,7 @@
       },
       {
         "title": "Plumbing Relocation Costs",
-        "desc": "Moving the sink or changing the island position means relocating drain lines — often requiring work through the crawl space or breaking into the slab. This adds $1,500–$4,000 to the budget and several days to the timeline that must be planned upfront."
+        "desc": "Moving the sink or changing the island position means relocating drain lines — often requiring work through the crawl space or breaking into the slab. It adds cost and several days to the timeline, so it must be planned upfront."
       },
       {
         "title": "Load-Bearing Wall Removal",
@@ -107,7 +105,7 @@
     ],
     "proTips": [
       "Lock in cabinet and countertop selections before demo starts — material lead times control your schedule, not the labor.",
-      "Design your lighting layout before any drywall goes up. Adding recessed lights after the fact means cutting, patching, and repainting — a $1,500+ mistake.",
+      "Design your lighting layout before any drywall goes up. Adding recessed lights after the fact means cutting, patching, and repainting — an expensive, avoidable mistake.",
       "Use the 36-inch work triangle rule: the combined distance between sink, stove, and refrigerator should total 12–26 feet. Layouts outside this range feel awkward to work in.",
       "Order 15% extra tile as a buffer for cuts, breakage, and future repairs — tile dye lots change between production runs and matching tile 2 years later is nearly impossible.",
       "Quartz is the smarter countertop choice for Virginia's humidity — non-porous, never needs sealing, and outperforms granite in high-use kitchens."
@@ -164,8 +162,6 @@
       }
     ],
     "costGuide": {
-      "range": "$8,000 – $35,000+",
-      "average": "$12,000 – $22,000",
       "timeline": "2 – 5 weeks",
       "factors": [
         "Custom tile vs. standard tile selection",
@@ -178,7 +174,7 @@
     "faq": [
       {
         "question": "How much does a bathroom remodel cost in Richmond, VA?",
-        "answer": "Bathroom remodels in Richmond range from $8,000 for a basic refresh to $35,000+ for a full master bath transformation with custom tile and fixtures. We offer free on-site estimates with a detailed line-item quote so you can plan your budget confidently."
+        "answer": "It depends on the scope: a basic refresh and a full master bath with custom tile and fixtures are very different projects, and what we find behind old tile (water damage, outdated plumbing) also matters. Every job is different, so we give you a free on-site estimate with a detailed line-item quote instead of a generic range."
       },
       {
         "question": "How long does bathroom remodeling take?",
@@ -236,8 +232,8 @@
       "Always upgrade the exhaust fan when remodeling — most existing fans are rated 50 CFM when 110+ CFM is needed for proper moisture control in Virginia's humidity.",
       "Use cement backer board, not greenboard, behind every wet area. Greenboard is moisture-resistant, not waterproof — it will eventually fail in a shower.",
       "Large format tile (12×24\" or bigger) makes small bathrooms look significantly larger — and fewer grout lines mean less cleaning.",
-      "Set rough plumbing and get it inspected before any tile goes down. Moving a drain after tile installation means a full tear-out — a $3,000+ mistake.",
-      "Heated floor systems cost $500–$1,500 to install and are dramatically easier to add during a remodel than after. If you're already doing the floor, consider it."
+      "Set rough plumbing and get it inspected before any tile goes down. Moving a drain after tile installation means a full tear-out — one of the most expensive mistakes in a bathroom.",
+      "Heated floor systems are dramatically easier and cheaper to add during a remodel than after. If you're already doing the floor, consider it."
     ],
     "safetyGear": [
       "Safety glasses",
@@ -292,8 +288,6 @@
       }
     ],
     "costGuide": {
-      "range": "$4,500 – $20,000",
-      "average": "$8,000 – $14,000",
       "timeline": "1 – 3 days",
       "factors": [
         "Roof square footage and pitch (steeper = more labor)",
@@ -421,8 +415,6 @@
       }
     ],
     "costGuide": {
-      "range": "$25,000 – $150,000+",
-      "average": "$40,000 – $90,000",
       "timeline": "8 – 24 weeks",
       "factors": [
         "Square footage of the addition",
@@ -435,7 +427,7 @@
     "faq": [
       {
         "question": "How much does a home addition cost in Richmond, VA?",
-        "answer": "Home addition costs in Richmond typically range from $80 to $200+ per square foot, depending on the type and finishes. A simple room addition might start around $25,000–$40,000, while a full second-story addition can reach $150,000+. We provide detailed estimates so you can plan accurately."
+        "answer": "Additions vary more than any other project: a single room and a full second story are different worlds, and foundation type, roof tie-in, HVAC and electrical capacity all change the scope. We don't publish price ranges because every addition is different and comes with its own challenges. We visit, review your lot and goals, and give you a free, detailed estimate so you can plan accurately."
       },
       {
         "question": "How long does a home addition take?",
@@ -480,7 +472,7 @@
       },
       {
         "title": "Electrical Panel Capacity",
-        "desc": "Most Richmond homes built before 2000 have 150–200A panels already near capacity. A new addition frequently requires a panel upgrade — an additional $2,000–$5,000 that must be planned early in the budget, not discovered during rough-in."
+        "desc": "Most Richmond homes built before 2000 have 150–200A panels already near capacity. A new addition frequently requires a panel upgrade — a cost that must be planned early in the budget, not discovered during rough-in."
       }
     ],
     "proTips": [
@@ -544,8 +536,6 @@
       }
     ],
     "costGuide": {
-      "range": "$5,000 – $35,000",
-      "average": "$12,000 – $22,000",
       "timeline": "1 – 3 weeks (after permits)",
       "factors": [
         "Square footage of deck or porch",
@@ -666,8 +656,6 @@
       }
     ],
     "costGuide": {
-      "range": "$6,000 – $25,000",
-      "average": "$10,000 – $18,000",
       "timeline": "3 – 7 days",
       "factors": [
         "Home square footage and number of stories",
@@ -799,8 +787,6 @@
       }
     ],
     "costGuide": {
-      "range": "$300 – $900 per window",
-      "average": "$5,000 – $12,000 whole home",
       "timeline": "1 – 2 days install (4–8 wks lead)",
       "factors": [
         "Number of windows being replaced",
@@ -813,7 +799,7 @@
     "faq": [
       {
         "question": "How much do replacement windows cost in Richmond, VA?",
-        "answer": "Window replacement costs in Richmond typically range from $300 to $900 per window installed, depending on size, style, and frame material. A full-house window replacement for a typical home averages $5,000–$15,000. We provide free estimates with line-item pricing per window."
+        "answer": "It depends on how many windows, their size and style, the frame material and whether the openings need repairs once the old units come out. We give you a free estimate with line-item pricing per window, so you can decide which ones to replace now and which can wait."
       },
       {
         "question": "How long does window replacement take?",
@@ -920,8 +906,6 @@
       }
     ],
     "costGuide": {
-      "range": "$500 – $2,500+ per door",
-      "average": "$800 – $1,500 entry door installed",
       "timeline": "2 hours – 1 day per door",
       "factors": [
         "Door material (steel vs. fiberglass vs. solid wood)",
@@ -934,7 +918,7 @@
     "faq": [
       {
         "question": "How much does door installation cost in Richmond, VA?",
-        "answer": "Interior door installation typically ranges from $200 to $500 per door installed. Exterior entry doors range from $500 to $2,500+ installed, depending on the door style and hardware. We provide free estimates with all labor and materials itemized clearly."
+        "answer": "It depends on the door itself (interior or exterior, material, glass, hardware) and on the condition of the frame and opening. Every job is different, so we provide free estimates with labor and materials itemized clearly."
       },
       {
         "question": "How long does door installation take?",
@@ -1041,8 +1025,6 @@
       }
     ],
     "costGuide": {
-      "range": "$3 – $15 per linear foot",
-      "average": "$2,500 – $8,000 per room (custom built-ins higher)",
       "timeline": "1 – 5 days",
       "factors": [
         "Profile complexity (simple base vs. elaborate crown)",
@@ -1055,7 +1037,7 @@
     "faq": [
       {
         "question": "How much does trim carpentry cost in Richmond, VA?",
-        "answer": "Trim carpentry costs vary widely by project type. Basic base and door casing installation runs $3–$8 per linear foot installed. Crown molding averages $8–$15 per linear foot. Custom coffered ceilings or built-in units range from $2,500 to $10,000+. We provide free on-site estimates with itemized pricing."
+        "answer": "Trim carpentry costs vary widely by project type: basic base and door casing, crown molding and custom coffered ceilings or built-ins are very different jobs, and the profile and wood species you choose matter. We provide free on-site estimates with itemized pricing."
       },
       {
         "question": "What's the difference between paint-grade and stain-grade trim?",
@@ -1123,7 +1105,7 @@
     "shortTitle": "Room Additions",
     "title": "Custom Room Additions in Richmond, VA",
     "metaTitle": "Custom Room Additions Richmond VA | MAS Contractors LLC",
-    "metaDescription": "Custom room additions in Richmond, Chesterfield & Midlothian VA — sunrooms, bonus rooms, garage conversions & basement finishing. From $20,000. Class A licensed. Free estimates — (804) 833-4600.",
+    "metaDescription": "Custom room additions in Richmond, Chesterfield & Midlothian VA — sunrooms, bonus rooms, garage conversions & basement finishing. Class A licensed. Free estimates — (804) 833-4600.",
     "heroText": "Create the extra space your family needs — from sunrooms and bonus rooms to finished basements and converted garages.",
     "img": "/gallery/CustomRoomAdditions1.png",
     "imgAlt": "Custom room addition and sunroom construction in Richmond VA by MAS Contractors",
@@ -1162,8 +1144,6 @@
       }
     ],
     "costGuide": {
-      "range": "$20,000 – $80,000",
-      "average": "$30,000 – $55,000",
       "timeline": "6 – 16 weeks",
       "factors": [
         "Type of space being converted (garage, basement, attic, or new addition)",
@@ -1188,7 +1168,7 @@
       },
       {
         "question": "How much does it cost to finish a basement in Richmond?",
-        "answer": "Basement finishing in Richmond typically runs $35–$65 per square foot depending on finish level, HVAC complexity, and whether plumbing is added. A 1,000 sq ft basement with a bathroom might run $45,000–$75,000 fully finished. We provide detailed free estimates itemized by trade."
+        "answer": "It depends on the finish level, the HVAC work and whether you add a bathroom, plus moisture conditions we check before starting. Every basement is different, so we provide detailed free estimates itemized by trade."
       },
       {
         "question": "Does a garage conversion or bonus room require a permit in Virginia?",
@@ -1285,8 +1265,6 @@
       }
     ],
     "costGuide": {
-      "range": "$8 – $30+ per sq ft installed",
-      "average": "$3,000 – $12,000 per room",
       "timeline": "3 – 10 days",
       "factors": [
         "Tile material — ceramic vs. porcelain vs. natural stone vs. marble",

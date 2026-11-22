@@ -69,6 +69,47 @@ Recomendación: instalar **1 y 2** (cubren auditoría, SEO local y datos reales 
 
 **Advertencias:** estas skills no conocen nuestra regla de verificar hechos con fuente oficial (sus textos son borradores) y varias recomiendan schema `AggregateRating`/`Review`, que aquí se dejó fuera a propósito.
 
+## Auditoría con las skills (2026-11-21)
+
+Se descargaron `claude-seo` y `marketingskills` (solo se leyeron sus instrucciones; no se ejecutó ningún script) y se aplicaron sus métodos de auditoría técnica, hreflang, schema, página, contenido y SEO local a las 78 URL del sitemap.
+
+**Bien:** todas dan 200, un H1 por página, canonical propio (también en /es), hreflang recíproco con x-default en `<head>` y sitemap, 404 reales con `noindex`, robots limpio, todas las imágenes con alt.
+
+**Hecho el 2026-11-21:**
+- Enlace del selector de idioma a `/es/index` (404) → `/es`.
+- H1 con qué + dónde en inicio, Nosotros, Contacto y Galería (y con espacio entre partes: antes se leía "…VATRANSFORMINGSPACES").
+- El H1 de Contacto ya no arranca invisible (`opacity:0`) esperando a JavaScript.
+- Schema `GeneralContractor` del sitio ahora va en el HTML inicial (antes lo inyectaba `next/script` después de cargar; Bing y los rastreadores de IA no lo veían).
+- `Service.provider` apunta al `@id` de la organización; se quitó la `Offer` con `price: "0"`; las migas usan la URL canónica sin barra final.
+- Enlaces internos: la inicio enlaza los 11 servicios; cada servicio enlaza 3 servicios relacionados por tema (`src/content/related.js`) y 3 guías del blog.
+- **Precios de obra quitados de todo el sitio** (servicios, FAQ, llms.txt y las tablas que quedaban en 3 posts). Solo quedan precios de materiales con fuente y tarifas oficiales del condado.
+- `llms.txt`: sin "4.9 estrellas" (no coincidía con Google), sin precios, con la lista de posts al día (faltaban 4).
+
+**Pendiente (necesita al dueño o más trabajo):**
+1. **Número de licencia DPOR** visible y enlazado a la consulta oficial (hoy el sello lleva a la home de DPOR). Señal de confianza nº 1.
+2. **Páginas de ciudad** (Midlothian, Chesterfield, Henrico, Glen Allen) con proyectos reales de cada zona: hace falta saber qué obras se hicieron dónde, para que no sean páginas puerta.
+3. **Títulos y descripciones largos:** 49 de 78 títulos pasan de 60 caracteres y 59 descripciones de 160 (el español es peor). Reescribir `meta.*` y `metaTitle`/`metaDescription`.
+4. **Fuentes en las páginas de servicio:** las FAQ citan leyes y permisos (§ 54.1-402, crédito 25C, permisos de cocina) sin mostrar referencias, como sí hacen los posts.
+5. `llms.txt` dice "Founded in 2014", "500 projects" y "Certified James Hardie installer": confirmar con el dueño o quitar.
+6. Menores: `lastmod` del sitemap cambia en cada deploy; FAQ idéntico en `/` y `/services`; Conthrax en OTF (77 KB); `the_haven.jpg` de 893 KB.
+
+## Directorios: dónde no estamos o hay datos mal (2026-11-21)
+
+Sin crear cuentas ni enviar nada. Muchos directorios bloquean la consulta automática; esos quedan "sin verificar".
+
+**Arreglar primero (teléfono equivocado, desvía llamadas):**
+- **Apple Maps** (sin reclamar): (804) 920-2569, Suite 218 en vez de 107, dirección visible.
+- **MapQuest** (sin reclamar): mapquest.com/us/virginia/mas-contractors-519460166, (804) 920-2569, dirección visible.
+- **Yelp** (reclamado por alguien desconocido): (804) 404-5361.
+- **ZoomInfo** (distribuye datos a otros sitios): (804) 404-5361.
+- **BBB**: (804) 920-2569, dos ubicaciones; en buscadores aparecen 9000 Deerwater Ter y 440 Southlake Blvd y "not BBB accredited", que contradice `directorios-semana.md`. Revisarlo con la sesión del dueño.
+
+**No estamos (por prioridad):** Houzz (domina las búsquedas de remodelación), Nextdoor, Cámara de Chesterfield ($450/año el nivel más bajo, leído en chesterfieldchamber.com/join), Virginia Hispanic Chamber ($495/año, incluye directorio; leído en vahcc.com/membership), Alignable, LinkedIn (página de empresa), Angi/HomeAdvisor, Manta (gratis), YouTube, HBAR (requiere aprobación de la junta).
+
+**Sin verificar:** Yellow Pages/Superpages, ChamberRVA, BuildZoom, Foursquare, Data Axle, Neustar Localeze, Porch.
+
+**Otros:** Thumbtack fue borrado (410) pero los buscadores aún muestran copias. Una reseña vieja de Thumbtack habla de "EA Builders LLC (formerly Mas Contractors)" en Glen Allen: preguntar a Raúl si tiene relación, porque puede mezclar citaciones. Variantes del nombre: "MAS Contractors,LLC" (Facebook) y "MAS Contractors" (MapQuest, ZoomInfo, Instagram).
+
 ## Fuentes
 
 Páginas descargadas: lhcrva.com (/, /midlothian-va/, /new-construction-home-additions-richmond-va/, /blog/); classicconstructionext.com (/, /bathroom-remodeling/, /blog/); qualityremodelingva.com (/, /financing, /service-area, /blog); leolantz.com (/, /services/kitchen-remodeling/, /media/, /blogs/); jamesriverremodeling.com (/, /remodeling-services); ahgva.com (/, /residential-home-additions); lanebuilt.com (/, /kitchen-remodeling-richmond-va, /projects/covered-porch-and-patio-remodel-in-glen-allen-at-twin-hickory, /our-team, /blog); richmondhomerenovations.com (/, /midlothian-general-contractor, /blog); mascontractors.com (/, /services/kitchen-remodeling, /sitemap.xml, /index, /es/index).

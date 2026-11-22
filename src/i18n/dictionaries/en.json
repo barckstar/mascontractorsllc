@@ -438,7 +438,7 @@
     "items": [
       {
         "question": "How much does remodeling cost in Richmond, VA?",
-        "answer": "Remodeling costs in Richmond vary by project scope and materials. Kitchen remodels typically range from $15,000–$60,000+, bathroom remodels from $8,000–$35,000, and whole-home renovations from $50,000–$200,000+. Decks start around $8,000, and room additions from $30,000. We provide free, itemized written estimates so you know exactly what you're paying for before any work begins."
+        "answer": "Every project is different and comes with its own challenges: scope, materials, the condition of the existing structure and permits all affect the final price. That's why we don't publish generic ranges. We visit your property, take measurements and give you a free, itemized written estimate so you know exactly what you're paying for before any work begins."
       },
       {
         "question": "Are you licensed and insured in Virginia?",
@@ -656,7 +656,10 @@
     "logoAlt": "MAS Contractors LLC Logo - General Contractor Richmond VA",
     "phoneTitle": "Call us",
     "phoneOffice": "Office",
-    "phoneDirect": "Direct line"
+    "phoneDirect": "Direct line",
+    "h1About": "MAS Contractors · General Contractor in Richmond, VA",
+    "h1Contact": "Free Estimates in Richmond & Chesterfield, VA",
+    "h1Gallery": "Remodeling Projects in Richmond, VA"
   },
   "blogPage": {
     "eyebrow": "Richmond VA Home Improvement",
@@ -704,15 +707,16 @@
     "statEstimate": "Free Estimate",
     "statEstimateValue": "Always",
     "costEyebrow": "Richmond, VA Market",
-    "costA": "Cost & ",
-    "costB": "Timeline",
-    "costC": " Guide",
-    "investmentRange": "Investment Range",
-    "mostProjects": "Most projects:",
+    "costA": "Timeline & ",
+    "costB": "Cost",
+    "costC": " Factors",
+    "estimateLabel": "Your Price",
+    "estimateValue": "Free Estimate",
+    "estimateText": "Every job is different and comes with its own challenges, so we quote each project in person, in writing.",
     "typicalTimeline": "Typical Timeline",
     "permitNote": "Permit review may add time to some projects",
     "factorsTitle": "What Affects Your Cost",
-    "rangesNote": "These are typical ranges for the Richmond, VA market. Every project is unique — we provide free on-site written estimates with no surprises and no pressure.",
+    "rangesNote": "We don't publish price ranges: two projects that look alike can need very different work. We visit, measure and give you a free written estimate with no surprises and no pressure.",
     "costButton": "GET YOUR FREE ESTIMATE",
     "insightsEyebrow": "11 Years of Field Experience",
     "insightsA": "What Every Homeowner ",
@@ -727,6 +731,9 @@
     "faqEyebrow": "Common Questions",
     "faqA": "Frequently Asked ",
     "faqB": "Questions",
+    "guidesA": "Planning ",
+    "guidesB": "Guides",
+    "readGuide": "READ THE GUIDE",
     "otherA": "Other Services in ",
     "otherB": "Richmond, VA",
     "learnMore": "LEARN MORE",
@@ -921,9 +928,6 @@
     "home": "Home",
     "services": "Services",
     "blog": "Blog"
-  },
-  "serviceSchema": {
-    "freeEstimate": "Free Estimate"
   },
   "notFound": {
     "title": "Page Not Found",

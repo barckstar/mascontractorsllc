@@ -12,14 +12,10 @@ import { useI18n } from "@/i18n/I18nProvider";
 import { EASE, PrimaryCta, GlowCard } from "./ui";
 import CountUp from "./CountUp";
 
-export default function ServicePageContent({ service, services }) {
+export default function ServicePageContent({ service, services: relatedServices, posts = [] }) {
     const [activeIndex, setActiveIndex] = useState(null);
     const { t, href } = useI18n();
     const s = t.serviceDetail;
-
-    const relatedServices = services
-        .filter((s) => s.slug !== service.slug)
-        .slice(0, 3);
 
     return (
         <div className="bg-primary min-h-screen overflow-hidden">
@@ -238,17 +234,15 @@ export default function ServicePageContent({ service, services }) {
                                             <FaDollarSign className="text-secondary" size={14} />
                                         </div>
                                         <span className="text-gray-400 font-contrax text-xs tracking-widest uppercase">
-                                            {s.investmentRange}
+                                            {s.estimateLabel}
                                         </span>
                                     </div>
                                     <p className="text-3xl md:text-4xl font-contrax text-white mb-2">
-                                        {service.costGuide.range}
+                                        {s.estimateValue}
                                     </p>
-                                    {service.costGuide.average && (
-                                        <p className="text-gray-500 font-body text-sm">
-                                            {s.mostProjects} <span className="text-gray-300">{service.costGuide.average}</span>
-                                        </p>
-                                    )}
+                                    <p className="text-gray-500 font-body text-sm">
+                                        {s.estimateText}
+                                    </p>
                                 </div>
                                 <div className="bg-[#252525] rounded-2xl p-8 border border-white/5">
                                     <div className="flex items-center gap-3 mb-4">
@@ -516,6 +510,35 @@ export default function ServicePageContent({ service, services }) {
                 </div>
             </section>
 
+            {/* ── Planning guides from the blog ──────────────────── */}
+            {posts.length > 0 && (
+                <section className="px-6 py-24 lg:px-16">
+                    <div className="container mx-auto">
+                        <h2 className="mb-12 text-center text-2xl font-contrax uppercase text-white md:text-4xl">
+                            {s.guidesA}<span className="text-secondary">{s.guidesB}</span>
+                        </h2>
+                        <ul className="grid grid-cols-1 gap-6 md:grid-cols-3">
+                            {posts.map((post) => (
+                                <li key={post.slug}>
+                                    <Link
+                                        href={href(`/blog/${post.slug}`)}
+                                        className="group flex h-full flex-col rounded-2xl border border-white/5 bg-[#252525] p-6 transition-colors duration-300 hover:border-secondary/50"
+                                    >
+                                        <h3 className="mb-3 font-body text-lg font-semibold leading-snug text-white transition-colors group-hover:text-secondary">
+                                            {post.title}
+                                        </h3>
+                                        <p className="mb-5 line-clamp-3 font-body text-sm leading-relaxed text-gray-400">{post.excerpt}</p>
+                                        <span className="mt-auto inline-flex items-center gap-2 font-contrax text-xs tracking-widest text-secondary transition-all group-hover:gap-4">
+                                            {s.readGuide} <BiRightArrowAlt size={16} />
+                                        </span>
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </section>
+            )}
+
             {/* ── Related Services ───────────────────────────────── */}
             <section className="bg-[#191919] py-24">
                 <div className="container mx-auto px-6 lg:px-16">
@@ -532,7 +555,7 @@ export default function ServicePageContent({ service, services }) {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {relatedServices.map((rel, i) => (
                             <m.div
-                                key={s.slug}
+                                key={rel.slug}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}

@@ -438,7 +438,7 @@
     "items": [
       {
         "question": "¿Cuánto cuesta una remodelación en Richmond, VA?",
-        "answer": "El costo depende del alcance y los materiales. Una remodelación de cocina suele costar entre $15,000 y $60,000+, un baño entre $8,000 y $35,000, y una renovación de toda la casa entre $50,000 y $200,000+. Los decks empiezan en unos $8,000 y las ampliaciones en $30,000. Le damos un presupuesto escrito, detallado y gratis, para que sepa exactamente qué paga antes de empezar."
+        "answer": "Cada proyecto es diferente y trae sus propios retos: el alcance, los materiales, el estado de la estructura existente y los permisos cambian el precio final. Por eso no publicamos rangos genéricos. Visitamos su propiedad, tomamos medidas y le damos un presupuesto escrito, detallado y gratis, para que sepa exactamente qué paga antes de empezar."
       },
       {
         "question": "¿Tienen licencia y seguro en Virginia?",
@@ -656,7 +656,10 @@
     "logoAlt": "Logo de MAS Contractors LLC - Contratista general en Richmond VA",
     "phoneTitle": "Llámenos",
     "phoneOffice": "Oficina",
-    "phoneDirect": "Línea directa"
+    "phoneDirect": "Línea directa",
+    "h1About": "MAS Contractors · Contratista general en Richmond, VA",
+    "h1Contact": "Presupuestos gratis en Richmond y Chesterfield, VA",
+    "h1Gallery": "Proyectos de remodelación en Richmond, VA"
   },
   "blogPage": {
     "eyebrow": "Mejoras para el hogar en Richmond, VA",
@@ -704,15 +707,16 @@
     "statEstimate": "Presupuesto gratis",
     "statEstimateValue": "Siempre",
     "costEyebrow": "Mercado de Richmond, VA",
-    "costA": "Guía de ",
-    "costB": "costos",
-    "costC": " y plazos",
-    "investmentRange": "Rango de inversión",
-    "mostProjects": "La mayoría de los proyectos:",
+    "costA": "Plazos y ",
+    "costB": "factores",
+    "costC": " de costo",
+    "estimateLabel": "Su precio",
+    "estimateValue": "Presupuesto gratis",
+    "estimateText": "Cada trabajo es diferente y trae sus propios retos, por eso cotizamos cada proyecto en persona y por escrito.",
     "typicalTimeline": "Plazo típico",
     "permitNote": "La revisión de permisos puede sumar tiempo en algunos proyectos",
     "factorsTitle": "Qué afecta el costo",
-    "rangesNote": "Estos son rangos típicos del mercado de Richmond, VA. Cada proyecto es único: le damos un presupuesto escrito gratis en el lugar, sin sorpresas y sin presión.",
+    "rangesNote": "No publicamos rangos de precio: dos proyectos parecidos pueden necesitar trabajos muy distintos. Lo visitamos, medimos y le damos un presupuesto escrito gratis, sin sorpresas y sin presión.",
     "costButton": "PIDA SU PRESUPUESTO GRATIS",
     "insightsEyebrow": "11 años de experiencia en obra",
     "insightsA": "Lo que todo propietario ",
@@ -727,6 +731,9 @@
     "faqEyebrow": "Preguntas comunes",
     "faqA": "Preguntas ",
     "faqB": "frecuentes",
+    "guidesA": "Guías para ",
+    "guidesB": "planear",
+    "readGuide": "LEER LA GUÍA",
     "otherA": "Otros servicios en ",
     "otherB": "Richmond, VA",
     "learnMore": "VER MÁS",
@@ -921,9 +928,6 @@
     "home": "Inicio",
     "services": "Servicios",
     "blog": "Blog"
-  },
-  "serviceSchema": {
-    "freeEstimate": "Presupuesto gratis"
   },
   "notFound": {
     "title": "Página no encontrada",

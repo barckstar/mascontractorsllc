@@ -17,7 +17,7 @@ import Image from 'next/image';
 // categories stay as English keys and are labelled through the dictionary.
 export default function GalleryContent({ gallery }) {
     const [activeCategory, setActiveCategory] = useState("All");
-    const g = useI18n().t.galleryPage;
+    const { galleryPage: g, common } = useI18n().t;
     const galleryData = gallery.images;
     const CATEGORIES = gallery.categories;
 
@@ -43,6 +43,7 @@ export default function GalleryContent({ gallery }) {
                     className="relative text-center"
                 >
                     <h1 className="font-contrax text-5xl md:text-7xl font-medium text-[#9fe300] mb-4 tracking-wider mt-44 md:mt-32 lg:mt-36">
+                        <span className="mb-4 block font-body text-sm font-semibold normal-case tracking-normal text-gray-300 md:text-base">{common.h1Gallery}</span>{" "}
                         {g.title}
                     </h1>
                     <div className="w-24 h-1 bg-[#9fe300] mx-auto rounded-full shadow-[0_0_10px_#9fe300]" />

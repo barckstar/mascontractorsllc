@@ -81,15 +81,12 @@ export default function ContactPageContent({ reviews = REVIEWS_SNAPSHOT, heroPho
                         {c.eyebrow}
                     </m.p>
 
-                    <m.h1
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.1 }}
-                        className="text-5xl sm:text-7xl md:text-[90px] font-contrax text-white uppercase leading-[0.95] mb-7 tracking-tight"
-                    >
+                    {/* Not animated: an H1 that starts at opacity 0 waits for React to paint (LCP). */}
+                    <h1 className="text-5xl sm:text-7xl md:text-[90px] font-contrax text-white uppercase leading-[0.95] mb-7 tracking-tight">
+                        <span className="mb-4 block font-body text-sm font-semibold normal-case tracking-normal text-gray-300 md:text-base">{t.common.h1Contact}</span>{" "}
                         {c.titleA}<br />
                         <span className="text-[#9fe300]">{c.titleB}</span>
-                    </m.h1>
+                    </h1>
 
                     <m.p
                         initial={{ opacity: 0, y: 20 }}

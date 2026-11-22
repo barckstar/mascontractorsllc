@@ -1,15 +1,14 @@
 import { BUSINESS } from "@/content/business";
-import { safeJson } from "@/components/JsonLd";
+import JsonLd from "@/components/JsonLd";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ReviewStrip, ReviewChip } from "@/components/ReviewAsk";
 import { SocialMediaBar } from "@/components/socialMedia";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import Script from "next/script";
 import MotionProvider from "@/components/MotionProvider";
 import { I18nProvider } from "@/i18n/I18nProvider";
 import { getDictionary } from "@/i18n/dictionaries";
-import { OG_LOCALE, SITE_URL, localePath } from "@/i18n/config";
+import { OG_LOCALE, SITE_URL, siteUrl } from "@/i18n/config";
 
 export async function generateMetadata({ params }) {
   const { lang } = await params;
@@ -26,7 +25,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: m.ogTitle,
       description: m.ogDescription,
-      url: SITE_URL + localePath(lang, "/"),
+      url: siteUrl(lang, "/"),
       siteName: "MAS Contractors LLC",
       locale: OG_LOCALE[lang],
       type: "website",
@@ -126,11 +125,7 @@ export default async function SiteLayout({ children, params }) {
           <ReviewChip />
         </MotionProvider>
         </I18nProvider>
-        <Script
-          id="json-ld-schema"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: safeJson(jsonLd) }}
-        />
+        <JsonLd id="json-ld-schema" data={jsonLd} />
     </>
   );
 }

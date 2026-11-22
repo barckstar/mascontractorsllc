@@ -67,8 +67,8 @@ function Hero({ photos }) {
                     </div>
 
                     <h1 className="font-contrax uppercase leading-[1.02] tracking-wide text-white text-[clamp(1.6rem,7.4vw,3.3rem)] lg:text-[clamp(2.1rem,3.55vw,3.7rem)]">
-                        <span className="mb-4 block font-body text-sm font-semibold normal-case tracking-normal text-gray-300 md:text-base">{h.heroKicker}</span>
-                        <span className="block">{h.heroTitleA}</span>
+                        <span className="mb-4 block font-body text-sm font-semibold normal-case tracking-normal text-gray-300 md:text-base">{h.heroKicker}</span>{" "}
+                        <span className="block">{h.heroTitleA}</span>{" "}
                         <span className="block bg-gradient-to-r from-[#9fe300] to-[#7ab300] bg-clip-text text-transparent">{h.heroTitleB}</span>
                     </h1>
                     <p className="mt-2 font-contrax uppercase leading-[1.02] tracking-wide text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.8)] md:[-webkit-text-stroke:1.5px_rgba(255,255,255,0.8)] text-[clamp(1.6rem,7.4vw,3.3rem)] lg:text-[clamp(2.1rem,3.55vw,3.7rem)]">

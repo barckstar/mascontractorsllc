@@ -46,14 +46,10 @@ export default function AboutPageContent({ photos }) {
                             {t.nav.classA}
                         </span>
                     </m.div>
-                    <m.h1
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.1 }}
-                        className="mb-4 font-contrax text-5xl uppercase tracking-wide text-white md:text-7xl"
-                    >
+                    <h1 className="mb-4 font-contrax text-5xl uppercase tracking-wide text-white md:text-7xl">
+                        <span className="mb-4 block font-body text-sm font-semibold normal-case tracking-normal text-gray-300 md:text-base">{t.common.h1About}</span>{" "}
                         {data.heroAbout.title}
-                    </m.h1>
+                    </h1>
                     <m.div
                         initial={{ opacity: 0, scaleX: 0 }}
                         animate={{ opacity: 1, scaleX: 1 }}

@@ -2,7 +2,7 @@ import JsonLd from "@/components/JsonLd";
 import { notFound } from "next/navigation";
 import { getPosts, getPostSummaries, getPostBySlug } from "@/content";
 import { getDictionary } from "@/i18n/dictionaries";
-import { OG_LOCALE, SITE_URL, alternatesFor, localePath } from "@/i18n/config";
+import { OG_LOCALE, SITE_URL, alternatesFor, localePath, siteUrl } from "@/i18n/config";
 import BlogPostContent from "@/components/BlogPostContent";
 import PageSections from "@/i18n/PageSections";
 import { pageTitle } from "@/i18n/metadata";
@@ -74,7 +74,7 @@ export default async function BlogPostPage({ params }) {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": t.breadcrumbs.home, "item": SITE_URL + localePath(lang, "/") },
+            { "@type": "ListItem", "position": 1, "name": t.breadcrumbs.home, "item": siteUrl(lang, "/") },
             { "@type": "ListItem", "position": 2, "name": t.breadcrumbs.blog, "item": SITE_URL + localePath(lang, "/blog") },
             { "@type": "ListItem", "position": 3, "name": post.title, "item": url }
         ]

@@ -27,6 +27,13 @@ export function localePath(lang, path = "/") {
     return path === "/" ? `/${lang}` : `/${lang}${path}`;
 }
 
+// Absolute URL of a page, matching its canonical: the English home is the bare
+// domain (no trailing slash), everything else is SITE_URL + its localized path.
+export function siteUrl(lang, path = "/") {
+    const p = localePath(lang, path);
+    return SITE_URL + (p === "/" ? "" : p);
+}
+
 // The inverse: the language-neutral path of a URL pathname. Also strips an
 // explicit /en prefix, which only exists as a redirect.
 export function stripLocale(pathname = "/") {

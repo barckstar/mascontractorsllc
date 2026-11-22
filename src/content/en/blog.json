@@ -387,11 +387,6 @@
         ],
         "rows": [
           [
-            "Cost (installed)",
-            "$10 – $18 per sq ft",
-            "$4 – $9 per sq ft"
-          ],
-          [
             "Lifespan",
             "30 – 50+ years",
             "20 – 30 years"
@@ -472,7 +467,7 @@
       },
       {
         "type": "p",
-        "text": "Vinyl wins on upfront cost — sometimes by 40–60%. If you're on a tight budget, flipping a property, or working on a rental where longevity matters less than first cost, premium vinyl (0.046\" or thicker) is a legitimate choice. We install both and will recommend the right product for your situation, not the most expensive one."
+        "text": "Vinyl wins on upfront cost. If you're on a tight budget, flipping a property, or working on a rental where longevity matters less than first cost, premium vinyl (0.046\" or thicker) is a legitimate choice. We install both and will recommend the right product for your situation, not the most expensive one."
       },
       {
         "type": "h2",
@@ -1962,32 +1957,32 @@
       },
       {
         "type": "h2",
-        "text": "Tile Installation Cost in Richmond, VA"
+        "text": "How Long Tile Work Takes in Richmond, VA"
       },
       {
         "type": "table",
         "headers": [
           "Scope",
-          "Typical Cost",
-          "Timeline"
+          "Typical Timeline"
         ],
         "rows": [
           [
             "Standard installation",
-            "$8 – $30+ per sq ft installed",
             "3 – 10 days"
           ],
           [
             "Full bathroom (floor + shower)",
-            "$3,000 – $12,000",
             "4 – 6 days"
           ],
           [
             "Kitchen backsplash",
-            "$800 – $2,500",
             "1 – 2 days"
           ]
         ]
+      },
+      {
+        "type": "p",
+        "text": "Every tile job is different: the substrate, the tile size and the layout change the work involved, so we give a free written estimate after seeing the space."
       },
       {
         "type": "tip",
@@ -2018,7 +2013,7 @@
     "category": "Trim Carpentry",
     "title": "Trim Carpentry Ideas That Instantly Upgrade a Richmond Home",
     "metaTitle": "Trim Carpentry Ideas Richmond VA | MAS Contractors",
-    "metaDescription": "Crown molding, wainscoting, and custom built-ins — see which trim carpentry upgrades add the most value in a Richmond VA home, plus real 2026 pricing.",
+    "metaDescription": "Crown molding, wainscoting, and custom built-ins — see which trim carpentry upgrades make the biggest difference in a Richmond VA home, and how long each one takes.",
     "readTime": "6 min read",
     "publishDate": "2026-09-03",
     "image": "/gallery/WindowReplacement-Closeup.jpeg",
@@ -2059,32 +2054,32 @@
       },
       {
         "type": "h2",
-        "text": "Trim Carpentry Cost in Richmond, VA"
+        "text": "How Long Trim Carpentry Takes in Richmond, VA"
       },
       {
         "type": "table",
         "headers": [
           "Project",
-          "Typical Cost",
-          "Timeline"
+          "Typical Timeline"
         ],
         "rows": [
           [
             "Base & door casing (per room)",
-            "$3 – $8 / linear ft",
             "1 – 2 days"
           ],
           [
             "Crown molding (per room)",
-            "$8 – $15 / linear ft",
             "1 – 2 days"
           ],
           [
             "Custom built-ins",
-            "$2,500 – $10,000+",
             "3 – 5 days"
           ]
         ]
+      },
+      {
+        "type": "p",
+        "text": "Every room is different: wall straightness, the profile and the wood species change the work, so we give a free written estimate after seeing the space."
       },
       {
         "type": "p",
@@ -2125,7 +2120,7 @@
     "category": "Room Additions",
     "title": "Room Addition vs. Home Addition: What's the Difference (and Which Do You Need)?",
     "metaTitle": "Room Addition vs Home Addition Richmond VA | MAS Contractors",
-    "metaDescription": "Room addition or home addition — what's the real difference, and which one fits your budget and timeline? Cost and timeline comparison from a licensed Richmond VA contractor.",
+    "metaDescription": "Room addition or home addition — what's the real difference, and which one fits your home and timeline? Scope and timeline comparison from a licensed Richmond VA contractor.",
     "readTime": "7 min read",
     "publishDate": "2026-09-10",
     "image": "/gallery/RoomAddition-Foundation.jpeg",
@@ -2152,27 +2147,11 @@
       },
       {
         "type": "h2",
-        "text": "Cost Comparison"
+        "text": "Which One Costs More?"
       },
       {
-        "type": "table",
-        "headers": [
-          "Project Type",
-          "Typical Cost Range",
-          "Average"
-        ],
-        "rows": [
-          [
-            "Room Addition (conversion/finish)",
-            "$20,000 – $80,000",
-            "$30,000 – $55,000"
-          ],
-          [
-            "Home Addition (ground-up)",
-            "$25,000 – $150,000+",
-            "$40,000 – $90,000"
-          ]
-        ]
+        "type": "p",
+        "text": "Neither has a fixed price. A room addition that converts or finishes existing space (a garage, basement or bonus room) usually avoids a new foundation and roof, which is why it tends to be the smaller project. A home addition built from the ground up adds footings, framing, roofing and new mechanical runs. Every project is different and comes with its own challenges, so we give a free written estimate after visiting your home."
       },
       {
         "type": "h2",
