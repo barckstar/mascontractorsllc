@@ -57,11 +57,16 @@ export async function getGoogleReviews(lang = "en") {
     }
 }
 
-// Link that opens the "write a review" box straight away. Falls back to the
-// Maps listing when the Place ID isn't configured.
+// Link that opens the "write a review" box straight away.
+//
+// It's the official "Ask for reviews" link from the Business Profile (copied
+// from Google on 2026-11-23). The raw search.google.com/local/writereview URL
+// works on a computer, but on Android the Google app grabs it and shows a plain
+// search for "MAS Contractors" instead of the review box; g.page links are
+// handed to Maps, which opens the review form. If the profile is ever recreated,
+// copy the new link from Google: profile → "Ask for reviews".
+const REVIEW_LINK = "https://g.page/r/CYH-fdmhlt2PEBM/review";
+
 export function writeReviewUrl() {
-    const placeId = process.env.GOOGLE_PLACE_ID;
-    return placeId
-        ? `https://search.google.com/local/writereview?placeid=${encodeURIComponent(placeId)}`
-        : REVIEWS_SNAPSHOT.mapsUrl;
+    return REVIEW_LINK;
 }

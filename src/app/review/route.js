@@ -9,8 +9,11 @@ import { BUSINESS } from "@/content/business";
 // People get a plain redirect. Link-preview bots (WhatsApp, iMessage, Facebook,
 // SMS apps…) get a small HTML page with title, description and our picture
 // instead: if they followed the redirect, the preview would be Google's or empty.
+// WhatsApp's preview fetcher sends just "WhatsApp/2.x" (no "Mozilla"); its in-app
+// browser on Android also carries "WhatsApp/" after a normal Chrome UA, and that
+// one is a person, so only the bare form counts.
 const PREVIEW_BOTS =
-    /facebookexternalhit|facebookcatalog|meta-externalagent|whatsapp|twitterbot|slackbot|linkedinbot|telegrambot|discordbot|skypeuripreview|pinterest|redditbot|embedly|vkshare|google-pagerenderer|iframely|outbrain|quora link preview|bitlybot|applebot|bingbot|googlebot/i;
+    /^whatsapp\/|facebookexternalhit|facebookcatalog|meta-externalagent|twitterbot|slackbot|linkedinbot|telegrambot|discordbot|skypeuripreview|pinterest|redditbot|embedly|vkshare|google-pagerenderer|iframely|outbrain|quora link preview|bitlybot|applebot|bingbot|googlebot/i;
 
 const TITLE = "Leave a Review for MAS Contractors";
 const DESCRIPTION =
@@ -50,7 +53,10 @@ export function GET(request) {
 <meta name="twitter:description" content="${esc(DESCRIPTION)}">
 <meta name="twitter:image" content="${image}">
 </head>
-<body><p><a href="${esc(target)}">${esc(TITLE)}</a></p></body>
+<body>
+<p><a href="${esc(target)}">${esc(TITLE)}</a></p>
+<script>location.replace(${JSON.stringify(target).replace(/</g, "\\u003c")})</script>
+</body>
 </html>`;
     return new Response(html, { headers: { ...headers, "content-type": "text/html; charset=utf-8" } });
 }
