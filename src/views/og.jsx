@@ -54,16 +54,17 @@ function loadAssets() {
 // only format next/og can output); blurred, it's a few hundred KB before the
 // dark overlay and palette step below take it under WhatsApp's ~300 KB limit.
 const photos = new Map();
-function loadPhoto(publicPath) {
-    if (!photos.has(publicPath)) {
+function loadPhoto(publicPath, blur = 11) {
+    const key = publicPath + blur;
+    if (!photos.has(key)) {
         photos.set(
-            publicPath,
+            key,
             readFile(join(PUBLIC, publicPath))
-                .then((buf) => sharp(buf).resize(size.width, size.height, { fit: "cover" }).blur(11).png().toBuffer())
+                .then((buf) => sharp(buf).resize(size.width, size.height, { fit: "cover" }).blur(blur).png().toBuffer())
                 .then((buf) => `data:image/png;base64,${buf.toString("base64")}`),
         );
     }
-    return photos.get(publicPath);
+    return photos.get(key);
 }
 
 // Column width for the eyebrow/title/contact block. Deliberately narrower
@@ -79,10 +80,10 @@ function titleSize(title) {
     return 40;
 }
 
-async function card({ lang, eyebrow, title, photo }) {
+async function card({ lang, eyebrow, title, photo, vivid = false }) {
     const { fonts, mark } = await loadAssets();
     const og = getDictionary(lang).meta.og;
-    const background = await loadPhoto(photo);
+    const background = await loadPhoto(photo, vivid ? 3 : 11);
 
     const rendered = new ImageResponse(
         (
@@ -115,7 +116,9 @@ async function card({ lang, eyebrow, title, photo }) {
                         height: 630,
                         display: "flex",
                         background:
-                            "linear-gradient(180deg, rgba(10,10,10,0.55) 0%, rgba(10,10,10,0.42) 24%, rgba(10,10,10,0.82) 55%, rgba(10,10,10,0.96) 100%)",
+                            vivid
+                            ? "linear-gradient(180deg, rgba(10,10,10,0.45) 0%, rgba(10,10,10,0.15) 30%, rgba(10,10,10,0.75) 58%, rgba(10,10,10,0.95) 100%)"
+                            : "linear-gradient(180deg, rgba(10,10,10,0.55) 0%, rgba(10,10,10,0.42) 24%, rgba(10,10,10,0.82) 55%, rgba(10,10,10,0.96) 100%)",
                     }}
                 />
 
@@ -234,6 +237,17 @@ export function pageImage(lang, key) {
         alt: `MAS Contractors — ${TITLE[key] ?? og[key]}`,
         Image: () => card({ lang, eyebrow: EYEBROW[key] ?? og.tagline, title: TITLE[key] ?? og[key], photo: PHOTO[key] }),
     };
+}
+
+// /review (QR card and hand-over text): bilingual, since it goes to every client.
+export function reviewImage() {
+    return card({
+        lang: "en",
+        eyebrow: getDictionary("en").meta.og.tagline,
+        title: "Leave us a review · Déjenos su reseña",
+        photo: "/gallery/Kitchen.jpeg",
+        vivid: true,
+    });
 }
 
 // Blog index: uses the newest post's own photo and category, so it stays
